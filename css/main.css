@@ -1,18 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --color-background: #fff;
+    --color-background-alt: #eaeaea;
     --color-text: #283848;
     --color-accent: #f29937;
+
+    --text-xs: 0.625rem;
+    --text-s: 0.8rem;
+    --text-m: 1rem;
+    --text-l: 1.3rem;
+    --text-xl: 1.9rem;
+    --text-xxl: 2.4rem;
+    --text-xxxl: 3.3rem;
+
+    --text-line-height-s: 1;
+    --text-line-height-m: 1.5;
+    --text-line-height-l: 2;
+
+    --text-icon: 3.125em;
+
+    --size-m: 16px;
+    --size-s: calc(var(--size-m) / 2);
+    --size-l: calc(var(--size-m) * 2);
+
+    --page-width: 1280px;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     margin: 0;
     font-family: "Heebo", sans-serif;
     color: var(--color-text);
+    background-color: var(--color-background);
 }
 
-a {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+}
+h1 {
+    font-size: var(--text-xxxl);
+    font-weight: 300;
+    line-height: var(--text-line-height-l);
+}
+h1 b, h1 strong {
+    font-weight: 500;
+}
+h2 {
+    font-size: var(--text-xxl);
+    font-weight: 300;
+    line-height: var(--text-line-height-l);
+}
+h2 b, h2 strong {
+    font-weight: 500;
+}
+h3 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: var(--text-line-height-l);
+}
+h3 b, h3 strong {
+    font-weight: 800;
+}
+h4 {
+    font-size: var(--text-xl);
+    font-weight: 300;
+    line-height: var(--text-line-height-l);
+}
+h4 b, h4 strong {
+    font-weight: 500;
+}
+h5 {
+    font-size: var(--text-l);
+    font-weight: 600;
+    line-height: var(--text-line-height-m);
+}
+h5 b, h5 strong {
+    font-weight: 800;
+}
+h6 {
+    font-size: var(--text-l);
+    font-weight: 300;
+    line-height: var(--text-line-height-m);
+}
+h6 b, h6 strong {
+    font-weight: 500;
+}
+p, ul, ol, li {
+    font-size: var(--text-m);
+    font-weight: 300;
+    line-height: var(--text-line-height-m);
+}
+p b, p strong, ul b, ul strong, ol b, ol strong, li b, li strong {
+    font-weight: 500;
+}
+i.fa {
+    font-size: var(--text-icon);
+}
+
+.page-block {
+    margin: var(--size-m) 0;
+}
+.page-block:nth-child(2n+1) {
+    background-color: var(--color-background-alt);
+}
+.page-block[style*="--background-image"] {
+    background-image: var(--background-image);
+    background-position: center center;
+    background-size: cover;
+}
+.page-block > * {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: var(--size-m);
+    box-sizing: border-box;
+}
+.page-block > .map {
+    max-width: unset;
+    width: 100%;
+    padding: var(--size-m) 0 0 0;
+}
+.page-block > .map iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+.page-block:first-child {
+    height: 100vh;
+    color: var(--color-background);
+}
+
+.page-block p.claim {
+    text-align: center;
+    font-size: var(--text-xxl);
+    padding: calc(var(--size-l) * 2);
+    max-width: calc(var(--page-width) * 0.75);
+}
+
+section > * + * {
+    margin-top: var(--size-m);
+}
+
+.info-box-container {
+    padding: var(--size-m);
+    display: grid;
+    grid-gap: calc(var(--size-l) * 1.5);
+    grid-template-columns: repeat(auto-fill, minmax(max(300px, 30%), 1fr));
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+/*a {
     text-decoration: none;
     font-size: 16px;
+    color: var(--color-accent);
 }
 
 a:visited {
@@ -58,4 +208,4 @@ a:visited {
 
 #header > .menu > a {
     flex-grow: 1;
-}
+}*/
