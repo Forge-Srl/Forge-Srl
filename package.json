@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "generate": "node ./node_modules/@11ty/eleventy/cmd",
+    "dev-mode": "node ./node_modules/@11ty/eleventy/cmd --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

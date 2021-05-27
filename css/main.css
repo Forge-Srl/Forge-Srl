@@ -1,0 +1,61 @@
+:root {
+    --color-background: #fff;
+    --color-text: #283848;
+    --color-accent: #f29937;
+}
+
+body {
+    margin: 0;
+    font-family: "Heebo", sans-serif;
+    color: var(--color-text);
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:visited {
+    color: var(--color-text);
+}
+
+#header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom-color: var(--color-accent);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+#header-container.sticky {
+    position: fixed;
+    top: 0;
+}
+
+#header {
+    max-width: 1280px;
+    padding: 16px;
+    display: flex;
+    flex-grow: 1;
+}
+
+#header > .logo {
+    object-fit: contain;
+    height: 48px;
+}
+
+#header > .spacer {
+    flex-grow: 1;
+}
+
+#header > .menu {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+#header > .menu > a {
+    flex-grow: 1;
+}
