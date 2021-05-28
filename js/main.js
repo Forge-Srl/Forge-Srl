@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('header-container')
+    const header = document.getElementsByTagName('header')[0]
     const stickyOffset = window.innerHeight
 
     window.onscroll = () => {

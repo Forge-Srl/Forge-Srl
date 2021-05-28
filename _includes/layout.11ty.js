@@ -1,8 +1,8 @@
 const header = require('./components/header')
+const footer = require('./components/footer')
 
-module.exports = data => `
-<!doctype html>
-<html lang="en">
+module.exports = data => `<!doctype html>
+<html lang="it">
     <head>
         <meta charset="utf-8">
         <title>${data.pageTitle}</title>
@@ -13,5 +13,6 @@ module.exports = data => `
     <body>
         ${header(data)}
         ${data.content}
+        ${footer(data)}
     </body>
 </html>`

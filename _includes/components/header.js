@@ -1,15 +1,15 @@
-module.exports = data => `
-<header id="header-container">
-    <div id="header">
-        <img class="logo" src="/img/forge-logo.jpg" alt="Forge">
-        <div class="spacer"></div>
-        <nav class="menu">
-            <a href="#">Home</a>
-            <a href="#">Servizi</a>
-            <a href="#">Dove siamo</a>
-            <a href="#">Contattaci</a>
-            <a href="#">Lavora con noi</a>
-        </nav>
+module.exports = data => `<header>
+    <div class="page-block">
+        <div>
+            <div class="forge-logo"><a href="/"><img src="/img/forge-logo.jpg" alt="Forge"></a></div>
+            <div class="spacer"></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/#what-we-do">Servizi</a>
+                <a href="/#where-we-are">Dove siamo</a>
+                <a href="/#contact-us">Contattaci</a>
+                <a href="/lavora-con-noi">Lavora con noi</a>
+            </nav>
+        </div>
     </div>
-</header>
-`
+</header>`
