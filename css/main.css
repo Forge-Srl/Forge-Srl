@@ -112,6 +112,50 @@ a:hover {
     color: var(--color-accent-alt);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: var(--size-m) 0;
+}
+form label {
+    font-size: var(--text-m);
+    font-weight: 400;
+    line-height: var(--text-line-height-s);
+}
+form * + label, form * + button {
+    margin-top: var(--size-m);
+}
+form label + * {
+    margin-top: var(--size-s);
+}
+form input, form textarea {
+    border: 1px solid var(--color-text);
+    border-radius: 0;
+    font-family: "Heebo", sans-serif;
+    font-size: var(--text-s);
+    font-weight: 400;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    padding: var(--size-m);
+}
+form textarea {
+    min-height: 150px;
+}
+form button {
+    border: 1px solid var(--color-text);
+    border-radius: 0;
+    font-family: "Heebo", sans-serif;
+    font-size: var(--text-m);
+    font-weight: 400;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: var(--size-s);
+}
+form button:hover {
+    background-color: var(--color-text-alt);
+}
+
 .forge-logo img {
     object-fit: contain;
     height: calc(var(--size-m) * 2.5);
@@ -152,6 +196,22 @@ a:hover {
 }
 .page-block section > * + * {
     margin-top: var(--size-m);
+}
+
+.flexible-grid {
+    --grid-gap: calc(var(--size-l) * 1.5);
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--column-min-width), calc((100% - (var(--grid-gap) * (var(--max-columns) - 1))) / var(--max-columns))), 1fr));
+}
+.flexible-grid.col-w300 {
+    --column-min-width: 300px;
+}
+.flexible-grid.col-2 {
+    --max-columns: 2;
+}
+.flexible-grid.col-3 {
+    --max-columns: 3;
 }
 
 header {
@@ -208,8 +268,8 @@ main .page-block:first-child > section {
 main .page-block:first-child a {
     display: inline-block;
     color: var(--color-background);
-    border: 2px solid;
-    border-radius: 0.5em;
+    border: 2px solid transparent;
+    border-radius: 0.75em;
     padding: 0.5em 1.5em;
     font-size: var(--text-s);
     font-weight: 600;
@@ -220,6 +280,12 @@ main .page-block:first-child a {
 }
 main .page-block:first-child a:hover {
     transform: scale(1.1);
+}
+main .page-block:first-child a:first-child {
+    border-color: var(--color-background);
+}
+main .page-block:first-child a + a {
+    margin-left: var(--size-m);
 }
 main .page-block:nth-child(2n+1) {
     background-color: var(--color-background-alt);
@@ -258,12 +324,7 @@ footer .legal-info {
     text-align: center;
 }
 
-.info-box-container {
-    display: grid;
-    grid-gap: calc(var(--size-l) * 1.5);
-    grid-template-columns: repeat(auto-fill, minmax(max(300px, 30%), 1fr));
-}
-.info-box-container > .info-box {
+.info-box {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
