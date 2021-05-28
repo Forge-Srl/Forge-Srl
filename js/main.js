@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementsByTagName('header')[0]
-    const stickyOffset = window.innerHeight
+    const stickyOffset = window.innerHeight * 0.75
 
     window.onscroll = () => {
         if (window.pageYOffset > stickyOffset) {

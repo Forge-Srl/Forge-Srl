@@ -44,7 +44,7 @@ body {
     background-color: var(--color-background);
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, figure {
     margin: 0;
 }
 h1 {
@@ -103,6 +103,13 @@ p, ul, ol, li {
 p b, p strong, ul b, ul strong, ol b, ol strong, li b, li strong {
     font-weight: 500;
 }
+blockquote {
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+cite {
+    font-style: normal;
+}
 
 a {
     text-decoration: none;
@@ -160,6 +167,9 @@ form button:hover {
     object-fit: contain;
     height: calc(var(--size-m) * 2.5);
 }
+.forge-logo a {
+    line-height: 0;
+}
 
 .page-block {
     margin: var(--size-m) 0;
@@ -174,7 +184,7 @@ form button:hover {
 .page-block > * {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: var(--size-m);
+    padding: var(--size-l);
     box-sizing: border-box;
 }
 .page-block > .map {
@@ -216,6 +226,7 @@ form button:hover {
 
 header {
     border-bottom: 2px solid var(--color-accent);
+    z-index: 100;
 }
 header.sticky {
     position: fixed;
@@ -231,7 +242,7 @@ header .page-block:first-child > div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: var(--size-s) var(--size-m);
+    padding: var(--size-m) var(--size-l);
 }
 header .spacer {
     flex-grow: 1;
@@ -287,7 +298,7 @@ main .page-block:first-child a:first-child {
 main .page-block:first-child a + a {
     margin-left: var(--size-m);
 }
-main .page-block:nth-child(2n+1) {
+main .page-block.alt-back {
     background-color: var(--color-background-alt);
 }
 
@@ -330,4 +341,36 @@ footer .legal-info {
     flex-wrap: nowrap;
     align-items: center;
     text-align: center;
+}
+
+.person-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.person-box::before {
+    content: '\201c';
+    color: var(--color-background-alt);
+    font-family: Georgia, serif;
+    font-size: 50rem;
+    line-height: 0.95;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.person-box > * {
+    z-index: 2;
+}
+.person-box > * + * {
+    margin-top: var(--size-m);
+}
+.person-box img {
+    height: calc(var(--size-l) * 4);
+    width: calc(var(--size-l) * 4);
+    object-fit: contain;
+    border-radius: 50%;
 }

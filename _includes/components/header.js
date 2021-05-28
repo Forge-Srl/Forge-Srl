@@ -1,7 +1,7 @@
 module.exports = data => `<header>
     <div class="page-block">
         <div>
-            <div class="forge-logo"><a href="/"><img src="/img/forge-logo.jpg" alt="Forge"></a></div>
+            <div class="forge-logo"><a href="/"><img src="/img/forge-logo.jpg" alt="Forge" height="40" width="145"></a></div>
             <div class="spacer"></div>
             <nav>
                 <a href="/">Home</a>

@@ -3,6 +3,10 @@ class Home {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge',
+            pageDescription: 'Trasformiamo le idee di oggi, nei prodotti di domani Studiamo a fondo le idee dei ' +
+                'clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente Contattaci ' +
+                'Dimmi di più La digitalizzazione è un potente strumento per le aziende: permette di migliorare i ' +
+                'processi e proiettarsi da subito nel futuro. Per un\'azienda moderna è impensabile non [...]',
         }
     }
 
@@ -127,16 +131,16 @@ class Home {
                     </ul>
                 </section>
              </div>
-             <div class="page-block">
+             <div class="page-block alt-back">
                 <section id="where-we-are">
                     <h3>Valorizziamo il territorio</h3>
                     <p>Ci piace lavorare a stretto contatto con il territorio ed in collaborazione con le migliori 
                     università. Siamo al tempo stesso amanti del remote working e degli spazi condivisi che creano forti
-                     sinergie e ritorni positivi. Crediamo fortemente che la chiave del cambiamento sia il confronto 
-                     nella diversità.</p>
+                    sinergie e ritorni positivi. Crediamo fortemente che la chiave del cambiamento sia il confronto 
+                    nella diversità.</p>
                 </section>
                 <div class="map">
-                    <iframe src="https://maps.google.com/maps?hl=it&q=Via%20Sempione,%2014,%2021100%20Varese%20VA+(Forge%20S.r.l.)&t=&z=15&ie=UTF8&iwloc=B&output=embed"></iframe>
+                    <iframe title="Map" src="https://maps.google.com/maps?hl=it&q=Via%20Sempione,%2014,%2021100%20Varese%20VA+(Forge%20S.r.l.)&t=&z=15&ie=UTF8&iwloc=B&output=embed"></iframe>
                 </div>
             </div>
             <div class="page-block">
@@ -144,11 +148,11 @@ class Home {
                 <section>
                     <h5>Quali sono i nostri principi e come cambia la vita di chi collabora con noi?</h5>
                     <p>Da noi si lavora <strong>duro</strong>, ma ci si <strong>diverte</strong> nei giusti modi e tempi
-                     e vale per tutti.<br>
-                     Ruota tutto attorno alla meritocrazia e non esiste un 
-                     <strong>organigramma</strong>, ci sono solo <strong>ruoli</strong> e <strong>responsabilità</strong>.<br>
-                     L'orario di lavoro è <strong>flessibile</strong> e va incontro alle esigenze di ognuno.<br>
-                     Il rispetto degli altri e delle <strong>differenze</strong> e delle singolarità di ognuno è alla 
+                    e vale per tutti.<br>
+                    Ruota tutto attorno alla meritocrazia e non esiste un <strong>organigramma</strong>, ci sono solo 
+                    <strong>ruoli</strong> e <strong>responsabilità</strong>.<br>
+                    L'orario di lavoro è <strong>flessibile</strong> e va incontro alle esigenze di ognuno.<br>
+                    Il rispetto degli altri e delle <strong>differenze</strong> e delle singolarità di ognuno è alla 
                     base di ogni relazione.<br>
                     Da noi il caffè non solo è <strong>gratuito</strong>, ma è anche <strong>buono</strong>!</p>
                 </section>
@@ -172,6 +176,53 @@ class Home {
                 </section>
             </div>
             <div class="page-block">
+                <section>
+                    <h3>Le nostre motivazioni</h3>
+                    <div class="flexible-grid col-2 col-w300">
+                        <figure class="person-box">
+                            <img src="/img/angelo-nodari.jpg" alt="Angelo Nodari" height="128" width="128" loading="lazy">
+                            <cite>
+                                <h5>Angelo Nodari</h5>
+                                <h6>Co-founder e CEO</h6>
+                            </cite>
+                            <blockquote>
+                                <p>Abbiamo creato Forge per dare spazio a chi, come noi, crede nel cambiamento e nella 
+                                tecnologia per migliorare la vita di tutti giorni. Crediamo fortemente nel rispetto del 
+                                prossimo e dell'ambiente. Ci piace parlare di etica e del valore che viene creato dal 
+                                nostro lavoro.</p>
+                            </blockquote>
+                        </figure>
+                        <figure class="person-box">
+                            <img src="/img/marco-vanetti.jpg" alt="Marco Vanetti" height="128" width="128" loading="lazy">
+                            <cite>
+                                <h5>Marco Vanetti</h5>
+                                <h6>Co-founder e CTO</h6>
+                            </cite>
+                            <blockquote>
+                                <p>Siamo fermamente convinti che l'intelligenza artificiale, come il software e 
+                                l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, 
+                                soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di 
+                                fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri 
+                                dipendenti e dei nostri clienti.</p>
+                            </blockquote>
+                        </figure>
+                        <figure class="person-box">
+                            <img src="/img/fabio-micheletti.jpg" alt="Fabio Lino Micheletti" height="128" width="128" loading="lazy">
+                            <cite>
+                                <h5>Fabio Lino Micheletti</h5>
+                                <h6>Co-founder e CIO</h6>
+                            </cite>
+                            <blockquote>
+                                <p>Il lavoro che facciamo occupa la maggior parte della nostra vita, è importante quindi
+                                che rispecchi appieno quello in cui crediamo. Per questo abbiamo deciso di creare Forge, 
+                                un'azienda che mira ad essere ai massimi livelli tecnologici ed al tempo stesso con solide 
+                                basi umane, puntando ad essere un ambiente di lavoro stimolante e sereno.</p>
+                            </blockquote>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+            <div class="page-block alt-back">
                 <div class="flexible-grid col-2 col-w300" id="contact-us">
                     <section>
                         <h3>Contattaci</h3>
