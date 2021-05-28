@@ -19,10 +19,12 @@ module.exports = data => {
                 <meta property="article:publisher" content="${data.facebookUrl}">
                 <meta name="description" content="${data.pageDescription}">
                 <title>${data.pageTitle}</title>
-                <link rel="stylesheet" href="/css/main.css">
-                <link rel="preload" href="/css/webfonts/fa-solid-900.woff2">
-                <link rel="preload" href="/css/webfonts/fa-brands-400.woff2">
+                <link rel="preload" as="font" href="/css/webfonts/fa-solid-900.woff2">
+                <link rel="preload" as="font" href="/css/webfonts/fa-brands-400.woff2">
                 <link rel="stylesheet" href="/css/fontawesome/all.css">
+                <link rel="stylesheet" href="/css/glider.min.css">
+                <link rel="stylesheet" href="/css/main.css">
+                <script type="text/javascript" src="/js/glider.min.js"></script>
                 <script type="text/javascript" src="/js/main.js"></script>
             </head>
             <body>

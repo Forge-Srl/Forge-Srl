@@ -178,47 +178,51 @@ class Home {
             <div class="page-block">
                 <section>
                     <h3>Le nostre motivazioni</h3>
-                    <div class="flexible-grid col-2 col-w300">
-                        <figure class="person-box">
-                            <img src="/img/angelo-nodari.jpg" alt="Angelo Nodari" height="128" width="128" loading="lazy">
-                            <cite>
-                                <h5>Angelo Nodari</h5>
-                                <h6>Co-founder e CEO</h6>
-                            </cite>
-                            <blockquote>
-                                <p>Abbiamo creato Forge per dare spazio a chi, come noi, crede nel cambiamento e nella 
-                                tecnologia per migliorare la vita di tutti giorni. Crediamo fortemente nel rispetto del 
-                                prossimo e dell'ambiente. Ci piace parlare di etica e del valore che viene creato dal 
-                                nostro lavoro.</p>
-                            </blockquote>
-                        </figure>
-                        <figure class="person-box">
-                            <img src="/img/marco-vanetti.jpg" alt="Marco Vanetti" height="128" width="128" loading="lazy">
-                            <cite>
-                                <h5>Marco Vanetti</h5>
-                                <h6>Co-founder e CTO</h6>
-                            </cite>
-                            <blockquote>
-                                <p>Siamo fermamente convinti che l'intelligenza artificiale, come il software e 
-                                l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, 
-                                soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di 
-                                fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri 
-                                dipendenti e dei nostri clienti.</p>
-                            </blockquote>
-                        </figure>
-                        <figure class="person-box">
-                            <img src="/img/fabio-micheletti.jpg" alt="Fabio Lino Micheletti" height="128" width="128" loading="lazy">
-                            <cite>
-                                <h5>Fabio Lino Micheletti</h5>
-                                <h6>Co-founder e CIO</h6>
-                            </cite>
-                            <blockquote>
-                                <p>Il lavoro che facciamo occupa la maggior parte della nostra vita, è importante quindi
-                                che rispecchi appieno quello in cui crediamo. Per questo abbiamo deciso di creare Forge, 
-                                un'azienda che mira ad essere ai massimi livelli tecnologici ed al tempo stesso con solide 
-                                basi umane, puntando ad essere un ambiente di lavoro stimolante e sereno.</p>
-                            </blockquote>
-                        </figure>
+                    <div class="slider-glider">
+                        <div class="glider">
+                            <figure class="person-box">
+                                <img src="/img/angelo-nodari.jpg" alt="Angelo Nodari" height="128" width="128" loading="lazy">
+                                <cite>
+                                    <h5>Angelo Nodari</h5>
+                                    <h6>Co-founder e CEO</h6>
+                                </cite>
+                                <blockquote>
+                                    <p>Abbiamo creato Forge per dare spazio a chi, come noi, crede nel cambiamento e 
+                                    nella tecnologia per migliorare la vita di tutti giorni. Crediamo fortemente nel 
+                                    rispetto del prossimo e dell'ambiente. Ci piace parlare di etica e del valore che 
+                                    viene creato dal nostro lavoro.</p>
+                                </blockquote>
+                            </figure>
+                            <figure class="person-box">
+                                <img src="/img/marco-vanetti.jpg" alt="Marco Vanetti" height="128" width="128" loading="lazy">
+                                <cite>
+                                    <h5>Marco Vanetti</h5>
+                                    <h6>Co-founder e CTO</h6>
+                                </cite>
+                                <blockquote>
+                                    <p>Siamo fermamente convinti che l'intelligenza artificiale, come il software e 
+                                    l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, 
+                                    soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di 
+                                    fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri 
+                                    dipendenti e dei nostri clienti.</p>
+                                </blockquote>
+                            </figure>
+                            <figure class="person-box">
+                                <img src="/img/fabio-micheletti.jpg" alt="Fabio Lino Micheletti" height="128" width="128" loading="lazy">
+                                <cite>
+                                    <h5>Fabio Lino Micheletti</h5>
+                                    <h6>Co-founder e CIO</h6>
+                                </cite>
+                                <blockquote>
+                                    <p>Il lavoro che facciamo occupa la maggior parte della nostra vita, è importante 
+                                    quindi che rispecchi appieno quello in cui crediamo. Per questo abbiamo deciso di 
+                                    creare Forge, un'azienda che mira ad essere ai massimi livelli tecnologici ed al 
+                                    tempo stesso con solide basi umane, puntando ad essere un ambiente di lavoro 
+                                    stimolante e sereno.</p>
+                                </blockquote>
+                            </figure>
+                        </div>
+                        <div role="tablist" class="dots"></div>
                     </div>
                 </section>
             </div>

@@ -374,3 +374,17 @@ footer .legal-info {
     object-fit: contain;
     border-radius: 50%;
 }
+
+.slider-glider {
+    max-width: max(600px, 70%);
+    margin: auto;
+}
+.slider-glider .glider + .dots {
+    margin: var(--size-m) 0;
+}
+.slider-glider .glider + .dots .glider-dot {
+    background-color: var(--color-background-alt);
+}
+.slider-glider .glider + .dots .glider-dot.active {
+    background-color: var(--color-accent);
+}
