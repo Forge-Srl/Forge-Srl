@@ -1,13 +1,20 @@
 class TirocinioInInformatica {
     data() {
+        const pageTitle = 'Tirocinio in Informatica'
+
         return {
             layout: 'layout.11ty.js',
             tags: ['stage'],
-            pageTitle: 'Tirocinio in Informatica',
+            pageTitle: pageTitle,
             pageDescription: 'Stage e tirocini part-time nel reparto ricerca e sviluppo Sei uno studente e hai sempre ' +
                 'avuto una passione per tutto ciò che è tecnologico? Allora sei nel posto giusto. Lavoriamo ' +
                 'quotidianamente a stretto contatto con le università del territorio e se sei uno studente di ' +
-                'informatica e vuoi approfondire i tuoi studi in un ambiente [...]'
+                'informatica e vuoi approfondire i tuoi studi in un ambiente [...]',
+            eleventyNavigation: {
+                key: 'tirocinio-in-informatica',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

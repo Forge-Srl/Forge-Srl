@@ -287,6 +287,27 @@ header nav > a:hover {
     color: var(--color-accent);
 }
 
+nav.breadcrumbs {
+    padding: var(--size-s) 0;
+    width: 100%;
+}
+nav.breadcrumbs ol {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 var(--size-l);
+    box-sizing: border-box;
+    list-style-type: none;
+}
+nav.breadcrumbs ol li {
+    display: inline-block;
+    font-size: var(--text-s);
+}
+nav.breadcrumbs ol li + li:before {
+    content: '>';
+    display: inline-block;
+    padding: 0 var(--size-s);
+}
+
 main .page-block.alt-back {
     background-color: var(--color-background-alt);
 }

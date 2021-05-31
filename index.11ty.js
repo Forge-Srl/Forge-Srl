@@ -7,6 +7,10 @@ class Home {
                 'clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente Contattaci ' +
                 'Dimmi di più La digitalizzazione è un potente strumento per le aziende: permette di migliorare i ' +
                 'processi e proiettarsi da subito nel futuro. Per un\'azienda moderna è impensabile non [...]',
+            eleventyNavigation: {
+                key: 'home',
+                title: 'Home'
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 const fs = require("fs")
+const navigationPlugin = require('@11ty/eleventy-navigation')
 
 module.exports = (eleventyConfig) => {
     eleventyConfig
@@ -10,6 +11,8 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'css/webfonts'})
         .addPassthroughCopy({'node_modules/glider-js/glider.min.css': 'css/glider.min.css'})
         .addPassthroughCopy({'node_modules/glider-js/glider.min.js': 'js/glider.min.js'})
+
+    eleventyConfig.addPlugin(navigationPlugin)
 
     eleventyConfig.addWatchTarget('./css')
     eleventyConfig.addWatchTarget('./js')

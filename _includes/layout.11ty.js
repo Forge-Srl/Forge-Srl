@@ -1,7 +1,8 @@
 const header = require('./components/header')
 const footer = require('./components/footer')
+const breadcrumbs = require('./components/breadcrumbs')
 
-module.exports = data => {
+module.exports = function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
 
     return `<!doctype html>
@@ -30,9 +31,10 @@ module.exports = data => {
                 <script type="text/javascript" src="/js/main.js"></script>
             </head>
             <body>
-                ${header(data)}
+                ${header.call(this, data)}
+                ${breadcrumbs.call(this, data)}
                 ${data.content}
-                ${footer(data)}
+                ${footer.call(this, data)}
             </body>
         </html>`
 }

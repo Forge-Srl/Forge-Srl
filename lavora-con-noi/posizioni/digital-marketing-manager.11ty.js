@@ -1,14 +1,20 @@
 class DigitalMarketingManager {
     data() {
+        const pageTitle = 'Digital Marketing Manager'
         return {
             layout: 'layout.11ty.js',
             tags: ['posizioni'],
-            pageTitle: 'Digital Marketing Manager',
+            pageTitle: pageTitle,
             pageDescription: 'Digital Marketing Manager Stiamo cercando una persona altamente qualificata e motivata ' +
                 'in grado di occuparsi insieme al management di impostare i canali di comunicazione e di strategia ' +
                 'marketing attraverso le più recenti metodologie e tecnologie disponibili. L\'attitudine al lavoro ' +
                 'di squadra e la propensione ad essere sempre aggiornati sono per noi requisiti fondamentali. Per ' +
-                'questi [...]'
+                'questi [...]',
+            eleventyNavigation: {
+                key: 'digital-marketing-manager',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

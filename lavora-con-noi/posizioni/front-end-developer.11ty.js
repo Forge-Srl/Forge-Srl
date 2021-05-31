@@ -1,13 +1,20 @@
 class FrontEndDeveloper {
     data() {
+        const pageTitle = 'Front-end developer'
+
         return {
             layout: 'layout.11ty.js',
             tags: ['posizioni'],
-            pageTitle: 'Front-end developer',
+            pageTitle: pageTitle,
             pageDescription: 'Sviluppatore Software Front End Stiamo cercando una persona altamente qualificata e ' +
                 'motivata in grado di sviluppare lato front end con metodologia Agile/Scrum in ambiente giovane e ' +
                 'dinamico. Sono richieste eccellenti capacità tecniche ed estrema eleganza nel design del codice. Si ' +
-                'richiede la conoscenza dei principali tool di sviluppo e dei linguaggi di markup e di [..]'
+                'richiede la conoscenza dei principali tool di sviluppo e dei linguaggi di markup e di [..]',
+            eleventyNavigation: {
+                key: 'front-end-developer',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

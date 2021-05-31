@@ -1,12 +1,19 @@
 class LavoraConNoi {
     data() {
+        const pageTitle = 'Lavora con noi'
+
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Lavora con noi',
+            pageTitle: pageTitle,
             pageDescription: 'Lavora con noi Sei uno studente in cerca di un tirocinio o hai già esperienza nel mondo ' +
                 'del lavoro e hai deciso di voltare pagina? Allora dai spazio ad una nuova opportunità in un ambiente ' +
                 'giovane, dinamico ed altamente tecnologico e guarda tra le nostre proposte di collaborazione. Quali ' +
                 'sono le nostre caratteristiche principali? Alta [...]',
+            eleventyNavigation: {
+                key: 'lavora-con-noi',
+                title: pageTitle,
+                parent: 'home'
+            }
         }
     }
 

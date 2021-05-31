@@ -1,13 +1,20 @@
 class DigitalSalesManager {
     data() {
+        const pageTitle = 'Digital Sales Manager'
+
         return {
             layout: 'layout.11ty.js',
             tags: ['posizioni'],
-            pageTitle: 'Digital Sales Manager',
+            pageTitle: pageTitle,
             pageDescription: 'Digital Sales Manager Stiamo cercando una persona altamente qualificata e motivata in ' +
                 'grado di occuparsi insieme al management del reparto sales in ambito digital. La persona cercata ' +
                 'dovrà utilizzare le più recenti metodologie e tecnologie disponibili in ambito inbound sales. ' +
-                'L\'attitudine al lavoro di squadra e la propensione ad essere sempre aggiornati sono per noi [...]'
+                'L\'attitudine al lavoro di squadra e la propensione ad essere sempre aggiornati sono per noi [...]',
+            eleventyNavigation: {
+                key: 'digital-sales-manager',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

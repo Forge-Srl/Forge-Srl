@@ -1,13 +1,20 @@
 class TirocinioInMarketing {
     data() {
+        const pageTitle = 'Tirocinio in Marketing'
+
         return {
             layout: 'layout.11ty.js',
             tags: ['stage'],
-            pageTitle: 'Tirocinio in Marketing',
+            pageTitle: pageTitle,
             pageDescription: 'Stage e tirocini part-time nel reparto marketing e sales Sei uno studente e stai ' +
                 'cercando uno stage, un tirocinio formativo o un part-time? Allora continua a leggere... Lavoriamo ' +
                 'quotidianamente a stretto contatto con le università del territorio e se sei uno studente di ' +
-                'economia e commercio e vuoi approfondire i tuoi studi in un ambiente [...]'
+                'economia e commercio e vuoi approfondire i tuoi studi in un ambiente [...]',
+            eleventyNavigation: {
+                key: 'tirocinio-in-marketing',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

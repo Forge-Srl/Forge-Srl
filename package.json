@@ -4,7 +4,8 @@
     "dev-mode": "node ./node_modules/@11ty/eleventy/cmd --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",

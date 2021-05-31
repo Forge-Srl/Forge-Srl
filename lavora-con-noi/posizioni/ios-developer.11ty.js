@@ -1,13 +1,20 @@
 class IOSDeveloper {
     data() {
+        const pageTitle = 'iOS developer'
+
         return {
             layout: 'layout.11ty.js',
             tags: ['posizioni'],
-            pageTitle: 'iOS developer',
+            pageTitle: pageTitle,
             pageDescription: 'iOS Mobile Developer Stiamo cercando una persona altamente qualificata e motivata in ' +
                 'grado di integrarsi nel team tecnico per la gestione e lo sviluppo di una serie di applicazioni ' +
                 'mobile per iOS. Come per tutte le figure professionali in Forge, l\'attitudine al lavoro di squadra ' +
-                'e la propensione ad essere sempre aggiornati sono per noi [...]'
+                'e la propensione ad essere sempre aggiornati sono per noi [...]',
+            eleventyNavigation: {
+                key: 'ios-developer',
+                title: pageTitle,
+                parent: 'lavora-con-noi'
+            }
         }
     }
 

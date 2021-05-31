@@ -1,4 +1,5 @@
-module.exports = data => `<footer>
+module.exports = function (data) {
+    return `<footer>
     <div class="page-block">
         <div class="info">
             <div class="forge-logo"><img src="/img/forge-logo.jpg" alt="Forge" height="40" width="145"></div>
@@ -15,3 +16,4 @@ module.exports = data => `<footer>
         </div>
     </div>
 </footer>`
+}
