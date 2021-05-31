@@ -3,6 +3,7 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('css')
         .addPassthroughCopy('js')
         .addPassthroughCopy('img')
+        .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'css/fontawesome/all.css'})
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'css/webfonts'})
         .addPassthroughCopy({'node_modules/glider-js/glider.min.css': 'css/glider.min.css'})

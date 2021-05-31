@@ -3,8 +3,8 @@ module.exports = data => `<footer>
         <div class="info">
             <div class="forge-logo"><img src="/img/forge-logo.jpg" alt="Forge" height="40" width="145"></div>
             <div class="social">
-                <a target="_blank" rel="noopener" href="${data.facebookUrl}" aria-label="Facebook"><i class="fab fa-3x fa-facebook"></i></a>
-                <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/forge-company" aria-label="Linkedin"><i class="fab fa-3x fa-linkedin"></i></a>
+                <a target="_blank" rel="noopener" href="${data.forge.facebook}" aria-label="Facebook"><i class="fab fa-3x fa-facebook"></i></a>
+                <a target="_blank" rel="noopener" href="${data.forge.linkedin}" aria-label="Linkedin"><i class="fab fa-3x fa-linkedin"></i></a>
             </div>
         </div>
     </div>

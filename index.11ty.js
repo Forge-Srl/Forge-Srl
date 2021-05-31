@@ -12,8 +12,8 @@ class Home {
 
     render(data) {
         return `<main>
-             <div class="page-block" style="--background-image: url('/img/home_bg_1.jpg');">
-                <section>
+             <div class="page-block full-page" style="--background-image: url('/img/home_bg_1.jpg');">
+                <section class="overlay">
                     <h1>Trasformiamo le idee di oggi, nei prodotti di domani</h1>
                     <h2>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale 
                     sempre più esigente</h2>
@@ -236,7 +236,7 @@ class Home {
                         migliore soluzione possibile.</p>
                         <section>
                             <h4>Informazioni</h4>
-                            <p>Email: info@forge.srl</p>
+                            <p>Email: ${data.forge.contacts.info}</p>
                         </section>
                         <section>
                             <h4>Indirizzo</h4>
@@ -244,7 +244,7 @@ class Home {
                         </section>
                     </section>
                     <!-- TODO: find better way to handle contact form -->
-                    <form method="POST" action="mailto:info@forge.srl">
+                    <form method="POST" action="mailto:${data.forge.contacts.info}">
                         <label for="contact-us_name">Il tuo nome</label>
                         <input type="text" id="contact-us_name" required>
                         <label for="contact-us_email">La tua email</label>

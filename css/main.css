@@ -103,6 +103,13 @@ p, ul, ol, li {
 p b, p strong, ul b, ul strong, ol b, ol strong, li b, li strong {
     font-weight: 500;
 }
+p a, li a {
+    font-weight: 400;
+    text-decoration: underline;
+}
+p a strong, p strong a, li a strong, li strong a {
+    font-weight: 600;
+}
 blockquote {
     font-family: Georgia, serif;
     font-style: italic;
@@ -113,10 +120,22 @@ cite {
 
 a {
     text-decoration: none;
-    color: var(--color-accent);
+    color: var(--color-accent-alt);
+}
+a:visited {
+    color: var(--color-text-alt);
 }
 a:hover {
-    color: var(--color-accent-alt);
+    color: var(--color-accent);
+}
+a.cta {
+    display: block;
+    padding: var(--size-s) 0;
+    margin: var(--size-l) auto;
+    width: fit-content;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 }
 
 form {
@@ -207,6 +226,12 @@ form button:hover {
 .page-block section > * + * {
     margin-top: var(--size-m);
 }
+.page-block section > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
 
 .flexible-grid {
     --grid-gap: calc(var(--size-l) * 1.5);
@@ -262,10 +287,12 @@ header nav > a:hover {
     color: var(--color-accent);
 }
 
-main .page-block:first-child {
+main .page-block.alt-back {
+    background-color: var(--color-background-alt);
+}
+main .page-block.full-page {
     height: 100vh;
     margin-top: 0;
-    color: var(--color-background);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -273,10 +300,11 @@ main .page-block:first-child {
     justify-content: center;
     align-items: center;
 }
-main .page-block:first-child > section {
+main .page-block > section.overlay {
+    color: var(--color-background);
     filter: drop-shadow(0px 0px var(--size-s) var(--color-text));
 }
-main .page-block:first-child a {
+main .page-block > section.overlay a {
     display: inline-block;
     color: var(--color-background);
     border: 2px solid transparent;
@@ -289,17 +317,14 @@ main .page-block:first-child a {
     text-transform: uppercase;
     transition: all .5s;
 }
-main .page-block:first-child a:hover {
+main .page-block > section.overlay a:hover {
     transform: scale(1.1);
 }
-main .page-block:first-child a:first-child {
+main .page-block > section.overlay a:first-child {
     border-color: var(--color-background);
 }
-main .page-block:first-child a + a {
+main .page-block > section.overlay a + a {
     margin-left: var(--size-m);
-}
-main .page-block.alt-back {
-    background-color: var(--color-background-alt);
 }
 
 footer {
