@@ -1,3 +1,5 @@
+const fs = require("fs")
+
 module.exports = (eleventyConfig) => {
     eleventyConfig
         .addPassthroughCopy('css')
@@ -18,6 +20,19 @@ module.exports = (eleventyConfig) => {
         Object.keys(require.cache).forEach(key => {
             delete require.cache[key]
         })
+    })
+    eleventyConfig.setBrowserSyncConfig({
+        callbacks: {
+            ready: function(err, bs) {
+                // Handle 404 page when running in serve/dev mode
+                bs.addMiddleware('*', (req, res) => {
+                    const page404content = fs.readFileSync('_site/404.html')
+                    res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' })
+                    res.write(page404content)
+                    res.end()
+                })
+            }
+        }
     })
 
     return {
