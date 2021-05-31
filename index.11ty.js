@@ -248,7 +248,7 @@ class Home {
                         </section>
                     </section>
                     <!-- TODO: find better way to handle contact form -->
-                    <form method="POST" action="mailto:${data.forge.contacts.info}">
+                    <!--<form method="POST" action="mailto:${data.forge.contacts.info}">
                         <label for="contact-us_name">Il tuo nome</label>
                         <input type="text" id="contact-us_name" required>
                         <label for="contact-us_email">La tua email</label>
@@ -258,7 +258,7 @@ class Home {
                         <label for="contact-us_message">Messaggio</label>
                         <textarea id="contact-us_message" name="body" required></textarea>
                         <button type="submit">Invia</button>
-                    </form>
+                    </form>-->
                 </div>
             </div>
         </main>`
