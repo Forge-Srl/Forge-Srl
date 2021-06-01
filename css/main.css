@@ -25,6 +25,19 @@
     --size-l: calc(var(--size-m) * 2);
 
     --page-width: 1280px;
+    --logo-height: 40px;
+}
+@media screen and (max-width: 640px) {
+    :root {
+        --text-l: 1.25rem;
+        --text-xl: 1.45rem;
+        --text-xxl: 1.9rem;
+        --text-xxxl: 2.4rem;
+
+        --text-line-height-l: 1.8;
+
+        --size-m: 12px;
+    }
 }
 
 html {
@@ -184,10 +197,11 @@ form button:hover {
 
 .forge-logo img {
     object-fit: contain;
-    height: calc(var(--size-m) * 2.5);
+    height: var(--logo-height);
 }
 .forge-logo a {
     line-height: 0;
+    display: block;
 }
 
 .page-block {
@@ -248,8 +262,14 @@ form button:hover {
 .flexible-grid.col-3 {
     --max-columns: 3;
 }
+@media screen and (max-width: 640px) {
+    .flexible-grid {
+        --column-min-width: 0 !important;
+    }
+}
 
 header {
+    user-select: none;
     border-bottom: 2px solid var(--color-accent);
     z-index: 100;
 }
@@ -264,6 +284,7 @@ header .page-block:first-child {
     margin: 0;
 }
 header .page-block:first-child > div {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -271,6 +292,9 @@ header .page-block:first-child > div {
 }
 header .spacer {
     flex-grow: 1;
+}
+header label.mobile-menu-button, header input.mobile-menu-button {
+    display: none;
 }
 header nav {
     display: flex;
@@ -285,6 +309,43 @@ header nav > a {
 }
 header nav > a:hover {
     color: var(--color-accent);
+}
+@media screen and (max-width: 800px) {
+    header label.mobile-menu-button {
+        display: flex;
+        align-items: center;
+    }
+    header label.mobile-menu-button > .fa-times {
+        display: none;
+    }
+    header input.mobile-menu-button:checked ~ label.mobile-menu-button > .fa-bars {
+        display: none;
+    }
+    header input.mobile-menu-button:checked ~ label.mobile-menu-button > .fa-times {
+        display: block;
+    }
+    header nav {
+        display: none;
+        position: absolute;
+        top: calc(var(--logo-height) + var(--size-m) * 2);
+        left: 0;
+        right: 0;
+        max-width: unset;
+        z-index: 1;
+        padding: var(--size-m) var(--size-l);
+        background: var(--color-background-alt);
+        border-bottom: 2px solid var(--color-accent);
+    }
+    header.sticky nav {
+        border-bottom-width: 1px;
+    }
+    header input.mobile-menu-button:checked ~ nav {
+        display: block;
+    }
+    header nav > a {
+        display: block;
+        margin: var(--size-m) 0;
+    }
 }
 
 nav.breadcrumbs {
@@ -312,7 +373,7 @@ main .page-block.alt-back {
     background-color: var(--color-background-alt);
 }
 main .page-block.full-page {
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 0;
     display: flex;
     flex-direction: column;

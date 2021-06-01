@@ -4,6 +4,11 @@ module.exports = function (data) {
         <div>
             <div class="forge-logo"><a href="/"><img src="/img/forge-logo.jpg" alt="Forge" height="40" width="145"></a></div>
             <div class="spacer"></div>
+            <input class="mobile-menu-button" type="checkbox" id="mobile-menu-toggle">
+            <label class="mobile-menu-button" for="mobile-menu-toggle">
+                <i class="fa fa-bars fa-2x"></i>
+                <i class="fa fa-times fa-2x"></i>
+            </label>
             <nav>
                 <a href="/">Home</a>
                 <a href="/#what-we-do">Servizi</a>
