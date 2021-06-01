@@ -24,11 +24,11 @@ module.exports = function(data) {
                 <link rel="icon" href="/favicon.ico">
                 <link rel="preload" as="font" href="/css/webfonts/fa-solid-900.woff2">
                 <link rel="preload" as="font" href="/css/webfonts/fa-brands-400.woff2">
-                <link rel="stylesheet" href="/css/fontawesome/all.css">
-                <link rel="stylesheet" href="/css/glider.min.css">
-                <link rel="stylesheet" href="/css/main.css">
-                <script type="text/javascript" src="/js/glider.min.js"></script>
-                <script type="text/javascript" src="/js/main.js"></script>
+                <link rel="stylesheet" href="/css/fontawesome/all.css" media="all">
+                <link rel="stylesheet" href="/css/glider.min.css" media="screen">
+                <link rel="stylesheet" href="/css/main.css" media="screen">
+                <script defer type="text/javascript" src="/js/glider.min.js"></script>
+                <script defer type="text/javascript" src="/js/main.js"></script>
             </head>
             <body>
                 ${header.call(this, data)}
