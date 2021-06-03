@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - '/serverless'
+      - 'serverless'
 
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FORGE_SRL_FIREBASE_TOKEN }}
         run: |
-          cd /serverless/functions
+          cd serverless/functions
           npm install -g firebase-tools
           npm install
           npm run deploy:ci
