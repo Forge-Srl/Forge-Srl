@@ -156,6 +156,7 @@ form {
     flex-direction: column;
     flex-wrap: nowrap;
     padding: var(--size-m) 0;
+    position: relative;
 }
 form label {
     font-size: var(--text-m);
@@ -193,6 +194,35 @@ form button {
 }
 form button:hover {
     background-color: var(--color-text-alt);
+}
+form .spinner {
+    display: none;
+    position: absolute;
+    top: calc(-1 * var(--size-s));
+    bottom: calc(-1 * var(--size-s));
+    left: calc(-1 * var(--size-m));
+    right: calc(-1 * var(--size-m));
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+form .spinner > .spin {
+    border: var(--size-s) solid var(--color-text);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    width: calc(var(--size-l) * 2);
+    height: calc(var(--size-l) * 2);
+    animation: spin 1.25s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+form.sending .spinner {
+    display: flex;
 }
 
 .forge-logo img {
