@@ -269,8 +269,6 @@ class Home {
                             event.preventDefault()
                             
                             const request = new XMLHttpRequest()
-                            request.open('POST', form.action, true)
-                            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
                             const fail = () => {
                                 form.classList.remove('sending')
                                 alert('L\\'invio della email è fallito')
@@ -279,6 +277,8 @@ class Home {
                                 form.reset()
                                 form.classList.remove('sending')
                             }
+                            
+                            request.open('POST', form.action, true)
                             request.onload = function() {
                                 if (this.status >= 200 && this.status < 400) {
                                     success()
@@ -287,6 +287,7 @@ class Home {
                                 }
                             }
                             request.onerror = function() { fail() }
+                            
                             form.classList.add('sending')
                             request.send(new FormData(form))
                         })
