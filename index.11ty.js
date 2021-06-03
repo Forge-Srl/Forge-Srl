@@ -15,6 +15,10 @@ class Home {
     }
 
     render(data) {
+        const contactFormUrl = 'https://us-central1-forge-srl.cloudfunctions.net/contactUs'
+        // For local test:
+        // contactFormUrl = 'http://localhost:5001/forge-srl/us-central1/contactUs'
+
         return `<main>
              <div class="page-block full-page" style="--background-image: url('/img/home_bg_1.jpg');">
                 <section class="overlay">
@@ -247,8 +251,8 @@ class Home {
                             <p>Via Cigalini 5/D 22100 Como, Italy</p>
                         </section>
                     </section>
-                    <!-- TODO: find better way to handle contact form 
-                    <form method="POST" action="http://localhost:5001/forge-srl/us-central1/contactUs">
+                    <form method="POST" action="${contactFormUrl}">
+                        <div class="spinner"><div class="spin"></div></div>
                         <label for="contact-us_name">Il tuo nome</label>
                         <input type="text" id="contact-us_name" name="name" required>
                         <label for="contact-us_email">La tua email</label>
@@ -258,7 +262,34 @@ class Home {
                         <label for="contact-us_message">Messaggio</label>
                         <textarea id="contact-us_message" name="message" required></textarea>
                         <button type="submit">Invia</button>
-                    </form>-->
+                    </form>
+                    <script>
+                        const form = document.getElementById('contact-us').getElementsByTagName('form')[0]
+                        form.addEventListener('submit', (event) => {
+                            event.preventDefault()
+                            
+                            const request = new XMLHttpRequest()
+                            request.open('POST', form.action, true)
+                            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+                            const fail = () => {
+                                form.classList.remove('sending')
+                                alert('L\\'invio della email è fallito')
+                            }
+                            const success = () => {
+                                form.classList.remove('sending')
+                            }
+                            request.onload = function() {
+                                if (this.status >= 200 && this.status < 400) {
+                                    success()
+                                } else {
+                                    fail()
+                                }
+                            }
+                            request.onerror = function() { fail() }
+                            form.classList.add('sending')
+                            request.send(new FormData(form))
+                        })
+                    </script>
                 </div>
             </div>
         </main>`
