@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '/serverless'
 
   workflow_dispatch:
 
@@ -12,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - name: Cache NPM packages
         uses: actions/cache@v2
         with:

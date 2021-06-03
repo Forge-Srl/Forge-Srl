@@ -247,16 +247,16 @@ class Home {
                             <p>Via Cigalini 5/D 22100 Como, Italy</p>
                         </section>
                     </section>
-                    <!-- TODO: find better way to handle contact form -->
-                    <!--<form method="POST" action="mailto:${data.forge.contacts.info}">
+                    <!-- TODO: find better way to handle contact form 
+                    <form method="POST" action="http://localhost:5001/forge-srl/us-central1/contactUs">
                         <label for="contact-us_name">Il tuo nome</label>
-                        <input type="text" id="contact-us_name" required>
+                        <input type="text" id="contact-us_name" name="name" required>
                         <label for="contact-us_email">La tua email</label>
                         <input type="email" id="contact-us_email" name="from" required>
                         <label for="contact-us_subject">Oggetto</label>
                         <input type="text" id="contact-us_subject" name="subject" required>
                         <label for="contact-us_message">Messaggio</label>
-                        <textarea id="contact-us_message" name="body" required></textarea>
+                        <textarea id="contact-us_message" name="message" required></textarea>
                         <button type="submit">Invia</button>
                     </form>-->
                 </div>
