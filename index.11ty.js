@@ -276,6 +276,7 @@ class Home {
                                 alert('L\\'invio della email è fallito')
                             }
                             const success = () => {
+                                form.reset()
                                 form.classList.remove('sending')
                             }
                             request.onload = function() {
