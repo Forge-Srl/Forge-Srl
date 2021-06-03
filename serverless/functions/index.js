@@ -46,12 +46,27 @@ exports.contactUs = functions.https.onRequest((request, response) => {
             }
         })
 
+        const fail = (error) => {
+            console.log(error)
+            return response.status(500).send('An error occurred while sending email.')
+        }
+
         try {
             const name = request.body.name ? request.body.name.replace(/[^\p{L}\p{N}\s]/gu, '') : ''
-            const email = request.body.from
-            const sender = `"${name}" <${email}>`
+            const sender = name ? `"${name}" <${request.body.from}>` : request.body.from
+            if (!sender) {
+                return fail('Missing sender')
+            }
+
             const subject = request.body.subject
+            if (!subject) {
+                return fail('Missing subject')
+            }
+
             const message = request.body.message
+            if (!message) {
+                return fail('Missing message')
+            }
 
             transporter.sendMail({
                 from: registerConfig.username,
@@ -61,15 +76,13 @@ exports.contactUs = functions.https.onRequest((request, response) => {
                 text: message,
             }, (error, result) => {
                 if (error) {
-                    console.log(error)
-                    return response.status(500).send('An error occurred while sending email.')
+                    return fail(error)
                 }
 
                 return response.send(result.messageId)
             })
         } catch (e) {
-            console.log(e)
-            return response.status(500).send('An error occurred while sending email.')
+            return fail(e)
         }
     })
 })
