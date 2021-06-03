@@ -269,6 +269,7 @@ class Home {
                             event.preventDefault()
                             
                             const request = new XMLHttpRequest()
+                            const formData = new FormData(form)
                             const fail = () => {
                                 form.classList.remove('sending')
                                 alert('L\\'invio della email è fallito')
@@ -289,7 +290,8 @@ class Home {
                             request.onerror = function() { fail() }
                             
                             form.classList.add('sending')
-                            request.send(new FormData(form))
+                            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+                            request.send(new URLSearchParams(formData))
                         })
                     </script>
                 </div>
