@@ -5,7 +5,8 @@ class NotFound {
             pageTitle: 'Forge',
             pageDescription: '',
             // Force output page to be /404.html instead of /404/index.html!
-            permalink: '/404.html'
+            permalink: '/404.html',
+            eleventyExcludeFromCollections: true
         }
     }
 
