@@ -10,12 +10,15 @@ module.exports = function (data) {
                 <i class="fa fa-times fa-2x"></i>
             </label>
             <nav>
-                <a href="/">Home</a>
-                <a href="/#what-we-do">Servizi</a>
-                <a href="/#where-we-are">Dove siamo</a>
-                <a href="/#contact-us">Contattaci</a>
-                <a href="/lavora-con-noi">Lavora con noi</a>
+                <a onclick="resetMobileMenuButton()" href="/">Home</a>
+                <a onclick="resetMobileMenuButton()" href="/#what-we-do">Servizi</a>
+                <a onclick="resetMobileMenuButton()" href="/#where-we-are">Dove siamo</a>
+                <a onclick="resetMobileMenuButton()" href="/#contact-us">Contattaci</a>
+                <a onclick="resetMobileMenuButton()" href="/lavora-con-noi">Lavora con noi</a>
             </nav>
+            <script>function resetMobileMenuButton() {
+                document.getElementById('mobile-menu-toggle').checked = false
+            }</script>
         </div>
     </div>
 </header>`
