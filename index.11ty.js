@@ -31,12 +31,12 @@ class Home {
                     </div>
                 </section>
              </div>
-             <div class="page-block">
+             <div class="page-block" id="what-we-do">
                 <p class="claim">La digitalizzazione è un potente strumento per le aziende: permette di migliorare i 
                 <strong>processi</strong> e proiettarsi da subito nel <strong>futuro</strong>.<br>
                 Per un'azienda <strong>moderna</strong> è impensabile non avere oggi una strategia di 
                 <strong>digitalizzazione</strong> del proprio business.</p>
-                <section id="what-we-do">
+                <section>
                     <h3>Realizziamo il tuo software su misura, meglio di chiunque altro</h3>
                     <div class="flexible-grid col-3 col-w300">
                         <section class="info-box">
@@ -139,8 +139,8 @@ class Home {
                     </ul>
                 </section>
              </div>
-             <div class="page-block alt-back">
-                <section id="where-we-are">
+             <div class="page-block alt-back" id="where-we-are">
+                <section>
                     <h3>Valorizziamo il territorio</h3>
                     <p>Ci piace lavorare a stretto contatto con il territorio ed in collaborazione con le migliori 
                     università. Siamo al tempo stesso amanti del remote working e degli spazi condivisi che creano forti
@@ -234,8 +234,8 @@ class Home {
                     </div>
                 </section>
             </div>
-            <div class="page-block alt-back">
-                <div class="flexible-grid col-2 col-w300" id="contact-us">
+            <div class="page-block alt-back" id="contact-us">
+                <div class="flexible-grid col-2 col-w300">
                     <section>
                         <h3>Contattaci</h3>
                         <p>Se hai bisogno di maggiori informazioni o vuoi semplicemente metterti in contatto con noi non 

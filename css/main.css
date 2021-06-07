@@ -49,6 +49,14 @@ html {
         scroll-behavior: auto;
     }
 }
+:target {
+    scroll-margin-top: 73px;
+}
+@media screen and (max-width: 640px) {
+    :target {
+        scroll-margin-top: 65px;
+    }
+}
 
 body {
     margin: 0;
