@@ -27,12 +27,12 @@
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-KGHFS8F');</script>
+                })(window,document,'script','dataLayer','GTM-P8LVR4Q');</script>
                 <!-- End Google Tag Manager -->
             </head>
             <body>
                 <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGHFS8F"
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8LVR4Q"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                 <header>
@@ -46,12 +46,15 @@
                 <i class="fa fa-times fa-2x"></i>
             </label>
             <nav>
-                <a href="/">Home</a>
-                <a href="/#what-we-do">Servizi</a>
-                <a href="/#where-we-are">Dove siamo</a>
-                <a href="/#contact-us">Contattaci</a>
-                <a href="/lavora-con-noi">Lavora con noi</a>
+                <a onclick="resetMobileMenuButton()" href="/">Home</a>
+                <a onclick="resetMobileMenuButton()" href="/#what-we-do">Servizi</a>
+                <a onclick="resetMobileMenuButton()" href="/#where-we-are">Dove siamo</a>
+                <a onclick="resetMobileMenuButton()" href="/#contact-us">Contattaci</a>
+                <a onclick="resetMobileMenuButton()" href="/lavora-con-noi">Lavora con noi</a>
             </nav>
+            <script>function resetMobileMenuButton() {
+                document.getElementById('mobile-menu-toggle').checked = false
+            }</script>
         </div>
     </div>
 </header>

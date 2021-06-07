@@ -27,12 +27,12 @@
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-KGHFS8F');</script>
+                })(window,document,'script','dataLayer','GTM-P8LVR4Q');</script>
                 <!-- End Google Tag Manager -->
             </head>
             <body>
                 <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGHFS8F"
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8LVR4Q"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                 <header>
@@ -46,12 +46,15 @@
                 <i class="fa fa-times fa-2x"></i>
             </label>
             <nav>
-                <a href="/">Home</a>
-                <a href="/#what-we-do">Servizi</a>
-                <a href="/#where-we-are">Dove siamo</a>
-                <a href="/#contact-us">Contattaci</a>
-                <a href="/lavora-con-noi">Lavora con noi</a>
+                <a onclick="resetMobileMenuButton()" href="/">Home</a>
+                <a onclick="resetMobileMenuButton()" href="/#what-we-do">Servizi</a>
+                <a onclick="resetMobileMenuButton()" href="/#where-we-are">Dove siamo</a>
+                <a onclick="resetMobileMenuButton()" href="/#contact-us">Contattaci</a>
+                <a onclick="resetMobileMenuButton()" href="/lavora-con-noi">Lavora con noi</a>
             </nav>
+            <script>function resetMobileMenuButton() {
+                document.getElementById('mobile-menu-toggle').checked = false
+            }</script>
         </div>
     </div>
 </header>
@@ -68,12 +71,12 @@
                     </div>
                 </section>
              </div>
-             <div class="page-block">
+             <div class="page-block" id="what-we-do">
                 <p class="claim">La digitalizzazione è un potente strumento per le aziende: permette di migliorare i 
                 <strong>processi</strong> e proiettarsi da subito nel <strong>futuro</strong>.<br>
                 Per un'azienda <strong>moderna</strong> è impensabile non avere oggi una strategia di 
                 <strong>digitalizzazione</strong> del proprio business.</p>
-                <section id="what-we-do">
+                <section>
                     <h3>Realizziamo il tuo software su misura, meglio di chiunque altro</h3>
                     <div class="flexible-grid col-3 col-w300">
                         <section class="info-box">
@@ -176,8 +179,8 @@
                     </ul>
                 </section>
              </div>
-             <div class="page-block alt-back">
-                <section id="where-we-are">
+             <div class="page-block alt-back" id="where-we-are">
+                <section>
                     <h3>Valorizziamo il territorio</h3>
                     <p>Ci piace lavorare a stretto contatto con il territorio ed in collaborazione con le migliori 
                     università. Siamo al tempo stesso amanti del remote working e degli spazi condivisi che creano forti
@@ -271,8 +274,8 @@
                     </div>
                 </section>
             </div>
-            <div class="page-block alt-back">
-                <div class="flexible-grid col-2 col-w300" id="contact-us">
+            <div class="page-block alt-back" id="contact-us">
+                <div class="flexible-grid col-2 col-w300">
                     <section>
                         <h3>Contattaci</h3>
                         <p>Se hai bisogno di maggiori informazioni o vuoi semplicemente metterti in contatto con noi non 
