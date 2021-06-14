@@ -52,8 +52,8 @@ const verifyRecaptcha = (userToken, callback) => {
 
     fetch('https://www.google.com/recaptcha/api/siteverify', {
         method: 'post',
-        body: JSON.stringify({secret: recaptchaConfig.key, response: userToken}),
-        headers: { 'Content-Type': 'application/json' },
+        // Only this content type is accepted. See: https://stackoverflow.com/a/52416003
+        body: new URLSearchParams({secret: recaptchaConfig.key, response: userToken})
     })
         .then(res => {
             if (!res.ok) {
