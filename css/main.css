@@ -524,6 +524,17 @@ footer .legal-info {
     max-width: max(600px, 70%);
     margin: auto;
 }
+.slider-glider .glider {
+    touch-action: none;
+    /* Fix to hide scrollbar also on Firefox */
+    scrollbar-width: none;
+}
+.slider-glider .glider .glider-track {
+    scroll-snap-type: x mandatory;
+}
+.slider-glider .glider .glider-track > * {
+    scroll-snap-align: center;
+}
 .slider-glider .glider + .dots {
     margin: var(--size-m) 0;
 }
