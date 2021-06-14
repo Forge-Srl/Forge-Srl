@@ -82,7 +82,8 @@ exports.contactUs = functions.https.onRequest((request, response) => {
             }
 
             if (!verification.success || verification.score < 0.5) {
-                return fail('Recaptcha detected a bot')
+                const errorMessage = `Recaptcha detected "${request.body.name}" <${request.body.from}> is a bot (success: ${verification.success}, score: ${verification.score})`
+                return fail(errorMessage)
             }
 
             try {
