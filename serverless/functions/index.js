@@ -59,9 +59,9 @@ const verifyRecaptcha = (userToken, callback) => {
             if (!res.ok) {
                 throw new Error(res.statusText)
             }
-            return res
+            return res.json()
         })
-        .then(res => callback(null, res.json()))
+        .then(res => callback(null, res))
         .catch(error => callback(error))
 }
 
