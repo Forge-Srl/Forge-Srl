@@ -15,6 +15,7 @@ class Home {
     }
 
     render(data) {
+        const recaptchaClientKey = '6Lc06DAbAAAAAO87U0h1atSDthKftgqo8p1bPOyl'
         const contactFormUrl = 'https://us-central1-forge-srl.cloudfunctions.net/contactUs'
         // For local test:
         // contactFormUrl = 'http://localhost:5001/forge-srl/us-central1/contactUs'
@@ -263,35 +264,50 @@ class Home {
                         <textarea id="contact-us_message" name="message" required></textarea>
                         <button type="submit">Invia</button>
                     </form>
+                    <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaClientKey}"></script>
                     <script>
                         const form = document.getElementById('contact-us').getElementsByTagName('form')[0]
+                        const checkRecaptcha = callback => {
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('${recaptchaClientKey}', {action: 'submit'})
+                                    .then(token => callback(null, token))
+                                    .catch(error => callback(error))
+                            })
+                        }
                         form.addEventListener('submit', (event) => {
                             event.preventDefault()
                             
-                            const request = new XMLHttpRequest()
-                            const formData = new FormData(form)
-                            const fail = () => {
-                                form.classList.remove('sending')
-                                alert('L\\'invio della email è fallito')
-                            }
-                            const success = () => {
-                                form.reset()
-                                form.classList.remove('sending')
-                            }
-                            
-                            request.open('POST', form.action, true)
-                            request.onload = function() {
-                                if (this.status >= 200 && this.status < 400) {
-                                    success()
-                                } else {
-                                    fail()
+                            checkRecaptcha((error, token) => {
+                                if (error) {
+                                    return
                                 }
-                            }
-                            request.onerror = function() { fail() }
+                                
+                                const request = new XMLHttpRequest()
+                                const formData = new FormData(form)
+                                formData.set('recaptcha', token)
+                                const fail = () => {
+                                    form.classList.remove('sending')
+                                    alert('L\\'invio della email è fallito')
+                                }
+                                const success = () => {
+                                    form.reset()
+                                    form.classList.remove('sending')
+                                }
                             
-                            form.classList.add('sending')
-                            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-                            request.send(new URLSearchParams(formData))
+                                request.open('POST', form.action, true)
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        success()
+                                    } else {
+                                        fail()
+                                    }
+                                }
+                                request.onerror = function() { fail() }
+                                
+                                form.classList.add('sending')
+                                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
+                                request.send(new URLSearchParams(formData))
+                            })
                         })
                     </script>
                 </div>
