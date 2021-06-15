@@ -525,7 +525,7 @@ footer .legal-info {
     margin: auto;
 }
 .slider-glider .glider {
-    touch-action: none;
+    touch-action: pan-y;
     /* Fix to hide scrollbar also on Firefox */
     scrollbar-width: none;
 }
