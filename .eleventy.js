@@ -12,8 +12,6 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('robots.txt')
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'css/fontawesome/all.css'})
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'css/webfonts'})
-        .addPassthroughCopy({'node_modules/glider-js/glider.min.css': 'css/glider.min.css'})
-        .addPassthroughCopy({'node_modules/glider-js/glider.min.js': 'js/glider.min.js'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {
