@@ -12,303 +12,284 @@ class Home {
     }
 
     render(data) {
-        const recaptchaClientKey = '6Lc06DAbAAAAAO87U0h1atSDthKftgqo8p1bPOyl'
-        const contactFormUrl = 'https://us-central1-forge-srl.cloudfunctions.net/contactUs'
-        // For local test:
-        // contactFormUrl = 'http://localhost:5001/forge-srl/us-central1/contactUs'
-
         return `<main>
-             <div class="page-block full-page" style="--background-image: url('/img/home_bg_1.jpg');">
-                <section class="overlay">
-                    <h1>Trasformiamo le idee di oggi, nei prodotti di domani</h1>
-                    <h2>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale 
-                    sempre più esigente</h2>
-                    <div>
-                        <a href="#contact-us">Contattaci</a>
-                        <a href="#what-we-do">Dimmi di più</a>
+            <section class="p-0 position-relative h-500 h-md-600 h-xl-900 bg-grad pattern-overlay-4 overflow-hidden">
+            <div class="container d-flex h-100">
+                <div class="row align-self-center w-100">
+                    <!-- banner Content -->
+                    <div class="col-md-6 mt-md-0 all-text-white position-relative">
+                        <h1 class="display-4 fw-normal">
+                            <span class="pt-0">Siamo una</span>
+                            <br>
+                            <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
+                        </h1>
+                            <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
+                                <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
+                                <a class="btn btn-primary mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
                     </div>
-                </section>
-             </div>
-             <div class="page-block" id="what-we-do">
-                <p class="claim">La digitalizzazione è un potente strumento per le aziende: permette di migliorare i 
-                <strong>processi</strong> e proiettarsi da subito nel <strong>futuro</strong>.<br>
-                Per un'azienda <strong>moderna</strong> è impensabile non avere oggi una strategia di 
-                <strong>digitalizzazione</strong> del proprio business.</p>
-                <section>
-                    <h3>Realizziamo il tuo software su misura, meglio di chiunque altro</h3>
-                    <div class="flexible-grid col-3 col-w300">
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-globe"></i>
-                            <h6>Web</h6>
-                            <p>Realizziamo siti web accessibili da <strong>qualsiasi dispositivo</strong>, curando 
-                            l'<strong>esperienza</strong> dell'utente, la <strong>visibilità sui motori di 
-                            ricerca</strong>, la raccolta e l'analisi dei <strong>dati di utilizzo</strong> nel pieno 
-                            rispetto del General Data Protection Regulation (GDPR). Siamo pronti ad implementare 
-                            applicazioni web in grado di sfruttare tutte le recenti tecnologie: <strong>single page 
-                            applications</strong>, <strong>progressive web apps</strong> (PWA), <strong>accelerated 
-                            mobile pages</strong> (AMP), <strong>chat bots</strong>, <strong>web push 
-                            notifications</strong>. Forniamo sempre ai nostri clienti una consulenza approfondita per 
-                            capire insieme quali tecnologie si adattano meglio ad ogni idea e business.</p>
-                        </section>
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-mobile-alt"></i>
-                            <h6>Mobile</h6>
-                            <p>Progettiamo e sviluppiamo app per le piattaforme mobile Android e iOS. Abbiamo creato e 
-                            rilasciato alla comunità open source una tecnologia unica che ci permette di creare app 
-                            perfettamente integrate nel loro ambiente, scritte in <strong>codice nativo altamente 
-                            ottimizzato</strong>, consentendoci allo stesso tempo di aggiornare tutta la <strong>logica 
-                            di business</strong> in modo <strong>indipendente dagli store ufficiali</strong> e di 
-                            <strong>riutilizzarla su altre piattaforme</strong> come ad esempio le applicazioni web. Le 
-                            app che creiamo si distinguono per la loro <strong>usabilità</strong> ed 
-                            <strong>efficienza</strong> combinata con una estrema versatilità nella 
-                            <strong>manutenzione</strong> e nell'<strong>introduzione di novità</strong>.</p>
-                        </section>
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-cloud"></i>
-                            <h6>Cloud</h6>
-                            <p>Oltre ad applicazioni web e mobile realizziamo servizi backend in grado di fornire 
-                            <strong>efficienza</strong> e <strong>scalabilità</strong>. Utilizziamo i principali 
-                            fornitori di servizi cloud come Amazon Web Services, Microsoft Azure, Google Cloud, IBM 
-                            Cloud e le principali tecnologie, come <strong>serverless computing</strong>, 
-                            <strong>architetture a microservizi</strong>, <strong>database realtime</strong> e 
-                            <strong>virtualizzazione</strong> a livello di sistema operativo (Docker) o di macchina 
-                            (VM).</p>
-                        </section>
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-hammer"></i>
-                            <h6>Software engineering</h6>
-                            <p>A differenza di molti sviluppatori di soluzioni software non abbiamo a cuore solo lo 
-                            sviluppo iniziale del software, siamo riusciti a creare una serie di strumenti e strategie 
-                            che ci consentono di mantenere il parco software dei nostri clienti e aggiungere novità 
-                            riducendo costi, tempi di sviluppo e <strong>garantendo sempre la qualità che ci 
-                            distingue</strong>. Valutiamo la possibilità di prendere in gestione applicazioni mobile, 
-                            web o backend già esistenti al fine di ammodernarle ed adeguarle progressivamente allo stato
-                            dell'arte nel mondo mobile.</p>
-                        </section>
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-university"></i>
-                            <h6>Innovazione e ricerca</h6>
-                            <p>Forge ha le sue radici nella ricerca scientifica e nell'innovazione, i suoi co-fondatori 
-                            hanno da subito applicato gli insegnamenti appresi durante il Ph.D. in intelligenza 
-                            artificiale a progetti digitali di successo. Studiamo e sviluppiamo progetti nelle 
-                            principali aree di innovazione: <strong>intelligenza e visione artificiale</strong>, 
-                            <strong>internet of things</strong> (IoT), <strong>edge computing</strong>, 
-                            <strong>blockchain</strong> e <strong>smart contracts</strong>. Collaboriamo da sempre con 
-                            le università del territorio, questo ci ha sempre permesso di avere una marcia in più. 
-                            Abbiamo costruito una solida rete di <strong>relazioni umane e professionali</strong> tra i 
-                            membri dei nostri team, professori universitari, ricercatori scientifici e studenti in modo 
-                            da essere sempre pronti ad affrontare il futuro usando sempre la migliore combinazione di 
-                            teoria e pratica.</p>
-                        </section>
-                        <section class="info-box">
-                            <i aria-hidden="true" class="fa fa-4x fa-code"></i>
-                            <h6>Open Source</h6>
-                            <p>Ogni persona sul pianeta (come nello spazio) gode costantemente, direttamente o 
-                            indirettamente, dei benefici del software open source. Noi <strong>crediamo profondamente 
-                            nell'open source</strong> e nella condivisione dei progressi tecnologici raggiunti, per 
-                            questo cerchiamo sempre di pubblicare e documentare il cuore dei nostri strumenti e librerie
-                            di sviluppo, permettendo a tutti di utilizzarli, migliorarli e contribuire a creare nuovi 
-                            standard di efficienza e affidabilità per il software. Stiamo creando in Forge un 
-                            <strong>polo di eccellenza per lo sviluppo del software</strong>, dove ogni sviluppatore 
-                            possa dare il massimo per il progetto su cui sta lavorando contribuendo al tempo stesso al 
-                            progresso tecnologico ed informatico.</p>
-                        </section>
+                    <!-- banner image -->
+                    <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
+                        <figure class="w-100 ie-height-750">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1290 1024" style="enable-background:new 0 0 1290 1024;" xml:space="preserve">
+                        <g id="XMLID_81_">
+                            <defs>
+                            <path id="XMLID_3_" d="M1290,0v1024c0,0-229.8-152.2-550-52.9C467.3,1055.7-22.5,927.6,47.8,540C120.4,139.6,17,0,17,0H1290z"/>
+                            </defs>
+                            <clipPath id="XMLID_83_">
+                            <use xlink:href="#XMLID_3_" style="overflow:visible;"/>
+                            </clipPath>
+                            <g style="clip-path:url(#XMLID_83_);">
+                                <!-- Set your 1290px X 1024px image below -->
+                                <image style="overflow:visible;" width="1290" height="1024" id="XMLID_82_" xlink:href="assets/images/forge-banner.jpg"  transform="matrix(0.9999 0 0 0.9999 8.063897e-002 6.401104e-002)">
+                                </image>
+                            </g>
+                        </g>
+                    </svg>
+                        </figure>
                     </div>
-                </section>
-                <section>
-                    <h3>Come lavoriamo</h3>
-                    <p>Non sappiamo mai con precisione che prodotto digitale vogliamo fino a quando non <strong>vediamo 
-                    degli utenti soddisfatti</strong> che lo utilizzano. È quindi altamente improbabile che una lista di
-                    specifiche possa descrivere con precisione e completezza il prodotto realmente desiderato.</p>
-                    <p>Per questo motivo i nostri team adottano da sempre <strong>metodologie agili</strong> e tecniche 
-                    consolidate di <strong>product management</strong> per sviluppare ogni tipo di progetto digitale.</p>
-                    <p>In Forge ci preoccupiamo da sempre di:</p>
-                    <ul>
-                        <li>capire con il cliente quando è <strong>davvero necessario</strong> iniziare a sviluppare del
-                            software e quando invece è meglio utilizzare altre soluzioni</li>
-                        <li>fare <strong>stime sui tempi</strong> e i <strong>costi</strong> di realizzazione con una 
-                            <strong>precisione</strong> che va ben oltre all'esperienza personale</li>
-                        <li>sottoporre al cliente <strong>versioni preliminari</strong> del prodotto, raccogliere 
-                            <strong>feedback</strong> e reiterare questo processo</li>
-                        <li>spendere tempo e risorse solo sulle <strong>caratteristiche di valore</strong> per il 
-                            cliente, evitando di implementare caratteristiche inutili e non richieste</li>
-                        <li>consegnare al cliente nel minore tempo possibile un prodotto che possa essere davvero 
-                            <strong>amato dagli utenti</strong></li>
-                    </ul>
-                </section>
-             </div>
-             <div class="page-block alt-back" id="where-we-are">
-                <section>
-                    <h3>Valorizziamo il territorio</h3>
-                    <p>Ci piace lavorare a stretto contatto con il territorio ed in collaborazione con le migliori 
-                    università. Siamo al tempo stesso amanti del remote working e degli spazi condivisi che creano forti
-                    sinergie e ritorni positivi. Crediamo fortemente che la chiave del cambiamento sia il confronto 
-                    nella diversità.</p>
-                </section>
-                <div class="map">
-                    <iframe title="Map" src="https://maps.google.com/maps?hl=it&q=Via%20Sempione,%2014,%2021100%20Varese%20VA+(Forge%20S.r.l.)&t=&z=15&ie=UTF8&iwloc=B&output=embed"></iframe>
                 </div>
             </div>
-            <div class="page-block">
-                <h3>Su di noi</h3>
-                <section>
-                    <h5>Quali sono i nostri principi e come cambia la vita di chi collabora con noi?</h5>
-                    <p>Da noi si lavora <strong>duro</strong>, ma ci si <strong>diverte</strong> nei giusti modi e tempi
-                    e vale per tutti.<br>
-                    Ruota tutto attorno alla meritocrazia e non esiste un <strong>organigramma</strong>, ci sono solo 
-                    <strong>ruoli</strong> e <strong>responsabilità</strong>.<br>
-                    L'orario di lavoro è <strong>flessibile</strong> e va incontro alle esigenze di ognuno.<br>
-                    Il rispetto degli altri e delle <strong>differenze</strong> e delle singolarità di ognuno è alla 
-                    base di ogni relazione.<br>
-                    Da noi il caffè non solo è <strong>gratuito</strong>, ma è anche <strong>buono</strong>!</p>
-                </section>
-                <section>
-                    <h5>Quali sono i nostri benefit e perché lavorare in una startup è molto più stimolante?</h5>
-                    <p>A seconda della sede abbiamo i seguenti <strong>benefit</strong>:</p>
-                    <ul>
-                        <li>spazi di <strong>co-working</strong> con altri talenti giovani e dinamici</li>
-                        <li>free water and <strong>coffee</strong></li>
-                        <li>free <strong>snacks</strong> and <strong>ice-cream</strong></li>
-                        <li>servizio di <strong>pranzo</strong> con ristoranti della zona convenzionati</li>
-                        <li>aree <strong>relax</strong></li>
-                        <li>ricarica per <strong>auto elettrica</strong></li>
-                        <li>rimborso spese di trasporto per <strong>mezzi pubblici</strong></li>
-                        <li>orario di <strong>lavoro flessibile</strong></li>
-                        <li>ore dedicate allo <strong>studio</strong></li>
-                        <li>partecipazione a <strong>corsi di formazione</strong> e <strong>conferenze</strong></li>
-                        <li>possibilità di <strong>remote working</strong></li>
-                        <li>e molto altro ancora...</li>
-                    </ul>
-                </section>
-            </div>
-            <div class="page-block">
-                <section>
-                    <h3>Le nostre motivazioni</h3>
-                    <div class="slider-glider">
-                        <div class="glider">
-                            <figure class="person-box">
-                                <img src="/img/angelo-nodari.jpg" alt="Angelo Nodari" height="128" width="128" loading="lazy">
-                                <cite>
-                                    <h5>Angelo Nodari</h5>
-                                    <h6>Co-founder e CEO</h6>
-                                </cite>
-                                <blockquote>
-                                    <p>Abbiamo creato Forge per dare spazio a chi, come noi, crede nel cambiamento e 
-                                    nella tecnologia per migliorare la vita di tutti giorni. Crediamo fortemente nel 
-                                    rispetto del prossimo e dell'ambiente. Ci piace parlare di etica e del valore che 
-                                    viene creato dal nostro lavoro.</p>
-                                </blockquote>
-                            </figure>
-                            <figure class="person-box">
-                                <img src="/img/marco-vanetti.jpg" alt="Marco Vanetti" height="128" width="128" loading="lazy">
-                                <cite>
-                                    <h5>Marco Vanetti</h5>
-                                    <h6>Co-founder e CTO</h6>
-                                </cite>
-                                <blockquote>
-                                    <p>Siamo fermamente convinti che l'intelligenza artificiale, come il software e 
-                                    l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, 
-                                    soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di 
-                                    fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri 
-                                    dipendenti e dei nostri clienti.</p>
-                                </blockquote>
-                            </figure>
-                            <figure class="person-box">
-                                <img src="/img/fabio-micheletti.jpg" alt="Fabio Lino Micheletti" height="128" width="128" loading="lazy">
-                                <cite>
-                                    <h5>Fabio Lino Micheletti</h5>
-                                    <h6>Co-founder e CIO</h6>
-                                </cite>
-                                <blockquote>
-                                    <p>Il lavoro che facciamo occupa la maggior parte della nostra vita, è importante 
-                                    quindi che rispecchi appieno quello in cui crediamo. Per questo abbiamo deciso di 
-                                    creare Forge, un'azienda che mira ad essere ai massimi livelli tecnologici ed al 
-                                    tempo stesso con solide basi umane, puntando ad essere un ambiente di lavoro 
-                                    stimolante e sereno.</p>
-                                </blockquote>
-                            </figure>
+            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9" id="waveCanvas"></canvas>
+        </section>
+        <!-- ======================= End Main banner -->
+    
+        <!-- ======================= About us  -->
+        <section id="chi-siamo">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                        <!-- left -->
+                        <div class="col-md-6">
+                            <div class="row mt-4 mt-md-0">
+                                <div class="col-5 offset-1 px-2 mb-3 align-self-end">
+                                    <img class="rounded aos" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" src="assets/images/chi-siamo1.jpg" alt="Esperti Forge">
+                                </div>
+                                <div class="col-6 px-2 mb-3">
+                                    <img class="rounded aos" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" src="assets/images/chi-siamo2.jpg" alt="Il team di Forge a Varese">
+                                </div>
+                                <div class="col-12 col-md-7 px-2 mb-3">
+                                    <div class="rounded aos bg-grad p-2 p-sm-3 p-lg-4 p-xl-5 all-text-white" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
+                                        <p class="blockquote">Ci piace parlare di etica e del valore che viene creato dal nostro lavoro.</p>
+                                    </div>
+                                </div>
+                                <div class="col-5 align-self-start ps-2 mb-3 d-none d-md-inline">
+                                    <img class="rounded aos" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500" src="assets/images/chi-siamo3.jpg" alt="Forge lavoro di squadra">
+                                </div>
+                            </div>
                         </div>
-                        <div role="tablist" class="dots"></div>
+                    <!-- right -->
+                    <div class="col-md-6 ps-lg-5">
+                        <h5 class="text-primary">Chi Siamo</h5>
+                        <h3 class="h1">Soluzioni digitali, approccio umano</h3>
+                        <p>Non siamo una classica agenzia di comunicazione né una web house, ma amiamo stare dove tecnologia, marketing e business si incontrano per trasformare le idee di oggi nei prodotti vincenti di domani.</p>
+                        <p>Aiutiamo le aziende nelle proprie decisioni strategiche attraverso una <b>consulenza armonica</b> e un approccio agile che premia fiducia, onestà e trasparenza.</p>
                     </div>
-                </section>
-            </div>
-            <div class="page-block alt-back" id="contact-us">
-                <div class="flexible-grid col-2 col-w300">
-                    <section>
-                        <h3>Contattaci</h3>
-                        <p>Se hai bisogno di maggiori informazioni o vuoi semplicemente metterti in contatto con noi non 
-                        esitare a compilare questo form.</p>
-                        <p>Siamo sempre disponibili per una consulenza realtiva al tuo problema e pronti a fornirti la 
-                        migliore soluzione possibile.</p>
-                        <section>
-                            <h4>Informazioni</h4>
-                            <p>Email: ${data.forge.contacts.info}</p>
-                        </section>
-                        <section>
-                            <h4>Indirizzo</h4>
-                            <p>Via Cigalini 5/D 22100 Como, Italy</p>
-                        </section>
-                    </section>
-                    <form method="POST" action="${contactFormUrl}">
-                        <div class="spinner"><div class="spin"></div></div>
-                        <label for="contact-us_name">Il tuo nome</label>
-                        <input type="text" id="contact-us_name" name="name" required>
-                        <label for="contact-us_email">La tua email</label>
-                        <input type="email" id="contact-us_email" name="from" required>
-                        <label for="contact-us_subject">Oggetto</label>
-                        <input type="text" id="contact-us_subject" name="subject" required>
-                        <label for="contact-us_message">Messaggio</label>
-                        <textarea id="contact-us_message" name="message" required></textarea>
-                        <button type="submit">Invia</button>
-                    </form>
-                    <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaClientKey}"></script>
-                    <script>
-                        const form = document.getElementById('contact-us').getElementsByTagName('form')[0]
-                        const checkRecaptcha = callback => {
-                            grecaptcha.ready(function() {
-                                grecaptcha.execute('${recaptchaClientKey}', {action: 'submit'})
-                                    .then(token => callback(null, token))
-                                    .catch(error => callback(error))
-                            })
-                        }
-                        form.addEventListener('submit', (event) => {
-                            event.preventDefault()
-                            
-                            checkRecaptcha((error, token) => {
-                                if (error) {
-                                    return
-                                }
-                                
-                                const request = new XMLHttpRequest()
-                                const formData = new FormData(form)
-                                formData.set('recaptcha', token)
-                                const fail = () => {
-                                    form.classList.remove('sending')
-                                    alert('L\\'invio della email è fallito')
-                                }
-                                const success = () => {
-                                    form.reset()
-                                    form.classList.remove('sending')
-                                }
-                            
-                                request.open('POST', form.action, true)
-                                request.onload = function() {
-                                    if (this.status >= 200 && this.status < 400) {
-                                        success()
-                                    } else {
-                                        fail()
-                                    }
-                                }
-                                request.onerror = function() { fail() }
-                                
-                                form.classList.add('sending')
-                                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-                                request.send(new URLSearchParams(formData))
-                            })
-                        })
-                    </script>
                 </div>
             </div>
+        </section>
+        <!-- ======================= End About us  -->
+    
+        <!-- ======================= Service -->
+        <section id="servizi" class="pb-3">
+            <div class="container">
+                <div class="row">
+                    <!-- column 1 -->
+                    <div class="col-md-4">
+                        <!-- title -->
+                        <h5 class="text-primary">Cosa Facciamo</h5>
+                        <h3 class="h1">Come possiamo aiutarti</h3>
+                        <!-- service item -->
+                        <div class="bg-light p-4 p-lg-5 ">
+                            <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
+                            <h5>Software Development</h5>
+                            <ul>
+                                <li>Web Development</li>
+                                <li>Back-End Development</li>
+                                <li>iOS Development</li>
+                                <li>Android Development</li>
+                                <li>AI e Machine Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- column 2 -->
+                    <div class="col-md-4 mt-5">
+                        <!-- service item -->
+                        <div class="bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-bullhorn"></i></span>
+                            <h5>Marketing</h5>
+                            <ul>
+                                <li>Strategia</li>
+                                <li>Branding Online</li>
+                                <li>SEO</li>
+                                <li>Paid Advertising</li>
+                                <li>Inbound Marketing</li>
+                                <li>Social Marketing</li>
+    
+                            </ul>
+                        </div>
+                        <!-- service item -->
+                        <div class="bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-project-diagram"></i></span>
+                            <h5>Service</h5>
+                            <ul>
+                                <li><i>Agile</i> Working</li>
+                                <li>Business Planning</li>
+                                <li>Business Modelling</li>
+                                <li>Digital Transformation</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!-- column 3 -->
+                    <div class="col-md-4">
+                        <!-- service item -->
+                        <div class="bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-university"></i></span>
+                            <h5>Formazione e recruiting</h5>
+                            <ul>
+                                <li>Supporto a progetti universitari</li>
+                                <li>Recruiting</li>
+                                <li>Formazione Tech</li>
+                                <li>Coaching</li>
+                            </ul>
+                        </div>
+                        <!-- service item -->
+                        <div class="bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
+                            <h5>Hai un progetto in mente?</h5>
+                                <a class="btn btn-outline-light mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                        </div>	
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================= End Service -->
+    
+        <!-- ======================= Process-advance -->
+        <section id="metodologia" class="process-advance bg-light">
+            <div class="title text-center">
+                <h2>Il successo dei nostri clienti è il nostro successo</h2>
+                <h4>Offriamo un approccio concreto, flessibile e soprattutto umano.</h4>
+            </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- process 1 -->
+                        <div class="col-sm-6 col-lg-3 text-center mb-4">
+                            <div class="process-border"><span class="process-number bg-primary border-end">01</span></div>
+                            <h5 class="my-3">Ascoltiamo e valutiamo</h5>
+                            <p>con onestà il progetto e decidiamo se possiamo fornire il nostro contributo nella realizzazione</p>
+                        </div>
+                        <!-- process 1 -->
+                        <div class="col-sm-6 col-lg-3 text-center mb-4">
+                            <div class="process-border"><span class="process-number bg-primary border-start border-end">02</span></div>
+                            <h5 class="my-3">Troviamo una soluzione</h5>
+                            <p>che sia il più possibile efficace e che dimostri con dei dati oggettivi un riscontro positivo</p>
+                        </div>
+                        <!-- process 1 -->
+                        <div class="col-sm-6 col-lg-3 text-center mb-4">
+                            <div class="process-border"><span class="process-number bg-primary border-start border-end">03</span></div>
+                            <h5 class="my-3">Usiamo il modello <i>Agile</i></h5>
+                            <p>e la metodologia Scrum per pianificare e gestire il progetto con la massima flessibilità ed efficienza</p>
+                        </div>
+                        <!-- process 1 -->
+                        <div class="col-sm-6 col-lg-3 text-center mb-4">
+                            <div class="process-border"><span class="process-number bg-primary border-start">04</span></div>
+                            <h5 class="my-3">Chiediamo feedback</h5>
+                            <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia e rilasciamo gradualmente i nostri prodotti.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- ======================= End Process-advance -->
+    
+        <!-- ======================= Why-us -->
+        <section id="lavora-con-noi" class="why-us p-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--why us left-->
+                    <div class="col-lg-6 d-none d-lg-block bg-light p-0" style="background: url('assets/images/forge-lavora-con-noi.jpg') no-repeat; background-size:cover;">
+                    </div>
+                    <!--why us right-->
+                    <div class="col-lg-6 col-md-12 bg-body px-4 py-5 p-lg-5 text-white">
+                        <div class="h-100">
+                            <div class="title text-start p-0">
+                                <h5 class="text-white">Come lavoriamo?</h5>
+                                <h3 class="text-white">Un team giovane in cui cresciamo personalmente e professionalmente</h3>
+                                <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
+                                <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
+                                <h5 class="text-white">Vuoi lavorare con noi?</h5>
+                            <a class="btn btn-outline-light mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Why-us =======================  -->
+    
+        <!-- ======================= Client -->
+        <section class="client">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-8 mx-auto">
+                        <h2>Le nostre tecnologie</h2>
+                        <h4>Le solide fondamenta alla base dei nostri lavori</h4>
+                    </div>
+                </div>
+                    <div class="row text-center justify-content-center">
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/algolia-logo.png" alt="Logo Algolia">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/aws-logo.png" alt="Logo AWS">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/googlecloud-logo.png" alt="Logo Google Cloud">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/bootstrap-logo.png" alt="Logo Bootstrap">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/googleads-logo.png" alt="Logo Google Ads">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/googleanalytics-logo.png" alt="Logo Google Analytics">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/hubspot-logo.png" alt="Logo Hubspot">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/wordpress-logo.png" alt="Logo Wordpress">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/mailchimp-logo.png" alt="Logo Mailchimp">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/facebook-logo.png" alt="Logo Facebook">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/instagram-logo.png" alt="Logo Instagram">
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            <img src="assets/images/technologies-logos/linkedin-logo.png" alt="Logo Linkedin">
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- ======================= End Client -->
+    
+        <!-- ======================= Action box -->
+        <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
+            <div class="container">
+                <div class="d-block all-text-white text-center">
+                    <div class="text-center">
+                        <h2 class="m-0">Ti aiutiamo a raggiungere i tuoi obiettivi</h2>
+                        <h4>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo? Siamo a tua disposizione!</h4>
+                    </div>
+                <a href="mailto:${data.forge.contacts.info}" class="btn btn-white me-3 text-center">Parliamone Insieme</a>
+                </div>
+            </div>
+        </section>
+        <!-- ======================= End Action box -->
         </main>`
     }
 }

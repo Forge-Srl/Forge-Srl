@@ -1,6 +1,5 @@
 const header = require('./components/header')
 const footer = require('./components/footer')
-const breadcrumbs = require('./components/breadcrumbs')
 
 module.exports = function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
@@ -68,7 +67,6 @@ module.exports = function(data) {
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                 ${header.call(this, data)}
-                ${breadcrumbs.call(this, data)}
                 ${data.content}
                 ${footer.call(this, data)}
             </body>
