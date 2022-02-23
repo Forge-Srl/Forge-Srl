@@ -12,8 +12,9 @@ class NotFound {
 
     render(data) {
         return `<main>
-            <section>
-                <h1><strong>Errore<br>404</strong></h1>
+            <section class="position-relative bg-grad pattern-overlay-4 overflow-hidden"></section>
+            <section class="container d-block m-4">
+                <h1>Errore 404</h1>
                 <h2>La pagina richiesta non è disponibile</h2>
             </section>
         </main>`
