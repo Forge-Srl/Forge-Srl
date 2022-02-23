@@ -98,7 +98,7 @@ class Home {
                         <h5 class="text-primary">Cosa Facciamo</h5>
                         <h3 class="h1">Come possiamo aiutarti</h3>
                         <!-- service item -->
-                        <div class="bg-light p-4 p-lg-5 ">
+                        <div class="rounded bg-light p-4 p-lg-5 ">
                             <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
                             <h5>Software Development</h5>
                             <ul>
@@ -114,7 +114,7 @@ class Home {
                     <!-- column 2 -->
                     <div class="col-md-4 mt-5">
                         <!-- service item -->
-                        <div class="bg-light p-4 p-lg-5 mb-5">
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
                             <span class="display-5 icon-primary"><i class="fas fa-bullhorn"></i></span>
                             <h5>Marketing</h5>
                             <ul>
@@ -128,7 +128,7 @@ class Home {
                             </ul>
                         </div>
                         <!-- service item -->
-                        <div class="bg-light p-4 p-lg-5 mb-5">
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
                             <span class="display-5 icon-primary"><i class="fas fa-project-diagram"></i></span>
                             <h5>Service</h5>
                             <ul>
@@ -143,7 +143,7 @@ class Home {
                     <!-- column 3 -->
                     <div class="col-md-4">
                         <!-- service item -->
-                        <div class="bg-light p-4 p-lg-5 mb-5">
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
                             <span class="display-5 icon-primary"><i class="fas fa-university"></i></span>
                             <h5>Formazione e recruiting</h5>
                             <ul>
@@ -154,7 +154,7 @@ class Home {
                             </ul>
                         </div>
                         <!-- service item -->
-                        <div class="bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
+                        <div class="rounded bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
                             <h5>Hai un progetto in mente?</h5>
                                 <a class="btn btn-outline-light mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
                         </div>	
