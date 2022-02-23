@@ -3,6 +3,8 @@ const footer = require('./components/footer')
 
 module.exports = function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
+    const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
+    const tagManagerId = 'GTM-P8LVR4Q'
 
     return `<!doctype html>
         <html lang="it-IT">
@@ -18,7 +20,7 @@ module.exports = function(data) {
                 <meta property="og:image" content="${data.forge.domain}/img/forge-logo.jpg">
                 <meta property="article:publisher" content="${data.forge.facebook}">
                 <meta name="description" content="${data.pageDescription}">
-                <meta name="facebook-domain-verification" content="fxmsfl9hkx07qo7xidpwh92dtws3c3">
+                <meta name="facebook-domain-verification" content="${facebookVerification}">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <title>${data.pageTitle}</title>
                 <link rel="canonical" href="${canonical}">
@@ -44,7 +46,7 @@ module.exports = function(data) {
                 <script defer src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
                 <!--Vendors-->
                 <script defer src="assets/vendor/aos/aos.js"></script>
-                <script defer src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+                <script defer src="assets/vendor/purecounterjs/purecounter_vanilla.js"></script>
                 <script defer src="assets/vendor/glightbox/js/glightbox.js"></script>
                 <script defer src="assets/vendor/ityped/index.js"></script>
                 <!--Template Functions-->
@@ -55,12 +57,12 @@ module.exports = function(data) {
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-P8LVR4Q');</script>
+                })(window,document,'script','dataLayer','${tagManagerId}');</script>
                 <!-- End Google Tag Manager -->
             </head>
             <body>
                 <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8LVR4Q"
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${tagManagerId}"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                 ${header.call(this, data)}

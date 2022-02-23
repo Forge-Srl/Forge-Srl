@@ -11,6 +11,10 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('robots.txt')
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'assets/vendor/font-awesome/css/all.min.css'})
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'assets/vendor/font-awesome/webfonts'})
+        .addPassthroughCopy({'node_modules/glightbox/dist': 'assets/vendor/glightbox'})
+        .addPassthroughCopy({'node_modules/aos/dist': 'assets/vendor/aos'})
+        .addPassthroughCopy({'node_modules/ityped/dist': 'assets/vendor/ityped'})
+        .addPassthroughCopy({'node_modules/@srexi/purecounterjs/dist': 'assets/vendor/purecounter'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {
