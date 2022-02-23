@@ -6,7 +6,7 @@ module.exports = function (data) {
 				<!-- Logo -->
 				<a class="navbar-brand" href="/">
 					<!-- Logo -->
-					<img class="navbar-brand-item" src="assets/images/forge-logo-white.png" alt="Logo Forge">
+					<img class="navbar-brand-item" src="/assets/images/forge-logo-white.png" alt="Logo Forge">
 				</a>
 				<!-- Menu opener button -->
 				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
