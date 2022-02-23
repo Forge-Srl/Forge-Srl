@@ -9,8 +9,8 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('js')
         .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy('robots.txt')
-        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'css/fontawesome/all.css'})
-        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'css/webfonts'})
+        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'assets/vendor/font-awesome/css/all.min.css'})
+        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'assets/vendor/font-awesome/webfonts'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {
