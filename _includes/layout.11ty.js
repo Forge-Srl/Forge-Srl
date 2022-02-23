@@ -43,10 +43,10 @@ module.exports = function(data) {
                 <link rel="stylesheet" type="text/css" href="assets/css/color.css">
                 
                 <!-- Bootstrap JS -->
-                <script defer src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <!--Vendors-->
                 <script defer src="assets/vendor/aos/aos.js"></script>
-                <script defer src="assets/vendor/purecounterjs/purecounter_vanilla.js"></script>
+                <script defer src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
                 <script defer src="assets/vendor/glightbox/js/glightbox.js"></script>
                 <script defer src="assets/vendor/ityped/index.js"></script>
                 <!--Template Functions-->

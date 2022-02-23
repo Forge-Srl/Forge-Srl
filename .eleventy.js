@@ -6,9 +6,9 @@ const Forge = require("./_data/forge")
 module.exports = (eleventyConfig) => {
     eleventyConfig
         .addPassthroughCopy('assets')
-        .addPassthroughCopy('js')
         .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy('robots.txt')
+        .addPassthroughCopy({'node_modules/bootstrap/dist': 'assets/vendor/bootstrap'})
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'assets/vendor/font-awesome/css/all.min.css'})
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'assets/vendor/font-awesome/webfonts'})
         .addPassthroughCopy({'node_modules/glightbox/dist': 'assets/vendor/glightbox'})
