@@ -25,7 +25,7 @@ class Home {
                         </h1>
                             <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
                                 <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
-                                <a class="btn btn-primary mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                                <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="mailto:${data.forge.contacts.info}">Contattaci</a>
                     </div>
                     <!-- banner image -->
                     <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
