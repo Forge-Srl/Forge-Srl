@@ -3,10 +3,7 @@ class Home {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge',
-            pageDescription: 'Trasformiamo le idee di oggi, nei prodotti di domani Studiamo a fondo le idee dei ' +
-                'clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente Contattaci ' +
-                'Dimmi di più La digitalizzazione è un potente strumento per le aziende: permette di migliorare i ' +
-                'processi e proiettarsi da subito nel futuro. Per un\'azienda moderna è impensabile non [...]',
+            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
             eleventyNavigation: {
                 key: 'home',
                 title: 'Home'

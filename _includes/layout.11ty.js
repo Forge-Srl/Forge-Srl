@@ -20,16 +20,40 @@ module.exports = function(data) {
                 <meta property="article:publisher" content="${data.forge.facebook}">
                 <meta name="description" content="${data.pageDescription}">
                 <meta name="facebook-domain-verification" content="fxmsfl9hkx07qo7xidpwh92dtws3c3">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <title>${data.pageTitle}</title>
                 <link rel="canonical" href="${canonical}" />
-                <link rel="icon" href="/favicon.ico">
-                <link rel="preload" as="font" href="/css/webfonts/fa-solid-900.woff2">
-                <link rel="preload" as="font" href="/css/webfonts/fa-brands-400.woff2">
-                <link rel="stylesheet" href="/css/fontawesome/all.css" media="all">
-                <link rel="stylesheet" href="/css/glider.min.css" media="screen">
-                <link rel="stylesheet" href="/css/main.css" media="screen">
-                <script defer type="text/javascript" src="/js/glider.min.js"></script>
+                <link rel="shortcut icon" href="/favicon.ico">
+                
+                <!-- Google Font -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+                <!-- Plugins CSS -->
+                <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+                <link rel="stylesheet" type="text/css" href="assets/vendor/themify-icons/css/themify-icons.css" />
+                <link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css" />
+                <link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+                <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+                <!-- Theme CSS -->
+                <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+                <!-- Theme Color CSS -->
+                <link rel="stylesheet" type="text/css" href="assets/css/color.css" />
+                
+                <!-- Bootstrap JS -->
+                <script defer src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <!--Vendors-->
+                <script defer src="assets/vendor/aos/aos.js"></script>
+                <script defer src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+                <script defer src="assets/vendor/glightbox/js/glightbox.js"></script>
+                <script defer src="assets/vendor/ityped/index.js"></script>
+                <!--Template Functions-->
+                <script defer src="assets/js/functions.js"></script>
+                
+                <!-- TODO: remove following script? -->
                 <script defer type="text/javascript" src="/js/main.js"></script>
+                
                 <!-- Google Tag Manager -->
                 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

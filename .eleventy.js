@@ -5,9 +5,8 @@ const Forge = require("./_data/forge")
 
 module.exports = (eleventyConfig) => {
     eleventyConfig
-        .addPassthroughCopy('css')
+        .addPassthroughCopy('assets')
         .addPassthroughCopy('js')
-        .addPassthroughCopy('img')
         .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy('robots.txt')
         .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'css/fontawesome/all.css'})
@@ -20,9 +19,8 @@ module.exports = (eleventyConfig) => {
         },
     })
 
-    eleventyConfig.addWatchTarget('./css')
+    eleventyConfig.addWatchTarget('./assets')
     eleventyConfig.addWatchTarget('./js')
-    eleventyConfig.addWatchTarget('./img')
 
     eleventyConfig.on('beforeWatch', () => {
         // Delete node.js require cache to enable changed components js reload
