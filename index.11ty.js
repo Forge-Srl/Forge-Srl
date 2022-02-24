@@ -6,8 +6,8 @@ class Home {
             pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
             eleventyNavigation: {
                 key: 'home',
-                title: 'Home'
-            }
+                title: 'Home',
+            },
         }
     }
 
@@ -15,7 +15,7 @@ class Home {
         return `<main>
             <section class="p-0 position-relative h-500 h-md-600 h-xl-900 bg-grad pattern-overlay-4 overflow-hidden">
             <div class="container d-flex h-100">
-                <div class="row align-self-center w-100">
+                <div class="row align-self-center w-100 z-index-9">
                     <!-- banner Content -->
                     <div class="col-md-6 mt-md-0 all-text-white position-relative">
                         <h1 class="display-4 fw-normal">
@@ -23,9 +23,9 @@ class Home {
                             <br>
                             <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
                         </h1>
-                            <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
-                                <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
-                                <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                        <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
+                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
+                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="/contattaci">Contattaci</a>
                     </div>
                     <!-- banner image -->
                     <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
@@ -49,7 +49,7 @@ class Home {
                     </div>
                 </div>
             </div>
-            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9" id="waveCanvas"></canvas>
+            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9 z-index-0" id="waveCanvas"></canvas>
         </section>
         <!-- ======================= End Main banner -->
     
@@ -156,7 +156,7 @@ class Home {
                         <!-- service item -->
                         <div class="rounded bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
                             <h5>Hai un progetto in mente?</h5>
-                                <a class="btn btn-outline-light mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                                <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci">Contattaci</a>
                         </div>	
                     </div>
                 </div>
@@ -217,7 +217,7 @@ class Home {
                                 <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
                                 <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
                                 <h5 class="text-white">Vuoi lavorare con noi?</h5>
-                            <a class="btn btn-outline-light mb-0 rounded m-0" href="mailto:${data.forge.contacts.info}">Contattaci</a>
+                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci">Contattaci</a>
                             </div>
                         </div>
                     </div>

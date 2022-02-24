@@ -34,7 +34,7 @@ module.exports = function (data) {
 				<div class="navbar-nav">
 					<!-- extra item Btn-->
 					<div class="nav-item border-0 d-none d-lg-inline-block align-self-center">
-						<a href="mailto:${data.forge.contacts.info}" class="btn btn-sm btn-primary text-white mb-0">Contattaci!</a>
+						<a href="/contattaci" class="btn btn-sm btn-primary text-white mb-0">Contattaci!</a>
 					</div>
 				</div>
 				<!-- Header Extras End-->

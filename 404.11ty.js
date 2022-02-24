@@ -1,3 +1,5 @@
+const pageTitle = require('./_includes/components/pageTitle')
+
 class NotFound {
     data() {
         return {
@@ -6,17 +8,30 @@ class NotFound {
             pageDescription: '',
             // Force output page to be /404.html instead of /404/index.html!
             permalink: '/404.html',
-            eleventyExcludeFromCollections: true
+            eleventyExcludeFromCollections: true,
+            eleventyNavigation: {
+                title: 'Errore 404'
+            }
         }
     }
 
     render(data) {
         return `<main>
-            <section class="position-relative bg-grad pattern-overlay-4 overflow-hidden"></section>
-            <section class="container d-block m-4">
-                <h1>Errore 404</h1>
-                <h2>La pagina richiesta non è disponibile</h2>
+            ${pageTitle.call(this, data)}
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 mx-auto">
+                            <div class="title text-center">
+                                <h2>La pagina richiesta non è disponibile</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+            <div class="text-center">
+                <img src="/assets/images/john-travolta.gif" class="w-25" alt="Non c'è nulla qui">
+            </div>
         </main>`
     }
 }
