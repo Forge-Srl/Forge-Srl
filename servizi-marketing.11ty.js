@@ -71,21 +71,19 @@ class Home {
                 </div>
 	        </section>
 
-            <section class="py-4"> 
+            <!-- ======================= Action box -->
+            <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
                 <div class="container">
-                    <div class="d-block d-md-flex bg-grad p-4 p-sm-5 rounded">
-                        <div class="align-self-center text-center text-md-start all-text-white">
-                            <h3>Ti abbiamo incuriosito?</h3>
-                            <p class="m-0">Scarica la nostra presentazione marketing per vedere il dettaglio dei servizi che offriamo.</p>
+                    <div class="d-block all-text-white text-center">
+                        <div class="text-center">
+                            <h2 class="m-0">Ti abbiamo incuriosito?</h2>
+                            <h4>Scarica la nostra presentazione marketing per vedere il dettaglio dei servizi che offriamo.</h4>
                         </div>
-                        <div class="mt-3 mt-md-0 text-center text-md-end ms-md-auto align-self-center">
-                            <a href="/assets/documents/FORGE-Servizi-Marketing.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica la presentazione</a>
-                        </div>
-                            
-                        </div>
+                        <a href="assets/documents/FORGE-Servizi-Marketing.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica la presentazione</a>
                     </div>
                 </div>
-	        </section>
+            </section>
+            <!-- ======================= End Action box -->
 
             <!-- ======================= Il nostro approccio -->
             <section class="approccio">
