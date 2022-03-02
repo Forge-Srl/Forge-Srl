@@ -5,7 +5,7 @@ class Home {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge - Servizi Marketing',
-            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
+            pageDescription: 'Scopri i servizi marketing di Forge: Paid Adv, Branding Online, SEO, Social Media, Inbound e Strategy.',
             eleventyNavigation: {
                 key: 'marketing',
                 title: 'Servizi Marketing'
