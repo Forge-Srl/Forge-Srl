@@ -25,6 +25,9 @@ module.exports = function (data) {
 							<a class="nav-link" href="/#metodologia">Metodologia</a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="/servizi-marketing">Marketing</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link px-lg-3" href="/#lavora-con-noi">Lavora con Noi</a>
 						</li>
 					</ul>
