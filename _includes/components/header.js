@@ -41,5 +41,11 @@ module.exports = function (data) {
 			</div>
 		</nav>
 		<!-- Logo Nav End -->
+		<script type="text/javascript">
+		var _iub = _iub || [];
+		_iub.csConfiguration = {"ccpaAcknowledgeOnDisplay":true,"ccpaApplies":true,"consentOnContinuedBrowsing":false,"enableCcpa":true,"invalidateConsentWithoutLog":true,"perPurposeConsent":true,"siteId":1561813,"whitelabel":false,"cookiePolicyId":43091528,"lang":"it", "banner":{ "acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#226CE0","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"logo":null,"position":"float-top-center","rejectButtonCaptionColor":"#FFFFFF","rejectButtonColor":"#226CE0","rejectButtonDisplay":true,"textColor":"#000000" }};
+		</script>
+		<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
+		<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 	</header>`
 }

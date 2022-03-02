@@ -10,7 +10,7 @@ class NotFound {
             permalink: '/404.html',
             eleventyExcludeFromCollections: true,
             eleventyNavigation: {
-                title: 'Errore 404'
+                title: 'Pagina non trovata!'
             }
         }
     }
@@ -18,20 +18,18 @@ class NotFound {
     render(data) {
         return `<main>
             ${pageTitle.call(this, data)}
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-8 mx-auto">
-                            <div class="title text-center">
-                                <h2>La pagina richiesta non è disponibile</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="text-center">
-                <img src="/assets/images/john-travolta.gif" class="w-25" alt="Non c'è nulla qui">
-            </div>
+            <section class="error-page">
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-md-8 mx-auto text-center">
+					    <h2 class="display-1 fw-bold text-grad">404</h2>
+					    <h3 class="mb-4">Pagina non trovata</h3>
+					    <p>Ooops! La pagina che stai cercando non esiste.</p>
+					    <a class="btn btn-sm btn-primary" href="https://forge.srl">Riparti dalla home!</a>
+				    </div>
+			    </div>
+		    </div>
+	    </section>
         </main>`
     }
 }
