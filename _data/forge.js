@@ -9,4 +9,5 @@ module.exports = {
   facebook: 'https://www.facebook.com/forgesrl',
   linkedin: 'https://www.linkedin.com/company/forge-company',
   github: 'https://github.com/Forge-Srl',
+  privacy: 'https://www.iubenda.com/privacy-policy/43091528',
 }
