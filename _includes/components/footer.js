@@ -17,7 +17,7 @@ module.exports = function (data) {
 					<!-- Footer widget 2 -->
 					<div class="col-md-3 col-sm-6">
 						<p class="mb-2"><b>DOVE TROVARCI</b></p>
-						<div class="widget address" style="background-image: url('assets/images/world-map.png'); background-position: 50% 20px; background-repeat: no-repeat; background-size: contain;">
+						<div class="widget address" style="background-image: url('../assets/images/world-map.png'); background-position: 50% 20px; background-repeat: no-repeat; background-size: contain;">
 							<ul class="list-group list-group-borderless">
 								<li class="d-flex mb-3"><i class="me-3 display-8 ti-map-alt"></i>${data.forge.contacts.address}</li>
 								<li class="d-flex mb-3"><i class="me-3 display-8 ti-headphone-alt"></i>${data.forge.contacts.phone}</li>

@@ -99,7 +99,6 @@ class Home {
                             <p>Amiamo ciò che facciamo e ci divertiamo nel farlo. Ci impegniamo a generare un <strong>impatto positivo</strong> sul territorio e collaboriamo il più possibile con la realtà che ci circonda.</p>
                             <p>Investiamo costantemente sulla <strong>formazione</strong> di ogni nostra risorsa, collaboriamo con le università del territorio e siamo sempre alla ricerca di <strong>nuovi talenti da forgiare</strong>.</p>
                             <ul class="list-group list-group-borderless list-group-icon-primary-bg mb-4">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Passione per la tecnologia</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Lean Thinking</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Condivisione come driver di conoscenza</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Assidua ricerca e sviluppo</li>
