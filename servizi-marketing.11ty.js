@@ -91,7 +91,7 @@ class Home {
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/forge-marketing2.jpg" alt="">
+                            <img class="rounded" src="/assets/images/forge-marketing2.jpg" alt="Forge approccio marketing">
                         </div>
                         <!-- right -->
                         <div class="col-md-6 mt-4 mt-md-0">
@@ -127,7 +127,7 @@ class Home {
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/forge-marketing.jpg" alt="">
+                            <img class="rounded" src="/assets/images/forge-marketing.jpg" alt="Forge team marketing">
                         </div>
                     </div>
                 </div>
