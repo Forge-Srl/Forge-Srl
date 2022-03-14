@@ -24,8 +24,8 @@ class Home {
                             <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
                         </h1>
                         <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
-                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
-                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="/contattaci">Contattaci</a>
+                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi/">Scopri i nostri servizi</a>
+                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="/contattaci/">Contattaci</a>
                     </div>
                     <!-- banner image -->
                     <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
@@ -126,7 +126,7 @@ class Home {
                                 <li>Inbound Marketing</li>
                                 <li>Social Marketing</li>
                             </ul>
-                            <a class="mt-3" href="/servizi-marketing">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <a class="mt-3" href="/servizi-marketing/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                         </div>
                         <!-- service item -->
                         <div class="rounded bg-light p-4 p-lg-5 mb-5">
@@ -157,7 +157,7 @@ class Home {
                         <!-- service item -->
                         <div class="rounded bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
                             <h5>Hai un progetto in mente?</h5>
-                                <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci">Contattaci</a>
+                                <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci/">Contattaci</a>
                         </div>	
                     </div>
                 </div>
@@ -259,7 +259,7 @@ class Home {
                                 <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
                                 <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
                                 <h5 class="text-white">Vuoi lavorare con noi?</h5>
-                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci">Contattaci</a>
+                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci/">Contattaci</a>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@ class Home {
                         <h2 class="m-0">Ti aiutiamo a raggiungere i tuoi obiettivi</h2>
                         <h4>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo? Siamo a tua disposizione!</h4>
                     </div>
-                <a href="mailto:${data.forge.contacts.info}" class="btn btn-white me-3 text-center">Parliamone Insieme</a>
+                <a href="/contattaci/" class="btn btn-white me-3 text-center">Parliamone Insieme</a>
                 </div>
             </div>
         </section>
