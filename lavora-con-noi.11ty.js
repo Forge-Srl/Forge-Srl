@@ -31,7 +31,7 @@ class Home {
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/forge-marketing.jpg" alt="Forge team marketing">
+                            <img class="rounded" src="/assets/images/forge-lavora-con-noi1.jpg" alt="Forge team marketing">
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ class Home {
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/forge-marketing2.jpg" alt="Forge approccio marketing">
+                            <img class="rounded" src="/assets/images/forge-lavora-con-noi2.jpg" alt="Forge approccio marketing">
                         </div>
                         <!-- right -->
                         <div class="col-md-6 mt-4 mt-md-0">
@@ -65,10 +65,10 @@ class Home {
                             <p>Da noi si lavora duro, ma ci si diverte nei giusti tempi e modi. Non esiste un organigramma: tutto ruota attorno alla meritocrazia, ci sono solo ruoli e responsabilità.</p>
                             <p>Ci piace lavorare in spazi di co-working con un orario di lavoro flessibile per andare incontro alle esigenze di ognuno, nel rispetto delle differenze degli altri.</p>
                             <ul class="list-group list-group-borderless">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Metodologia Agile: adottiamo la metodologia Agile per organizzare le attività in brevi sprint di task ben definiti così da dare il massimo.</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Approccio data-driven: pianifichiamo le attività sulla base di previsioni accurate, facciamo test e ci affidiamo ai dati per prendere decisioni.</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Alta competenza tecnologica: siamo al passo con le ultime tecnologie e siamo sempre aggiornati.</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Ore di studio: ogni giorno dedichiamo del tempo alla nostra formazione professionale e a progetti personali, che riteniamo tanto importanti quanto il lavoro stesso.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Metodologia Agile</strong>: adottiamo la metodologia Agile per organizzare le attività in brevi sprint di task ben definiti così da dare il massimo.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Approccio data-driven</strong>: pianifichiamo le attività sulla base di previsioni accurate, facciamo test e ci affidiamo ai dati per prendere decisioni.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Alta competenza tecnologica</strong>: siamo al passo con le ultime tecnologie e siamo sempre aggiornati.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Ore di studio</strong>: ogni giorno dedichiamo del tempo alla nostra formazione professionale e a progetti personali, che riteniamo tanto importanti quanto il lavoro stesso.</li>
                             </ul>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ class Home {
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
                             <h2 class="m-0">Vuoi essere dei nostri?</h2>
-                            <h4>Mandaci una e-mail allegando il tuo curriculum!</h4>
+                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere te.</h4>
                         </div>
                     <a href="mailto:career@forge.srl" class="btn btn-white me-3 text-center">Candidati ora</a>
                     </div>
