@@ -16,8 +16,8 @@ module.exports = function(data) {
                 <meta property="og:title" content="${data.pageTitle}">
                 <meta property="og:description" content="${data.pageDescription}">
                 <meta property="og:url" content="${canonical}">
-                <meta property="og:site_name" content="Forge S.r.l">
-                <meta property="og:image" content="${data.forge.domain}/img/forge-logo.jpg">
+                <meta property="og:site_name" content="Forge Srl">
+                <meta property="og:image" content="${data.forge.domain}/assets/images/forge-banner.jpg">
                 <meta property="article:publisher" content="${data.forge.facebook}">
                 <meta name="description" content="${data.pageDescription}">
                 <meta name="facebook-domain-verification" content="${facebookVerification}">

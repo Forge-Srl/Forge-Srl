@@ -108,6 +108,7 @@ class Home {
                                 <li>Android Development</li>
                                 <li>AI e Machine Learning</li>
                             </ul>
+                            <a class="mt-3" href="/servizi-tech">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                         </div>
                     </div>
     
@@ -124,8 +125,8 @@ class Home {
                                 <li>Paid Advertising</li>
                                 <li>Inbound Marketing</li>
                                 <li>Social Marketing</li>
-    
                             </ul>
+                            <a class="mt-3" href="/servizi-marketing">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                         </div>
                         <!-- service item -->
                         <div class="rounded bg-light p-4 p-lg-5 mb-5">
@@ -200,6 +201,47 @@ class Home {
                 </div>
         </section>
         <!-- ======================= End Process-advance -->
+
+        <!-- ======================= Values -->
+	<section id="valori">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center mb-4">
+					<h2>I nostri valori</h2>
+					<h4>La nostra filosofia si basa su 4 valori che guidano le scelte e le decisioni che prendiamo quotidianamente</h4>
+				</div>
+				<div class="col-md-3">
+					<div class="feature-box f-style-5 h-100 icon-grad">
+						<div class="feature-box-icon"><i class="fas fa-light fa-key"></i></i></div>
+						<h3 class="feature-box-title">Fiducia</h3>
+						<p class="feature-box-desc">Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido. </p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="feature-box f-style-5 h-100 icon-grad">
+						<div class="feature-box-icon"><i class="fas fa-light fa-handshake"></i></i></div>
+						<h3 class="feature-box-title">Onestà</h3>
+						<p class="feature-box-desc">Vogliamo che le cose siano fatte bene. I nostri consigli saranno sempre sinceri, senza timore di metterci in discussione.</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="feature-box f-style-5 h-100 icon-grad">
+						<div class="feature-box-icon"><i class="fas fa-light fa-rocket"></i></i></div>
+						<h3 class="feature-box-title">Innovazione</h3>
+						<p class="feature-box-desc">Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide. </p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="feature-box f-style-5 h-100 icon-grad">
+						<div class="feature-box-icon"><i class="fas fa-light fa-message"></i></i></div>
+						<h3 class="feature-box-title">Trasparenza</h3>
+						<p class="feature-box-desc">Ci confrontiamo costantemente con un rapporto informale ma altamente professionale e specializzato. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ======================= End Values -->
     
         <!-- ======================= Why-us -->
         <section id="lavora-con-noi" class="why-us p-0">
