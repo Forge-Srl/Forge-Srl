@@ -19,19 +19,17 @@ module.exports = function (data) {
 							<a class="nav-link" href="/#chi-siamo">Chi Siamo</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/#servizi">Servizi</a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" href="/#metodologia">Metodologia</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/servizi-tech">Development</a>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="/#servizi" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servizi</a>
+							<ul class="dropdown-menu" aria-labelledby="pagesMenu">
+								<li> <a class="dropdown-item" href="/servizi-tech">Development</a></li>
+								<li> <a class="dropdown-item" href="/servizi-marketing">Marketing</a> </li>
+							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/servizi-marketing">Marketing</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link px-lg-3" href="/#lavora-con-noi">Lavora con Noi</a>
+							<a class="nav-link px-lg-3" href="/lavora-con-noi">Lavora con Noi</a>
 						</li>
 					</ul>
 				</div>
