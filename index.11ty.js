@@ -108,7 +108,9 @@ class Home {
                                 <li>Android Development</li>
                                 <li>AI e Machine Learning</li>
                             </ul>
-                            <a class="mt-3" href="/servizi-tech/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <div class="mt-3">
+                            <a href="/servizi-tech/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            </div>
                         </div>
                     </div>
     
@@ -126,7 +128,9 @@ class Home {
                                 <li>Inbound Marketing</li>
                                 <li>Social Marketing</li>
                             </ul>
-                            <a class="mt-3" href="/servizi-marketing/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <div class="mt-3">
+                            <a href="/servizi-marketing/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            </div>
                         </div>
                         <!-- service item -->
                         <div class="rounded bg-light p-4 p-lg-5 mb-5">
