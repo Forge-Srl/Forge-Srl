@@ -259,7 +259,7 @@ class Home {
                                 <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
                                 <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
                                 <h5 class="text-white">Vuoi lavorare con noi?</h5>
-                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci/">Contattaci</a>
+                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/lavora-con-noi/">Scopri cosa offriamo</a>
                             </div>
                         </div>
                     </div>
