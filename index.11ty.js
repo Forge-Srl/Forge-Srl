@@ -108,7 +108,7 @@ class Home {
                                 <li>Android Development</li>
                                 <li>AI e Machine Learning</li>
                             </ul>
-                            <a class="mt-3" href="/servizi-tech">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <a class="mt-3" href="/servizi-tech/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                         </div>
                     </div>
     

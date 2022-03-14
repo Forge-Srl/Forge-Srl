@@ -30,7 +30,7 @@ module.exports = function (data) {
 						<div class="widget">
 							<p class="mb-2"><b>AZIENDA</b></p>
 							<ul class="nav flex-column primary-hover">
-								<li class="nav-item"><a class="nav-link" href="/contattaci">Contattaci</a></li>
+								<li class="nav-item"><a class="nav-link" href="/contattaci/">Contattaci</a></li>
 								<li class="nav-item"><a class="nav-link" href="${data.forge.privacy}">Privacy Policy</a></li>
 							</ul>
 						</div>
