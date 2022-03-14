@@ -5,7 +5,7 @@ class Home {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge - Contattaci',
-            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
+            pageDescription: 'Contattaci se sei interessato, vuoi informazioni o vuoi farci sapere la tua opinione. Un nostro incaricato ti risponderà al più presto!',
             eleventyNavigation: {
                 key: 'contattaci',
                 title: 'Contattaci'
