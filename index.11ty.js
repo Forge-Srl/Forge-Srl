@@ -24,7 +24,7 @@ class Home {
                             <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
                         </h1>
                         <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
-                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi/">Scopri i nostri servizi</a>
+                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
                         <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="/contattaci/">Contattaci</a>
                     </div>
                     <!-- banner image -->
