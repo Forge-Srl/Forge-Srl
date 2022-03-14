@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class Home {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -20,7 +20,7 @@ class Home {
             <section class="service">
                 <div class="container">
                     <div class="title text-center">
-                        <h2 c>I nostri Servizi Marketing</h2>
+                        <h2>I nostri Servizi Marketing</h2>
                         <p>Siamo il tuo partner strategico e creativo. Il nostro team ti aiuterà in ogni aspetto analitico e operativo di marketing digitale per risultati efficaci e misurabili.</p>
                     </div>
                     <div class="row">
@@ -79,7 +79,7 @@ class Home {
                             <h2 class="m-0">Ti abbiamo incuriosito?</h2>
                             <h4>Scarica la nostra presentazione marketing per vedere il dettaglio dei servizi che offriamo.</h4>
                         </div>
-                        <a href="/assets/documents/forge-servizi-marketing.pdf/" target="_blank" class="btn btn-white me-3 text-center">Scarica la presentazione</a>
+                        <a href="/assets/documents/forge-servizi-marketing.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica la presentazione</a>
                     </div>
                 </div>
             </section>
@@ -151,5 +151,3 @@ class Home {
         </main>`
     }
 }
-
-module.exports = Home

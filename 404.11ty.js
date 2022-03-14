@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class NotFound {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -33,5 +33,3 @@ class NotFound {
         </main>`
     }
 }
-
-module.exports = NotFound

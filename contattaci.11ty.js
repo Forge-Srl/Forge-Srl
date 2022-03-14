@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class Home {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -166,5 +166,3 @@ class Home {
         </main>`
     }
 }
-
-module.exports = Home

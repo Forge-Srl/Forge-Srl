@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class Home {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -14,13 +14,12 @@ class Home {
     }
 
     render(data) {
-
         return `<main>
             ${pageTitle.call(this, data)}
             <section class="service">
                 <div class="container">
                     <div class="title text-center">
-                        <h2 c> I nostri Servizi Tech</h2>
+                        <h2> I nostri Servizi Tech</h2>
                         <p>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente.</p>
                     </div>
                     <div class="row">
@@ -151,5 +150,3 @@ class Home {
         </main>`
     }
 }
-
-module.exports = Home

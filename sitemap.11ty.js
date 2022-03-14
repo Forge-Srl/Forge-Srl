@@ -1,4 +1,4 @@
-class Sitemap {
+module.exports = class {
     data() {
         return {
             permalink: '/sitemap.xml',
@@ -11,5 +11,3 @@ class Sitemap {
         return this.sitemap(data.collections.all)
     }
 }
-
-module.exports = Sitemap

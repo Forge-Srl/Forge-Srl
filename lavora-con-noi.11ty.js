@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class Home {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -14,10 +14,8 @@ class Home {
     }
 
     render(data) {
-
         return `<main>
             ${pageTitle.call(this, data)}
-
             <!-- ======================= Perché Forge -->
             <section class="pt-0">
                 <div class="container">
@@ -77,42 +75,42 @@ class Home {
             <!-- ======================= Il lavoro in Forge End -->                                    
 
            <!-- ======================= La nostra filosofia -->
-	<section class="service">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-lg-8 mx-auto">
-					<div class="title text-center">
-						<h2>La nostra filosofia</h2>
-						<p class="mb-0">Pensiamo che per lavorare bene insieme sia importante condividere i nostri valori:</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="fas fa-light fa-fire"></i></div>
-						<h3 class="feature-box-title">Entusiasmo</h3>
-						<p class="feature-box-desc">Abbracciamo il cambiamento e le nuove sfide, non ci fermiamo davanti alle prime difficoltà. </p>
-					</div>
-				</div>
-				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="fas fa-light fa-link"></i></div>
-						<h3 class="feature-box-title">Collaborazione</h3>
-						<p class="feature-box-desc">Ascoltiamo il parere di tutti e collaboriamo con la massima trasparenza incentivando gli scambi di idee. </p>
-					</div>
-				</div>
-				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="fas fa-light fa-comments"></i></div>
-						<h3 class="feature-box-title">Confronto</h3>
-						<p class="feature-box-desc">Mettiamo in discussione ciò che facciamo ogni giorno e non diamo mai nulla per scontato. </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ======================= La nostra filosofia End -->
+            <section class="service">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 mx-auto">
+                            <div class="title text-center">
+                                <h2>La nostra filosofia</h2>
+                                <p class="mb-0">Pensiamo che per lavorare bene insieme sia importante condividere i nostri valori:</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mt-30">
+                            <div class="feature-box f-style-2 icon-grad h-100">
+                                <div class="feature-box-icon"><i class="fas fa-light fa-fire"></i></div>
+                                <h3 class="feature-box-title">Entusiasmo</h3>
+                                <p class="feature-box-desc">Abbracciamo il cambiamento e le nuove sfide, non ci fermiamo davanti alle prime difficoltà. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-30">
+                            <div class="feature-box f-style-2 icon-grad h-100">
+                                <div class="feature-box-icon"><i class="fas fa-light fa-link"></i></div>
+                                <h3 class="feature-box-title">Collaborazione</h3>
+                                <p class="feature-box-desc">Ascoltiamo il parere di tutti e collaboriamo con la massima trasparenza incentivando gli scambi di idee. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-30">
+                            <div class="feature-box f-style-2 icon-grad h-100">
+                                <div class="feature-box-icon"><i class="fas fa-light fa-comments"></i></div>
+                                <h3 class="feature-box-title">Confronto</h3>
+                                <p class="feature-box-desc">Mettiamo in discussione ciò che facciamo ogni giorno e non diamo mai nulla per scontato. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ======================= La nostra filosofia End -->
 
             <!-- ======================= Action box -->
             <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
@@ -122,14 +120,11 @@ class Home {
                             <h2 class="m-0">Vuoi essere dei nostri?</h2>
                             <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere te.</h4>
                         </div>
-                    <a href="mailto:career@forge.srl" class="btn btn-white me-3 text-center">Candidati ora</a>
+                        <a href="mailto:${data.forge.contacts.career}" class="btn btn-white me-3 text-center">Candidati ora</a>
                     </div>
                 </div>
             </section>
             <!-- ======================= End Action box -->
-            
         </main>`
     }
 }
-
-module.exports = Home
