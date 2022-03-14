@@ -50,7 +50,7 @@ class Home {
                                 </div>
                                 <!-- Phone -->
                                 <div class="all-text-white">
-                                    <div class="fs-4"><i class="ti-panel"></i></div>
+                                    <div class="fs-4"><i class="ti-headphone-alt"></i></div>
                                     <h5 class="mb-2">Telefono</h5>
                                     <p class="mb-0">${data.forge.contacts.phone}</p>
                                 </div>
