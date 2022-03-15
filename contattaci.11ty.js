@@ -103,9 +103,13 @@ module.exports = class {
                                         </div>
                                     </div>
                                 </form>
+                                <div id="contact-form-done" style="display: none;">
+                                    <h4 class="text-center">Grazie per averci contattato!</h4>
+                                </div>
                                 <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaClientKey}"></script>
                                 <script>
                                     const form = document.getElementById('contact-form')
+                                    const formReplacement = document.getElementById('contact-form-done')
                                     const submitButton = form.getElementsByTagName('button')[0]
                                     const checkRecaptcha = callback => {
                                         grecaptcha.ready(function() {
@@ -116,10 +120,10 @@ module.exports = class {
                                     }
                                     const lockForm = () => {
                                         submitButton.classList.add('disabled')
-                                        submitButton.children[0].style = ''
+                                        submitButton.children[0].style.cssText = ''
                                     }
                                     const unlockForm = () => {
-                                        submitButton.children[0].style = 'display: none;'
+                                        submitButton.children[0].style.cssText = 'display: none;'
                                         submitButton.classList.remove('disabled')
                                     }
                                     form.addEventListener('submit', (event) => {
@@ -140,6 +144,8 @@ module.exports = class {
                                             const success = () => {
                                                 form.reset()
                                                 unlockForm()
+                                                form.style.cssText = 'display: none;'
+                                                formReplacement.style.cssText = ''
                                             }
                                         
                                             request.open('POST', form.action, true)

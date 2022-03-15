@@ -60,8 +60,7 @@ module.exports = function (data) {
 		<div class="footer-copyright py-3">
 			<div class="container">
 				<div class="d-md-flex py-3 justify-content-center">
-					<!-- copyright text -->
-					<div class="copyright-text">© 2022 Forge s.r.l. | P.IVA IT03778880132 | Tutti i diritti sono riservati.</div>
+					<div class="copyright-text">© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | Tutti i diritti sono riservati.</div>
 				</div>
 			</div>
 		</div>

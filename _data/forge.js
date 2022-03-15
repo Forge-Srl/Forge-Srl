@@ -6,6 +6,7 @@ module.exports = {
     phone: '(+39) 379 112 1688',
     address: 'Via Sempione 14, 21100 Varese VA'
   },
+  vatCode: 'IT03778880132',
   facebook: 'https://www.facebook.com/forgesrl',
   linkedin: 'https://www.linkedin.com/company/forge-company',
   github: 'https://github.com/Forge-Srl',
