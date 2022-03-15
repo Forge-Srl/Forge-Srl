@@ -252,7 +252,7 @@ module.exports = class {
             <div class="container-fluid">
                 <div class="row">
                     <!--why us left-->
-                    <div class="col-lg-6 d-none d-lg-block bg-light p-0" style="background: url('assets/images/forge-lavora-con-noi.jpg') no-repeat; background-size:cover;">
+                    <div class="col-lg-6 d-none d-lg-block bg-light p-0" style="background: url('/assets/images/forge-lavora-con-noi.jpg') no-repeat; background-size:cover;">
                     </div>
                     <!--why us right-->
                     <div class="col-lg-6 col-md-12 bg-body px-4 py-5 p-lg-5 text-white">

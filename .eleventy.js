@@ -1,6 +1,7 @@
 const fs = require("fs")
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const sitemap = require("@quasibit/eleventy-plugin-sitemap")
+const htmlmin = require("html-minifier")
 const Forge = require("./_data/forge")
 
 module.exports = (eleventyConfig) => {
@@ -25,6 +26,17 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addWatchTarget('./assets')
     eleventyConfig.addWatchTarget('./js')
+
+    eleventyConfig.addTransform('html-minifier', function (content) {
+        if (this.outputPath && this.outputPath.endsWith(".html")) {
+            return htmlmin.minify(content, {
+                removeComments: true,
+                collapseWhitespace: true,
+            })
+        }
+
+        return content
+    })
 
     eleventyConfig.on('beforeWatch', () => {
         // Delete node.js require cache to enable changed components js reload

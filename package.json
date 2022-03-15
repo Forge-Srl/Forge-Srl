@@ -6,7 +6,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
-    "@quasibit/eleventy-plugin-sitemap": "^2.1.5"
+    "@quasibit/eleventy-plugin-sitemap": "^2.1.5",
+    "html-minifier": "^4.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

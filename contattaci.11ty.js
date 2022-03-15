@@ -96,7 +96,7 @@ module.exports = class {
                                         </div>
                                         <!-- submit button -->
                                         <div class="col-md-12 d-grid">
-                                            <button class="btn btn-dark m-0" type="submit">
+                                            <button class="btn btn-primary m-0" type="submit">
                                                 <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
                                                 <span>Invia</span>
                                             </button>
