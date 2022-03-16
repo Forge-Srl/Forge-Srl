@@ -283,40 +283,40 @@ module.exports = class {
                 </div>
                     <div class="row text-center justify-content-center">
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/algolia-logo.png" alt="Logo Algolia">
+                            <img width=214 height=86 src="assets/images/technologies-logos/algolia-logo.png" alt="Logo Algolia">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/aws-logo.png" alt="Logo AWS">
+                            <img width=214 height=86 src="assets/images/technologies-logos/aws-logo.png" alt="Logo AWS">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/googlecloud-logo.png" alt="Logo Google Cloud">
+                            <img width=214 height=86 src="assets/images/technologies-logos/googlecloud-logo.png" alt="Logo Google Cloud">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/bootstrap-logo.png" alt="Logo Bootstrap">
+                            <img width=214 height=86 src="assets/images/technologies-logos/bootstrap-logo.png" alt="Logo Bootstrap">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/googleads-logo.png" alt="Logo Google Ads">
+                            <img width=214 height=86 src="assets/images/technologies-logos/googleads-logo.png" alt="Logo Google Ads">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/googleanalytics-logo.png" alt="Logo Google Analytics">
+                            <img width=214 height=86 src="assets/images/technologies-logos/googleanalytics-logo.png" alt="Logo Google Analytics">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/hubspot-logo.png" alt="Logo Hubspot">
+                            <img width=214 height=86 src="assets/images/technologies-logos/hubspot-logo.png" alt="Logo Hubspot">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/wordpress-logo.png" alt="Logo Wordpress">
+                            <img width=214 height=86 src="assets/images/technologies-logos/wordpress-logo.png" alt="Logo Wordpress">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/mailchimp-logo.png" alt="Logo Mailchimp">
+                            <img width=214 height=86 src="assets/images/technologies-logos/mailchimp-logo.png" alt="Logo Mailchimp">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/facebook-logo.png" alt="Logo Facebook">
+                            <img width=214 height=86 src="assets/images/technologies-logos/facebook-logo.png" alt="Logo Facebook">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/instagram-logo.png" alt="Logo Instagram">
+                            <img width=214 height=86 src="assets/images/technologies-logos/instagram-logo.png" alt="Logo Instagram">
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img src="assets/images/technologies-logos/linkedin-logo.png" alt="Logo Linkedin">
+                            <img width=214 height=86 src="assets/images/technologies-logos/linkedin-logo.png" alt="Logo Linkedin">
                         </div>
                     </div>
                 </div>

@@ -29,18 +29,18 @@ module.exports = function(data) {
                 <!-- Google Font -->
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+                <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
 
                 <!-- Plugins CSS -->
-                <link rel="stylesheet" type="text/css" href="/assets/vendor/font-awesome/css/all.min.css">
-                <link rel="stylesheet" type="text/css" href="/assets/vendor/themify-icons/css/themify-icons.css">
-                <link rel="stylesheet" type="text/css" href="/assets/vendor/animate/animate.min.css">
-                <link rel="stylesheet" type="text/css" href="/assets/vendor/glightbox/css/glightbox.css">
-                <link rel="stylesheet" type="text/css" href="/assets/vendor/aos/aos.css">
+                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/font-awesome/css/all.min.css">
+                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/themify-icons/css/themify-icons.css">
+                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/animate/animate.min.css">
+                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/glightbox/css/glightbox.css">
+                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/aos/aos.css">
                 <!-- Theme CSS -->
-                <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+                <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css">
                 <!-- Theme Color CSS -->
-                <link rel="stylesheet" type="text/css" href="/assets/css/color.css">
+                <link rel="stylesheet" type="text/css" media="all" href="/assets/css/color.css">
                 
                 <!-- Bootstrap JS -->
                 <script defer src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

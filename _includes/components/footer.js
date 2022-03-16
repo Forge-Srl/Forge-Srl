@@ -7,9 +7,7 @@ module.exports = function (data) {
 					<div class="col-md-4">
 						<div class="widget">
 							<a href="/" class="footer-logo">
-								<!-- footer logo Start -->
-								<img class="footer-logo-item" src="/assets/images/forge-logo.png" alt="Logo Forge">
-								<!-- footer logo End -->
+								<img width=181 height=50 class="footer-logo-item" src="/assets/images/forge-logo.png" alt="Logo Forge">
 							</a>
 							<p class="mt-3">Forge offre servizi di consulenza tecnica, marketing e formazione con un approccio umano, che premia onestà, fiducia e trasparenza.</p>
 						</div>

@@ -3,10 +3,8 @@ module.exports = function (data) {
 		<!-- Logo Nav Start -->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
-				<!-- Logo -->
 				<a class="navbar-brand" href="/">
-					<!-- Logo -->
-					<img class="navbar-brand-item" src="/assets/images/forge-logo-white.png" alt="Logo Forge">
+					<img width=159 height=44 class="navbar-brand-item" src="/assets/images/forge-logo-white.png" alt="Logo Forge">
 				</a>
 				<!-- Menu opener button -->
 				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
