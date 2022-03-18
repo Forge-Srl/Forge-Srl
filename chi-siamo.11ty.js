@@ -15,9 +15,9 @@ class Home {
 
     render(data) {
 
-        return /*html*/`<main>
+        return `<main>
             ${pageTitle.call(this, data)}
-            <section class="chi siamo">
+            <section id="chi siamo" class="pb-0">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
@@ -27,7 +27,7 @@ class Home {
                             <p>Siamo una realtà giovane e dinamica che unisce competenze multisettoriali altamente professionali per risolvere problemi tecnologici, strategici e di comunicazione alle aziende.</p>
                             <p>Nasciamo nel 2018 e da allora trasformiamo le idee di oggi nei prodotti di domani studiando a fondo la visione dei clienti e realizzando soluzioni digitali competitive.</p>
                             <p>Il nostro cuore pulsante è a Varese, ma siamo amanti del remote working, delle metodologie agili e degli spazi condivisi.</p>
-                            <a href="/#servizi" class="btn btn-outline-secondary me-3 text-center">Scopri i nostri servizi</a>
+                            <a href="/#servizi" class="btn btn-outline-primary me-3 text-center">Scopri i nostri servizi</a>
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
@@ -37,7 +37,7 @@ class Home {
                 </div>
             </section>
             <!-- I Nostri Valori -->
-            <section class="valori">
+            <section id="valori" class="pt-3">
             <div class="container">	
                 <div class="row">
                     <div class="col-sm-12 text-center mt-5 mb-4">
@@ -53,7 +53,7 @@ class Home {
                     </div>
                     <div class="col-md-4 mt-4">
                         <div class="feature-box f-style-1 h-100 icon-primary">
-                            <div class="feature-box-icon"><i class="fa-solid fa-mountain"></i></div>
+                            <div class="feature-box-icon"><i class="fa-regular fa-handshake"></i></div>
                             <h3 class="feature-box-title">Mission</h3>
                             <h5>Che ruolo vogliamo avere nel futuro?</h5>
                             <p class="feature-box-desc">Vogliamo affiancare le aziende nel processo di crescita con un approccio propositivo di fiducia, onestà, eticità e trasparenza.</p>
@@ -87,15 +87,15 @@ class Home {
             <!-- ======================= End Action box -->
 
             <!-- ======================= Divisione del team  -->
-            <section class="team">
+            <section id="team" class="pb-3">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- right -->
                         <div class="col-md-6">
                             <h5 class="text-primary">Il team</h5>
                             <h2 class="h1">Il lavoro di squadra è il nostro asset migliore</h2>
-                            <p>La nostra squadra è composta da un mix perfetto di creativi, marketer e tecnici esperti.
-                            Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie. </p>
+                            <p>La nostra squadra è composta da un mix perfetto di creativi, marketer e tecnici esperti.</p>
+                            <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie. </p>
                             <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende. </p>
                         </div>
                         <!-- left -->
@@ -141,10 +141,10 @@ class Home {
                 </div>
                 <div class="row">
                     <!-- Team item 1 -->
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-6 col-sm-6 col-md-2">
                         <div class="team-item text-center">
                             <div class="team-avatar">
-                                <img src="assets/images/team/Angelo_square.png" alt="">
+                                <img src="/assets/images/team/Angelo_square.png" alt="Angelo">
                             </div>
                             <div class="team-desc">
                                 <h5 class="team-name">Angelo Nodari</h5>
@@ -153,22 +153,130 @@ class Home {
                         </div>
                     </div>
                     <!-- Team item 2 -->
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-6 col-sm-6 col-md-2">
                         <div class="team-item text-center">
                             <div class="team-avatar">
-                                <img src="assets/images/team/01.jpg" alt="">
+                                <img src="/assets/images/team/MarcoV_square.png" alt="Marco">
                             </div>
                             <div class="team-desc">
-                                <h5 class="team-name">Angelo Nodari</h5>
-                                <span class="team-position">Co-Founder e CEO</span>
+                                <h5 class="team-name">Marco Vanetti</h5>
+                                <span class="team-position">Co-Founder e CTO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 3 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/FabioM_square.png" alt="FabioM">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Fabio Micheletti</h5>
+                                <span class="team-position">Co-Founder e CIO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 4 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/FabioG_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Fabio Gozzo</h5>
+                                <span class="team-position">Senior Infrastructure Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 5 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Tommaso_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Tommaso Bossi</h5>
+                                <span class="team-position">Web/App Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 6 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/MarcoM_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Marco Marchiori</h5>
+                                <span class="team-position">Software Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 7 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Marta_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Marta Maestri</h5>
+                                <span class="team-position">Marketing Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 8 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Federica_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Federica Bernaschina</h5>
+                                <span class="team-position">Marketing Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 9 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Francesca_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Francesca Migliori</h5>
+                                <span class="team-position">Digital Sales Account</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 10 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Benedetta_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Benedetta Re Cecconi</h5>
+                                <span class="team-position">Digital Sales Account</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team item 11 -->
+                    <div class="col-6 col-sm-6 col-md-2">
+                        <div class="team-item text-center">
+                            <div class="team-avatar">
+                                <img src="/assets/images/team/Davide_square.png" alt="">
+                            </div>
+                            <div class="team-desc">
+                                <h5 class="team-name">Davide Gallazzi</h5>
+                                <span class="team-position">Digital Sales Account</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- row end -->
             </div>
-        </section>
-<!-- ======================= team style default End -->
+            </section>
+            <!-- ======================= team style default End -->
 
             <!-- ======================= Action box -->
             <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
