@@ -30,18 +30,18 @@ class Home {
                             <a href="/#servizi" class="btn btn-outline-primary me-3 text-center">Scopri i nostri servizi</a>
                         </div>
                         <!-- right -->
-                        <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/forge-marketing.jpg" alt="Forge team marketing">
+                        <div class="col-md-6 d-none d-sm-block">
+                            <img class="rounded" src="/assets/images/forge-chi-siamo.jpg" alt="Chi siamo">
                         </div>
                     </div>
                 </div>
             </section>
             <!-- I Nostri Valori -->
-            <section id="valori" class="pt-3">
+            <section id="valori" class="pt-5">
             <div class="container">	
                 <div class="row">
-                    <div class="col-sm-12 text-center mt-5 mb-4">
-                        <h2>I nostri valori sono il nostro brand</h2>
+                    <div class="col-sm-12 mt-5 mb-4 text-sm-start text-md-center">
+                        <h2 class="h1">I nostri valori sono il nostro brand</h2>
                     </div>
                     <div class="col-md-4 mt-4">
                         <div class="feature-box f-style-1 h-100 icon-primary">
@@ -99,39 +99,15 @@ class Home {
                             <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende. </p>
                         </div>
                         <!-- left -->
-                        <div class="col-sm-6">
-                        <div class="progress-xl">
-                            <!-- progress item 1 -->
-                            <div class="progress-item">
-                                <p>Creativi</p>
-                                <div class="progress">
-                                    <div class="progress-bar aos aos-init" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:75%"><span class="progress-percent">85%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- progress item 2 -->
-                            <div class="progress-item">
-                                <p>Marketing</p>
-                                <div class="progress">
-                                    <div class="progress-bar aos aos-init" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:85%"><span class="progress-percent">70%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- progress item 3 -->
-                            <div class="progress-item">
-                                <p>Tecnologia</p>
-                                <div class="progress">
-                                    <div class="progress-bar aos aos-init" data-aos="slide-right" data-aos-delay="400" data-aos-duration="1000" data-aos-easing="ease-in-out" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="progress-percent">90%</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-md-6">
+                            <img class="rounded" src="/assets/images/team-chi-siamo.jpg" alt="Suddivisione del team Forge">
                         </div>
                     </div>
                 </div>
             </section>
             <!-- ======================= Divisione del team End -->                                    
 
-           <!-- ======================= team style default -->
+           <!-- ======================= Team style default -->
             <section class="team pb-0">
             <div class="container">
                 <div class="row mb-5 text-center">
@@ -276,7 +252,7 @@ class Home {
                 <!-- row end -->
             </div>
             </section>
-            <!-- ======================= team style default End -->
+            <!-- ======================= Team style default End -->
 
             <!-- ======================= Action box -->
             <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
