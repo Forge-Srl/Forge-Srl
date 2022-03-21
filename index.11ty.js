@@ -82,6 +82,7 @@ module.exports = class {
                         <h3 class="h1">Soluzioni digitali, approccio umano</h3>
                         <p>Non siamo una classica agenzia di comunicazione né una web house, ma amiamo stare dove tecnologia, marketing e business si incontrano per trasformare le idee di oggi nei prodotti vincenti di domani.</p>
                         <p>Aiutiamo le aziende nelle proprie decisioni strategiche attraverso una <b>consulenza armonica</b> e un approccio agile che premia fiducia, onestà e trasparenza.</p>
+                        <a href="/chi-siamo/" class="btn btn-outline-primary me-3 text-center">Conosci il team</a>
                     </div>
                 </div>
             </div>

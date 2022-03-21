@@ -14,7 +14,7 @@ module.exports = function (data) {
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav navbar-nav-scroll navbar-nav-scroll ms-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="/#chi-siamo">Chi Siamo</a>
+							<a class="nav-link" href="/chi-siamo/">Chi Siamo</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/#metodologia">Metodologia</a>
@@ -27,7 +27,7 @@ module.exports = function (data) {
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link px-lg-3" href="/lavora-con-noi">Lavora con Noi</a>
+							<a class="nav-link px-lg-3" href="/lavora-con-noi/">Lavora con Noi</a>
 						</li>
 					</ul>
 				</div>
@@ -36,7 +36,7 @@ module.exports = function (data) {
 				<div class="navbar-nav">
 					<!-- extra item Btn-->
 					<div class="nav-item border-0 d-none d-lg-inline-block align-self-center">
-						<a href="/contattaci" class="btn btn-sm btn-primary text-white mb-0">Contattaci!</a>
+						<a href="/contattaci/" class="btn btn-sm btn-primary text-white mb-0">Contattaci!</a>
 					</div>
 				</div>
 				<!-- Header Extras End-->
