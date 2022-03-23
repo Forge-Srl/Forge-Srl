@@ -104,7 +104,7 @@ module.exports = class {
                                     </div>
                                 </form>
                                 <div id="contact-form-done" style="display: none;">
-                                    <h4 class="text-center">Grazie per averci contattato!</h4>
+                                    <h4 class="text-center">Grazie per averci contattato! Un membro del nostro team si metterà in contatto con te il prima possibile.</h4>
                                 </div>
                                 <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaClientKey}"></script>
                                 <script>
