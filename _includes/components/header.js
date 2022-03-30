@@ -1,4 +1,4 @@
-module.exports = function (data) {
+module.exports = async function (data) {
     return `<header class="navbar-sticky navbar-transparent navbar-primary">
 		<!-- Logo Nav Start -->
 		<nav class="navbar navbar-expand-lg">

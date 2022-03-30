@@ -1,8 +1,10 @@
-const fs = require("fs")
+const fs = require('fs')
+const path = require('path')
+const Image = require('@11ty/eleventy-img')
 const navigationPlugin = require('@11ty/eleventy-navigation')
-const sitemap = require("@quasibit/eleventy-plugin-sitemap")
-const htmlmin = require("html-minifier")
-const Forge = require("./_data/forge")
+const sitemap = require('@quasibit/eleventy-plugin-sitemap')
+const htmlmin = require('html-minifier')
+const Forge = require('./_data/forge')
 
 module.exports = (eleventyConfig) => {
     eleventyConfig
@@ -24,20 +26,48 @@ module.exports = (eleventyConfig) => {
         },
     })
 
-    eleventyConfig.addWatchTarget('./assets')
-    eleventyConfig.addWatchTarget('./js')
+    eleventyConfig.addFilter('image', async (url, altText, cssClasses, widths = [null], sizes = '') => {
+        if (!url) {
+            return ''
+        }
+        url = url.startsWith('http') ? url : `assets/images/${url}`
+
+        const metadata = await Image(url, {
+            formats: ['webp', null],
+            widths: widths,
+            urlPath: '/assets/images',
+            outputDir: './_site/assets/images',
+            filenameFormat: (id, src, width, format, options) => {
+                const extension = path.extname(src)
+                const name = path.basename(src, extension)
+                fs.mkdirSync(`${options.outputDir}/${name}`, {recursive: true})
+                return `${name}/${id}-${width}w.${format}`
+            },
+        })
+
+        return Image.generateHTML(metadata, {
+            alt: altText || '',
+            loading: 'lazy',
+            decoding: 'async',
+            sizes: sizes,
+            class: cssClasses,
+        })
+    })
 
     eleventyConfig.addTransform('html-minifier', function (content) {
-        if (this.outputPath && this.outputPath.endsWith(".html")) {
+        if (this.outputPath && this.outputPath.endsWith('.html')) {
             return htmlmin.minify(content, {
                 removeComments: true,
                 collapseWhitespace: true,
+                minifyJS: true,
             })
         }
 
         return content
     })
 
+    eleventyConfig.addWatchTarget('./assets')
+    eleventyConfig.addWatchTarget('./js')
     eleventyConfig.on('beforeWatch', () => {
         // Delete node.js require cache to enable changed components js reload
         Object.keys(require.cache).forEach(key => {
@@ -46,16 +76,16 @@ module.exports = (eleventyConfig) => {
     })
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
-            ready: function(err, bs) {
+            ready: function (err, bs) {
                 // Handle 404 page when running in serve/dev mode
                 bs.addMiddleware('*', (req, res) => {
                     const page404content = fs.readFileSync('_site/404.html')
-                    res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' })
+                    res.writeHead(404, {'Content-Type': 'text/html; charset=UTF-8'})
                     res.write(page404content)
                     res.end()
                 })
-            }
-        }
+            },
+        },
     })
 
     return {

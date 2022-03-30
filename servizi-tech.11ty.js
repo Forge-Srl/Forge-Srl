@@ -13,7 +13,7 @@ module.exports = class {
         }
     }
 
-    render(data) {
+    async render(data) {
         return `<main>
             ${pageTitle.call(this, data)}
             <section class="service">
@@ -88,7 +88,7 @@ module.exports = class {
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/approccio-tech-forge.jpg" alt="Forge approccio coding">
+                            ${await this.image('approccio-tech-forge.jpg', 'Forge approccio coding', 'rounded')}
                         </div>
                         <!-- right -->
                         <div class="col-md-6 mt-4 mt-md-0">
@@ -126,7 +126,7 @@ module.exports = class {
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/code-tech-forge.jpg" alt="Forge Team Tech Coding">
+                            ${await this.image('code-tech-forge.jpg', 'Forge Team Tech Coding', 'rounded')}
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,6 @@ module.exports = class {
                 </div>
             </section>
             <!-- ======================= End Action box -->
-
         </main>`
     }
 }

@@ -1,6 +1,6 @@
 const pageTitle = require('./_includes/components/pageTitle')
 
-class Home {
+module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
@@ -13,8 +13,7 @@ class Home {
         }
     }
 
-    render(data) {
-
+    async render(data) {
         return `<main>
             ${pageTitle.call(this, data)}
             <section id="chi siamo" class="pb-0">
@@ -31,7 +30,7 @@ class Home {
                         </div>
                         <!-- right -->
                         <div class="col-md-6 d-none d-sm-block">
-                            <img class="rounded" src="/assets/images/forge-chi-siamo.jpg" alt="Chi siamo">
+                            ${await this.image('forge-chi-siamo.jpg', 'Chi siamo', 'rounded')}
                         </div>
                     </div>
                 </div>
@@ -100,7 +99,7 @@ class Home {
                         </div>
                         <!-- left -->
                         <div class="col-md-6">
-                            <img class="rounded" src="/assets/images/team-chi-siamo.jpg" alt="Suddivisione del team Forge">
+                            ${await this.image('team-chi-siamo.jpg', 'Suddivisione del team Forge', 'rounded')}
                         </div>
                     </div>
                 </div>
@@ -120,9 +119,6 @@ class Home {
                 </div>
             </section>
             <!-- ======================= End Action box -->
-
         </main>`
     }
 }
-
-module.exports = Home

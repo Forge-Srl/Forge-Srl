@@ -1,7 +1,7 @@
 const header = require('./components/header')
 const footer = require('./components/footer')
 
-module.exports = function(data) {
+module.exports = async function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
     const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
     const tagManagerId = 'GTM-P8LVR4Q'
@@ -65,9 +65,9 @@ module.exports = function(data) {
                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${tagManagerId}"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
-                ${header.call(this, data)}
+                ${await header.call(this, data)}
                 ${data.content}
-                ${footer.call(this, data)}
+                ${await footer.call(this, data)}
             </body>
         </html>`
 }

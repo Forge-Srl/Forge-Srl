@@ -1,4 +1,4 @@
-module.exports = function (data) {
+module.exports = async function (data) {
     return `<footer class="footer bg-light pt-6">
 		<div class="footer-content pb-3">
 			<div class="container">
@@ -7,7 +7,7 @@ module.exports = function (data) {
 					<div class="col-md-4">
 						<div class="widget">
 							<a href="/" class="footer-logo">
-								<img width=181 height=50 class="footer-logo-item" src="/assets/images/forge-logo.png" alt="Logo Forge">
+							     ${await this.image('forge-logo.png', 'Logo Forge', 'footer-logo-item', [181], '181w')}
 							</a>
 							<p class="mt-3">Forge offre servizi di consulenza tecnica, marketing e formazione con un approccio umano, che premia onestà, fiducia e trasparenza.</p>
 						</div>

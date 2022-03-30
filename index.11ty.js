@@ -11,7 +11,7 @@ module.exports = class {
         }
     }
 
-    render(data) {
+    async render(data) {
         return `<main>
             <section class="p-0 position-relative h-500 h-md-600 h-xl-900 bg-grad pattern-overlay-4 overflow-hidden">
             <div class="container d-flex h-100">
@@ -61,10 +61,14 @@ module.exports = class {
                     <div class="col-md-6">
                         <div class="row mt-4 mt-md-0">
                             <div class="col-5 offset-1 px-2 mb-3 align-self-end">
-                                <img class="rounded aos" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" src="assets/images/chi-siamo1.jpg" alt="Esperti Forge">
+                                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                    ${await this.image('chi-siamo1.jpg', 'Esperti Forge', 'rounded aos', [240])}
+                                </div>
                             </div>
                             <div class="col-6 px-2 mb-3">
-                                <img class="rounded aos" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" src="assets/images/chi-siamo2.jpg" alt="Il team di Forge a Varese">
+                                <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                                    ${await this.image('chi-siamo2.jpg', 'Il team di Forge a Varese', 'rounded aos', [290])}
+                                </div>
                             </div>
                             <div class="col-12 col-md-7 px-2 mb-3">
                                 <div class="rounded aos bg-grad p-2 p-sm-3 p-lg-4 p-xl-5 all-text-white" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
@@ -72,7 +76,9 @@ module.exports = class {
                                 </div>
                             </div>
                             <div class="col-5 align-self-start ps-2 mb-3 d-none d-md-inline">
-                                <img class="rounded aos" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500" src="assets/images/chi-siamo3.jpg" alt="Forge lavoro di squadra">
+                                <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500">
+                                    ${await this.image('chi-siamo3.jpg', 'Forge lavoro di squadra', 'rounded aos', [240])}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,40 +290,40 @@ module.exports = class {
                 </div>
                     <div class="row text-center justify-content-center">
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/algolia-logo.png" alt="Logo Algolia">
+                            ${await this.image('technologies-logos/algolia-logo.png', 'Logo Algolia', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/aws-logo.png" alt="Logo AWS">
+                            ${await this.image('technologies-logos/aws-logo.png', 'Logo AWS', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/googlecloud-logo.png" alt="Logo Google Cloud">
+                            ${await this.image('technologies-logos/googlecloud-logo.png', 'Logo Google Cloud', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/bootstrap-logo.png" alt="Logo Bootstrap">
+                            ${await this.image('technologies-logos/bootstrap-logo.png', 'Logo Bootstrap', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/googleads-logo.png" alt="Logo Google Ads">
+                            ${await this.image('technologies-logos/googleads-logo.png', 'Logo Google Ads', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/googleanalytics-logo.png" alt="Logo Google Analytics">
+                            ${await this.image('technologies-logos/googleanalytics-logo.png', 'Logo Google Analytics', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/hubspot-logo.png" alt="Logo Hubspot">
+                            ${await this.image('technologies-logos/hubspot-logo.png', 'Logo HubSpot', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/wordpress-logo.png" alt="Logo Wordpress">
+                            ${await this.image('technologies-logos/wordpress-logo.png', 'Logo WordPress', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/mailchimp-logo.png" alt="Logo Mailchimp">
+                            ${await this.image('technologies-logos/mailchimp-logo.png', 'Logo Mailchimp', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/facebook-logo.png" alt="Logo Facebook">
+                            ${await this.image('technologies-logos/facebook-logo.png', 'Logo Facebook', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/instagram-logo.png" alt="Logo Instagram">
+                            ${await this.image('technologies-logos/instagram-logo.png', 'Logo Instagram', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            <img width=214 height=86 src="assets/images/technologies-logos/linkedin-logo.png" alt="Logo Linkedin">
+                            ${await this.image('technologies-logos/linkedin-logo.png', 'Logo LinkedIn', '', [214], '214w')}
                         </div>
                     </div>
                 </div>
