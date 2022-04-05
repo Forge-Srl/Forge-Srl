@@ -1,6 +1,11 @@
 const header = require('./components/header')
 const footer = require('./components/footer')
 
+const lazyCssLink = (href, media) => {
+    return `<link rel="preload" as="style" type="text/css" media="${media}" href="${href}" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" type="text/css" media="${media}" href="${href}"></noscript>`
+}
+
 module.exports = async function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
     const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
@@ -29,18 +34,18 @@ module.exports = async function(data) {
                 <!-- Google Font -->
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+                ${lazyCssLink('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', 'all')}
 
                 <!-- Plugins CSS -->
-                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/font-awesome/css/all.min.css">
-                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/themify-icons/css/themify-icons.css">
-                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/animate/animate.min.css">
-                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/glightbox/css/glightbox.css">
-                <link rel="stylesheet" type="text/css" media="screen" href="/assets/vendor/aos/aos.css">
+                ${lazyCssLink('/assets/vendor/font-awesome/css/all.min.css', 'screen')}
+                ${lazyCssLink('/assets/vendor/themify-icons/css/themify-icons.css', 'screen')}
+                ${lazyCssLink('/assets/vendor/animate/animate.min.css', 'screen')}
+                ${lazyCssLink('/assets/vendor/glightbox/css/glightbox.css', 'screen')}
+                ${lazyCssLink('/assets/vendor/aos/aos.css', 'screen')}
                 <!-- Theme CSS -->
-                <link rel="stylesheet" type="text/css" media="all" href="/assets/css/style.css">
+                ${lazyCssLink('/assets/css/style.css', 'all')}
                 <!-- Theme Color CSS -->
-                <link rel="stylesheet" type="text/css" media="all" href="/assets/css/color.css">
+                ${lazyCssLink('/assets/css/color.css', 'all')}
                 
                 <!-- Bootstrap JS -->
                 <script defer src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
