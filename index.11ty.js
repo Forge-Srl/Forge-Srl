@@ -18,7 +18,7 @@ module.exports = class {
                 <div class="row align-self-center w-100 z-index-9">
                     <!-- banner Content -->
                     <div class="col-md-6 mt-md-0 all-text-white position-relative">
-                        <h1 class="display-4 fw-normal">
+                        <h1 class="display-4 fw-normal" style="will-change: contents; transform: translateZ(0);">
                             <span class="pt-0">Siamo una</span>
                             <br>
                             <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
@@ -49,7 +49,7 @@ module.exports = class {
                     </div>
                 </div>
             </div>
-            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9 z-index-0" id="waveCanvas"></canvas>
+            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9 z-index-0" id="waveCanvas" style="will-change: transform; transform: translateZ(0);"></canvas>
         </section>
         <!-- ======================= End Main banner -->
     
