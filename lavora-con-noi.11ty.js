@@ -118,7 +118,7 @@ module.exports = class {
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
                             <h2 class="m-0">Vuoi essere dei nostri?</h2>
-                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere te.</h4>
+                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere proprio te.</h4>
                         </div>
                         <a href="mailto:${data.forge.contacts.career}" class="btn btn-white me-3 text-center">Candidati ora</a>
                     </div>
