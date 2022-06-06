@@ -5344,7 +5344,7 @@ textarea.form-control-lg {
 }
 
 .accordion-header {
-  margin-bottom: 0;
+  margin-bottom: 1;
 }
 
 .accordion-item {
@@ -19551,6 +19551,7 @@ footer .widget {
 }
 .accordion.accordion-icon-gradient .accordion-body {
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  line-height: 1.8;
 }
 
 .accordion.accordion-icon-dark .accordion-item {

@@ -112,13 +112,64 @@ module.exports = class {
             </section>
             <!-- ======================= La nostra filosofia End -->
 
+            <!-- ======================= Posizioni Aperte -->
+            <section>
+                <div class="container">
+                    <div class="row">
+                    <!-- Job positions -->
+                    <div class="col-md-8">
+                        <h2 class="h1 mb-4">Posizioni Aperte</h2>
+                        
+                        <div class="accordion accordion-icon-gradient" id="accordionWorkWithUs">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                                        Sviluppatore Software
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4" data-bs-parent="#accordionWorkWithUs">
+                                    <div class="accordion-body">
+                                        Due to the limited quantity, each member's account is only entitled to 1 unique free sample. You can check out up to 4 free samples in each checkout. We take such matters very seriously and will look into individual cases thoroughly.
+                                    <a class="d-block" href="careers-single.html">Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingT6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                        Candidatura Spontanea
+                                    </button>
+                                </h2>
+                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="headingT6" data-bs-parent="#accordionWorkWithUs">
+                                    <div class="accordion-body">
+                                        Yes! It is commonly misunderstood that a Paypal account is needed in order to make payments through Paypal. The truth is you DO NOT need one, although we strongly recommend you sign up to enjoy the added ease of use.
+                                    <a class="d-block" href="careers-single.html">Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- Sidebar -->
+                        <div class="col-md-4 sidebar">
+                        <h2 class="mb-4">Hai qualche domanda? </h2>
+                            <div class="widget bg-light border-0 p-3 rounded">
+                                <h4>Scrivici! </h4>
+                                <p>Se hai bisogno di qualche informazione riguardo le opportunità di lavoro in Forge mandaci una email a <a class="text-primary" href="mailto:${data.forge.contacts.career}">career@forge.srl</a>  e ti risponderemo il prima possibile.
+                            </div>
+                        </div>
+                        <!-- Sidebar end-->
+                    </div>
+                </div>
+            </section>
+            <!-- ======================= End Posizioni Aperte -->
+
             <!-- ======================= Action box -->
             <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
                 <div class="container">
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
                             <h2 class="m-0">Vuoi essere dei nostri?</h2>
-                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere proprio te.</h4>
+                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere te.</h4>
                         </div>
                         <a href="mailto:${data.forge.contacts.career}" class="btn btn-white me-3 text-center">Candidati ora</a>
                     </div>
