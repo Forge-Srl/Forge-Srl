@@ -1,4 +1,4 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('../_includes/components/pageTitle')
 
 module.exports = class {
     data() {
@@ -7,7 +7,8 @@ module.exports = class {
             pageTitle: 'Forge - Lavora con Noi: Sviluppatore Software',
             pageDescription: 'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: Java, Javascript, Kotlin, Swift, PHP...',
             eleventyNavigation: {
-                key: 'lavoro',
+                key: 'sviluppatore-software',
+                parent: 'lavora-con-noi',
                 title: 'Sviluppatore Software'
             }
         }
@@ -23,13 +24,21 @@ module.exports = class {
                         <!-- Job positions -->
                         <div class="col-md-8">
                             <h2 class="mb-4">Job description</h2>
-                            <p>Are you currently in a Team Leader role looking for a new challenge or are you an experienced Consultant looking to make the next step into leadership? Well Wizixo Business Support are recruiting and would love to hear from you if you are considering your next move.</p>
+                            <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
+                            Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
+                            
+                            <p>Abbiamo un approccio di continuous delivery sui progetti: incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative e scriviamo test per consolidare il lavoro che facciamo (e dormire sonni tranquilli!).</p>
+                            
+                            <p>Utilizziamo diverse tecnologie a seconda del contesto: Java, Javascript, Kotlin, Swift, PHP, etc...</p>
+                            
+                            <p>A nostro avviso non è indispensabile conoscere tutti i linguaggi, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i principi di buona programmazione dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
+                            
+                            <p>Crediamo molto nella formazione: riserviamo ad ogni membro del team un'ora al giorno da dedicare alla propria crescita professionale e all'avanzamento di progetti personali e incentiviamo la partecipazione a conferenze di settore ed eventi.</p>
+                            
+                            <p>Contribuiamo a diversi progetti open source su diverse tematiche: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.
+                            </p>
 
-                            <p>Ideally you will be from an agency background and preferably within the business support or accounting support sector. You’ll know the ins-and-outs of the recruitment process, from talent sourcing right through to business development, and are ready to pass on your knowledge by leading a team of consultants towards bigger and better goals.</p>
-
-                            <p>This is a billing leadership position, and as such you will be responsible for leading by example. Along with managing your own desk, you’ll provide support and coaching to the consultants within your team.</p>
-
-                            <h6 class="mb-2">What you’ll need:</h6>
+                            <h2 class="mb-4">Job description</h2>Cosa farai con noi</h2>
                             <ul>
                                 <li>Proven results as a recruitment consultant or strong sales experience</li>
                                 <li>Knowledge of the staffing industry</li>

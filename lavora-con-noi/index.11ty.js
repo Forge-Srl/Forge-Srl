@@ -1,4 +1,4 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('../_includes/components/pageTitle')
 
 module.exports = class {
     data() {
@@ -7,7 +7,7 @@ module.exports = class {
             pageTitle: 'Forge - Lavora con Noi',
             pageDescription: 'Forge è sempre alla ricerca di persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra a far parte del team.',
             eleventyNavigation: {
-                key: 'lavoro',
+                key: 'lavora-con-noi',
                 title: 'Lavora con Noi'
             }
         }
@@ -129,8 +129,9 @@ module.exports = class {
                                 </h2>
                                 <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4" data-bs-parent="#accordionWorkWithUs">
                                     <div class="accordion-body">
-                                        Due to the limited quantity, each member's account is only entitled to 1 unique free sample. You can check out up to 4 free samples in each checkout. We take such matters very seriously and will look into individual cases thoroughly.
-                                    <a class="d-block" href="careers-single.html">Apply</a>
+                                        Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
+                                        Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo. 
+                                    <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Apply</a>
                                     </div>
                                 </div>
                             </div>
@@ -142,8 +143,8 @@ module.exports = class {
                                 </h2>
                                 <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="headingT6" data-bs-parent="#accordionWorkWithUs">
                                     <div class="accordion-body">
-                                        Yes! It is commonly misunderstood that a Paypal account is needed in order to make payments through Paypal. The truth is you DO NOT need one, although we strongly recommend you sign up to enjoy the added ease of use.
-                                    <a class="d-block" href="careers-single.html">Apply</a>
+                                        Non ci sono posizioni aperte adatte a te? Scrivici comunque: siamo sempre alla ricerca di talenti in grado di portare valore all'interno del team e valutiamo singolarmente tutte le candidature che riceviamo. Spiegaci perché dovremmo lavorare insieme.
+                                    <a class="d-block" href="mailto:${data.forge.contacts.career}">Apply</a>
                                     </div>
                                 </div>
                             </div>
@@ -168,10 +169,10 @@ module.exports = class {
                 <div class="container">
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
-                            <h2 class="m-0">Vuoi essere dei nostri?</h2>
-                            <h4>Mandaci una e-mail allegando il tuo curriculum e spiegaci perché dovremmo scegliere te.</h4>
+                            <h2 class="m-0">Vuoi conoscere meglio la nostra società?</h2>
+                            <h4>Dai un'occhiata alla nostra pagina chi siamo</h4>
                         </div>
-                        <a href="mailto:${data.forge.contacts.career}" class="btn btn-white me-3 text-center">Candidati ora</a>
+                        <a href="/chi-siamo/" class="btn btn-white me-3 text-center">Scopri Chi Siamo</a>
                     </div>
                 </div>
             </section>
