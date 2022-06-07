@@ -81,27 +81,28 @@ module.exports = class {
                             <p>Tutte le candidature sono valutate singolarmente e ci teniamo a rispondere a ogni candidato. A volte, purtroppo, le risposte sono filtrate come Spam: ricordati di controllare la cartella.</p>
 
                             <!-- Apply form -->
-                            <div class="row mt-5">
-                                <div class="col-md-12">
-                                    <h2 class="mb-3">Candidati per questa posizione</h2></div>
-                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome"></span></div>
-                                <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
-                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Telefono"></span></div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group">
-                                        <input type="file" class="form-control mb-0" id="inputGroupFile01">
-                                        <!-- <label class="customFile" for="inputGroupFile01">Carica il tuo CV</label> -->
+                            <section id="application-form">
+                                <div class="row mt-5">
+                                    <div class="col-md-12">
+                                        <h2 class="mb-3">Candidati per questa posizione</h2></div>
+                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome"></span></div>
+                                    <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
+                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Telefono"></span></div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="input-group">
+                                            <input type="file" class="form-control mb-0" id="inputGroupFile01">
+                                            <!-- <label class="customFile" for="inputGroupFile01">Carica il tuo CV</label> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"><span class="form-group"><textarea cols="40" rows="6" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea></span></div>
+                                    <div class="col-md-12 text-center d-grid">
+                                    <button class="btn btn-primary m-0" type="submit">
+                                        <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
+                                        <span>Candidati Ora</span>
+                                    </button>
                                     </div>
                                 </div>
-                                <div class="col-md-12"><span class="form-group"><textarea cols="40" rows="6" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea></span></div>
-                                <div class="col-md-12 text-center d-grid">
-                                <button class="btn btn-primary m-0" type="submit">
-                                    <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
-                                    <span>Candidati Ora</span>
-                                </button>
-                                </div>
-                            </div>
-
+                            </section>
                         </div>
                         <!-- Sidebar -->
                         <div class="col-md-4 sidebar" data-sticky>
@@ -114,7 +115,7 @@ module.exports = class {
                                     <li class="mb-3"><strong>Modalità:</strong> Ibrido </li>
                                 </ul>
                                 <div class="mt-3">
-                                    <a href="#">Candidati <i class="ti-arrow-right text-primary"></i></a>
+                                    <a href="#application-form">Candidati <i class="ti-arrow-right text-primary"></i></a>
                                 </div>
                             </div>
                         </div>
