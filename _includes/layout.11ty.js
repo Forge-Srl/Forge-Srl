@@ -54,6 +54,7 @@ module.exports = async function(data) {
                 <script defer src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
                 <script defer src="/assets/vendor/glightbox/js/glightbox.js"></script>
                 <script defer src="/assets/vendor/ityped/index.js"></script>
+                <script defer src="/assets/vendor/sticky-js/sticky.min.js"></script>
                 <!--Template Functions-->
                 <script defer src="/assets/js/functions.js"></script>
                 

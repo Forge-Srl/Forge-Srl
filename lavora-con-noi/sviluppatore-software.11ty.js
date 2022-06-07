@@ -24,54 +24,66 @@ module.exports = class {
                         <!-- Job positions -->
                         <div class="col-md-8">
                             <h2 class="mb-4">Job description</h2>
-                            <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
-                            Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
+                            <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una <strong>modalità di lavoro ibrida</strong> (2/3 giorni in sede, gli altri giorni in smart working). 
+                            Utilizziamo la <strong>metodologia Agile</strong> applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
                             
-                            <p>Abbiamo un approccio di continuous delivery sui progetti: incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative e scriviamo test per consolidare il lavoro che facciamo (e dormire sonni tranquilli!).</p>
+                            <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti: incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative e scriviamo test per consolidare il lavoro che facciamo (e dormire sonni tranquilli!).</p>
                             
                             <p>Utilizziamo diverse tecnologie a seconda del contesto: Java, Javascript, Kotlin, Swift, PHP, etc...</p>
                             
-                            <p>A nostro avviso non è indispensabile conoscere tutti i linguaggi, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i principi di buona programmazione dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
+                            <p>A nostro avviso <strong>non è indispensabile conoscere tutti i linguaggi</strong>, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i <strong>principi di buona programmazione</strong> dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
                             
-                            <p>Crediamo molto nella formazione: riserviamo ad ogni membro del team un'ora al giorno da dedicare alla propria crescita professionale e all'avanzamento di progetti personali e incentiviamo la partecipazione a conferenze di settore ed eventi.</p>
+                            <p>Crediamo molto nella <strong>formazione</strong>: riserviamo ad ogni membro del team un'ora al giorno da dedicare alla propria crescita professionale e all'avanzamento di progetti personali e incentiviamo la partecipazione a conferenze di settore ed eventi.</p>
                             
-                            <p>Contribuiamo a diversi progetti open source su diverse tematiche: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.
+                            <p>Contribuiamo a diversi <strong>progetti open source</strong> su diverse tematiche: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.
                             </p>
 
-                            <h2 class="mb-4">Job description</h2>Cosa farai con noi</h2>
-                            <ul>
-                                <li>Proven results as a recruitment consultant or strong sales experience</li>
-                                <li>Knowledge of the staffing industry</li>
-                                <li>Previous leadership experience, personally or professionally</li>
-                                <li>A strong desire to be successful and inspire people</li>
-                            </ul>
-                            <h6 class="mb-2 mt-3">What you’ll get in return:</h6>
-                            <ul>
-                                <li>A culture where success is celebrated</li>
-                                <li>Uncapped earnings potential</li>
-                                <li>A career where you can choose your path</li>
-                                <li>Company share purchase plan</li>
-                                <li>An internal rewards program</li>
+                            <h2 class="mt-4 mb-4">Cosa farai con noi</h2>
+                            <ul class="list-group list-group-borderless list-group-icon-primary-bg mb-4">
+                                <li class="list-group-item"><i class="fa fa-check"></i> Scrivi codice pulito, sicuro, documentato e testato</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Contribuisci alla progettazione di software robusto e scalabile</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Conduci analisi e ottimizzazione delle performance</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Strutturi e ottimizzi il codice al meglio</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Collabori con il resto del team per lo sviluppo di prodotti digitali</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Ti piace tenerti aggiornato sugli ultimi sviluppi di tecnologie, coding trends, best practices e le porti nel tuo lavoro giornaliero coinvolgendo il team in discussioni costruttive ed educative</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Ti piace misurarti su progetti di tipologia diversa e appartenenti a diversi ambiti e settori.</li>
                             </ul>
 
-                            <h6 class="mt-4 mb-2">Skills</h6>
-                            <ul>
-                                <li>Involving The Team In Decisions That Affect Them</li>
-                                <li>Displays technical or professional expertise</li>
-                                <li>Communicates powerfully and prolifically</li>
-                                <li>Solves problems and analyzes issues</li>
-                                <li>Displays high integrity and honesty</li>
+                            <h2 class="mt-4 mb-4">Chi stiamo cercando</h2>
+                            <p>Non poniamo vincoli sull'esperienza, l'importante è che tu abbia:</p>
+                            <ul class="list-group list-group-borderless mb-4">
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Volontà di metterti in gioco</strong>: è fondamentale che tu abbia passione per quello che fai e voglia di lavorare su progetti innovativi e "challenging"</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Attitudine al lavoro di squadra</strong>: per noi il concetto di team è fondamentale e cerchiamo persone che apprezzino il confronto con gli altri più che il lavoro in solitaria</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Voglia di imparare</strong>: non è fondamentale saper utilizzare tutti i linguaggi, l'importante è non spaventarsi di fronte a nuove sfide e non temere di rimboccarsi le maniche</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Trasparenza</strong>: amiamo l’onestà e desideriamo che tu ti senta libero di dire ciò che pensi in maniera costruttiva, partecipando alle dinamiche che ti circondano</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Desiderio di crescita</strong>: cerchi un contesto lavorativo che sappia coltivare il tuo talento con un percorso di crescita professionale condiviso.</li>
                             </ul>
 
-                            <h6 class="mt-4 mb-2">Educational requirements</h6>
-                            <ul>
-                                <li>Bachelor Degree</li>
+                            <h2 class="mt-4 mb-4">Cosa ti offriamo</h2>
+                            <p>Cerchiamo di trattare le persone nel miglior modo possibile, con professionalità e rispetto. Ti offriamo:</p>
+                            <ul class="list-group list-group-borderless mb-4">
+                                <li class="list-group-item"><i class="fa fa-check"></i> Un ambiente di lavoro positivo, dinamico e sempre aperto al dialogo</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Un’ora di studio giornaliera per investire continuamente sulla tua formazione e crescita personale</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Un interessante pacchetto retributivo con RAL commisurata all’esperienza</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Remote working policy</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Utilizzo di PerPranzo nei giorni in ufficio (il pranzo al ristorante pagato)</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Free coffee & snacks</li>
                             </ul>
+
+                            <h2 class="mt-4 mb-4">Come funziona il processo di selezione</h2>
+                            <ul class="list-group list-group-borderless mb-4">
+                                <li class="list-group-item"><i class="fa fa-check"></i> Se passerai con successo il processo di screening delle candidature, ti inviteremo a fare un test che servirà a permetterci di capire il tuo approccio alla programmazione. Questo test non richiede nessuna preparazione specifica e durerà circa un paio di ore.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Se passerai il test con successo, saremo felici di fissare un colloquio di persona per conoscerci meglio e capire insieme se noi possiamo essere adatti a te e viceversa.</li> 
+                                <li class="list-group-item"><i class="fa fa-info fa-fw text-info"></i> Forge è un’azienda inclusiva. Non facciamo nessun tipo di discriminazione basata su colore, religione, genere, età o orientamento sessuale.</li>
+                            </ul>
+
+                            <h2 class="mt-4 mb-4">Nota</h2>
+                            <p>Tutte le candidature sono valutate singolarmente e ci teniamo a rispondere a ogni candidato. A volte, purtroppo, le risposte sono filtrate come Spam: ricordati di controllare la cartella.</p>
 
                             <!-- Apply form -->
                             <div class="row mt-5">
                                 <div class="col-md-12">
-                                    <h2 class="mb-3">Apply for this Job</h2></div>
+                                    <h2 class="mb-3">Candidati per questa posizione</h2></div>
                                 <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Name"></span></div>
                                 <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
                                 <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Mobile number"></span></div>
@@ -89,17 +101,16 @@ module.exports = class {
                         <!-- Sidebar -->
                         <div class="col-md-4 sidebar">
                             <div data-sticky data-margin-top="80" data-sticky-for="991">
-                                <h2 class="mt-3 mt-md-0 mb-3">Job details</h2>
+                                <h2 class="mt-3 mt-md-0 mb-3">Dettagli</h2>
                                 <ul class="list-unstyled p-0">
-                                    <li class="mb-3"><strong>Posted:</strong> 3 July 2018 </li>
-                                    <li class="mb-3"><strong>Location:</strong> London </li>
-                                    <li class="mb-3"><strong>Specialism:</strong> IT </li>
-                                    <li class="mb-3"><strong>Job type:</strong> Permanent </li>
-                                    <li class="mb-3"><strong>Reference number:</strong> CRR0001-18 </li>
-                                    <li class="mb-3"><strong>Contact:</strong> Jessica Mores</li>
-                                    <li class="mb-3"><strong>Phone:</strong> (+251) 854-6308 </li>
+                                    <li class="mb-3"><strong>Luogo:</strong> Varese </li>
+                                    <li class="mb-3"><strong>Settore:</strong> IT </li>
+                                    <li class="mb-3"><strong>Contratto:</strong> Tempo pieno </li>
+                                    <li class="mb-3"><strong>Modalità:</strong> Ibrido </li>
                                 </ul>
-                                <a class="d-block mt-3" href="#"><i class="fa fa-print me-2"></i> Print</a>
+                                <div class="mt-3">
+                                    <a href="#">Candidati <i class="ti-arrow-right text-primary"></i></a>
+                                </div>
                             </div>
                         </div>
                         <!-- Sidebar end-->
