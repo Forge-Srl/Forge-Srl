@@ -84,23 +84,28 @@ module.exports = class {
                             <div class="row mt-5">
                                 <div class="col-md-12">
                                     <h2 class="mb-3">Candidati per questa posizione</h2></div>
-                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Name"></span></div>
+                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome"></span></div>
                                 <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
-                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Mobile number"></span></div>
+                                <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Telefono"></span></div>
                                 <div class="col-md-6 mb-4">
                                     <div class="input-group">
                                         <input type="file" class="form-control mb-0" id="inputGroupFile01">
-                                        <!-- <label class="customFile" for="inputGroupFile01">Upload your CV</label> -->
+                                        <!-- <label class="customFile" for="inputGroupFile01">Carica il tuo CV</label> -->
                                     </div>
                                 </div>
-                                <div class="col-md-12"><span class="form-group"><textarea cols="40" rows="6" class="form-control" placeholder="Message"></textarea></span></div>
-                                <div class="col-md-12 text-center d-grid"><button class="btn btn-dark">Apply now</button></div>
+                                <div class="col-md-12"><span class="form-group"><textarea cols="40" rows="6" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea></span></div>
+                                <div class="col-md-12 text-center d-grid">
+                                <button class="btn btn-primary m-0" type="submit">
+                                    <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
+                                    <span>Candidati Ora</span>
+                                </button>
+                                </div>
                             </div>
 
                         </div>
                         <!-- Sidebar -->
-                        <div class="col-md-4 sidebar">
-                            <div data-sticky data-margin-top="80" data-sticky-for="991">
+                        <div class="col-md-4 sidebar" data-sticky>
+                            <div data-margin-top="80" data-sticky-for="991">
                                 <h2 class="mt-3 mt-md-0 mb-3">Dettagli</h2>
                                 <ul class="list-unstyled p-0">
                                     <li class="mb-3"><strong>Luogo:</strong> Varese </li>
@@ -114,6 +119,7 @@ module.exports = class {
                             </div>
                         </div>
                         <!-- Sidebar end-->
+
                     </div>
                 </div>
             </section>
