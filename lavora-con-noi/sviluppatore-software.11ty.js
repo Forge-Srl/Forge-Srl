@@ -85,7 +85,7 @@ module.exports = class {
                                 <div class="row mt-5">
                                     <div class="col-md-12">
                                         <h2 class="mb-3">Candidati per questa posizione</h2></div>
-                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome"></span></div>
+                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome e Cognome"></span></div>
                                     <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
                                     <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Telefono"></span></div>
                                     <div class="col-md-6 mb-4">
