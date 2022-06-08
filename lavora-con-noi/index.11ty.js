@@ -131,7 +131,8 @@ module.exports = class {
                                     <div class="accordion-body">
                                         Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
                                         Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo. 
-                                    <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Apply</a>
+                                        <h6 class="mt-2 mb-2">Luogo: Varese</h6>
+                                        <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Apply</a>
                                     </div>
                                 </div>
                             </div>
