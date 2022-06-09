@@ -27,11 +27,11 @@ module.exports = class {
                             <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una <strong>modalità di lavoro ibrida</strong> (2/3 giorni in sede, gli altri giorni in smart working). 
                             Utilizziamo la <strong>metodologia Agile</strong> applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
                             
-                            <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti: incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative e scriviamo test per consolidare il lavoro che facciamo (e dormire sonni tranquilli!).</p>
+                            <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti: e scriviamo test automatici per consolidare il lavoro che facciamo (e dormire sonni tranquilli!); inoltre incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative</p>
                             
-                            <p>Utilizziamo diverse tecnologie a seconda del contesto: Java, Javascript, Kotlin, Swift, PHP, etc...</p>
+                            <p>Utilizziamo diverse tecnologie a seconda del contesto: JavasScript, TypeScript, Java, Kotlin, Swift, PHP, etc.</p>
                             
-                            <p>A nostro avviso <strong>non è indispensabile conoscere tutti i linguaggi</strong>, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i <strong>principi di buona programmazione</strong> dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
+                            <p>A nostro avviso <strong>non è indispensabile conoscere tutti i linguaggi</strong> o framework, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i <strong>principi di buona programmazione</strong> dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
                             
                             <p>Crediamo molto nella <strong>formazione</strong>: riserviamo ad ogni membro del team un'ora al giorno da dedicare alla propria crescita professionale e all'avanzamento di progetti personali e incentiviamo la partecipazione a conferenze di settore ed eventi.</p>
                             
@@ -40,13 +40,13 @@ module.exports = class {
 
                             <h2 class="mt-4 mb-4">Cosa farai con noi</h2>
                             <ul class="list-group list-group-borderless list-group-icon-primary-bg mb-4">
-                                <li class="list-group-item"><i class="fa fa-check"></i> Scrivi codice pulito, sicuro, documentato e testato</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Contribuisci alla progettazione di software robusto e scalabile</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Conduci analisi e ottimizzazione delle performance</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Strutturi e ottimizzi il codice al meglio</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Collabori con il resto del team per lo sviluppo di prodotti digitali</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Ti piace tenerti aggiornato sugli ultimi sviluppi di tecnologie, coding trends, best practices e le porti nel tuo lavoro giornaliero coinvolgendo il team in discussioni costruttive ed educative</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Ti piace misurarti su progetti di tipologia diversa e appartenenti a diversi ambiti e settori.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Scriverai codice pulito, sicuro, documentato e testato</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Contribuirai alla progettazione di software robusto e scalabile</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Condurrai analisi e ottimizzazione delle performance</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Strutturerai il codice al meglio</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Collaborerai con il resto del team per lo sviluppo di prodotti digitali</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Rimarrai aggiornato sugli ultimi sviluppi di tecnologie, coding trends, best practices e le porterai nel tuo lavoro giornaliero coinvolgendo il team in discussioni costruttive ed educative</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Ti misurerai su progetti di tipologia diversa e appartenenti a diversi ambiti e settori.</li>
                             </ul>
 
                             <h2 class="mt-4 mb-4">Chi stiamo cercando</h2>
@@ -67,7 +67,7 @@ module.exports = class {
                                 <li class="list-group-item"><i class="fa fa-check"></i> Un interessante pacchetto retributivo con RAL commisurata all’esperienza</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Remote working policy</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> Utilizzo di PerPranzo nei giorni in ufficio (il pranzo al ristorante pagato)</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Free coffee & snacks</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> Free coffee & snacks.</li>
                             </ul>
 
                             <h2 class="mt-4 mb-4">Come funziona il processo di selezione</h2>
