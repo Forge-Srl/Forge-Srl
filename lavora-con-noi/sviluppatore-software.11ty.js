@@ -23,6 +23,11 @@ module.exports = class {
                     <div class="row">
                         <!-- Job positions -->
                         <div class="col-md-8">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active"><a href="#"><i class="ti-arrow-circle-left"></i> Torna alle posizioni aperte</a></li>
+                            </ol>
+					    </nav>
                             <h2 class="mb-4">Job description</h2>
                             <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una <strong>modalità di lavoro ibrida</strong> (2/3 giorni in sede, gli altri giorni in smart working). 
                             Utilizziamo la <strong>metodologia Agile</strong> applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
@@ -115,7 +120,7 @@ module.exports = class {
                                     <li class="mb-3"><strong>Modalità:</strong> Ibrido </li>
                                 </ul>
                                 <div class="mt-3">
-                                    <a href="#application-form">Candidati <i class="ti-arrow-right text-primary"></i></a>
+                                    <a href="#application-form">Candidati <i class="ti-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
