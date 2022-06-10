@@ -132,7 +132,7 @@ module.exports = class {
                                         Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
                                         Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo. 
                                         <h6 class="mt-2 mb-2">Luogo: Varese</h6>
-                                        <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Apply</a>
+                                        <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Candidati <i class="ti-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@ module.exports = class {
                                 <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="headingT6" data-bs-parent="#accordionWorkWithUs">
                                     <div class="accordion-body">
                                         Non ci sono posizioni aperte adatte a te? Scrivici comunque: siamo sempre alla ricerca di talenti in grado di portare valore all'interno del team e valutiamo singolarmente tutte le candidature che riceviamo. Spiegaci perché dovremmo lavorare insieme.
-                                    <a class="d-block" href="mailto:${data.forge.contacts.career}">Apply</a>
+                                    <a class="d-block" href="mailto:${data.forge.contacts.career}">Candidati <i class="ti-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
