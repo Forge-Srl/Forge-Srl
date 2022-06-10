@@ -18,6 +18,7 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy({'node_modules/aos/dist': 'assets/vendor/aos'})
         .addPassthroughCopy({'node_modules/ityped/dist': 'assets/vendor/ityped'})
         .addPassthroughCopy({'node_modules/@srexi/purecounterjs/dist': 'assets/vendor/purecounter'})
+        .addPassthroughCopy({'node_modules/sticky-js/dist': 'assets/vendor/sticky-js'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {

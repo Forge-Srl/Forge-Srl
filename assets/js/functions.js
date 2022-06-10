@@ -158,8 +158,6 @@ var e = {
                 } else {
                     element.addEventListener(type, listener);
                 }
-
-
             });
         });
     },
@@ -177,7 +175,6 @@ var e = {
                 element.removeClass(className);
             });
         }
-
     },
     toggleClass: function (selectors, className) {
         if (!(selectors instanceof HTMLElement) && selectors !== null) {
