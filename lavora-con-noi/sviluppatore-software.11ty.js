@@ -5,7 +5,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge - Lavora con Noi: Sviluppatore Software',
-            pageDescription: 'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: Java, Javascript, Kotlin, Swift, PHP...',
+            pageDescription: 'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: Java, JavaScript, Kotlin, Swift, PHP...',
             eleventyNavigation: {
                 key: 'sviluppatore-software',
                 parent: 'lavora-con-noi',
@@ -105,14 +105,14 @@ module.exports = class {
                             </section>
                         </div>
                         <!-- Sidebar -->
-                        <div class="col-md-4 sidebar" data-sticky>
-                            <div data-margin-top="80" data-sticky-for="991">
+                        <div class="col-md-4 sidebar">
+                            <div data-margin-top="80" data-sticky data-sticky-for="991">
                                 <h2 class="mt-3 mt-md-0 mb-3">Dettagli</h2>
                                 <ul class="list-unstyled p-0">
-                                    <li class="mb-3"><strong>Luogo:</strong> Varese </li>
-                                    <li class="mb-3"><strong>Settore:</strong> IT </li>
-                                    <li class="mb-3"><strong>Contratto:</strong> Tempo pieno </li>
-                                    <li class="mb-3"><strong>Modalità:</strong> Ibrido </li>
+                                    <li class="mb-3"><strong>Luogo:</strong> Varese</li>
+                                    <li class="mb-3"><strong>Settore:</strong> IT</li>
+                                    <li class="mb-3"><strong>Contratto:</strong> Tempo pieno</li>
+                                    <li class="mb-3"><strong>Modalità:</strong> Ibrido</li>
                                 </ul>
                                 <div class="mt-3">
                                     <a href="#application-form">Candidati <i class="ti-arrow-right text-primary"></i></a>
@@ -120,15 +120,10 @@ module.exports = class {
                             </div>
                         </div>
                         <!-- Sidebar end-->
-
                     </div>
                 </div>
             </section>
-            <!-- =======================
-            careers -->
-
-
-            
+            <!-- ======================= careers -->
         </main>`
     }
 }
