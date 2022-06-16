@@ -293,34 +293,31 @@ module.exports = class {
                             ${await this.image('technologies-logos/TS-logo.png', 'Logo TypeScript', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/javascript-logo.png', 'Logo Javascript', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/java-logo.png', 'Logo Java', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/algolia-logo.png', 'Logo Algolia', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/swift-logo.png', 'Logo Swift', '', [214], '214w')}
+                            ${await this.image('technologies-logos/ios-logo.png', 'Logo iOS', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/kotlin-logo.png', 'Logo Kotlin', '', [214], '214w')}
+                            ${await this.image('technologies-logos/android-logo.png', 'Logo Android', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/node-logo.png', 'Logo Node', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/firebase-logo.png', 'Logo Firebase', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/c++-logo.png', 'Logo C++', '', [214], '214w')}
+                            ${await this.image('technologies-logos/angular-logo.png', 'Logo Angular', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/csharp-logo.png', 'Logo C#', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/aws-logo.png', 'Logo AWS', '', [214], '214w')}
+                        </div>
+                        <div class="col-4 col-md-2 mb-5">
+                            ${await this.image('technologies-logos/firebase-logo.png', 'Logo Firebase', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/googlecloud-logo.png', 'Logo Google Cloud', '', [214], '214w')}
