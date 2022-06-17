@@ -1,4 +1,5 @@
 const pageTitle = require('./_includes/components/pageTitle')
+const formScript = require('./_includes/components/formScript')
 
 module.exports = class {
     data() {
@@ -14,11 +15,6 @@ module.exports = class {
     }
 
     render(data) {
-        const recaptchaClientKey = '6Lc06DAbAAAAAO87U0h1atSDthKftgqo8p1bPOyl'
-        const contactFormUrl = 'https://us-central1-forge-srl.cloudfunctions.net/contactUs'
-        // For local test:
-        // contactFormUrl = 'http://localhost:5001/forge-srl/us-central1/contactUs'
-
         return `<main>
             ${pageTitle.call(this, data)}
             <section>
@@ -67,34 +63,28 @@ module.exports = class {
                             <div class="h-100">
                                 <h3>Hai un progetto in mente?</br>Realizziamolo insieme!</h3>
                                 <p>Mettiti in contatto con noi per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto</p>
-                                <form class="contact-form needs-validation" id="contact-form" name="contactform" method="POST" action="${contactFormUrl}">
-                                    <!-- Main form -->
+                                <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <!-- name -->
-                                            <div class="mb-3 position-relative">
+                                            <div class="input-group">
                                                 <input required id="con-name" name="name" type="text" class="form-control" placeholder="Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <!-- email -->
-                                            <div class="mb-3 position-relative">
+                                            <div class="input-group">
                                                 <input required id="con-email" name="from" type="email" class="form-control" placeholder="E-mail">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <!-- Subject -->
-                                            <div class="mb-3 position-relative">
+                                            <div class="input-group">
                                                 <input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Subject">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <!-- Message -->
-                                            <div class="mb-3 position-relative">
+                                            <div class="input-group">
                                                 <textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Message"></textarea>
                                             </div>
                                         </div>
-                                        <!-- submit button -->
                                         <div class="col-md-12 d-grid">
                                             <button class="btn btn-primary m-0" type="submit">
                                                 <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
@@ -106,64 +96,7 @@ module.exports = class {
                                 <div id="contact-form-done" style="display: none;">
                                     <h4 class="text-center">Grazie per averci contattato! Un membro del nostro team si metterà in contatto con te il prima possibile.</h4>
                                 </div>
-                                <script src="https://www.google.com/recaptcha/api.js?render=${recaptchaClientKey}"></script>
-                                <script>
-                                    const form = document.getElementById('contact-form')
-                                    const formReplacement = document.getElementById('contact-form-done')
-                                    const submitButton = form.getElementsByTagName('button')[0]
-                                    const checkRecaptcha = callback => {
-                                        grecaptcha.ready(function() {
-                                            grecaptcha.execute('${recaptchaClientKey}', {action: 'submit'})
-                                                .then(token => callback(null, token))
-                                                .catch(error => callback(error))
-                                        })
-                                    }
-                                    const lockForm = () => {
-                                        submitButton.classList.add('disabled')
-                                        submitButton.children[0].style.cssText = ''
-                                    }
-                                    const unlockForm = () => {
-                                        submitButton.children[0].style.cssText = 'display: none;'
-                                        submitButton.classList.remove('disabled')
-                                    }
-                                    form.addEventListener('submit', (event) => {
-                                        event.preventDefault()
-                                        
-                                        checkRecaptcha((error, token) => {
-                                            if (error) {
-                                                return
-                                            }
-                                            
-                                            const request = new XMLHttpRequest()
-                                            const formData = new FormData(form)
-                                            formData.set('recaptcha', token)
-                                            const fail = () => {
-                                                unlockForm()
-                                                alert('L\\'invio della email è fallito')
-                                            }
-                                            const success = () => {
-                                                form.reset()
-                                                unlockForm()
-                                                form.style.cssText = 'display: none;'
-                                                formReplacement.style.cssText = ''
-                                            }
-                                        
-                                            request.open('POST', form.action, true)
-                                            request.onload = function() {
-                                                if (this.status >= 200 && this.status < 400) {
-                                                    success()
-                                                } else {
-                                                    fail()
-                                                }
-                                            }
-                                            request.onerror = function() { fail() }
-                                            
-                                            lockForm()
-                                            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
-                                            request.send(new URLSearchParams(formData))
-                                        })
-                                    })
-                                </script>
+                                ${formScript.call(this, 'contact-form', 'contact-form-done', data)}
                             </div>
                         </div>
                     </div>

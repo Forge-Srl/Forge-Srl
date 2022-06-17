@@ -1,4 +1,5 @@
 const pageTitle = require('../_includes/components/pageTitle')
+const formScript = require('../_includes/components/formScript')
 
 module.exports = class {
     data() {
@@ -23,25 +24,26 @@ module.exports = class {
                     <div class="row">
                         <!-- Job positions -->
                         <div class="col-md-8">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="#"><i class="ti-arrow-circle-left"></i> Torna alle posizioni aperte</a></li>
-                            </ol>
-					    </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item active">
+                                        <a href="#"><i class="ti-arrow-circle-left"></i> Torna alle posizioni aperte</a>
+                                    </li>
+                                </ol>
+                            </nav>
                             <h2 class="mb-4">Job description</h2>
                             <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una <strong>modalità di lavoro ibrida</strong> (2/3 giorni in sede, gli altri giorni in smart working). 
                             Utilizziamo la <strong>metodologia Agile</strong> applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
                             
-                            <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti: e scriviamo test automatici per consolidare il lavoro che facciamo (e dormire sonni tranquilli!); inoltre incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative</p>
+                            <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti e scriviamo test automatici per consolidare il lavoro che facciamo (e dormire sonni tranquilli!); inoltre incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative.</p>
                             
-                            <p>Utilizziamo diverse tecnologie a seconda del contesto: JavasScript, TypeScript, Java, Kotlin, Swift, PHP, etc.</p>
+                            <p>Utilizziamo diverse tecnologie a seconda del contesto: JavaScript, TypeScript, Java, Kotlin, Swift, PHP, etc.</p>
                             
                             <p>A nostro avviso <strong>non è indispensabile conoscere tutti i linguaggi</strong> o framework, quanto piuttosto non spaventarsi di fronte a nuove sfide e utilizzare i <strong>principi di buona programmazione</strong> dettati da un'architettura pulita del codice e dall'utilizzo di pattern.</p>
                             
                             <p>Crediamo molto nella <strong>formazione</strong>: riserviamo ad ogni membro del team un'ora al giorno da dedicare alla propria crescita professionale e all'avanzamento di progetti personali e incentiviamo la partecipazione a conferenze di settore ed eventi.</p>
                             
-                            <p>Contribuiamo a diversi <strong>progetti open source</strong> su diverse tematiche: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.
-                            </p>
+                            <p>Contribuiamo a diversi <strong>progetti open source</strong> su diverse tematiche: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.</p>
 
                             <h2 class="mt-4 mb-4">Cosa farai con noi</h2>
                             <ul class="list-group list-group-borderless list-group-icon-primary-bg mb-4">
@@ -85,29 +87,51 @@ module.exports = class {
                             <h2 class="mt-4 mb-4">Nota</h2>
                             <p>Tutte le candidature sono valutate singolarmente e ci teniamo a rispondere a ogni candidato. A volte, purtroppo, le risposte sono filtrate come Spam: ricordati di controllare la cartella.</p>
 
-                            <!-- Apply form -->
-                            <section id="application-form">
-                                <div class="row mt-5">
-                                    <div class="col-md-12">
-                                        <h2 class="mb-3">Candidati per questa posizione</h2></div>
-                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Nome e Cognome"></span></div>
-                                    <div class="col-md-6"><span class="form-group"><input type="email" class="form-control" placeholder="E-mail"></span></div>
-                                    <div class="col-md-6"><span class="form-group"><input type="text" class="form-control" placeholder="Telefono"></span></div>
-                                    <div class="col-md-6 mb-4">
+                            <div class="mt-5 col-md-12">
+                                <h2 class="mb-3">Candidati per questa posizione</h2>
+                            </div>
+                            <form id="application-form" class="needs-validation" name="applicationform" method="POST" action="${data.form.url.applyForJob()}">
+                                <div class="row">
+                                    <div class="col-md-6">
                                         <div class="input-group">
-                                            <input type="file" class="form-control mb-0" id="inputGroupFile01">
-                                            <!-- <label class="customFile" for="inputGroupFile01">Carica il tuo CV</label> -->
+                                            <input required type="text" name="name" class="form-control" placeholder="Nome e Cognome">
                                         </div>
                                     </div>
-                                    <div class="col-md-12"><span class="form-group"><textarea cols="40" rows="6" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea></span></div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input required type="email" name="from" class="form-control" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input required type="text" name="phone" class="form-control" placeholder="Telefono">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="input-group">
+                                            <button class="form-control mb-0 btn btn-outline-primary" onclick="document.querySelector('input[name=curriculum]').click();">
+                                                <span>Carica il tuo CV</span>
+                                            </button>
+                                            <input required type="file" name="curriculum" style="display: none;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <textarea required cols="40" rows="6" name="about_you" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12 text-center d-grid">
-                                    <button class="btn btn-primary m-0" type="submit">
-                                        <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
-                                        <span>Candidati Ora</span>
-                                    </button>
+                                        <button class="btn btn-primary m-0" type="submit">
+                                            <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
+                                            <span>Candidati Ora</span>
+                                        </button>
                                     </div>
                                 </div>
-                            </section>
+                            </form>
+                            <div id="application-form-done" style="display: none;">
+                                <h4 class="text-center">Grazie per averci contattato! Un membro del nostro team si metterà in contatto con te il prima possibile.</h4>
+                            </div>
+                            ${formScript.call(this, 'application-form', 'application-form-done', data)}
                         </div>
                         <!-- Sidebar -->
                         <div class="col-md-4 sidebar">
