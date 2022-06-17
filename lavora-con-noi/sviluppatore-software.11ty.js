@@ -27,7 +27,7 @@ module.exports = class {
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item active">
-                                        <a href="#"><i class="ti-arrow-circle-left"></i> Torna alle posizioni aperte</a>
+                                        <a href="/lavora-con-noi/"><i class="ti-arrow-circle-left"></i> Torna alle posizioni aperte</a>
                                     </li>
                                 </ol>
                             </nav>
