@@ -113,7 +113,7 @@ module.exports = class {
             <!-- ======================= La nostra filosofia End -->
 
             <!-- ======================= Posizioni Aperte -->
-            <section>
+            <section id="posizioni-aperte">
                 <div class="container">
                     <div class="row">
                     <!-- Job positions -->
