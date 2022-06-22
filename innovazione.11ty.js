@@ -5,7 +5,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Forge - Innovazione',
-            pageDescription: 'Uniamo competenze multisettoriali altamente professionali per risolvere problemi tecnologici, strategici e di comunicazione alle aziende.',
+            pageDescription: 'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.',
             eleventyNavigation: {
                 key: 'innovazione',
                 title: 'Innovazione'
@@ -16,7 +16,7 @@ module.exports = class {
     async render(data) {
         return `<main>
             ${pageTitle.call(this, data)}
-            <section id="innovare" class="pt-5 py-4 mb-4">
+            <section id="innovare" class="pt-5 py-5 mb-4">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->

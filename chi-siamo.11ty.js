@@ -86,7 +86,7 @@ module.exports = class {
             <!-- ======================= End Action box -->
 
             <!-- ======================= Divisione del team  -->
-            <section id="team" class="pb-3">
+            <section id="team" class="pt-5 py-5">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- right -->
@@ -96,6 +96,7 @@ module.exports = class {
                             <p>La nostra squadra è composta da un mix perfetto di creativi, marketer e tecnici esperti.</p>
                             <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie. </p>
                             <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende. </p>
+                            <a href="/innovazione/" class="btn btn-outline-primary me-3 text-center">Scopri i nostri progetti</a>
                         </div>
                         <!-- left -->
                         <div class="col-md-6">
