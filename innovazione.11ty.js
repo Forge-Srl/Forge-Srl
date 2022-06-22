@@ -21,12 +21,12 @@ module.exports = class {
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
                         <div class="col-md-6 mt-4 mt-md-0">
-                            <h2 class="h1">La nostra parola preferita: innovare</h2>
-                            <p>In Forge amiamo accompagnare le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.</p>
-                            <p>Utilizziamo un approccio collaborativo in ogni fase dello sviluppo di prodotti, servizi e processi, ponendo particolare attenzione alla trasformazione digitale e all’adozione di nuove tecnologie che rispondano ai problemi emergenti delle organizzazioni.</p>
+                            <h2 class="h1">La nostra parola preferita: Innovare</h2>
+                            <p>In Forge amiamo accompagnare le aziende in un <strong>percorso di innovazione</strong> che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.</p>
+                            <p>Utilizziamo un <strong>approccio collaborativo</strong> in ogni fase dello sviluppo di prodotti, servizi e processi, ponendo particolare attenzione alla <strong>trasformazione digitale</strong> e all’adozione di nuove tecnologie che rispondano ai problemi emergenti delle organizzazioni.</p>
                         </div>
                         <!-- right -->
-                        <div class="col-md-6 d-none d-sm-block">
+                        <div class="col-md-6">
                             ${await this.image('innovazione/universita-como-nexxt.jpg', 'Università e Centri di Ricerca con cui collaboriamo', 'rounded')}
                         </div>
                     </div>
@@ -42,7 +42,7 @@ module.exports = class {
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-write"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="5257">0</h2>
-                                <p class="mb-0">Linee di codice</p>
+                                <p class="mb-0">Linee di codice Open Source</p>
                             </div>
                         </div>
                         <!-- count item -->
@@ -56,9 +56,9 @@ module.exports = class {
                         <!-- count item -->
                         <div class="col-md-4 col-6 mb-4 mb-md-0">
                             <div class="text-center">
-                                <i class="text-grad display-6 ti-user"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="2">0</h2>
-                                <p class="mb-0">Team incubati</p>
+                                <i class="text-grad display-6 ti-agenda"></i>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="3">0</h2>
+                                <p class="mb-0">Università partner</p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ module.exports = class {
                     <div class="row">
                         <div class="col-sm-12 text-center mb-4">
                             <h2>Sviluppiamo progetti Open Source</h2>
-                            <p>Ogni volta che risolviamo un problema scrivendo del software cerchiamo di astrarre il più possibile dall’ambito di applicazione per arrivare ad una soluzione generica che possa essere riutilizzata in altri ambiti. Per questo motivo abbiamo deciso di rilasciare alcuni progetti Open Source, nati e forgiati internamente a Forge con lo scopo di risolvere esigenze di sviluppo.</p>
+                            <p>Ogni volta che risolviamo un problema scrivendo del software cerchiamo di astrarre il più possibile dall’ambito di applicazione per arrivare ad una <strong>soluzione generica</strong> che possa essere riutilizzata in altri ambiti. Per questo motivo abbiamo deciso di rilasciare alcuni progetti Open Source, <strong>nati e forgiati internamente a Forge</strong> con lo scopo di risolvere esigenze di sviluppo.</p>
                         </div>
                         <div class="col-md-4 mt-30">
                             <div class="feature-box f-style-2 icon-grad h-100">
@@ -136,9 +136,9 @@ module.exports = class {
                         <div class="col-md-6 mt-4 mt-md-0">
                             <h5 class="text-primary">Ricerca e Sviluppo</h5>
                             <h2 class="h1">Un ecosistema dedicato alla trasformazione digitale</h2>
-                            <p>Per noi la tecnologia è al servizio del cambiamento. Partendo dal potenziale delle nuove tecnologie digitali sviluppiamo soluzioni architetturali, di intelligenza artificiale e di ricerca e sviluppo che accompagnano le aziende in un reale percorso di trasformazione digitale.</p>
-                            <p>Ci identifichiamo con i bisogni di innovazione delle aziende e le aiutiamo a individuare le soluzioni migliori per realizzare progetti che le rendano autonome nell’affrontare il futuro.</p>
-                            <a href="/contattaci/" class="btn btn-outline-primary me-3 text-center">Contattaci per una consulenza</a>
+                            <p>Per noi la tecnologia è al servizio del cambiamento. Partendo dal potenziale delle nuove tecnologie digitali sviluppiamo soluzioni architetturali, di <strong>intelligenza artificiale</strong> e di ricerca e sviluppo che accompagnano le aziende in un reale percorso di trasformazione digitale.</p>
+                            <p>Ci identifichiamo con i <strong>bisogni di innovazione delle aziende</strong> e le aiutiamo a individuare le soluzioni migliori per realizzare progetti che le rendano autonome nell’affrontare il futuro.</p>
+                                <a href="/contattaci/" class="btn btn-outline-primary me-3 text-center">Contattaci per una consulenza</a>
                         </div>
                     </div>
                 </div>
