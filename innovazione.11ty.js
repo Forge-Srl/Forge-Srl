@@ -34,13 +34,13 @@ module.exports = class {
             </section>
 
             <!-- counter gradient -->
-            <section class="pt-5 py-5 bg-grad all-text-white">
+            <section class="pt-5 py-5 bg-light">
                 <div class="container">
                     <div class="row">
                         <!-- count item -->
                         <div class="col-md-4 col-6 mb-4 mb-md-0">
                             <div class="text-center">
-                                <i class="display-6 ti-write"></i>
+                                <i class="text-grad display-6 ti-write"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="5257">0</h2>
                                 <p class="mb-0">Linee di codice</p>
                             </div>
@@ -48,7 +48,7 @@ module.exports = class {
                         <!-- count item -->
                         <div class="col-md-4 col-6 mb-4 mb-md-0">
                             <div class="text-center">
-                                <i class="display-6 ti-marker"></i>
+                                <i class="text-grad display-6 ti-marker"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="13">0</h2>
                                 <p class="mb-0">Progetti di tesi</p>
                             </div>
@@ -56,7 +56,7 @@ module.exports = class {
                         <!-- count item -->
                         <div class="col-md-4 col-6 mb-4 mb-md-0">
                             <div class="text-center">
-                                <i class="display-6 ti-face-smile"></i>
+                                <i class="text-grad display-6 ti-user"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="2">0</h2>
                                 <p class="mb-0">Team incubati</p>
                             </div>
@@ -88,7 +88,7 @@ module.exports = class {
             <!-- ======================= Università End -->    
 
             <!-- ======================= Progetti Open Source -->
-            <section id="open-source">
+            <section id="open-source" class="bg-light">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center mb-4">
