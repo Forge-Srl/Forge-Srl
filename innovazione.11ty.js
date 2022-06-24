@@ -38,15 +38,15 @@ module.exports = class {
                 <div class="container">
                     <div class="row">
                         <!-- count item -->
-                        <div class="col-md-4 col-6 mb-4 mb-md-0">
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
-                                <i class="text-grad display-6 ti-write"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="5257">0</h2>
-                                <p class="mb-0">Linee di codice Open Source</p>
+                                <i class="text-grad display-6 ti-plug"></i>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="8357">0</h2>
+                                <p class="mb-0">Caffè convertiti in codice</p>
                             </div>
                         </div>
                         <!-- count item -->
-                        <div class="col-md-4 col-6 mb-4 mb-md-0">
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-marker"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="13">0</h2>
@@ -54,7 +54,15 @@ module.exports = class {
                             </div>
                         </div>
                         <!-- count item -->
-                        <div class="col-md-4 col-6 mb-4 mb-md-0">
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
+                            <div class="text-center">
+                                <i class="text-grad display-6 ti-ruler-alt-2"></i>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="15">0</h2>
+                                <p class="mb-0">Progetti Software</p>
+                            </div>
+                        </div>
+                        <!-- count item -->
+                        <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-agenda"></i>
                                 <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="3">0</h2>
