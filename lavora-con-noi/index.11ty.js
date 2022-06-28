@@ -4,7 +4,7 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Forge - Lavora con Noi',
+            pageTitle: 'Lavora con Noi',
             pageDescription: 'Forge è sempre alla ricerca di persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra a far parte del team.',
             eleventyNavigation: {
                 key: 'lavora-con-noi',

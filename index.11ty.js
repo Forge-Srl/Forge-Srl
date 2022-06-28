@@ -2,7 +2,7 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Forge',
+            pageTitle: 'Homepage',
             pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
             eleventyNavigation: {
                 key: 'home',

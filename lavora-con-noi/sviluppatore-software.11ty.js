@@ -5,7 +5,7 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Forge - Lavora con Noi: Sviluppatore Software',
+            pageTitle: 'Lavora con Noi: Sviluppatore Software',
             pageDescription: 'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: Java, JavaScript, Kotlin, Swift, PHP...',
             eleventyNavigation: {
                 key: 'sviluppatore-software',

@@ -27,7 +27,7 @@ module.exports = async function(data) {
                 <meta name="description" content="${data.pageDescription}">
                 <meta name="facebook-domain-verification" content="${facebookVerification}">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <title>${data.pageTitle}</title>
+                <title>${data.pageTitle} - Forge Srl</title>
                 <link rel="canonical" href="${canonical}">
                 <link rel="shortcut icon" href="/favicon.ico">
                 

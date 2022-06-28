@@ -4,7 +4,7 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Forge - Chi siamo',
+            pageTitle: 'Chi siamo',
             pageDescription: 'Uniamo competenze multisettoriali altamente professionali per risolvere problemi tecnologici, strategici e di comunicazione alle aziende.',
             eleventyNavigation: {
                 key: 'chi-siamo',

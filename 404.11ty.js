@@ -4,7 +4,7 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Forge',
+            pageTitle: '404',
             pageDescription: '',
             // Force output page to be /404.html instead of /404/index.html!
             permalink: '/404.html',
