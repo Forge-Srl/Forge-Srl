@@ -41,7 +41,7 @@ module.exports = class {
                         <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-plug"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="8357">0</h2>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="15210">0</h2>
                                 <p class="mb-0">Caffè convertiti in codice</p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ module.exports = class {
                         <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-ruler-alt-2"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="15">0</h2>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="21">0</h2>
                                 <p class="mb-0">Progetti Software</p>
                             </div>
                         </div>
