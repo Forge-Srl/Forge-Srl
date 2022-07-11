@@ -107,7 +107,7 @@ module.exports = class {
                             <h2 class="h1">Dialoghiamo con giovani menti entusiaste</h2>
                             <p>La forte spinta a collaborare con le università del territorio viene dai nostri stessi fondatori, che arrivano da un lungo percorso accademico e ben conoscono il <strong>potenziale innovativo di centri di ricerca e università</strong> in risposta alle esigenze di trasformazione delle aziende.</p>
                             <p>Nel tempo abbiamo stretto importanti <strong>sinergie con l’Università Insubria di Varese</strong>, la nostra città natale, e abbiamo svolto diversi <strong>workshop all’Università Bicocca di Milano</strong>. Inoltre, curiamo la formazione dei giovani universitari per accelerare la loro crescita professionale e la loro capacità di essere protagonisti del cambiamento attraverso <strong>stage e progetti di ricerca</strong> che riguardano sia tematiche IT che Marketing.</p>
-                            <a href="/lavora-con-noi/#posizioni-aperte/" class="btn btn-outline-primary me-3 text-center">Posizioni aperte</a>
+                            <a href="/lavora-con-noi/#posizioni-aperte" class="btn btn-outline-primary me-3 text-center">Posizioni aperte</a>
                         </div>
                     </div>
                 </div>
