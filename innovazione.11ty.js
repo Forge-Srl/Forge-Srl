@@ -127,7 +127,7 @@ module.exports = class {
                                 <div class="feature-box-icon"><i class="fas fa-regular fa-arrows-turn-to-dots"></i></div>
                                 <h3 class="feature-box-title">BionicJS</h3>
                                 <p class="feature-box-desc">Permette di eseguire codice JavaScript da altri linguaggi di programmazione per semplificare lo sviluppo di applicazioni multi-piattaforma.</p>
-                                <a class="d-block pt-2" href="https://github.com/Forge-Srl/bionic-js/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
+                                <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/bionic-js/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <div class="col-md-4 mt-30">
@@ -135,7 +135,7 @@ module.exports = class {
                                 <div class="feature-box-icon"><i class="fas fa-regular fa-bridge-water"></i></div>
                                 <h3 class="feature-box-title">JJBridge</h3>
                                 <p class="feature-box-desc">Porta l’esecuzione di codice JavaScript in ambiente Java, nato inizialmente per utilizzare BionicJS in ambito Android.</p>
-                                <a class="d-block pt-2" href="https://github.com/Forge-Srl/jjbridge-engine-v8/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
+                                <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/jjbridge-engine-v8/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <div class="col-md-4 mt-30">
@@ -143,7 +143,7 @@ module.exports = class {
                                 <div class="feature-box-icon"><i class="fas fa-regular fa-diagram-project"></i></div>
                                 <h3 class="feature-box-title">Gushio</h3>
                                 <p class="feature-box-desc">Permette di scrivere script multipiattaforma testabili unitariamente in linguaggio JavaScript.</p>
-                                <a class="d-block pt-2" href="https://github.com/Forge-Srl/gushio/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
+                                <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/gushio/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
