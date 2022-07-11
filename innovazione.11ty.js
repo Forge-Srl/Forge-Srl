@@ -32,6 +32,25 @@ module.exports = class {
                     </div>
                 </div>
             </section>
+            
+            <script>                       
+                function countCoffees() {
+                    
+                    const coffeesUntilPageCreation = 15210
+                    const pageCreation = new Date(2022, 6, 1)
+                    const today = new Date();
+                    
+                    const differenceInMillis = today.getTime() - pageCreation.getTime()
+                    const differenceInDays = differenceInMillis / (1000 * 3600 * 24)                                      
+                   
+                    return coffeesUntilPageCreation + (differenceInDays * 0.6 * 21)                   
+                }
+                
+                document.addEventListener("DOMContentLoaded", function() {
+                    const coffeeCounter = document.getElementById('coffeeCounter')
+                    coffeeCounter.setAttribute('data-purecounter-end', countCoffees())  
+                });            
+            </script>
 
             <!-- counter gradient -->
             <section class="pt-5 py-5 bg-light">
@@ -41,7 +60,7 @@ module.exports = class {
                         <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-plug"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="15210">0</h2>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" id="coffeeCounter"  data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="15210">0</h2>
                                 <p class="mb-0">Caffè convertiti in codice</p>
                             </div>
                         </div>
