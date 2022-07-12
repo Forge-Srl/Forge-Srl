@@ -3,7 +3,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Homepage',
-            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Marketing Agency, Digital Company.',
+            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Digital Factory, Web Agency.',
             eleventyNavigation: {
                 key: 'home',
                 title: 'Home',
@@ -21,7 +21,7 @@ module.exports = class {
                         <h1 class="display-4 fw-normal" style="will-change: contents; transform: translateZ(0);">
                             <span class="pt-0">Siamo una</span>
                             <br>
-                            <span class="typed" data-type-text="Software House&&Marketing Agency&&Digital Company"></span>
+                            <span class="typed" data-type-text="Software House&&Digital Factory&&Web Agency"></span>
                         </h1>
                         <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
                         <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
@@ -86,8 +86,9 @@ module.exports = class {
                     <div class="col-md-6 ps-lg-5">
                         <h5 class="text-primary">Chi Siamo</h5>
                         <h3 class="h1">Soluzioni digitali, approccio umano</h3>
-                        <p>Non siamo una classica agenzia di comunicazione né una web house, ma amiamo stare dove tecnologia, marketing e business si incontrano per trasformare le idee di oggi nei prodotti vincenti di domani.</p>
-                        <p>Aiutiamo le aziende nelle proprie decisioni strategiche attraverso una <b>consulenza armonica</b> e un approccio agile che premia fiducia, onestà e trasparenza.</p>
+                        <p>Non siamo una classica software house, ma amiamo definirci una <b>digital factory</b> che trasforma le idee di oggi nei prodotti vincenti di domani.</p>
+                        <p>Lavoriamo su software e tecnologie web con la serietà e la passione di una squadra affiatata, composta da informatici con varie specializzazioni che non smettono mai di imparare al fine di offrire <b>soluzioni innovative</b> sempre al passo con le evoluzioni tecnologiche.</p>
+                        <p>Il nostro approccio è diretto e agile, e premia <b>fiducia, onestà e trasparenza</b>.</p>
                         <a href="/chi-siamo/" class="btn btn-outline-primary me-3 text-center">Conosci il team</a>
                     </div>
                 </div>
@@ -125,6 +126,17 @@ module.exports = class {
                     <div class="col-md-4 mt-5">
                         <!-- service item -->
                         <div class="rounded bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-project-diagram"></i></span>
+                            <h5>Service</h5>
+                            <ul>
+                                <li><i>Agile</i> Working</li>
+                                <li>Business Planning</li>
+                                <li>Business Modelling</li>
+                                <li>Digital Transformation</li>
+                            </ul>
+                        </div>
+                        <!-- service item -->
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
                             <span class="display-5 icon-primary"><i class="fas fa-bullhorn"></i></span>
                             <h5>Marketing</h5>
                             <ul>
@@ -138,17 +150,6 @@ module.exports = class {
                             <div class="mt-3">
                                 <a href="/servizi-marketing/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                             </div>
-                        </div>
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-project-diagram"></i></span>
-                            <h5>Service</h5>
-                            <ul>
-                                <li><i>Agile</i> Working</li>
-                                <li>Business Planning</li>
-                                <li>Business Modelling</li>
-                                <li>Digital Transformation</li>
-                            </ul>
                         </div>
                     </div>
     
