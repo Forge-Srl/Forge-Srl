@@ -24,6 +24,7 @@ Table Of Content
 13 TYPING TEXT ANIMATION
 14 ISOTOPE
 15 WAVE
+16 PURECOUNTER
 ====================== */
 
 "use strict";
@@ -81,7 +82,8 @@ var e = {
         e.lightBox(),
         e.typeText(),
         e.enableIsotope(),
-        e.waveCanvas()
+        e.waveCanvas(),
+        e.pureCounter()
     },
     isVariableDefined: function (el) {
         return typeof !!el && (el) != 'undefined' && el != null;
@@ -597,6 +599,11 @@ var e = {
         }
     },
     // END: wave
-    
+
+    // START: 16 Pure Counter
+    pureCounter: function() {
+        new PureCounter({})
+    }
+    // END: Pure Counter
 };
 e.init();
