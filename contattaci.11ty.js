@@ -20,11 +20,11 @@ module.exports = class {
             <section>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-8 mx-auto">
+                        <div class="col-sm-12 text-center mb-4">
                             <div class="title text-center">
-                                <h2>Come possiamo aiutarti?</h2>
-                                <p>Il modo migliore per comprendere le tue esigenze o rispondere ai tuoi dubbi è 
-                                parlarne! Mandaci una mail, chiamaci oppure compila il form qui sotto.</p>
+                                <h2>Come possiamo essere d'aiuto alla tua azienda?</h2>
+                                <p>Hai domande sui nostri servizi? Vorresti farti un’idea di come lavoriamo oppure ricevere un preventivo? Il modo migliore per comprendere le tue esigenze o rispondere ai tuoi dubbi è parlarne! Passa a trovarci, chiamaci, mandaci una email o scrivi un messaggio nel modulo di contatto che trovi qui sotto.</p>
+                                <p>Siamo estremamente reattivi, rispondiamo ad ogni richiesta e diamo importanza ad ogni opinione ricevuta. Scrivici e un nostro incaricato ti risponderà al più presto. Faremo buon uso dei tuoi dati ma, soprattutto, sarà un piacere conoscere te e gli obiettivi che vuoi raggiungere!</p>
                             </div>
                         </div>
                     </div>
@@ -61,8 +61,8 @@ module.exports = class {
                         <!-- contact form -->
                         <div class="col-md-6">
                             <div class="h-100">
-                                <h3>Hai un progetto in mente?</br>Realizziamolo insieme!</h3>
-                                <p>Mettiti in contatto con noi per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto</p>
+                                <h3>Hai un grande progetto in mente?</br>Realizziamolo insieme!</h3>
+                                <p>Mettiti in contatto con noi per condividere le tue idee e per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto.</p>
                                 <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
                                     <div class="row">
                                         <div class="col-md-6">
