@@ -3,7 +3,7 @@ module.exports = {
   contacts: {
     info: 'info@forge.srl',
     career: 'career@forge.srl',
-    phone: '(+39) 379 112 1688',
+    phone: '(+39) 375 664 7867',
     address: 'Via Sempione 14, 21100 Varese VA'
   },
   vatCode: 'IT03778880132',
