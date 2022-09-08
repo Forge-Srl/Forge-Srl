@@ -1,1 +1,16 @@
+# Hi there!
+#
+# If you are not a robot and you are reading this, we are curious to discover the reason why!
+#
+# We are looking to meet inquisitive people like you, who desire to work on innovative and "challenging" projects!
+#
+# Do you think you have what it takes to join the Forge family? Apply now!
+#
+# Email career@forge.srl
+#
+# Or visit https://forge.srl/lavora-con-noi/
+
+User-agent: *
+Allow: /
+
 Sitemap: https://forge.srl/sitemap.xml
