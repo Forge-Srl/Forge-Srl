@@ -19994,6 +19994,8 @@ footer .widget {
 .testimonials .testi-avatar img {
   width: 80px;
   border-radius: 50%;
+  border-style: solid;
+  border-color:  var(--bs-body-color);
   display: inline-block;
 }
 .testimonials .testi-full {
