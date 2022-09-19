@@ -42,6 +42,7 @@ module.exports = async function(data) {
                 ${lazyCssLink('/assets/vendor/animate/animate.min.css', 'screen')}
                 ${lazyCssLink('/assets/vendor/glightbox/css/glightbox.css', 'screen')}
                 ${lazyCssLink('/assets/vendor/aos/aos.css', 'screen')}
+                ${lazyCssLink('/assets/vendor/tiny-slider/tiny-slider.css', 'screen')}
                 <!-- Theme CSS -->
                 ${lazyCssLink('/assets/css/style.css', 'all')}
                 <!-- Theme Color CSS -->
@@ -55,8 +56,10 @@ module.exports = async function(data) {
                 <script defer src="/assets/vendor/glightbox/js/glightbox.js"></script>
                 <script defer src="/assets/vendor/ityped/index.js"></script>
                 <script defer src="/assets/vendor/sticky-js/sticky.min.js"></script>
+                <script defer src="/assets/vendor/tiny-slider/tiny-slider.js"></script>
                 <!--Template Functions-->
                 <script defer src="/assets/js/functions.js"></script>
+                
                 
                 <!-- Google Tag Manager -->
                 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

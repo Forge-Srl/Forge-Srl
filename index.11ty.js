@@ -365,8 +365,8 @@ module.exports = class {
                     </div>
                         <div class="col-12">
                             <div class="tiny-slider">
-                                <div class="tiny-slider-inner testi-full" data-gutter="1" data-arrow="false" data-dots="true" data-autoplay="true" data-items="1">	
-                                    <!-- testimonial item -->
+                                <div class="tiny-slider-inner testi-full" data-gutter="30" data-arrow="false" data-dots="true" data-autoplay="true" data-items-xl="3" data-items-md="2" data-items-sm="2" data-items-xs="1">	
+                                    <!-- testimonial item 1 -->
                                     <div class="item px-2 px-sm-5">
                                         <div class="testimonials-wrap">
                                             <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
