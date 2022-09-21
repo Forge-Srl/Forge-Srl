@@ -280,6 +280,66 @@ module.exports = class {
         </section>
         <!-- End Why-us =======================  -->
     
+        <!-- ======================= Testimonials -->
+        <section class="testimonials bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tiny-slider">
+                            <div class="tiny-slider-inner testi-full" data-gutter="1" data-arrow="false" data-dots="true" data-autoplay="true" data-items="1">	
+                                <!-- testimonial item 1 -->
+                                <div class="item px-2 px-sm-5">
+                                    <div class="testimonials-wrap">
+                                        <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
+                                        <div class="testi-text">
+                                            <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
+                                            <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
+                                            <h5 class="mb-2 mt-2">Elsa Srl</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonial item 2 -->
+                                <div class="item px-2 px-sm-5">
+                                    <div class="testimonials-wrap">
+                                        <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
+                                        <div class="testi-text">
+                                            <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
+                                            <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
+                                            <h5 class="mb-2 mt-2">Elsa Srl</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonial item 3 -->
+                                <div class="item px-2 px-sm-5">
+                                    <div class="testimonials-wrap">
+                                        <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
+                                        <div class="testi-text">
+                                            <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
+                                            <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
+                                            <h5 class="mb-2 mt-2">Elsa Srl</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonial item 4 -->
+                                <div class="item px-2 px-sm-5">
+                                    <div class="testimonials-wrap">
+                                        <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
+                                        <div class="testi-text">
+                                            <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
+                                            <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
+                                            <h5 class="mb-2 mt-2">Elsa Srl</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================= End Testimonials -->
+    
+
         <!-- ======================= Technologies -->
         <section class="technologies">
             <div class="container">
@@ -355,68 +415,6 @@ module.exports = class {
             </section>
             <!-- ======================= End Technologies -->
 
-            <!-- ======================= Testimonials -->
-            <section class="testimonials">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-8 mx-auto">
-                        <h2>Case Studies</h2>
-                        <h4>Alcune testimonianze dai progetti che abbiamo seguito</h4>
-                    </div>
-                        <div class="col-12">
-                            <div class="tiny-slider">
-                                <div class="tiny-slider-inner testi-full" data-gutter="30" data-arrow="false" data-dots="true" data-autoplay="true" data-items-xl="3" data-items-md="2" data-items-sm="2" data-items-xs="1">	
-                                    <!-- testimonial item 1 -->
-                                    <div class="item px-2 px-sm-5">
-                                        <div class="testimonials-wrap">
-                                            <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
-                                            <div class="testi-text">
-                                                <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
-                                                <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
-                                                <h5 class="mb-0 mt-2">Elsa Srl</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- testimonial item 2-->
-                                    <div class="item px-2 px-sm-5">
-                                        <div class="testimonials-wrap">
-                                            <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
-                                            <div class="testi-text">
-                                                <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
-                                                <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
-                                                <h5 class="mb-0 mt-2">Elsa Srl</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- testimonial item 3-->
-                                    <div class="item px-2 px-sm-5">
-                                        <div class="testimonials-wrap">
-                                            <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
-                                            <div class="testi-text">
-                                                <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
-                                                <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
-                                                <h5 class="mb-0 mt-2">Elsa Srl</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- testimonial item 4-->
-                                    <div class="item px-2 px-sm-5">
-                                        <div class="testimonials-wrap">
-                                            <div class="testi-avatar"> <img src="assets/images/clients/elsa-logo.png" alt="logo elsa"> </div>
-                                            <div class="testi-text">
-                                                <p>Abbiamo affidato a Forge la gestione del nostro marketing strategico per supportare e potenziare le attività svolte internamente. Riceviamo un costante supporto altamente specializzato, sia nelle attività organiche che per quelle a pagamento.</p>
-                                                <span class="text-primary display-8"><i class="fas fa-quote-left"></i></span>
-                                                <h5 class="mb-0 mt-2">Elsa Srl</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                </div>
-            </section>
-            <!-- ======================= End Testimonials --> 
     
             <!-- ======================= Action box -->
             <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
