@@ -1,5 +1,10 @@
 module.exports = async function (data) {
     return `<footer class="footer bg-light pt-6">
+        <script>
+        function openIubendaPreferences(){
+            _iub.cs.api.openPreferences();    
+        }
+        </script>
 		<div class="footer-content pb-3">
 			<div class="container">
 				<div class="row">
@@ -30,7 +35,7 @@ module.exports = async function (data) {
 							<ul class="nav flex-column primary-hover">
 								<li class="nav-item"><a class="nav-link" href="/contattaci/">Contattaci</a></li>
 								<li class="nav-item"><a class="nav-link" href="${data.forge.privacy}">Privacy Policy</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">Preferenze Cookie</a></li>
+								<li class="nav-item"><a class="nav-link" onclick="openIubendaPreferences()">Preferenze Cookie</a></li>
 							</ul>
 						</div>
 					</div>
