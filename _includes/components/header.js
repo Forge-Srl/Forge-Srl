@@ -14,7 +14,7 @@ module.exports = async function (data) {
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav navbar-nav-scroll navbar-nav-scroll ms-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="/chi-siamo/">Chi Siamo</a>
+							<a class="nav-link" href="/chi-siamo/">${this.i18n('whoWeAre.headerTitle')}</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/#metodologia">Metodologia</a>
