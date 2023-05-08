@@ -1,3 +1,5 @@
+const homePageContent = require('../_includes/components/home');
+
 module.exports = class {
     data() {
         return {
@@ -8,13 +10,10 @@ module.exports = class {
                 key: 'home',
                 title: 'Home',
             },
-            additionalMeta: '<meta http-equiv="refresh" content="0.1; url = /it/"/>',
-            hideHeader: true,
-            hideFooter: true
         }
     }
 
     async render(data) {
-        return ''
+        return `${await homePageContent.call(this, data)}`
     }
 }

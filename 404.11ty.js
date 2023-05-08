@@ -10,12 +10,12 @@ module.exports = class {
             permalink: '/404.html',
             eleventyExcludeFromCollections: true,
             eleventyNavigation: {
-                title: 'Pagina non trovata!'
+                title: 'Page Not Found'
             }
         }
     }
 
-    render(data) {
+    async render(data) {
         return `<main>
             ${pageTitle.call(this, data)}
             <section class="error-page">
@@ -23,9 +23,9 @@ module.exports = class {
 			    <div class="row">
 				    <div class="col-md-8 mx-auto text-center">
 					    <h2 class="display-1 fw-bold text-grad">404</h2>
-					    <h3 class="mb-4">Pagina non trovata</h3>
-					    <p>Ooops! La pagina che stai cercando non esiste.</p>
-					    <a class="btn btn-sm btn-primary" href="https://forge.srl/">Riparti dalla home!</a>
+					    <h3 class="mb-4">${this.i18n('pageNotFound.pageNotFound')}</h3>
+					    <p>${this.i18n('pageNotFound.courtesyMessage')}</p>
+					    <a class="btn btn-sm btn-primary" href="https://forge.srl/">${this.i18n('pageNotFound.backToHome')}</a>
 				    </div>
 			    </div>
 		    </div>

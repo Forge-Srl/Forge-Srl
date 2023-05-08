@@ -1,30 +1,17 @@
-const pageTitle = require('./_includes/components/pageTitle')
-const formScript = require('./_includes/components/formScript')
+const pageTitle = require('../components/pageTitle')
+const formScript = require('../components/formScript')
 
-module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Contattaci',
-            pageDescription: 'Contattaci se sei interessato, vuoi informazioni o vuoi farci sapere la tua opinione. Un nostro incaricato ti risponderà al più presto!',
-            eleventyNavigation: {
-                key: 'contattaci',
-                title: 'Contattaci'
-            }
-        }
-    }
-
-    render(data) {
-        return `<main>
+module.exports =  async function(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center mb-4">
                             <div class="title text-center">
-                                <h2>Come possiamo essere d'aiuto alla tua azienda?</h2>
-                                <p>Hai domande sui nostri servizi? Vorresti farti un’idea di come lavoriamo oppure ricevere un preventivo? Il modo migliore per comprendere le tue esigenze o rispondere ai tuoi dubbi è parlarne! Passa a trovarci, chiamaci, mandaci una email o scrivi un messaggio nel modulo di contatto che trovi qui sotto.</p>
-                                <p>Siamo estremamente reattivi, rispondiamo ad ogni richiesta e diamo importanza ad ogni opinione ricevuta. Scrivici e un nostro incaricato ti risponderà al più presto. Faremo buon uso dei tuoi dati ma, soprattutto, sarà un piacere conoscere te e gli obiettivi che vuoi raggiungere!</p>
+                                <h2>${this.i18n('contactUs.howCanWeHelp.sectionTitle')}</h2>
+                                <p>${this.i18n('contactUs.howCanWeHelp.firstChunk')}</p>
+                                <p>${this.i18n('contactUs.howCanWeHelp.secondChunk')}</p>
                             </div>
                         </div>
                     </div>
@@ -61,8 +48,8 @@ module.exports = class {
                         <!-- contact form -->
                         <div class="col-md-6">
                             <div class="h-100">
-                                <h3>Hai un grande progetto in mente?</br>Realizziamolo insieme!</h3>
-                                <p>Mettiti in contatto con noi per condividere le tue idee e per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto.</p>
+                                <h3>${this.i18n('contactUs.haveAProjectInMind.sectionTitle')}</h3>
+                                <p>${this.i18n('contactUs.haveAProjectInMind.firstChunk')}</p>
                                 <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -88,13 +75,13 @@ module.exports = class {
                                         <div class="col-md-12 d-grid">
                                             <button class="btn btn-primary m-0" type="submit">
                                                 <span class="spinner-border spinner-border-sm" style="display: none;" role="status" aria-hidden="true"></span>
-                                                <span>Invia</span>
+                                                <span>${this.i18n('contactUs.send')}</span>
                                             </button>
                                         </div>
                                     </div>
                                 </form>
                                 <div id="contact-form-done" style="display: none;">
-                                    <h4 class="text-center">Grazie per averci contattato! Un membro del nostro team si metterà in contatto con te il prima possibile.</h4>
+                                    <h4 class="text-center">${this.i18n('contactUs.thankYouForContactingUs')}</h4>
                                 </div>
                                 ${formScript.call(this, 'contact-form', 'contact-form-done', data)}
                             </div>
@@ -103,5 +90,4 @@ module.exports = class {
                 </div>
             </section>
         </main>`
-    }
 }

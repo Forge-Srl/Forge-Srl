@@ -1,4 +1,4 @@
-const pageTitle = require('../_includes/components/pageTitle')
+const pageTitle = require('../../_includes/components/pageTitle')
 
 module.exports = class {
     data() {

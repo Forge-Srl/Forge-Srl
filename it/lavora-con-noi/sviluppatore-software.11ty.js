@@ -1,5 +1,5 @@
-const pageTitle = require('../_includes/components/pageTitle')
-const formScript = require('../_includes/components/formScript')
+const pageTitle = require('../../_includes/components/pageTitle')
+const formScript = require('../../_includes/components/formScript')
 
 module.exports = class {
     data() {

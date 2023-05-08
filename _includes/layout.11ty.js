@@ -10,6 +10,10 @@ module.exports = async function(data) {
     const canonical = `${data.forge.domain}${data.page.url}`
     const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
     const tagManagerId = 'GTM-P8LVR4Q'
+    const [headerContent, footerContent] = await Promise.all([
+        (async () => data.hideHeader ? '' : await header.call(this, data))(),
+        (async () => data.hideFooter ? '' : await footer.call(this, data))(),
+    ])
 
     return `<!doctype html>
         <html lang="it-IT">
@@ -27,6 +31,7 @@ module.exports = async function(data) {
                 <meta name="description" content="${data.pageDescription}">
                 <meta name="facebook-domain-verification" content="${facebookVerification}">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                ${data.additionalMeta ? data.additionalMeta : ''}
                 <title>${data.pageTitle} - Forge Srl</title>
                 <link rel="canonical" href="${canonical}">
                 <link rel="shortcut icon" href="/favicon.ico">
@@ -71,9 +76,9 @@ module.exports = async function(data) {
                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${tagManagerId}"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
-                ${await header.call(this, data)}
+                ${headerContent}
                 ${data.content}
-                ${await footer.call(this, data)}
+                ${footerContent}
             </body>
         </html>`
 }

@@ -11,8 +11,8 @@ module.exports = async function(data) {
                             <span class="typed" data-type-text="Software House&&Digital Factory&&Web Agency"></span>
                         </h1>
                         <h2 class="mb-4 fw-normal">${this.i18n('home.motto')}</h2>
-                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">${this.i18n('discoverOurServices')}</a>
-                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="${this.i18n(`pageUrls.contactUsLink`)}">${this.i18n('home.contactUs')}</a>
+                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">${this.i18n('home.discoverOurServices')}</a>
+                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="${this.i18n(`pagesUrl.contactUsLink`)}">${this.i18n('home.contactUs')}</a>
                     </div>
                     <!-- banner image -->
                     <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
@@ -72,10 +72,10 @@ module.exports = async function(data) {
                     <!-- right -->
                     <div class="col-md-6 ps-lg-5">
                         <h5 class="text-primary">${this.i18n('home.whoWeAre.sectionTitle')}</h5>
-                        <h3 class="h1">${this.i18n('home.whoWeAre.sectionSubtitle')}</h3>
-                        <p>${this.i18n('home.sectionBody.firstChunk')}</p>
-                        <p>${this.i18n('home.sectionBody.secondChunk')}</p>
-                        <p>${this.i18n('home.sectionBody.thirdChunk')}</p>
+                        <h3 class="h1">${this.i18n('home.whoWeAre.sectionSubTitle')}</h3>
+                        <p>${this.i18n('home.whoWeAre.sectionBody.firstChunk')}</p>
+                        <p>${this.i18n('home.whoWeAre.sectionBody.secondChunk')}</p>
+                        <p>${this.i18n('home.whoWeAre.sectionBody.thirdChunk')}</p>
                         <a href="${this.i18n('pagesUrl.whoWeAreLink')}" class="btn btn-outline-primary me-3 text-center">${this.i18n('home.whoWeAre.meetTheTeam')}</a>
                     </div>
                 </div>
@@ -90,8 +90,8 @@ module.exports = async function(data) {
                     <!-- column 1 -->
                     <div class="col-md-4">
                         <!-- title -->
-                        <h5 class="text-primary">${this.i18n('home..ourServices.sectionTitle')}</h5>
-                        <h3 class="h1">${this.i18n('home..ourServices.sectionSubTitle')}</h3>
+                        <h5 class="text-primary">${this.i18n('home.ourServices.sectionTitle')}</h5>
+                        <h3 class="h1">${this.i18n('home.ourServices.sectionSubTitle')}</h3>
                         <!-- service item -->
                         <div class="rounded bg-light p-4 p-lg-5 ">
                             <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
@@ -135,7 +135,7 @@ module.exports = async function(data) {
                                 <li>Social Marketing</li>
                             </ul>
                             <div class="mt-3">
-                                <a href="${this.i18n('pagesUrl.marketingServicesLink">${this.i18n('home.discoverMore')}<i class="ti-arrow-right text-primary"></i></a>
+                                <a href="${this.i18n('pagesUrl.marketingServicesLink')}">${this.i18n('home.discoverMore')}<i class="ti-arrow-right text-primary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ module.exports = async function(data) {
                         </div>
                         <!-- service item -->
                         <div class="rounded bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
-                            <h5>${this.i18n('home.HaveAProjectInMind')}</h5>
+                            <h5>${this.i18n('home.haveAProjectInMind')}</h5>
                             <a class="btn btn-outline-light mb-0 rounded m-0" href="${this.i18n('pagesUrl.contactUsLink')}">${this.i18n('home.contactUs')}</a>
                         </div>	
                     </div>
@@ -167,34 +167,34 @@ module.exports = async function(data) {
         <!-- ======================= Process-advance -->
         <section id="metodologia" class="process-advance bg-light">
             <div class="title text-center">
-                <h2>Il successo dei nostri clienti è il nostro successo</h2>
-                <h4>Offriamo un approccio concreto, flessibile e soprattutto umano.</h4>
+                <h2>${this.i18n('home.methodology.sectionTitle')}</h2>
+                <h4>${this.i18n('home.methodology.sectionSubTitle')}</h4>
             </div>
             <div class="container">
                 <div class="row">
                     <!-- process 1 -->
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-end">01</span></div>
-                        <h5 class="my-3">Ascoltiamo e valutiamo</h5>
-                        <p>con onestà il progetto e decidiamo se possiamo fornire il nostro contributo nella realizzazione</p>
+                        <h5 class="my-3">${this.i18n('home.methodology.firstChunk.title')}</h5>
+                        <p>${this.i18n('home.methodology.firstChunk.body')}</p>
                     </div>
-                    <!-- process 1 -->
+                    <!-- process 2 -->
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-start border-end">02</span></div>
-                        <h5 class="my-3">Troviamo una soluzione</h5>
-                        <p>che sia il più possibile efficace e che dimostri con dei dati oggettivi un riscontro positivo</p>
+                        <h5 class="my-3">${this.i18n('home.methodology.secondChunk.title')}</h5>
+                        <p>${this.i18n('home.methodology.secondChunk.body')}</p>
                     </div>
-                    <!-- process 1 -->
+                    <!-- process 3 -->
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-start border-end">03</span></div>
-                        <h5 class="my-3">Usiamo il modello <i>Agile</i></h5>
-                        <p>e la metodologia Scrum per pianificare e gestire il progetto con la massima flessibilità ed efficienza</p>
+                        <h5 class="my-3">${this.i18n('home.methodology.thirdChunk.title')}</h5>
+                        <p>${this.i18n('home.methodology.thirdChunk.body')}</p>
                     </div>
-                    <!-- process 1 -->
+                    <!-- process 4 -->
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-start">04</span></div>
-                        <h5 class="my-3">Chiediamo feedback</h5>
-                        <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia e rilasciamo gradualmente i nostri prodotti.</p>
+                        <h5 class="my-3">${this.i18n('home.methodology.fourthChunk.title')}</h5>
+                        <p>${this.i18n('home.methodology.fourthChunk.body')}</p>
                     </div>
                 </div>
             </div>
@@ -206,35 +206,35 @@ module.exports = async function(data) {
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 text-center mb-4">
-                        <h2>I nostri valori</h2>
-                        <h4>La nostra filosofia si basa su 4 valori che guidano le scelte e le decisioni che prendiamo quotidianamente</h4>
+                        <h2>${this.i18n('home.ourValues.sectionTitle')}</h2>
+                        <h4>${this.i18n('home.ourValues.sectionSubTitle')}</h4>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-key"></i></i></div>
-                            <h3 class="feature-box-title">Fiducia</h3>
-                            <p class="feature-box-desc">Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido. </p>
+                            <h3 class="feature-box-title">${this.i18n('home.ourValues.firstChunk.title')}</h3>
+                            <p class="feature-box-desc">${this.i18n('home.ourValues.firstChunk.body')}</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-handshake"></i></i></div>
-                            <h3 class="feature-box-title">Onestà</h3>
-                            <p class="feature-box-desc">Vogliamo che le cose siano fatte bene. I nostri consigli saranno sempre sinceri, senza timore di metterci in discussione.</p>
+                            <h3 class="feature-box-title">${this.i18n('home.ourValues.secondChunk.title')}</h3>
+                            <p class="feature-box-desc">${this.i18n('home.ourValues.secondChunk.body')}</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-rocket"></i></i></div>
-                            <h3 class="feature-box-title">Innovazione</h3>
-                            <p class="feature-box-desc">Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide. </p>
+                            <h3 class="feature-box-title">${this.i18n('home.ourValues.thirdChunk.title')}</h3>
+                            <p class="feature-box-desc">${this.i18n('home.ourValues.thirdChunk.body')}</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-message"></i></i></div>
-                            <h3 class="feature-box-title">Trasparenza</h3>
-                            <p class="feature-box-desc">Ci confrontiamo costantemente con un rapporto informale ma altamente professionale e specializzato. </p>
+                            <h3 class="feature-box-title">${this.i18n('home.ourValues.fourthChunk.title')}</h3>
+                            <p class="feature-box-desc">${this.i18n('home.ourValues.fourthChunk.body')}</p>
                         </div>
                     </div>
                 </div>
@@ -253,12 +253,12 @@ module.exports = async function(data) {
                     <div class="col-lg-6 col-md-12 bg-body px-4 py-5 p-lg-5 text-white">
                         <div class="h-100">
                             <div class="title text-start p-0">
-                                <h5 class="text-white">Come lavoriamo?</h5>
-                                <h3 class="text-white">Un team giovane in cui cresciamo personalmente e professionalmente</h3>
-                                <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
-                                <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
-                                <h5 class="text-white">Vuoi lavorare con noi?</h5>
-                                <a class="btn btn-outline-light mb-0 rounded m-0" href="/lavora-con-noi/">Scopri cosa offriamo</a>
+                                <h5 class="text-white">${this.i18n('home.howWeWork.sectionTitle')}</h5>
+                                <h3 class="text-white">${this.i18n('home.howWeWork.sectionSubTitle')}</h3>
+                                <p>${this.i18n('home.howWeWork.firstChunk')}</p>
+                                <p>${this.i18n('home.howWeWork.secondChunk')}</p>
+                                <h5 class="text-white">${this.i18n('home.howWeWork.doYouWantWorkWithUs')}</h5>
+                                <a class="btn btn-outline-light mb-0 rounded m-0" href="${this.i18n('pagesUrl.workWithUsLink')}">${this.i18n('home.howWeWork.discoverWhatWeOffer')}</a>
                             </div>
                         </div>
                     </div>
@@ -272,8 +272,8 @@ module.exports = async function(data) {
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-8 mx-auto">
-                        <h2>Le nostre tecnologie</h2>
-                        <h4>Le solide fondamenta alla base dei nostri lavori</h4>
+                        <h2>${this.i18n('home.ourTechnologies.sectionTitle')}</h2>
+                        <h4>${this.i18n('home.ourTechnologies.sectionSubTitle')}</h4>
                     </div>
                 </div>
                     <div class="row text-center justify-content-center">
@@ -347,10 +347,10 @@ module.exports = async function(data) {
                 <div class="container">
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
-                            <h2 class="m-0">Ti aiutiamo a raggiungere i tuoi obiettivi</h2>
-                            <h4>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo? Siamo a tua disposizione!</h4>
+                            <h2 class="m-0">${this.i18n('home.cta.sectionTitle')}</h2>
+                            <h4>${this.i18n('home.cta.sectionSubTitle')}</h4>
                         </div>
-                        <a href="/contattaci/" class="btn btn-white me-3 text-center">Parliamone Insieme</a>
+                        <a href="${this.i18n('pagesUrl.contactUsLink')}" class="btn btn-white me-3 text-center">${this.i18n('home.cta.letsTalk')}</a>
                     </div>
                 </div>
             </section>
