@@ -6,15 +6,15 @@ module.exports = {
     cta: {
         sectionTitle: {
             it: 'Ti aiutiamo a raggiungere i tuoi obiettivi',
-            en: 'Our technologies'
+            en: 'We help you achieve your goals'
         },
         sectionSubTitle: {
             it: 'Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo? Siamo a tua disposizione!',
-            en: 'The solid foundations behind our work'
+            en: 'Do you need more information or do you just want to get an idea of how we work? We are at your disposal!'
         },
         letsTalk: {
             it: 'Parliamone Insieme',
-            en: 'We help you achieve your goals'
+            en: 'Let\'s Talk'
         }
     },
     discoverMore: {

@@ -2,7 +2,7 @@ module.exports = {
     backend: {
         description: {
             it: 'Realizzazione di servizi back-end su AWS, Microsoft Azure, Google Cloud, IBM Cloud e con le principali tecnologie serverless, a microservizi, database real time e virtualizzazione.',
-            en: 'mplementation of back-end services on AWS, Microsoft Azure, Google Cloud, IBM Cloud and the main serverless technologies, microservices, real time database and virtualization.'
+            en: 'Implementation of back-end services on AWS, Microsoft Azure, Google Cloud, IBM Cloud and the main serverless technologies, microservices, real time database and virtualization.'
         }
     },
     innovationAndResearch: {

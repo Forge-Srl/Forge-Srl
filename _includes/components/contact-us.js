@@ -22,7 +22,7 @@ module.exports =  async function(data) {
                                 <!-- Phone -->
                                 <div class="all-text-white mb-4">
                                     <div class="fs-4"><i class="ti-map-alt"></i></div>
-                                    <h5 class="mb-2">Indirizzo</h5>
+                                    <h5 class="mb-2">${this.i18n('contactUs.contacts.address')}</h5>
                                     <p>${data.forge.contacts.address}</p>
                                 </div>
                                 <!-- Email -->
@@ -34,7 +34,7 @@ module.exports =  async function(data) {
                                 <!-- Phone -->
                                 <div class="all-text-white">
                                     <div class="fs-4"><i class="ti-headphone-alt"></i></div>
-                                    <h5 class="mb-2">Telefono</h5>
+                                    <h5 class="mb-2">${this.i18n('contactUs.contacts.phone')}</h5>
                                     <p class="mb-0">${data.forge.contacts.phone}</p>
                                 </div>
                             </div>

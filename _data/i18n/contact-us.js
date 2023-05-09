@@ -1,4 +1,14 @@
 module.exports = {
+    contacts: {
+        address: {
+            it: 'Indirizzo',
+            en: 'Address'
+        },
+        phone: {
+            it: 'Telefono',
+            en: 'Phone'
+        }
+    },
     haveAProjectInMind: {
         sectionTitle: {
             it: 'Hai un grande progetto in mente?</br>Realizziamolo insieme!',

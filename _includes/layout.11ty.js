@@ -16,11 +16,11 @@ module.exports = async function(data) {
     ])
 
     return `<!doctype html>
-        <html lang="it-IT">
+        <html lang="${data.locale}" dir=${data.dir}>
             <head>
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-                <meta property="og:locale" content="it_IT">
+                <meta property="og:locale" content="${data.locale}">
                 <meta property="og:type" content="website">
                 <meta property="og:title" content="${data.pageTitle}">
                 <meta property="og:description" content="${data.pageDescription}">

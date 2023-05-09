@@ -29,6 +29,10 @@ module.exports = {
         it: '/it/servizi-marketing/',
         en: '/en/marketing-services/'
     },
+    softwareDeveloperLink: {
+        it: '/it/lavora-con-noi/sviluppatore-software/',
+        en: '/en/work-with-us/software-developer/'
+    },
     techServicesLink: {
         it: '/it/servizi-tech/',
         en: '/en/tech-services/',

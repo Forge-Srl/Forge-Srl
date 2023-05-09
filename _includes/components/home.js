@@ -165,7 +165,7 @@ module.exports = async function(data) {
         <!-- ======================= End Service -->
     
         <!-- ======================= Process-advance -->
-        <section id="metodologia" class="process-advance bg-light">
+        <section id="metodology" class="process-advance bg-light">
             <div class="title text-center">
                 <h2>${this.i18n('home.methodology.sectionTitle')}</h2>
                 <h4>${this.i18n('home.methodology.sectionSubTitle')}</h4>

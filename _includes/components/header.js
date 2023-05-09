@@ -17,7 +17,7 @@ module.exports = async function (data) {
 							<a class="nav-link" href="${this.i18n('pagesUrl.whoWeAreLink')}">${this.i18n('header.whoWeAre')}</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="${this.i18n('pagesUrl.homePageLink')}/#metodologia">${this.i18n('header.methodology')}</a>
+							<a class="nav-link" href="${this.i18n('pagesUrl.homePageLink')}/#metodology">${this.i18n('header.methodology')}</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="/#servizi" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${this.i18n('header.services')}</a>
@@ -37,6 +37,16 @@ module.exports = async function (data) {
 				<!-- Main Menu End -->
 				<!-- Header Extras Start-->
 				<div class="navbar-nav">
+                     
+                  <!-- Language Switch -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">${this.i18n('pagesUrl.languageSwitch.label')}</a>
+                        <ul class="dropdown-menu dropdown-language">
+                              <li>
+                                    <a href="${this.i18n('pagesUrl.languageSwitch.otherLanguageUrl')}" class="dropdown-item">${this.i18n('pagesUrl.languageSwitch.otherLanguageLabel')}</a>                  
+                              </li>
+                        </ul>
+                    </div>
 					<!-- extra item Btn-->
 					<div class="nav-item border-0 d-none d-lg-inline-block align-self-center">
 						<a href="${this.i18n('pagesUrl.contactUsLink')}" class="btn btn-sm btn-primary text-white mb-0">${this.i18n('header.contactUs')}</a>
