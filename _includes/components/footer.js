@@ -1,4 +1,5 @@
 module.exports = async function (data) {
+    const locale = data.locale ? data.locale.slice(0, 2) : 'it';
     return `<footer class="footer bg-light pt-6">
         <script>
         function openIubendaPreferences(){
@@ -14,12 +15,12 @@ module.exports = async function (data) {
 							<a href="/" class="footer-logo">
 							     ${await this.image('forge-logo.png', 'Logo Forge', 'footer-logo-item', [181], '181w')}
 							</a>
-							<p class="mt-3">${this.i18n('footer.companyDescription')}</p>
+							<p class="mt-3">${this.i18n('footer.companyDescription', {}, locale)}</p>
 						</div>
 					</div>
 					<!-- Footer widget 2 -->
 					<div class="col-md-3 col-sm-6">
-						<p class="mb-2"><b>${this.i18n('footer.whereFindUs.sectionTitle')}</b></p>
+						<p class="mb-2"><b>${this.i18n('footer.whereFindUs.sectionTitle', {}, locale)}</b></p>
 						<div class="widget address" style="background-image: url('/assets/images/world-map.png'); background-position: 50% 20px; background-repeat: no-repeat; background-size: contain;">
 							<ul class="list-group list-group-borderless">
 								<li class="d-flex mb-3"><i class="me-3 display-8 ti-map-alt"></i>${data.forge.contacts.address}</li>
@@ -33,16 +34,16 @@ module.exports = async function (data) {
 						<div class="widget">
 							<p class="mb-2"><b>${this.i18n('footer.company.sectionTitle')}</b></p>
 							<ul class="nav flex-column primary-hover">
-								<li class="nav-item"><a class="nav-link" href="/contattaci/">${this.i18n('footer.company.contactUs')}</a></li>
+								<li class="nav-item"><a class="nav-link" href="/contattaci/">${this.i18n('footer.company.contactUs', {}, locale)}</a></li>
 								<li class="nav-item"><a class="nav-link" href="${data.forge.privacy}">Privacy Policy</a></li>
-								<li class="nav-item"><a class="nav-link" onclick="openIubendaPreferences()">${this.i18n('footer.company.cookiePreferences')}</a></li>
+								<li class="nav-item"><a class="nav-link" onclick="openIubendaPreferences()">${this.i18n('footer.company.cookiePreferences', {}, locale)}</a></li>
 							</ul>
 						</div>
 					</div>
 					<!-- Footer widget 4 -->
 					<div class="col-md-3">
 						<div class="col-md-2 col-sm-6">
-							<p class="mb-2"><b>${this.i18n('footer.followUs.sectionTitle')}</b></p>
+							<p class="mb-2"><b>${this.i18n('footer.followUs.sectionTitle', {}, locale)}</b></p>
 							<ul class="social-icons list-group list-group-horizontal">
 								<li class="social-icons-item social-facebook m-0">
 									<a target="_blank" rel="noopener" href="${data.forge.github}" class="social-icons-link w-auto px-2" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -64,7 +65,7 @@ module.exports = async function (data) {
 		<div class="footer-copyright py-3">
 			<div class="container">
 				<div class="d-md-flex py-3 justify-content-center">
-					<div class="copyright-text">© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | ${this.i18n('footer.allRightsReserved')}.</div>
+					<div class="copyright-text">© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | ${this.i18n('footer.allRightsReserved', {}, locale)}.</div>
 				</div>
 			</div>
 		</div>

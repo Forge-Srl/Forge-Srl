@@ -101,7 +101,7 @@ module.exports = async function(data) {
                             <h2 class="m-0">${this.i18n('whoWeAre.weHelpYouReachYourGoals.sectionTitle')}</h2>
                             <h4>${this.i18n('whoWeAre.weHelpYouReachYourGoals.firstChunk')}</h4>
                         </div>
-                    <a href="${this.i18n('pagesUrl.contactUs')}" class="btn btn-white me-3 text-center">${this.i18n('whoWeAre.weHelpYouReachYourGoals.letsTalk')}</a>
+                    <a href="${this.i18n('pagesUrl.contactUsLink')}" class="btn btn-white me-3 text-center">${this.i18n('whoWeAre.weHelpYouReachYourGoals.letsTalk')}</a>
                     </div>
                 </div>
             </section>
