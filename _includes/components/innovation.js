@@ -166,7 +166,7 @@ module.exports = async function(data) {
                 <div class="container">
                     <div class="d-block all-text-white text-center">
                         <div class="text-center">
-                            <h2 class="m-0">${this.i18n('innovation.isYourFavouriteWordAlso.sectionTitle')}/h2>
+                            <h2 class="m-0">${this.i18n('innovation.isYourFavouriteWordAlso.sectionTitle')}</h2>
                             <h4>${this.i18n('innovation.isYourFavouriteWordAlso.sectionSubTitle')}</h4>
                         </div>
                         <a href="${this.i18n('pagesUrl.contactUsLink')}" target="_blank" class="btn btn-white me-3 text-center">${this.i18n('innovation.isYourFavouriteWordAlso.letsTalk')}</a>
