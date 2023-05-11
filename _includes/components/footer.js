@@ -12,7 +12,7 @@ module.exports = async function (data) {
 					<!-- Footer widget 1 -->
 					<div class="col-md-4">
 						<div class="widget">
-							<a href="/" class="footer-logo">
+							<a href="${this.i18n('pagesUrl.homePageLink', {}, locale)}" class="footer-logo">
 							     ${await this.image('forge-logo.png', 'Logo Forge', 'footer-logo-item', [181], '181w')}
 							</a>
 							<p class="mt-3">${this.i18n('footer.companyDescription', {}, locale)}</p>
@@ -34,7 +34,7 @@ module.exports = async function (data) {
 						<div class="widget">
 							<p class="mb-2"><b>${this.i18n('footer.company.sectionTitle', {}, locale)}</b></p>
 							<ul class="nav flex-column primary-hover">
-								<li class="nav-item"><a class="nav-link" href="/contattaci/">${this.i18n('footer.company.contactUs', {}, locale)}</a></li>
+								<li class="nav-item"><a class="nav-link" href="${this.i18n('pagesUrl.contactUsLink', {}, locale)}">${this.i18n('footer.company.contactUs', {}, locale)}</a></li>
 								<li class="nav-item"><a class="nav-link" href="${data.forge.privacy}">Privacy Policy</a></li>
 								<li class="nav-item"><a class="nav-link" onclick="openIubendaPreferences()">${this.i18n('footer.company.cookiePreferences', {}, locale)}</a></li>
 							</ul>
