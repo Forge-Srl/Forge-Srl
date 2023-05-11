@@ -27,7 +27,7 @@ module.exports = async function(data) {
                                     </clipPath>
                                     <g style="clip-path:url(#XMLID_83_);">
                                         <!-- Set your 1290px X 1024px image below -->
-                                        <image style="overflow:visible;" width="1290" height="1024" id="XMLID_82_" xlink:href="assets/images/forge-banner.jpg"  transform="matrix(0.9999 0 0 0.9999 8.063897e-002 6.401104e-002)">
+                                        <image style="overflow:visible;" width="1290" height="1024" id="XMLID_82_" xlink:href="/assets/images/forge-banner.jpg"  transform="matrix(0.9999 0 0 0.9999 8.063897e-002 6.401104e-002)">
                                         </image>
                                     </g>
                                 </g>

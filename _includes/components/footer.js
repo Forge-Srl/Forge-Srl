@@ -32,7 +32,7 @@ module.exports = async function (data) {
 					<!-- Footer widget 3 -->
 					<div class="col-md-2 col-sm-6">
 						<div class="widget">
-							<p class="mb-2"><b>${this.i18n('footer.company.sectionTitle')}</b></p>
+							<p class="mb-2"><b>${this.i18n('footer.company.sectionTitle', {}, locale)}</b></p>
 							<ul class="nav flex-column primary-hover">
 								<li class="nav-item"><a class="nav-link" href="/contattaci/">${this.i18n('footer.company.contactUs', {}, locale)}</a></li>
 								<li class="nav-item"><a class="nav-link" href="${data.forge.privacy}">Privacy Policy</a></li>
