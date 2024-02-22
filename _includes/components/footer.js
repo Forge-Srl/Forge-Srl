@@ -14,7 +14,7 @@ module.exports = async function (data) {
 							<a href="/" class="footer-logo">
 							     ${await this.image('forge-logo.png', 'Logo Forge', 'footer-logo-item', [181], '181w')}
 							</a>
-							<p class="mt-3">Forge offre servizi di consulenza tecnica, marketing e formazione con un approccio umano, che premia onestà, fiducia e trasparenza.</p>
+							<p class="mt-3">Siamo appassionati di Intelligenza Artificiale, ma sviluppiamo soluzioni software con un approccio umano.</p>
 						</div>
 					</div>
 					<!-- Footer widget 2 -->

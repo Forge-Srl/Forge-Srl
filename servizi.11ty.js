@@ -4,11 +4,11 @@ module.exports = class {
     data() {
         return {
             layout: 'layout.11ty.js',
-            pageTitle: 'Servizi Tech',
-            pageDescription: 'Scopri i servizi tech di Forge: sviluppo Web, Mobile, Back-End, Software Engineering, IoT, Blockchain e Intelligenza Artificiale.',
+            pageTitle: 'Servizi',
+            pageDescription: 'Scopri i servizi di Forge: Intelligenza Artificiale, Sviluppo Web, Mobile, Back-End',
             eleventyNavigation: {
-                key: 'tech',
-                title: 'Servizi Tech'
+                key: 'software development',
+                title: 'I nostri Servizi'
             }
         }
     }
@@ -19,7 +19,6 @@ module.exports = class {
             <section class="service">
                 <div class="container">
                     <div class="title text-center">
-                        <h2> I nostri Servizi Tech</h2>
                         <p>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente.</p>
                     </div>
                     <div class="row">

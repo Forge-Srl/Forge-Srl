@@ -3,7 +3,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Homepage',
-            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo una Software House, Digital Factory, Web Agency.',
+            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo appassionati di Artificial Intelligence, Process Automation, Machine Learning, Software Development e Digital Innovation',
             eleventyNavigation: {
                 key: 'home',
                 title: 'Home',
@@ -17,18 +17,18 @@ module.exports = class {
             <div class="container d-flex h-100">
                 <div class="row align-self-center w-100 z-index-9">
                     <!-- banner Content -->
-                    <div class="col-md-6 mt-md-0 all-text-white position-relative">
+                    <div class="col-md-7 mt-md-0 all-text-white position-relative">
                         <h1 class="display-4 fw-normal" style="will-change: contents; transform: translateZ(0);">
-                            <span class="pt-0">Siamo una</span>
+                            <span class="pt-0">Appassionati di</span>
                             <br>
-                            <span class="typed" data-type-text="Software House&&Digital Factory&&Web Agency"></span>
+                            <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
                         </h1>
-                        <h2 class="mb-4 fw-normal">Trasformiamo le idee di oggi nei prodotti di domani.</h2>
-                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Scopri i nostri servizi</a>
-                        <a class="btn btn-primary mb-0 rounded m-0 d-md-inline" href="/contattaci/">Contattaci</a>
+                        <h2 class="mb-4 fw-normal">trasformiamo le idee di oggi nei prodotti di domani.</h2>
+                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Esplora le nostre soluzioni</a>
+                        <a class="btn btn-primary mb-0 rounded m-3 d-md-inline" href="/contattaci/">Contattaci</a>
                     </div>
                     <!-- banner image -->
-                    <div class="col-md-6 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
+                    <div class="col-md-5 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
                         <figure class="w-100 ie-height-750">
                             <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1290 1024" style="enable-background:new 0 0 1290 1024;" xml:space="preserve">
                                 <g id="XMLID_81_">
@@ -72,7 +72,7 @@ module.exports = class {
                             </div>
                             <div class="col-12 col-md-7 px-2 mb-3">
                                 <div class="rounded aos bg-grad p-2 p-sm-3 p-lg-4 p-xl-5 all-text-white" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
-                                    <p class="blockquote">Ci piace parlare di etica e del valore che viene creato dal nostro lavoro.</p>
+                                    <p class="blockquote">Appassionarci alle idee dei nostri clienti ci permette di creare costantemente valore.</p>
                                 </div>
                             </div>
                             <div class="col-5 align-self-start ps-2 mb-3 d-none d-md-inline">
@@ -85,10 +85,13 @@ module.exports = class {
                     <!-- right -->
                     <div class="col-md-6 ps-lg-5">
                         <h5 class="text-primary">Chi Siamo</h5>
-                        <h3 class="h1">Soluzioni digitali, approccio umano</h3>
-                        <p>Non siamo una classica software house, ma amiamo definirci una <b>digital factory</b> che trasforma le idee di oggi nei prodotti vincenti di domani.</p>
-                        <p>Lavoriamo su software e tecnologie web con la serietà e la passione di una squadra affiatata, composta da informatici con varie specializzazioni che non smettono mai di imparare al fine di offrire <b>soluzioni innovative</b> sempre al passo con le evoluzioni tecnologiche.</p>
-                        <p>Il nostro approccio è diretto e agile, e premia <b>fiducia, onestà e trasparenza</b>.</p>
+                        <h3 class="h1">Intelligenza artificiale, approccio umano</h3>
+                        <p>Siamo una squadra affiatata composta da <b>informatici</b> con varie specializzazioni. 
+                        <p>Lavoriamo con le più recenti tecnologie di <b>intelligenza arificiale</b> e usando gli strumenti 
+                        di <b>sviluppo software</b> più aggiornati. 
+                        <p>Ci <b>divertiamo</b> e non smettiamo mai di imparare, perché 
+                        l'innovazione digitale è in costante accelerazione e richiede <b>passione</b>.</p>
+                        <p>Il nostro approccio è diretto e agile, cerchiamo costantemente <b>fiducia, onestà e trasparenza</b>.</p>
                         <a href="/chi-siamo/" class="btn btn-outline-primary me-3 text-center">Conosci il team</a>
                     </div>
                 </div>
@@ -100,77 +103,43 @@ module.exports = class {
         <section id="servizi" class="pb-3">
             <div class="container">
                 <div class="row">
-                    <!-- column 1 -->
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <!-- title -->
                         <h5 class="text-primary">Cosa Facciamo</h5>
                         <h3 class="h1">Come possiamo aiutarti</h3>
+                    </div>
+                    <div class="col-md-6">
                         <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 ">
-                            <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
-                            <h5>Software Development</h5>
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-brain"></i></span>
+                            <h5 class="mt-3">Intelligenza Artificiale</h5>
                             <ul>
+                                <li>Automazione di Processi con AI Generativa</li>
+                                <li>Supporto Clienti automatizzato</li>
+                                <li>Manutenzione Predittiva</li>
+                                <li>Data Science</li>
+                            </ul>
+                            <div class="mt-3">
+                            <a href="/servizi/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <!-- service item -->
+                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
+                            <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
+                            <h5 class="mt-3">Sviluppo software</h5>
+                            <ul>
+                                <li>E-Commerce</li>
                                 <li>Web Development</li>
                                 <li>Back-End Development</li>
-                                <li>iOS Development</li>
-                                <li>Android Development</li>
-                                <li>AI e Machine Learning</li>
+                                <li>Mobile App Development Android/iOS</li>
                             </ul>
                             <div class="mt-3">
-                            <a href="/servizi-tech/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <a href="/servizi/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                             </div>
                         </div>
-                    </div>
-    
-                    <!-- column 2 -->
-                    <div class="col-md-4 mt-5">
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-project-diagram"></i></span>
-                            <h5>Service</h5>
-                            <ul>
-                                <li><i>Agile</i> Working</li>
-                                <li>Business Planning</li>
-                                <li>Business Modelling</li>
-                                <li>Digital Transformation</li>
-                            </ul>
-                        </div>
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-bullhorn"></i></span>
-                            <h5>Marketing</h5>
-                            <ul>
-                                <li>Strategia</li>
-                                <li>Branding Online</li>
-                                <li>SEO</li>
-                                <li>Paid Advertising</li>
-                                <li>Inbound Marketing</li>
-                                <li>Social Marketing</li>
-                            </ul>
-                            <div class="mt-3">
-                                <a href="/servizi-marketing/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- column 3 -->
-                    <div class="col-md-4">
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-university"></i></span>
-                            <h5>Formazione e recruiting</h5>
-                            <ul>
-                                <li>Supporto a progetti universitari</li>
-                                <li>Recruiting</li>
-                                <li>Formazione Tech</li>
-                                <li>Coaching</li>
-                            </ul>
-                        </div>
-                        <!-- service item -->
-                        <div class="rounded bg-grad all-text-white p-4 p-lg-5 mb-5 text-center">
-                            <h5>Hai un progetto in mente?</h5>
-                            <a class="btn btn-outline-light mb-0 rounded m-0" href="/contattaci/">Contattaci</a>
-                        </div>	
                     </div>
                 </div>
             </div>
@@ -181,7 +150,7 @@ module.exports = class {
         <section id="metodologia" class="process-advance bg-light">
             <div class="title text-center">
                 <h2>Il successo dei nostri clienti è il nostro successo</h2>
-                <h4>Offriamo un approccio concreto, flessibile e soprattutto umano.</h4>
+                <h4>Offriamo un approccio concreto, flessibile e soprattutto umano</h4>
             </div>
             <div class="container">
                 <div class="row">
@@ -195,7 +164,7 @@ module.exports = class {
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-start border-end">02</span></div>
                         <h5 class="my-3">Troviamo una soluzione</h5>
-                        <p>che sia il più possibile efficace e che dimostri con dei dati oggettivi un riscontro positivo</p>
+                        <p>che sia il più possibile efficace e che dimostri con dati misurabili un riscontro positivo</p>
                     </div>
                     <!-- process 1 -->
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
@@ -207,7 +176,7 @@ module.exports = class {
                     <div class="col-sm-6 col-lg-3 text-center mb-4">
                         <div class="process-border"><span class="process-number bg-primary border-start">04</span></div>
                         <h5 class="my-3">Chiediamo feedback</h5>
-                        <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia e rilasciamo gradualmente i nostri prodotti.</p>
+                        <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia, rilasciando gradualmente il software.</p>
                     </div>
                 </div>
             </div>
@@ -220,13 +189,13 @@ module.exports = class {
                 <div class="row">
                     <div class="col-sm-12 text-center mb-4">
                         <h2>I nostri valori</h2>
-                        <h4>La nostra filosofia si basa su 4 valori che guidano le scelte e le decisioni che prendiamo quotidianamente</h4>
+                        <h4>Ci basiamo su 4 valori per guidare le nostre scelte e decisioni</h4>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-key"></i></i></div>
                             <h3 class="feature-box-title">Fiducia</h3>
-                            <p class="feature-box-desc">Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido. </p>
+                            <p class="feature-box-desc">Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido che possa generare valore. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -240,14 +209,14 @@ module.exports = class {
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-rocket"></i></i></div>
                             <h3 class="feature-box-title">Innovazione</h3>
-                            <p class="feature-box-desc">Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide. </p>
+                            <p class="feature-box-desc">Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="feature-box f-style-5 h-100 icon-grad">
                             <div class="feature-box-icon"><i class="fas fa-light fa-message"></i></i></div>
                             <h3 class="feature-box-title">Trasparenza</h3>
-                            <p class="feature-box-desc">Ci confrontiamo costantemente con un rapporto informale ma altamente professionale e specializzato. </p>
+                            <p class="feature-box-desc">Ci confrontiamo costantemente con un rapporto diretto e informale, non amiamo fare giri di parole. </p>
                         </div>
                     </div>
                 </div>
@@ -267,9 +236,9 @@ module.exports = class {
                         <div class="h-100">
                             <div class="title text-start p-0">
                                 <h5 class="text-white">Come lavoriamo?</h5>
-                                <h3 class="text-white">Un team giovane in cui cresciamo personalmente e professionalmente</h3>
-                                <p>In Forge diamo molta importanza alla cultura aziendale, basata sul lavoro di squadra come mezzo per il raggiungimento di risultati di qualità e sull’inclusività come via per il pensiero creativo.</p>
-                                <p>Ci impegniamo affinché ciascuno si senta a casa e contribuisca a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
+                                <h3 class="text-white">Lavoriamo divertendoci e crescendo sia personalmente che professionalmente</h3>
+                                <p>In Forge diamo molta importanza all'umiltà e al lavoro di squadra come chiavi per il raggiungimento di risultati di qualità.</p>
+                                <p>Ci impegniamo affinché ciascuno si senta sempre a casa e possa contribuire a sua volta a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
                                 <h5 class="text-white">Vuoi lavorare con noi?</h5>
                                 <a class="btn btn-outline-light mb-0 rounded m-0" href="/lavora-con-noi/">Scopri cosa offriamo</a>
                             </div>
@@ -286,7 +255,7 @@ module.exports = class {
                 <div class="row text-center">
                     <div class="col-md-8 mx-auto">
                         <h2>Le nostre tecnologie</h2>
-                        <h4>Le solide fondamenta alla base dei nostri lavori</h4>
+                        <h4>Alcuni degli strumenti che utilizziamo quotidianamente per lavorare</h4>
                     </div>
                 </div>
                     <div class="row text-center justify-content-center">
@@ -327,28 +296,7 @@ module.exports = class {
                             ${await this.image('technologies-logos/bootstrap-logo.png', 'Logo Bootstrap', '', [214], '214w')}
                         </div>
                         <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/googleads-logo.png', 'Logo Google Ads', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/googleanalytics-logo.png', 'Logo Google Analytics', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/hubspot-logo.png', 'Logo HubSpot', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
                             ${await this.image('technologies-logos/wordpress-logo.png', 'Logo WordPress', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/mailchimp-logo.png', 'Logo Mailchimp', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/facebook-logo.png', 'Logo Facebook', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/instagram-logo.png', 'Logo Instagram', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/linkedin-logo.png', 'Logo LinkedIn', '', [214], '214w')}
                         </div>
                     </div>
                 </div>

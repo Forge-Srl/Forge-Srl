@@ -5,7 +5,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Chi siamo',
-            pageDescription: 'Uniamo competenze multisettoriali altamente professionali per risolvere problemi tecnologici, strategici e di comunicazione alle aziende.',
+            pageDescription: 'Usiamo le nostre competenze informatiche per creare valore.',
             eleventyNavigation: {
                 key: 'chi-siamo',
                 title: 'Chi Siamo'
@@ -23,9 +23,9 @@ module.exports = class {
                         <div class="col-md-6 mt-4 mt-md-0">
                             <h2 class="h1">La miglior estensione per la tua squadra</h2>
                             <h4>Il nostro obiettivo? Creare valore e arrivare al successo insieme alle aziende che seguiamo.</h4>
-                            <p>Siamo una realtà giovane e dinamica che unisce competenze multisettoriali altamente professionali per risolvere problemi tecnologici, strategici e di comunicazione alle aziende.</p>
-                            <p>Nasciamo nel 2018 e da allora trasformiamo le idee di oggi nei prodotti di domani studiando a fondo la visione dei clienti e realizzando soluzioni digitali competitive.</p>
-                            <p>Il nostro cuore pulsante è a Varese, ma siamo amanti del remote working, delle metodologie agili e degli spazi condivisi.</p>
+                            <p>Siamo una realtà giovane e dinamica che unisce competenze informatiche di diverso tipo come l'intelligenza artificiale, lo sviluppo agile del software e il cloud computing.</p>
+                            <p>Nasciamo nel 2018 e da allora trasformiamo idee in prodotti, studiando a fondo la visione dei clienti e realizzando soluzioni digitali competitive.</p>
+                            <p>Il nostro cuore pulsante è a Varese, siamo amanti delle metodologie agili e degli spazi condivisi.</p>
                             <a href="/#servizi" class="btn btn-outline-primary me-3 text-center">Scopri i nostri servizi</a>
                         </div>
                         <!-- right -->
@@ -72,17 +72,17 @@ module.exports = class {
             <!-- I Nostri Valori End --> 
 
             <!-- ======================= Action box -->
-            <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
-                <div class="container">
-                    <div class="d-block all-text-white text-center">
-                        <div class="text-center">
-                            <h2 class="m-0">Condividi i nostri valori?</h2>
-                            <h4>Scarica il nostro company profile per scoprire il dettaglio dei nostri servizi.</h4>
-                        </div>
-                        <a href="/assets/documents/forge-company-profile.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica il Company Profile</a>
-                    </div>
-                </div>
-            </section>
+<!--            <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">-->
+<!--                <div class="container">-->
+<!--                    <div class="d-block all-text-white text-center">-->
+<!--                        <div class="text-center">-->
+<!--                            <h2 class="m-0">Condividi i nostri valori?</h2>-->
+<!--                            <h4>Scarica il nostro company profile per scoprire il dettaglio dei nostri servizi.</h4>-->
+<!--                        </div>-->
+<!--                        <a href="/assets/documents/forge-company-profile.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica il Company Profile</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
             <!-- ======================= End Action box -->
 
             <!-- ======================= Divisione del team  -->
