@@ -17,15 +17,15 @@ module.exports = class {
         return `<main>
             ${pageTitle.call(this, data)}
             <!-- ======================= Perché Forge -->
-            <section class="pt-0">
+            <section class="pt-5 py-5 mb-4">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
-                        <div class="col-md-6 mt-4 mt-md-0">
-                            <h2 class="h1">Perché Forge</h2>
-                            <h4>Crediamo che lavorare in Forge sia il massimo!</h4>
+                        <div class="col-md-6 mt-4">
+                            <h1 class="h1">Perché Forge</h1>
+                            <h4>Vogliamo il massimo per chi lavora con noi!</h4>
                             <p>Come dice il nome stesso, Forge ha come elemento distintivo la “forgiatura”, ovvero la formazione di persone. Ci piace lavorare a stretto contatto con il territorio e in collaborazione con le migliori università.</p>
-                            <p>Siamo al tempo stesso amanti del remote working e degli spazi condivisi che creano forti sinergie e ritorni positivi. Crediamo fortemente che la chiave del cambiamento sia il confronto nella diversità.</p>
+                            <p>Crediamo che la condivisione dello spazio fisico, come anche di quello creato con strumenti virtuali, possa creare forti sinergie e ritorni positivi. Pensiamo che la chiave del cambiamento sia il confronto nella diversità.</p>
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
@@ -60,13 +60,13 @@ module.exports = class {
                         <div class="col-md-6 mt-4 mt-md-0">
                             <h5 class="text-primary">Il lavoro in Forge</h5>
                             <h2 class="h1">Fai ciò che ti piace in un team di cui essere orgoglioso</h2>
-                            <p>Da noi si lavora duro, ma ci si diverte nei giusti tempi e modi. Non esiste un organigramma: tutto ruota attorno alla meritocrazia, ci sono solo ruoli e responsabilità.</p>
-                            <p>Ci piace lavorare in spazi di co-working con un orario di lavoro flessibile per andare incontro alle esigenze di ognuno, nel rispetto delle differenze degli altri.</p>
+                            <p>Da noi si lavora duro, ma ci si diverte nei giusti tempi e modi. Non esiste un organigramma preciso: ci sono ruoli e responsabilità.</p>
+                            <p>Ci piace lavorare in spazi di co-working con un orario di lavoro che vada incontro alle esigenze di ognuno, nel rispetto delle differenze degli altri.</p>
                             <ul class="list-group list-group-borderless">
                                 <li class="list-group-item"><i class="fa fa-check"></i> <strong>Metodologia Agile</strong>: adottiamo la metodologia Agile per organizzare le attività in brevi sprint di task ben definiti così da dare il massimo.</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> <strong>Approccio data-driven</strong>: pianifichiamo le attività sulla base di previsioni accurate, facciamo test e ci affidiamo ai dati per prendere decisioni.</li>
                                 <li class="list-group-item"><i class="fa fa-check"></i> <strong>Alta competenza tecnologica</strong>: siamo al passo con le ultime tecnologie e siamo sempre aggiornati.</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Ore di studio</strong>: ogni giorno dedichiamo del tempo alla nostra formazione professionale e a progetti personali, che riteniamo tanto importanti quanto il lavoro stesso.</li>
+                                <li class="list-group-item"><i class="fa fa-check"></i> <strong>Ore di studio</strong>: dedichiamo del tempo alla nostra formazione professionale e a progetti personali, che riteniamo tanto importanti quanto il lavoro stesso.</li>
                             </ul>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ module.exports = class {
                         </div>
                         <div class="col-md-4 mt-30">
                             <div class="feature-box f-style-2 icon-grad h-100">
-                                <div class="feature-box-icon"><i class="fas fa-light fa-comments"></i></div>
+                                <div class="feature-box-icon"><i class="fas fa-light fa-users"></i></div>
                                 <h3 class="feature-box-title">Confronto</h3>
                                 <p class="feature-box-desc">Mettiamo in discussione ciò che facciamo ogni giorno e non diamo mai nulla per scontato. </p>
                             </div>
@@ -129,8 +129,9 @@ module.exports = class {
                                 </h2>
                                 <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4" data-bs-parent="#accordionWorkWithUs">
                                     <div class="accordion-body">
-                                        Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese, con una modalità di lavoro ibrida (2/3 giorni in sede, gli altri giorni in smart working). 
-                                        Utilizziamo la metodologia Agile applicata ad ogni aspetto del processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo. 
+                                        Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese.
+                                        L'esperienza nell'utilizzo di più linguaggi di programmazione e di strumenti di Intelligenza Artificiale e Machine Learning sono requisiti opzionali.
+                                        Utilizziamo la metodologia Agile applicata al processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo. 
                                         <h6 class="mt-2 mb-2">Luogo: Varese</h6>
                                         <a class="d-block" href="/lavora-con-noi/sviluppatore-software/">Candidati <i class="ti-arrow-circle-right"></i></a>
                                     </div>

@@ -5,7 +5,7 @@ module.exports = class {
         return {
             layout: 'layout.11ty.js',
             pageTitle: 'Chi siamo',
-            pageDescription: 'Usiamo le nostre competenze informatiche per creare valore.',
+            pageDescription: 'Usiamo le nostre competenze informatiche e di problem solving per creare valore.',
             eleventyNavigation: {
                 key: 'chi-siamo',
                 title: 'Chi Siamo'
@@ -55,7 +55,7 @@ module.exports = class {
                             <div class="feature-box-icon"><i class="fa-regular fa-handshake"></i></div>
                             <h3 class="feature-box-title">Mission</h3>
                             <h5>Che ruolo vogliamo avere nel futuro?</h5>
-                            <p class="feature-box-desc">Vogliamo affiancare le aziende nel processo di crescita con un approccio propositivo di fiducia, onestà, eticità e trasparenza.</p>
+                            <p class="feature-box-desc">Vogliamo affiancare le aziende nel processo di crescita con un approccio propositivo basato su fiducia, onestà, etica e trasparenza.</p>
                         </div>
                     </div>
                     <div class="col-md-4 mt-4">
@@ -70,37 +70,19 @@ module.exports = class {
             </div>
             </section>
             <!-- I Nostri Valori End --> 
-
-            <!-- ======================= Action box -->
-<!--            <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">-->
-<!--                <div class="container">-->
-<!--                    <div class="d-block all-text-white text-center">-->
-<!--                        <div class="text-center">-->
-<!--                            <h2 class="m-0">Condividi i nostri valori?</h2>-->
-<!--                            <h4>Scarica il nostro company profile per scoprire il dettaglio dei nostri servizi.</h4>-->
-<!--                        </div>-->
-<!--                        <a href="/assets/documents/forge-company-profile.pdf" target="_blank" class="btn btn-white me-3 text-center">Scarica il Company Profile</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </section>-->
-            <!-- ======================= End Action box -->
-
+            
             <!-- ======================= Divisione del team  -->
             <section id="team" class="pt-5 py-5">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
                         <!-- right -->
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <h5 class="text-primary">Il team</h5>
                             <h2 class="h1">Il lavoro di squadra è il nostro asset migliore</h2>
-                            <p>La nostra squadra è composta da un mix perfetto di creativi, marketer e tecnici esperti.</p>
+                            <p>La nostra squadra è composta da sviluppatori esperti in diverse tecnologie e project manager.</p>
                             <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie. </p>
-                            <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende. </p>
+                            <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende.</p>
                             <a href="/innovazione/" class="btn btn-outline-primary me-3 text-center">Scopri i nostri progetti</a>
-                        </div>
-                        <!-- left -->
-                        <div class="col-md-6">
-                            ${await this.image('team-chi-siamo.jpg', 'Suddivisione del team Forge', 'rounded')}
                         </div>
                     </div>
                 </div>

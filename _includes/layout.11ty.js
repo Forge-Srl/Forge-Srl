@@ -43,9 +43,11 @@ module.exports = async function(data) {
                 ${lazyCssLink('/assets/vendor/glightbox/css/glightbox.css', 'screen')}
                 ${lazyCssLink('/assets/vendor/aos/aos.css', 'screen')}
                 <!-- Theme CSS -->
-                ${lazyCssLink('/assets/css/style.css', 'all')}
+                <!--${lazyCssLink('/assets/css/style.css', 'all')}-->
+                <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
                 <!-- Theme Color CSS -->
                 ${lazyCssLink('/assets/css/color.css', 'all')}
+
                 
                 <!-- Bootstrap JS -->
                 <script defer src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

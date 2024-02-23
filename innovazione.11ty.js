@@ -68,7 +68,7 @@ module.exports = class {
                         <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-marker"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="13">0</h2>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="21">0</h2>
                                 <p class="mb-0">Progetti di tesi</p>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ module.exports = class {
                         <div class="col-md-3 col-6 mb-4 mb-md-0">
                             <div class="text-center">
                                 <i class="text-grad display-6 ti-ruler-alt-2"></i>
-                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="21">0</h2>
+                                <h2 class="fw-bold mt-2 mb-0 purecounter" data-purecounter-start="0" data-purecounter-delay="10" data-purecounter-duration="1" data-purecounter-end="32">0</h2>
                                 <p class="mb-0">Progetti Software</p>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ module.exports = class {
                             <h5 class="text-primary">Università</h5>
                             <h2 class="h1">Dialoghiamo con giovani menti entusiaste</h2>
                             <p>La forte spinta a collaborare con le università del territorio viene dai nostri stessi fondatori, che arrivano da un lungo percorso accademico e ben conoscono il <strong>potenziale innovativo di centri di ricerca e università</strong> in risposta alle esigenze di trasformazione delle aziende.</p>
-                            <p>Nel tempo abbiamo stretto importanti <strong>sinergie con l’Università Insubria di Varese</strong>, la nostra città natale, e abbiamo svolto diversi <strong>workshop all’Università Bicocca di Milano</strong>. Inoltre, curiamo la formazione dei giovani universitari per accelerare la loro crescita professionale e la loro capacità di essere protagonisti del cambiamento attraverso <strong>stage e progetti di ricerca</strong> che riguardano sia tematiche IT che Marketing.</p>
+                            <p>Nel tempo abbiamo stretto importanti <strong>sinergie con l’Università Insubria di Varese</strong>, la nostra città natale, e abbiamo svolto diversi <strong>workshop all’Università Bicocca di Milano</strong>. Inoltre, curiamo la formazione dei giovani universitari per accelerare la loro crescita professionale e la loro capacità di essere protagonisti del cambiamento attraverso <strong>stage e progetti di ricerca</strong>.</p>
                             <a href="/lavora-con-noi/#posizioni-aperte" class="btn btn-outline-primary me-3 text-center">Posizioni aperte</a>
                         </div>
                     </div>
@@ -120,7 +120,15 @@ module.exports = class {
                     <div class="row">
                         <div class="col-sm-12 text-center mb-4">
                             <h2>Sviluppiamo progetti Open Source</h2>
-                            <p>Ogni volta che risolviamo un problema scrivendo del software cerchiamo di astrarre il più possibile dall’ambito di applicazione per arrivare ad una <strong>soluzione generica</strong> che possa essere riutilizzata in altri ambiti. Per questo motivo abbiamo deciso di rilasciare alcuni progetti Open Source, <strong>nati e forgiati internamente a Forge</strong> con lo scopo di risolvere esigenze di sviluppo.</p>
+                            <p>Ogni volta che risolviamo un problema scrivendo del software cerchiamo di astrarre il più possibile dall’ambito di applicazione per arrivare ad una <strong>soluzione aperta</strong> che possa essere riutilizzata in altri ambiti. Per questo motivo abbiamo deciso di rilasciare alcuni progetti Open Source, <strong>nati e forgiati internamente a Forge</strong> con lo scopo di risolvere esigenze di sviluppo.</p>
+                        </div>
+                        <div class="col-md-4 mt-30">
+                            <div class="feature-box f-style-2 icon-grad h-100">
+                                <div class="feature-box-icon"><i class="fas fa-regular fa-diagram-project"></i></div>
+                                <h3 class="feature-box-title">Gushio</h3>
+                                <p class="feature-box-desc">Permette di scrivere script multipiattaforma testabili unitariamente in linguaggio JavaScript.</p>
+                                <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/gushio/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
+                            </div>
                         </div>
                         <div class="col-md-4 mt-30">
                             <div class="feature-box f-style-2 icon-grad h-100">
@@ -136,14 +144,6 @@ module.exports = class {
                                 <h3 class="feature-box-title">JJBridge</h3>
                                 <p class="feature-box-desc">Porta l’esecuzione di codice JavaScript in ambiente Java, nato inizialmente per utilizzare BionicJS in ambito Android.</p>
                                 <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/jjbridge-engine-v8/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mt-30">
-                            <div class="feature-box f-style-2 icon-grad h-100">
-                                <div class="feature-box-icon"><i class="fas fa-regular fa-diagram-project"></i></div>
-                                <h3 class="feature-box-title">Gushio</h3>
-                                <p class="feature-box-desc">Permette di scrivere script multipiattaforma testabili unitariamente in linguaggio JavaScript.</p>
-                                <a target="_blank" rel="noopener" class="d-block pt-2" href="https://github.com/Forge-Srl/gushio/">Vai al progetto <i class="ti-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -163,8 +163,8 @@ module.exports = class {
                         <div class="col-md-6 mt-4 mt-md-0">
                             <h5 class="text-primary">Ricerca e Sviluppo</h5>
                             <h2 class="h1">Un ecosistema dedicato alla trasformazione digitale</h2>
-                            <p>Per noi la tecnologia è al servizio del cambiamento. Partendo dal potenziale delle nuove tecnologie digitali sviluppiamo soluzioni architetturali, di <strong>intelligenza artificiale</strong> e di ricerca e sviluppo che accompagnano le aziende in un reale percorso di trasformazione digitale.</p>
-                            <p>Ci identifichiamo con i <strong>bisogni di innovazione delle aziende</strong> e le aiutiamo a individuare le soluzioni migliori per realizzare progetti che le rendano autonome nell’affrontare il futuro.</p>
+                            <p>Per noi la tecnologia è al servizio del cambiamento. Partendo dal potenziale delle nuove tecnologie digitali costruiamo soluzioni di <strong>intelligenza artificiale</strong>, integriamo e <strong>sviluppiamo software</strong> per accompagnare le aziende in un reale percorso di trasformazione digitale.</p>
+                            <p>Ci identifichiamo con i <strong>bisogni di innovazione delle aziende</strong> e le aiutiamo a individuare le soluzioni migliori per realizzare i progetti che le rendano autonome nell’affrontare il futuro.</p>
                                 <a href="/contattaci/" class="btn btn-outline-primary me-3 text-center">Contattaci per una consulenza</a>
                         </div>
                     </div>

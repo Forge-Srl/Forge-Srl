@@ -120,7 +120,7 @@ module.exports = class {
                                 <li>Data Science</li>
                             </ul>
                             <div class="mt-3">
-                            <a href="/servizi/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <a href="/servizi/#ai">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@ module.exports = class {
                                 <li>Mobile App Development Android/iOS</li>
                             </ul>
                             <div class="mt-3">
-                            <a href="/servizi/">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
+                            <a href="/servizi/#dev">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
                             </div>
                         </div>
                     </div>

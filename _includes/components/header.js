@@ -17,10 +17,10 @@ module.exports = async function (data) {
 							<a class="nav-link" href="/chi-siamo/">Chi Siamo</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/#metodologia">Metodologia</a>
+						    <a class="nav-link" href="/#servizi">Servizi</a>
 						</li>
 						<li class="nav-item">
-						    <a class="nav-link" href="/#servizi">Servizi</a>
+							<a class="nav-link" href="/#metodologia">Metodologia</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link px-lg-3" href="/innovazione/">Innovazione</a>
