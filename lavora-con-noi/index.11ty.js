@@ -29,7 +29,7 @@ module.exports = class {
                         </div>
                         <!-- right -->
                         <div class="col-md-6">
-                            ${await this.image('forge-lavora-con-noi1.jpg', 'Forge team marketing', 'rounded')}
+                            ${await this.image('forge-lavora-con-noi1.jpg', 'Forge team', 'rounded')}
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ module.exports = class {
                     <div class="row justify-content-between align-items-center">
                         <!-- left -->
                         <div class="col-md-6">
-                            ${await this.image('forge-lavora-con-noi2.jpg', 'Forge approccio marketing', 'rounded')}
+                            ${await this.image('forge-lavora-con-noi2.jpg', 'Forge approccio', 'rounded')}
                         </div>
                         <!-- right -->
                         <div class="col-md-6 mt-4 mt-md-0">
