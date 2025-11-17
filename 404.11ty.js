@@ -19,17 +19,12 @@ module.exports = class {
         return `<main>
             ${pageTitle.call(this, data)}
             <section class="error-page">
-		    <div class="container">
-			    <div class="row">
-				    <div class="col-md-8 mx-auto text-center">
-					    <h2 class="display-1 fw-bold text-grad">404</h2>
-					    <h3 class="mb-4">Pagina non trovata</h3>
-					    <p>Ooops! La pagina che stai cercando non esiste.</p>
-					    <a class="btn btn-sm btn-primary" href="https://forge.srl/">Riparti dalla home!</a>
-				    </div>
-			    </div>
-		    </div>
-	    </section>
+	   	        <p>
+                <span style="color: white; background: firebrick;">Errore 404</span><br>
+                Ooops! La pagina che stai cercando non esiste.<br>
+                <a class="btn btn-sm btn-primary" href="/">Riparti dalla home!</a>
+                </p>
+	       </section>
         </main>`
     }
 }

@@ -3,7 +3,7 @@ const path = require('path')
 const Image = require('@11ty/eleventy-img')
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const sitemap = require('@quasibit/eleventy-plugin-sitemap')
-const htmlmin = require('html-minifier')
+const htmlmin = require('html-minifier-next')
 const Forge = require('./_data/forge')
 
 module.exports = (eleventyConfig) => {
@@ -11,14 +11,8 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('assets')
         .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy('robots.txt')
-        .addPassthroughCopy({'node_modules/bootstrap/dist': 'assets/vendor/bootstrap'})
-        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/css/all.css': 'assets/vendor/font-awesome/css/all.min.css'})
-        .addPassthroughCopy({'node_modules/@fortawesome/fontawesome-free/webfonts': 'assets/vendor/font-awesome/webfonts'})
-        .addPassthroughCopy({'node_modules/glightbox/dist': 'assets/vendor/glightbox'})
-        .addPassthroughCopy({'node_modules/aos/dist': 'assets/vendor/aos'})
         .addPassthroughCopy({'node_modules/ityped/dist': 'assets/vendor/ityped'})
         .addPassthroughCopy({'node_modules/@srexi/purecounterjs/dist': 'assets/vendor/purecounter'})
-        .addPassthroughCopy({'node_modules/sticky-js/dist': 'assets/vendor/sticky-js'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {

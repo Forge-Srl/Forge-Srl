@@ -13,12 +13,14 @@ module.exports = function (formId, formReplacementId, data) {
             })
         }
         const lockForm = () => {
+            submitButton.disabled = true
             submitButton.classList.add('disabled')
             submitButton.children[0].style.cssText = ''
         }
         const unlockForm = () => {
             submitButton.children[0].style.cssText = 'display: none;'
             submitButton.classList.remove('disabled')
+            submitButton.disabled = false
         }
         const fail = () => {
             unlockForm()

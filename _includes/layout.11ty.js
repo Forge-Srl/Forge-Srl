@@ -22,7 +22,7 @@ module.exports = async function(data) {
                 <meta property="og:description" content="${data.pageDescription}">
                 <meta property="og:url" content="${canonical}">
                 <meta property="og:site_name" content="Forge Srl">
-                <meta property="og:image" content="${data.forge.domain}/assets/images/forge-banner.jpg">
+                <meta property="og:image" content="${data.forge.domain}/assets/images/forge-logo.png">
                 <meta property="article:publisher" content="${data.forge.facebook}">
                 <meta name="description" content="${data.pageDescription}">
                 <meta name="facebook-domain-verification" content="${facebookVerification}">
@@ -34,29 +34,15 @@ module.exports = async function(data) {
                 <!-- Google Font -->
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                ${lazyCssLink('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', 'all')}
+                ${lazyCssLink('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap', 'all')}
 
-                <!-- Plugins CSS -->
-                ${lazyCssLink('/assets/vendor/font-awesome/css/all.min.css', 'screen')}
-                ${lazyCssLink('/assets/vendor/themify-icons/css/themify-icons.css', 'screen')}
-                ${lazyCssLink('/assets/vendor/animate/animate.min.css', 'screen')}
-                ${lazyCssLink('/assets/vendor/glightbox/css/glightbox.css', 'screen')}
-                ${lazyCssLink('/assets/vendor/aos/aos.css', 'screen')}
                 <!-- Theme CSS -->
                 <!--${lazyCssLink('/assets/css/style.css', 'all')}-->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-                <!-- Theme Color CSS -->
-                ${lazyCssLink('/assets/css/color.css', 'all')}
 
-                
-                <!-- Bootstrap JS -->
-                <script defer src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <!--Vendors-->
-                <script defer src="/assets/vendor/aos/aos.js"></script>
                 <script defer src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-                <script defer src="/assets/vendor/glightbox/js/glightbox.js"></script>
                 <script defer src="/assets/vendor/ityped/index.js"></script>
-                <script defer src="/assets/vendor/sticky-js/sticky.min.js"></script>
                 <!--Template Functions-->
                 <script defer src="/assets/js/functions.js"></script>
                 
@@ -73,9 +59,11 @@ module.exports = async function(data) {
                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${tagManagerId}"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
-                ${await header.call(this, data)}
-                ${data.content}
-                ${await footer.call(this, data)}
+                <div class="box" style="width: var(--terminal-width); box-sizing: content-box;">
+                    ${await header.call(this, data)}
+                    ${data.content}
+                    ${await footer.call(this, data)}
+                </div>
             </body>
         </html>`
 }

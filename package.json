@@ -1,22 +1,17 @@
 {
   "scripts": {
-    "generate": "node ./node_modules/@11ty/eleventy/cmd",
-    "dev-mode": "node ./node_modules/@11ty/eleventy/cmd --serve"
+    "generate": "node ./node_modules/@11ty/eleventy/cmd.cjs",
+    "dev-mode": "node ./node_modules/@11ty/eleventy/cmd.cjs --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-img": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.3",
-    "@quasibit/eleventy-plugin-sitemap": "^2.1.5",
-    "html-minifier": "^4.0.0"
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "html-minifier-next": "^4.1.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
     "@srexi/purecounterjs": "^1.5.0",
-    "aos": "^2.3.4",
-    "bootstrap": "^5.1.3",
-    "glightbox": "^3.2.0",
-    "ityped": "^1.0.3",
-    "sticky-js": "^1.3.0"
+    "ityped": "^1.0.3"
   }
 }

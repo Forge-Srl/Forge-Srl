@@ -13,46 +13,18 @@ module.exports = class {
 
     async render(data) {
         return `<main>
-            <section class="p-0 position-relative h-500 h-md-600 h-xl-900 bg-grad pattern-overlay-4 overflow-hidden">
-            <div class="container d-flex h-100">
-                <div class="row align-self-center w-100 z-index-9">
-                    <!-- banner Content -->
-                    <div class="col-md-7 mt-md-0 all-text-white position-relative">
-                        <h1 class="display-4 fw-normal" style="will-change: contents; transform: translateZ(0);">
-                            <span class="pt-0">Appassionati di</span>
-                            <br>
-                            <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
-                        </h1>
-                        <h2 class="mb-4 fw-normal">trasformiamo le idee di oggi nei prodotti di domani.</h2>
-                        <a class="btn btn-outline-light mb-0 rounded m-0 d-none d-md-inline" href="#servizi">Esplora le nostre soluzioni</a>
-                        <a class="btn btn-primary mb-0 rounded m-3 d-md-inline" href="/contattaci/">Contattaci</a>
-                    </div>
-                    <!-- banner image -->
-                    <div class="col-md-5 d-none d-md-block p-0 position-absolute top-0 end-0 align-top align-text-top">
-                        <figure class="w-100 ie-height-750">
-                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1290 1024" style="enable-background:new 0 0 1290 1024;" xml:space="preserve">
-                                <g id="XMLID_81_">
-                                    <defs>
-                                    <path id="XMLID_3_" d="M1290,0v1024c0,0-229.8-152.2-550-52.9C467.3,1055.7-22.5,927.6,47.8,540C120.4,139.6,17,0,17,0H1290z"/>
-                                    </defs>
-                                    <clipPath id="XMLID_83_">
-                                    <use xlink:href="#XMLID_3_" style="overflow:visible;"/>
-                                    </clipPath>
-                                    <g style="clip-path:url(#XMLID_83_);">
-                                        <!-- Set your 1290px X 1024px image below -->
-                                        <image style="overflow:visible;" width="1290" height="1024" id="XMLID_82_" xlink:href="assets/images/forge-banner.jpg"  transform="matrix(0.9999 0 0 0.9999 8.063897e-002 6.401104e-002)">
-                                        </image>
-                                    </g>
-                                </g>
-                            </svg>
-                        </figure>
-                    </div>
+            <section>
+                <div>
+                    <h3 style="will-change: contents; transform: translateZ(0);">
+                        <span class="pt-0">Appassionati di</span>
+                        <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
+                    </h3>
+                    <p>Trasformiamo le idee di oggi nei prodotti di domani.</p>
+                    <a href="/#servizi">Esplora le nostre soluzioni</a>
+                    <a href="/contattaci/">Contattaci</a>
                 </div>
-            </div>
-            <canvas class="position-absolute bottom-0 start-50 translate-middle-x mb-n9 z-index-0" id="waveCanvas" style="will-change: transform; transform: translateZ(0);"></canvas>
-        </section>
-        <!-- ======================= End Main banner -->
-    
+            </section>
+
         <!-- ======================= About us  -->
         <section id="chi-siamo">
             <div class="container">
@@ -250,72 +222,61 @@ module.exports = class {
         <!-- End Why-us =======================  -->
     
         <!-- ======================= Client -->
-        <section class="client">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-8 mx-auto">
-                        <h2>Le nostre tecnologie</h2>
-                        <h4>Alcuni degli strumenti che utilizziamo quotidianamente per lavorare</h4>
-                    </div>
+        <section>
+                <div>
+                    <h2>Le nostre tecnologie</h2>
+                    <p>Alcuni degli strumenti che utilizziamo quotidianamente per lavorare</p>
                 </div>
-                    <div class="row text-center justify-content-center">
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/TS-logo.png', 'Logo TypeScript', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/java-logo.png', 'Logo Java', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/algolia-logo.png', 'Logo Algolia', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/ios-logo.png', 'Logo iOS', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/android-logo.png', 'Logo Android', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/node-logo.png', 'Logo Node', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/angular-logo.png', 'Logo Angular', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/csharp-logo.png', 'Logo C#', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/aws-logo.png', 'Logo AWS', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/firebase-logo.png', 'Logo Firebase', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/googlecloud-logo.png', 'Logo Google Cloud', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/bootstrap-logo.png', 'Logo Bootstrap', '', [214], '214w')}
-                        </div>
-                        <div class="col-4 col-md-2 mb-5">
-                            ${await this.image('technologies-logos/wordpress-logo.png', 'Logo WordPress', '', [214], '214w')}
-                        </div>
+                <div class="group-3 gap-2">
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/TS-logo.png', 'Logo TypeScript', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/java-logo.png', 'Logo Java', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/algolia-logo.png', 'Logo Algolia', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/ios-logo.png', 'Logo iOS', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/android-logo.png', 'Logo Android', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/node-logo.png', 'Logo Node', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/angular-logo.png', 'Logo Angular', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/csharp-logo.png', 'Logo C#', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/aws-logo.png', 'Logo AWS', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/firebase-logo.png', 'Logo Firebase', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/googlecloud-logo.png', 'Logo Google Cloud', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/bootstrap-logo.png', 'Logo Bootstrap', '', [214], '214w')}
+                    </div>
+                    <div style="text-align: center;">
+                        ${await this.image('technologies-logos/wordpress-logo.png', 'Logo WordPress', '', [214], '214w')}
                     </div>
                 </div>
             </section>
             <!-- ======================= End Client -->
-    
-            <!-- ======================= Action box -->
-            <section class="bg-grad p-4 p-sm-5 pattern-overlay-4">
-                <div class="container">
-                    <div class="d-block all-text-white text-center">
-                        <div class="text-center">
-                            <h2 class="m-0">Ti aiutiamo a raggiungere i tuoi obiettivi</h2>
-                            <h4>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo? Siamo a tua disposizione!</h4>
-                        </div>
-                        <a href="/contattaci/" class="btn btn-white me-3 text-center">Parliamone Insieme</a>
-                    </div>
-                </div>
+            <section class="highlight">
+                <p><strong>Ti aiutiamo a raggiungere i tuoi obiettivi</strong></p>
+				<br>
+				<p>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un'idea di come lavoriamo?<br>Siamo a tua disposizione!</p>
+				<br>
+				<a href="/contattaci/" class="cta">Parliamone Insieme</a>
             </section>
-            <!-- ======================= End Action box -->
         </main>`
     }
 }
