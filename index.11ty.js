@@ -19,6 +19,25 @@ module.exports = class {
                         <span class="pt-0">Appassionati di</span>
                         <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
                     </h3>
+                    <script defer src="/assets/vendor/ityped/index.js"></script>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const type = document.querySelectorAll('.typed');
+                        type.forEach(el => {
+                            const strings = el.getAttribute('data-type-text');
+                            const split_strings = strings.split("&&");
+                            const typespeed = el.getAttribute('data-speed') ? el.getAttribute('data-speed') : 125;
+                            const typeBackSpeed = el.getAttribute('data-back-speed') ? el.getAttribute('data-back-speed') : 50;
+
+                            ityped.init(el, {
+                                strings: split_strings,
+                                showCursor: true,
+                                typeSpeed: typespeed,
+                                backSpeed: typeBackSpeed
+                            });
+                        });
+                    });
+                    </script>
                     <p>Trasformiamo le idee di oggi nei prodotti di domani.</p>
                     <a href="/#servizi">Esplora le nostre soluzioni</a>
                     <a href="/contattaci/">Contattaci</a>

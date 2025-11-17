@@ -12,7 +12,6 @@ module.exports = (eleventyConfig) => {
         .addPassthroughCopy('favicon.ico')
         .addPassthroughCopy('robots.txt')
         .addPassthroughCopy({'node_modules/ityped/dist': 'assets/vendor/ityped'})
-        .addPassthroughCopy({'node_modules/@srexi/purecounterjs/dist': 'assets/vendor/purecounter'})
 
     eleventyConfig.addPlugin(navigationPlugin)
     eleventyConfig.addPlugin(sitemap, {

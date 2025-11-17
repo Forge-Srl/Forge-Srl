@@ -20,9 +20,18 @@ module.exports = class {
             ${pageTitle.call(this, data)}
             <section class="error-page">
 	   	        <p>
-                <span style="color: white; background: firebrick;">Errore 404</span><br>
-                Ooops! La pagina che stai cercando non esiste.<br>
-                <a class="btn btn-sm btn-primary" href="/">Riparti dalla home!</a>
+                <span style="color: white; background: firebrick;">HTTPError: 404 (Not Found)</span><br>
+                <em>Uncaught ReferenceError: this page is not defined</em><br>
+                <em>&nbsp;&nbsp;at resolveRoute (webpack:///./src/router/index.js:42:69)</em><br>
+                <em>&nbsp;&nbsp;at async whereIsThisGoing (webpack:///./node_modules/forge-router/dist/forge-router.production.min.js:20:18)</em><br>
+                <em>&nbsp;&nbsp;at async pleaseLoad (webpack:///./src/loaders/pageLoader.js:33:9)</em><br>
+                <em>&nbsp;&nbsp;at async render (webpack:///./src/app.js:89:5)</em><br>
+                <em>&nbsp;&nbsp;at async startPage (https://forge.srl)</em><br>
+                </p>
+                <p>
+                    <br>
+                    Ooops! La pagina che stai cercando non esiste.<br>
+                    <a href="/">Riparti dalla home!</a>
                 </p>
 	       </section>
         </main>`

@@ -40,12 +40,6 @@ module.exports = async function(data) {
                 <!--${lazyCssLink('/assets/css/style.css', 'all')}-->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
-                <!--Vendors-->
-                <script defer src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-                <script defer src="/assets/vendor/ityped/index.js"></script>
-                <!--Template Functions-->
-                <script defer src="/assets/js/functions.js"></script>
-                
                 <!-- Google Tag Manager -->
                 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
