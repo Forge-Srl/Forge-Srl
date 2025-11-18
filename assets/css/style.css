@@ -141,7 +141,7 @@ input:disabled, input[disabled], textarea:disabled, textarea[disabled] {
     opacity: 0.5;
 }
 
-p, span, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+p, span, a, ul, ol, li, h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     word-break: break-all;
 }
