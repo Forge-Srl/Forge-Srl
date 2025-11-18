@@ -41,7 +41,7 @@ module.exports = class {
             </section>
             <br>
             <section>
-                <h4>Il nostro approccio</h4>
+                <h2>Il nostro approccio</h2>
                 <p><strong><em>Supportiamo l'evoluzione tecnologica con un rapporto solido.</em></strong></p>
                 <p>Instauriamo partnership amichevoli e durature con i nostri clienti per costruire insieme esperienze digitali future-proof che abbiano un <strong>valore concreto</strong>.</p>
                 <p>Amiamo ciò che facciamo e ci divertiamo nel farlo. Ci impegniamo a generare un <strong>impatto positivo</strong> sul territorio e collaboriamo il più possibile con la realtà che ci circonda.</p>
