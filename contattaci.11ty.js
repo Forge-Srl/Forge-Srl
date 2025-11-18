@@ -41,35 +41,33 @@ module.exports = class {
                 <h3>Hai un grande progetto in mente? Realizziamolo insieme!</h3>
                 <p>Mettiti in contatto con noi per condividere le tue idee e per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto.</p>
                 <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
-                    <div class="row">
-                        <div class="group-2">
-                            <div style="display: flex;">
-                                <input required id="con-name" name="name" type="text" class="form-control" placeholder="Nome">
-                            </div>
-                            <div style="display: flex;">
-                                <input required id="con-email" name="from" type="email" class="form-control" placeholder="E-mail">
-                            </div>
+                    <div class="group-2">
+                        <div style="display: flex;">
+                            <input required id="con-name" name="name" type="text" class="form-control" placeholder="Nome">
                         </div>
-                        <div class="group-1">
-                            <div style="display: flex;">
-                                <input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Oggetto">
-                            </div>
+                        <div style="display: flex;">
+                            <input required id="con-email" name="from" type="email" class="form-control" placeholder="E-mail">
                         </div>
-                        <div class="group-1">
-                            <div style="display: flex;">
-                                <textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Messaggio"></textarea>
-                            </div>
+                    </div>
+                    <div class="group-1">
+                        <div style="display: flex;">
+                            <input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Oggetto">
                         </div>
-                        <div style="text-align: center;">
-                            <button type="submit">
-                                <span class="spinner" style="display: none" role="status" aria-hidden="true"></span>
-                                Invia
-                            </button>
+                    </div>
+                    <div class="group-1">
+                        <div style="display: flex;">
+                            <textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Messaggio"></textarea>
                         </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit">
+                            <span class="spinner" style="display: none" role="status" aria-hidden="true"></span>
+                            Invia
+                        </button>
                     </div>
                 </form>
                 <div id="contact-form-done" style="display: none;">
-                    <h4 class="text-center">Grazie per averci contattato! Un membro del nostro team si metterà in contatto con te il prima possibile.</h4>
+                    <p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>
                 </div>
                 ${formScript.call(this, 'contact-form', 'contact-form-done', data)}
             </section>
