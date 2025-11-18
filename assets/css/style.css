@@ -61,7 +61,7 @@ html {
     --input-backgroud-highlight: rgba(255, 255, 255, 0.35);
 
     --terminal-width: 120ch;
-    --char-height: calc((4ex + 1cap) / 2);
+    --char-height: calc((5ex + 1cap) / 2);
     --border-thickness: 0.5ch;
     --border-style: double;
     --size-multiplier: 1;
@@ -318,6 +318,15 @@ header a.logo:hover {
     margin: calc(var(--char-height) * 0.4) 0;
     border: var(--border-thickness) var(--border-style) var(--color-text-soft);
     box-sizing: border-box;
+}
+
+.box > span.box-title:first-child {
+    display: block;
+    margin-top: calc(-1 * var(--char-height));
+    padding: 0 1ch;
+    width: fit-content;
+    background: var(--color-text-soft);
+    color: var(--color-background);
 }
 
 .group-1 {

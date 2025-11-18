@@ -14,234 +14,135 @@ module.exports = class {
     async render(data) {
         return `<main>
             <section>
-                <div>
-                    <h3 style="will-change: contents; transform: translateZ(0);">
-                        <span class="pt-0">Appassionati di</span>
-                        <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
-                    </h3>
-                    <script defer src="/assets/vendor/ityped/index.js"></script>
-                    <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const type = document.querySelectorAll('.typed');
-                        type.forEach(el => {
-                            const strings = el.getAttribute('data-type-text');
-                            const split_strings = strings.split("&&");
-                            const typespeed = el.getAttribute('data-speed') ? el.getAttribute('data-speed') : 125;
-                            const typeBackSpeed = el.getAttribute('data-back-speed') ? el.getAttribute('data-back-speed') : 50;
+                <h3 style="will-change: contents; transform: translateZ(0);">
+                    <span class="pt-0">Appassionati di</span>
+                    <span class="typed" data-type-text="Artificial Intelligence&&Process Automation&&Machine Learning&&Software Development&&Digital Innovation"></span>
+                </h3>
+                <script defer src="/assets/vendor/ityped/index.js"></script>
+                <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const type = document.querySelectorAll('.typed');
+                    type.forEach(el => {
+                        const strings = el.getAttribute('data-type-text');
+                        const split_strings = strings.split("&&");
+                        const typespeed = el.getAttribute('data-speed') ? el.getAttribute('data-speed') : 125;
+                        const typeBackSpeed = el.getAttribute('data-back-speed') ? el.getAttribute('data-back-speed') : 50;
 
-                            ityped.init(el, {
-                                strings: split_strings,
-                                showCursor: true,
-                                typeSpeed: typespeed,
-                                backSpeed: typeBackSpeed
-                            });
+                        ityped.init(el, {
+                            strings: split_strings,
+                            showCursor: true,
+                            typeSpeed: typespeed,
+                            backSpeed: typeBackSpeed
                         });
                     });
-                    </script>
-                    <p>Trasformiamo le idee di oggi nei prodotti di domani.</p>
-                    <a href="/#servizi">Esplora le nostre soluzioni</a>
-                    <a href="/contattaci/">Contattaci</a>
+                });
+                </script>
+                <p>Trasformiamo le idee di oggi nei prodotti di domani.</p>
+                <a href="/#servizi">Esplora le nostre soluzioni</a>
+                <a href="/contattaci/">Contattaci</a>
+            </section>
+            <section id="chi-siamo">
+                <div class="box">
+                    <p>Appassionarci alle idee dei nostri clienti ci permette di creare costantemente valore.</p>
+                </div>
+                <h2>Chi Siamo</h2>
+                <p><strong><em>Intelligenza artificiale, approccio umano</em></strong></p>
+                <p>Siamo una squadra affiatata composta da <strong>informatici</strong> con varie specializzazioni.
+                <p>Lavoriamo con le più recenti tecnologie di <strong>intelligenza artificiale</strong> e usando gli strumenti
+                di <strong>sviluppo software</strong> più aggiornati.
+                <p>Ci <strong>divertiamo</strong> e non smettiamo mai di imparare, perché
+                l'innovazione digitale è in costante accelerazione e richiede <strong>passione</strong>.</p>
+                <p>Il nostro approccio è diretto e agile, cerchiamo costantemente <strong>fiducia, onestà e trasparenza</strong>.</p>
+                <br>
+                <a href="/chi-siamo/">Conosci il team</a>
+            </section>
+            <section id="servizi">
+                <h2>Come possiamo aiutarti</h2>
+                <div class="group-2 gap-3">
+                    <div class="box">
+                        <h5>Intelligenza Artificiale</h5>
+                        <ul>
+                            <li>Automazione di Processi con AI Generativa</li>
+                            <li>Supporto Clienti automatizzato</li>
+                            <li>Manutenzione Predittiva</li>
+                            <li>Data Science</li>
+                        </ul>
+                        <br>
+                        <a href="/servizi/#ai">Scopri di più</a>
+                    </div>
+                    <div class="box">
+                        <h5>Sviluppo software</h5>
+                        <ul>
+                            <li>E-Commerce</li>
+                            <li>Web Development</li>
+                            <li>Back-End Development</li>
+                            <li>Mobile App Development Android/iOS</li>
+                        </ul>
+                        <br>
+                        <a href="/servizi/#dev">Scopri di più</a>
+                    </div>
                 </div>
             </section>
 
-        <!-- ======================= About us  -->
-        <section id="chi-siamo">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <!-- left -->
-                    <div class="col-md-6">
-                        <div class="row mt-4 mt-md-0">
-                            <div class="col-5 offset-1 px-2 mb-3 align-self-end">
-                                <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                                    ${await this.image('chi-siamo1.jpg', 'Esperti Forge', 'rounded aos', [240])}
-                                </div>
-                            </div>
-                            <div class="col-6 px-2 mb-3">
-                                <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-                                    ${await this.image('chi-siamo2.jpg', 'Il team di Forge a Varese', 'rounded aos', [290])}
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-7 px-2 mb-3">
-                                <div class="rounded aos bg-grad p-2 p-sm-3 p-lg-4 p-xl-5 all-text-white" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500">
-                                    <p class="blockquote">Appassionarci alle idee dei nostri clienti ci permette di creare costantemente valore.</p>
-                                </div>
-                            </div>
-                            <div class="col-5 align-self-start ps-2 mb-3 d-none d-md-inline">
-                                <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="1500">
-                                    ${await this.image('chi-siamo3.jpg', 'Forge lavoro di squadra', 'rounded aos', [240])}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- right -->
-                    <div class="col-md-6 ps-lg-5">
-                        <h5 class="text-primary">Chi Siamo</h5>
-                        <h3 class="h1">Intelligenza artificiale, approccio umano</h3>
-                        <p>Siamo una squadra affiatata composta da <b>informatici</b> con varie specializzazioni. 
-                        <p>Lavoriamo con le più recenti tecnologie di <b>intelligenza arificiale</b> e usando gli strumenti 
-                        di <b>sviluppo software</b> più aggiornati. 
-                        <p>Ci <b>divertiamo</b> e non smettiamo mai di imparare, perché 
-                        l'innovazione digitale è in costante accelerazione e richiede <b>passione</b>.</p>
-                        <p>Il nostro approccio è diretto e agile, cerchiamo costantemente <b>fiducia, onestà e trasparenza</b>.</p>
-                        <a href="/chi-siamo/" class="btn btn-outline-primary me-3 text-center">Conosci il team</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ======================= End About us  -->
-    
-        <!-- ======================= Service -->
-        <section id="servizi" class="pb-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- title -->
-                        <h5 class="text-primary">Cosa Facciamo</h5>
-                        <h3 class="h1">Come possiamo aiutarti</h3>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-brain"></i></span>
-                            <h5 class="mt-3">Intelligenza Artificiale</h5>
-                            <ul>
-                                <li>Automazione di Processi con AI Generativa</li>
-                                <li>Supporto Clienti automatizzato</li>
-                                <li>Manutenzione Predittiva</li>
-                                <li>Data Science</li>
-                            </ul>
-                            <div class="mt-3">
-                            <a href="/servizi/#ai">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <!-- service item -->
-                        <div class="rounded bg-light p-4 p-lg-5 mb-5">
-                            <span class="display-5 icon-primary"><i class="fas fa-code"></i></span>
-                            <h5 class="mt-3">Sviluppo software</h5>
-                            <ul>
-                                <li>E-Commerce</li>
-                                <li>Web Development</li>
-                                <li>Back-End Development</li>
-                                <li>Mobile App Development Android/iOS</li>
-                            </ul>
-                            <div class="mt-3">
-                            <a href="/servizi/#dev">Scopri di più <i class="ti-arrow-right text-primary"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ======================= End Service -->
-    
-        <!-- ======================= Process-advance -->
-        <section id="metodologia" class="process-advance bg-light">
-            <div class="title text-center">
+            <section id="metodologia">
                 <h2>Il successo dei nostri clienti è il nostro successo</h2>
-                <h4>Offriamo un approccio concreto, flessibile e soprattutto umano</h4>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <!-- process 1 -->
-                    <div class="col-sm-6 col-lg-3 text-center mb-4">
-                        <div class="process-border"><span class="process-number bg-primary border-end">01</span></div>
-                        <h5 class="my-3">Ascoltiamo e valutiamo</h5>
+                <p><strong><em>Offriamo un approccio concreto, flessibile e soprattutto umano</em></strong></p>
+                <br>
+                <div class="group-2 gap-3">
+                    <div class="box">
+                        <span class="box-title">01</span>
+                        <h5>Ascoltiamo e valutiamo</h5>
                         <p>con onestà il progetto e decidiamo se possiamo fornire il nostro contributo nella realizzazione</p>
                     </div>
-                    <!-- process 1 -->
-                    <div class="col-sm-6 col-lg-3 text-center mb-4">
-                        <div class="process-border"><span class="process-number bg-primary border-start border-end">02</span></div>
-                        <h5 class="my-3">Troviamo una soluzione</h5>
+                    <div class="box">
+                        <span class="box-title">02</span>
+                        <h5>Troviamo una soluzione</h5>
                         <p>che sia il più possibile efficace e che dimostri con dati misurabili un riscontro positivo</p>
                     </div>
-                    <!-- process 1 -->
-                    <div class="col-sm-6 col-lg-3 text-center mb-4">
-                        <div class="process-border"><span class="process-number bg-primary border-start border-end">03</span></div>
-                        <h5 class="my-3">Usiamo il modello <i>Agile</i></h5>
+                    <div class="box">
+                        <span class="box-title">03</span>
+                        <h5>Usiamo il modello <em>Agile</em></h5>
                         <p>e la metodologia Scrum per pianificare e gestire il progetto con la massima flessibilità ed efficienza</p>
                     </div>
-                    <!-- process 1 -->
-                    <div class="col-sm-6 col-lg-3 text-center mb-4">
-                        <div class="process-border"><span class="process-number bg-primary border-start">04</span></div>
-                        <h5 class="my-3">Chiediamo feedback</h5>
+                    <div class="box">
+                        <span class="box-title">04</span>
+                        <h5>Chiediamo feedback</h5>
                         <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia, rilasciando gradualmente il software.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- ======================= End Process-advance -->
+            </section>
+            <section id="valori">
+                <h2>I nostri valori</h2>
+                <p><strong><em>Ci basiamo su 4 valori per guidare le nostre scelte e decisioni</em></strong></p>
+                <div>
+                    <h3>Fiducia</h3>
+                    <p>Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido che possa generare valore. </p>
+                </div>
+                <div>
+                    <h3>Onestà</h3>
+                    <p>Vogliamo che le cose siano fatte bene. I nostri consigli saranno sempre sinceri, senza timore di metterci in discussione.</p>
+                </div>
+                <div>
+                    <h3>Innovazione</h3>
+                    <p>Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide.</p>
+                </div>
+                <div>
+                    <h3>Trasparenza</h3>
+                    <p>Ci confrontiamo costantemente con un rapporto diretto e informale, non amiamo fare giri di parole.</p>
+                </div>
+            </section>
 
-        <!-- ======================= Values -->
-        <section id="valori">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center mb-4">
-                        <h2>I nostri valori</h2>
-                        <h4>Ci basiamo su 4 valori per guidare le nostre scelte e decisioni</h4>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="feature-box f-style-5 h-100 icon-grad">
-                            <div class="feature-box-icon"><i class="fas fa-light fa-key"></i></i></div>
-                            <h3 class="feature-box-title">Fiducia</h3>
-                            <p class="feature-box-desc">Sia tra di noi che con i nostri clienti. Pensiamo che sia la vera chiave per la costruzione di un rapporto solido che possa generare valore. </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="feature-box f-style-5 h-100 icon-grad">
-                            <div class="feature-box-icon"><i class="fas fa-light fa-handshake"></i></i></div>
-                            <h3 class="feature-box-title">Onestà</h3>
-                            <p class="feature-box-desc">Vogliamo che le cose siano fatte bene. I nostri consigli saranno sempre sinceri, senza timore di metterci in discussione.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="feature-box f-style-5 h-100 icon-grad">
-                            <div class="feature-box-icon"><i class="fas fa-light fa-rocket"></i></i></div>
-                            <h3 class="feature-box-title">Innovazione</h3>
-                            <p class="feature-box-desc">Aiutiamo i nostri clienti nelle scelte attraverso una consulenza armonica che abbraccia il cambiamento e le nuove sfide.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="feature-box f-style-5 h-100 icon-grad">
-                            <div class="feature-box-icon"><i class="fas fa-light fa-message"></i></i></div>
-                            <h3 class="feature-box-title">Trasparenza</h3>
-                            <p class="feature-box-desc">Ci confrontiamo costantemente con un rapporto diretto e informale, non amiamo fare giri di parole. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ======================= End Values -->
-    
-        <!-- ======================= Why-us -->
-        <section id="lavora-con-noi" class="why-us p-0">
-            <div class="container-fluid">
-                <div class="row">
-                    <!--why us left-->
-                    <div class="col-lg-6 d-none d-lg-block bg-light p-0" style="background: url('/assets/images/forge-lavora-con-noi.jpg') no-repeat; background-size:cover;">
-                    </div>
-                    <!--why us right-->
-                    <div class="col-lg-6 col-md-12 bg-body px-4 py-5 p-lg-5 text-white">
-                        <div class="h-100">
-                            <div class="title text-start p-0">
-                                <h5 class="text-white">Come lavoriamo?</h5>
-                                <h3 class="text-white">Lavoriamo divertendoci e crescendo sia personalmente che professionalmente</h3>
-                                <p>In Forge diamo molta importanza all'umiltà e al lavoro di squadra come chiavi per il raggiungimento di risultati di qualità.</p>
-                                <p>Ci impegniamo affinché ciascuno si senta sempre a casa e possa contribuire a sua volta a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
-                                <h5 class="text-white">Vuoi lavorare con noi?</h5>
-                                <a class="btn btn-outline-light mb-0 rounded m-0" href="/lavora-con-noi/">Scopri cosa offriamo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Why-us =======================  -->
-    
-        <!-- ======================= Client -->
-        <section>
+            <section id="lavora-con-noi">
+                <h2>Come lavoriamo?</h2>
+                <p><strong><em>Lavoriamo divertendoci e crescendo sia personalmente che professionalmente</em></strong></p>
+                <p>In Forge diamo molta importanza all'umiltà e al lavoro di squadra come chiavi per il raggiungimento di risultati di qualità.</p>
+                <p>Ci impegniamo affinché ciascuno si senta sempre a casa e possa contribuire a sua volta a una cultura di benessere, libertà, responsabilità e trasparenza.</p>
+                <br>
+                <p><strong>Vuoi lavorare con noi?</strong></p>
+                <br>
+                <a href="/lavora-con-noi/">Scopri cosa offriamo</a>
+            </section>
+            <section>
                 <div>
                     <h2>Le nostre tecnologie</h2>
                     <p>Alcuni degli strumenti che utilizziamo quotidianamente per lavorare</p>
@@ -288,7 +189,6 @@ module.exports = class {
                     </div>
                 </div>
             </section>
-            <!-- ======================= End Client -->
             <section class="highlight">
                 <p><strong>Ti aiutiamo a raggiungere i tuoi obiettivi</strong></p>
 				<br>
