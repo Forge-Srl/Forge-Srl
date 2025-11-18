@@ -38,14 +38,15 @@ module.exports = class {
                 });
                 </script>
                 <p>Trasformiamo le idee di oggi nei prodotti di domani.</p>
+                <br>
                 <a href="/#servizi">Esplora le nostre soluzioni</a>
                 <a href="/contattaci/">Contattaci</a>
             </section>
             <section id="chi-siamo">
-                <div class="box">
-                    <p>Appassionarci alle idee dei nostri clienti ci permette di creare costantemente valore.</p>
-                </div>
                 <h2>Chi Siamo</h2>
+                <blockquote>
+                    <p>Appassionarci alle idee dei nostri clienti ci permette di creare costantemente valore.</p>
+                </blockquote>
                 <p><strong><em>Intelligenza artificiale, approccio umano</em></strong></p>
                 <p>Siamo una squadra affiatata composta da <strong>informatici</strong> con varie specializzazioni.
                 <p>Lavoriamo con le più recenti tecnologie di <strong>intelligenza artificiale</strong> e usando gli strumenti

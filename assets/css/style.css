@@ -271,6 +271,24 @@ button:disabled, button[disabled] {
     font-weight: inherit !important;
 }
 
+blockquote {
+    padding: calc(var(--char-height)) 0;
+    color: var(--color-text-soft);
+}
+blockquote > * {
+    margin-left: 2ch;
+}
+blockquote::before {
+    content: '/**';
+    font-weight: 900;
+    display: inline-block;
+}
+blockquote:after {
+    content: '*/';
+    font-weight: 900;
+    display: inline-block;
+}
+
 header .logo img {
     width: 30ch;
     margin: calc(var(--char-height) * 2) 2ch;
