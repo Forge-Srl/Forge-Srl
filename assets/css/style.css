@@ -116,6 +116,7 @@ body {
     font-family: "Source Code Pro", monospace;
     font-optical-sizing: auto;
     font-size: clamp(14px, round(calc(100vw / 1400px * 16px), 1px), 24px);
+    font-kerning: none;
 
     cursor: var(--cursor-default) 6 15, auto;
 }
@@ -153,12 +154,12 @@ p, span, ul, ol, li, input, textarea, button {
 
 ul {
     list-style: disc outside;
-    padding-inline-start: 1.25em;
+    padding-inline-start: 2ch;
 }
 
 ol {
     list-style: decimal-leading-zero outside;
-    padding-inline-start: 2.5em;
+    padding-inline-start: 4ch;
 }
 
 a {
