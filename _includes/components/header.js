@@ -3,7 +3,7 @@ module.exports = async function (data) {
 		? ''
 		: this.eleventyNavigationToHtml(this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {includeSelf: true, allowMissing: true}))
     return `<header style="text-align: center;">
-			<p>
+			<p style="text-align: center;">
 				<a href="/chi-siamo/">Chi Siamo</a> |
 				<a href="/#servizi">Servizi</a> |
 				<a href="/#metodologia">Metodologia</a> |
