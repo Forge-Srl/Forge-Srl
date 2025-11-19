@@ -324,6 +324,9 @@ header a.logo:hover {
     color: var(--color-text);
     text-align: center;
 }
+.highlight > * {
+    text-align: center;
+}
 .highlight a {
     color: var(--color-text);
     font-weight: 900;
