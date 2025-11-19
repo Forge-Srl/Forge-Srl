@@ -8,7 +8,8 @@ module.exports = class {
             pageDescription: 'Scopri i servizi di Forge: Intelligenza Artificiale, Sviluppo Web, Mobile, Back-End',
             eleventyNavigation: {
                 key: 'software development',
-                title: 'I nostri Servizi'
+                title: 'I nostri Servizi',
+                parent: 'home',
             }
         }
     }

@@ -1,4 +1,7 @@
 module.exports = async function (data) {
+	const breadcrumb = data.eleventyNavigation.key === 'home'
+		? ''
+		: this.eleventyNavigationToHtml(this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {includeSelf: true, allowMissing: true}))
     return `<header style="text-align: center;">
 			<p>
 				<a href="/chi-siamo/">Chi Siamo</a> |
@@ -10,10 +13,13 @@ module.exports = async function (data) {
 			<a class="logo" href="/">
 				<picture>
 				  <source srcset="/assets/images/forge-logo.png" media="(prefers-color-scheme: light)"/>
-				  <source srcset="/assets/images/forge-logo-white.png"  media="(prefers-color-scheme: dark)"/>
+				  <source srcset="/assets/images/forge-logo-white.png" media="(prefers-color-scheme: dark)"/>
 				  <img src="https://forge.srl/assets/images/forge-logo-white.png" alt="Forge logo"/>
 				</picture>
 			</a>
 			<hr>
+			<nav>
+                ${breadcrumb}
+            </nav>
 		</header>`
 }

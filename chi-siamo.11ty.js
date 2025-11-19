@@ -8,7 +8,8 @@ module.exports = class {
             pageDescription: 'Usiamo le nostre competenze informatiche e di problem solving per creare valore.',
             eleventyNavigation: {
                 key: 'chi-siamo',
-                title: 'Chi Siamo'
+                title: 'Chi Siamo',
+                parent: 'home',
             }
         }
     }

@@ -179,6 +179,21 @@ strong {
     font-weight: 900;
 }
 
+nav {
+    text-align: left;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li::before {
+    content: '/';
+    margin: 0 1ch;
+}
+
 h1, h2, h3, h4, h5, h6 {
     padding-top: calc(var(--char-height) / var(--size-multiplier));
     padding-bottom: calc(var(--char-height) / var(--size-multiplier));

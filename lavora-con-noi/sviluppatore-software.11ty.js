@@ -17,9 +17,6 @@ module.exports = class {
 
     async render(data) {
         return `<main>
-            <nav>
-                <a href="/lavora-con-noi/">Torna alle posizioni aperte</a>
-            </nav>
             ${pageTitle.call(this, data)}
             <section class="group-3 gap-2">
                 <div style="flex-grow: 2;">

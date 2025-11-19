@@ -8,7 +8,8 @@ module.exports = class {
             pageDescription: 'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.',
             eleventyNavigation: {
                 key: 'innovazione',
-                title: 'Innovazione'
+                title: 'Innovazione',
+                parent: 'home',
             }
         }
     }
