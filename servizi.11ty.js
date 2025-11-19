@@ -36,8 +36,10 @@ module.exports = class {
                 <p>Utilizziamo ogni giorno decine di strumenti offerti dalla comunità open source. Il minimo che possiamo fare è cercare di contribuire noi stessi, creando nuovi progetti e aiutando a migliorare l'efficienza e l'affidabilità dei software che utilizziamo.</p>
 	        </section>
             <br>
-            <section class="box">
-                <p>Siamo fermamente convinti che l'Intelligenza Artificiale, come il software e l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri dipendenti e dei nostri clienti.</p>
+            <section>
+                <blockquote>
+                    <p>Siamo fermamente convinti che l'Intelligenza Artificiale, come il software e l'informatica in generale, debbano essere utilizzati per migliorare la vita di tutti, soprattutto di chi non è esperto di tecnologia. Per questo motivo abbiamo scelto di fondare Forge, mettendo tutta la nostra passione ed esperienza al servizio dei nostri dipendenti e dei nostri clienti.</p>
+                </blockquote>
             </section>
             <br>
             <section>
