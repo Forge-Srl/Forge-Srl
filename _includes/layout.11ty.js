@@ -40,6 +40,8 @@ module.exports = async function(data) {
                 <!--${lazyCssLink('/assets/css/style.css', 'all')}-->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
+                <script src="/assets/js/start.js" defer>
+
                 <!-- Google Tag Manager -->
                 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
