@@ -1,9 +1,10 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('node:fs')
+const path = require('node:path')
 const Image = require('@11ty/eleventy-img')
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const sitemap = require('@quasibit/eleventy-plugin-sitemap')
 const htmlmin = require('html-minifier-next')
+const csso = require('csso')
 const Forge = require('./_data/forge')
 
 module.exports = (eleventyConfig) => {
@@ -62,7 +63,17 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addWatchTarget('./assets')
     eleventyConfig.addWatchTarget('./js')
-    eleventyConfig.on('beforeWatch', () => {
+    eleventyConfig.on('eleventy.after', async (event) => {
+        const cssFolder = path.join(event.directories.output, 'assets', 'css')
+
+        for await (const entry of fs.promises.glob(path.join(cssFolder, '**/*.css'))) {
+            console.log(`Compressing ${entry}`);
+            const plainCss = await fs.promises.readFile(entry, {encoding: 'utf-8'})
+            const minifiedCss = csso.minify(plainCss).css
+            await fs.promises.writeFile(entry, minifiedCss)
+        }
+    })
+    eleventyConfig.on('eleventy.beforeWatch', () => {
         // Delete node.js require cache to enable changed components js reload
         Object.keys(require.cache).forEach(key => {
             delete require.cache[key]
