@@ -37,9 +37,7 @@ module.exports = async function(data) {
                 ${lazyCssLink('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap', 'all')}
 
                 <!-- Theme CSS -->
-                <!--${lazyCssLink('/assets/css/style.css', 'all')}-->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-
                 <script src="/assets/js/start.js" defer>
 
                 <!-- Google Tag Manager -->

@@ -9,7 +9,8 @@
     "@11ty/eleventy-navigation": "^1.0.4",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "html-minifier-next": "^4.1.1",
-    "csso": "^5.0.5"
+    "csso": "^5.0.5",
+    "terser": "^5.44.1"
   },
   "dependencies": {
     "ityped": "^1.0.3"
