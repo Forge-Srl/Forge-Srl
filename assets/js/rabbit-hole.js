@@ -16,7 +16,10 @@
             containerElement.classList.add('box')
             containerElement.style = 'width: var(--terminal-width); box-sizing: content-box;'
             overlayElement.appendChild(containerElement)
+
+            document.body.style.overflow = 'hidden'
             document.body.appendChild(overlayElement)
+
             this.#containerElement = containerElement
         }
 

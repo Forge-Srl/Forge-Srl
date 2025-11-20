@@ -8,7 +8,8 @@ body > div.rabbit-hole-overlay {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow: auto;
 
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(15px);
