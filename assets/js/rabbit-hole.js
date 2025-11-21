@@ -3,11 +3,11 @@
         #containerElement;
 
         constructor() {
-            const css = document.createElement('link')
-            css.rel = 'stylesheet'
-            css.type = 'text/css'
-            css.href = '/assets/css/rabbit-hole.css'
-            document.head.appendChild(css)
+            const cssLinkElement = document.createElement('link')
+            cssLinkElement.rel = 'stylesheet'
+            cssLinkElement.type = 'text/css'
+            cssLinkElement.href = '/assets/css/rabbit-hole.css'
+            document.head.appendChild(cssLinkElement)
 
             const overlayElement = document.createElement('div')
             overlayElement.classList.add('rabbit-hole-overlay')
@@ -69,5 +69,5 @@
     }
 
     const rabbitHole = new RabbitHole()
-    window.whiteRabbit.onFollowLoaded(rabbitHole)
+    window.whiteRabbit[Symbol.for('onRabbitHoleLoaded')](rabbitHole)
 })()
