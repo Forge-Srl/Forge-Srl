@@ -1,8 +1,14 @@
-module.exports = async function (data) {
-	const breadcrumb = data.eleventyNavigation.key === 'home'
-		? ''
-		: this.eleventyNavigationToHtml(this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {includeSelf: true, allowMissing: true}))
-    return `<header style="text-align: center;">
+module.exports = function (data) {
+  const breadcrumb =
+    data.eleventyNavigation.key === 'home'
+      ? ''
+      : this.eleventyNavigationToHtml(
+          this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {
+            includeSelf: true,
+            allowMissing: true,
+          }),
+        )
+  return `<header style="text-align: center;">
 			<p style="text-align: center;">
 				<a href="/chi-siamo/">Chi Siamo</a> |
 				<a href="/#servizi">Servizi</a> |

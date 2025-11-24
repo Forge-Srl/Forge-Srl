@@ -1,22 +1,23 @@
-const pageTitle = require('../_includes/components/pageTitle')
-const formScript = require('../_includes/components/formScript')
+const pageTitle = require('../_includes/components/page-title')
+const formScript = require('../_includes/components/form-script')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Lavora con Noi: Sviluppatore Software',
-            pageDescription: 'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: JavaScript, Python, Kotlin...',
-            eleventyNavigation: {
-                key: 'sviluppatore-software',
-                parent: 'lavora-con-noi',
-                title: 'Sviluppatore Software'
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Lavora con Noi: Sviluppatore Software',
+      pageDescription:
+        'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: JavaScript, Python, Kotlin...',
+      eleventyNavigation: {
+        key: 'sviluppatore-software',
+        parent: 'lavora-con-noi',
+        title: 'Sviluppatore Software',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section class="group-3 gap-2">
                 <div style="flex-grow: 2;">
@@ -119,5 +120,5 @@ module.exports = class {
                 ${formScript.call(this, 'application-form', 'application-form-done', data)}
             </section>
         </main>`
-    }
+  }
 }

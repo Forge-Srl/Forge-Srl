@@ -1,21 +1,21 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('./_includes/components/page-title')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Chi siamo',
-            pageDescription: 'Usiamo le nostre competenze informatiche e di problem solving per creare valore.',
-            eleventyNavigation: {
-                key: 'chi-siamo',
-                title: 'Chi Siamo',
-                parent: 'home',
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Chi siamo',
+      pageDescription: 'Usiamo le nostre competenze informatiche e di problem solving per creare valore.',
+      eleventyNavigation: {
+        key: 'chi-siamo',
+        title: 'Chi Siamo',
+        parent: 'home',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section id="chi siamo">
                 <h2>La miglior estensione per la tua squadra</h2>
@@ -63,5 +63,5 @@ module.exports = class {
                 <a href="/contattaci/" class="cta">Parliamone Insieme</a>
             </section>
         </main>`
-    }
+  }
 }

@@ -1,21 +1,22 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('./_includes/components/page-title')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Innovazione',
-            pageDescription: 'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.',
-            eleventyNavigation: {
-                key: 'innovazione',
-                title: 'Innovazione',
-                parent: 'home',
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Innovazione',
+      pageDescription:
+        'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.',
+      eleventyNavigation: {
+        key: 'innovazione',
+        title: 'Innovazione',
+        parent: 'home',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section id="innovare">
                 <h2>La nostra parola preferita: Innovare</h2>
@@ -115,5 +116,5 @@ module.exports = class {
                 <a href="/contattaci/" class="cta">Parliamone insieme</a>
             </section>
         </main>`
-    }
+  }
 }

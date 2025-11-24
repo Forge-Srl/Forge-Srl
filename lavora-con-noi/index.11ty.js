@@ -1,21 +1,22 @@
-const pageTitle = require('../_includes/components/pageTitle')
+const pageTitle = require('../_includes/components/page-title')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Lavora con Noi',
-            pageDescription: 'Forge è sempre alla ricerca di persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra a far parte del team.',
-            eleventyNavigation: {
-                key: 'lavora-con-noi',
-                title: 'Lavora con Noi',
-                parent: 'home',
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Lavora con Noi',
+      pageDescription:
+        'Forge è sempre alla ricerca di persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra a far parte del team.',
+      eleventyNavigation: {
+        key: 'lavora-con-noi',
+        title: 'Lavora con Noi',
+        parent: 'home',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section >
                 <h2>Perché Forge</h2>
@@ -93,5 +94,5 @@ module.exports = class {
                 <a href="/chi-siamo/" class="cta">Scopri Chi Siamo</a>
             </section>
         </main>`
-    }
+  }
 }

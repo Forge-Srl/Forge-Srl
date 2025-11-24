@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lint": "biome check --write --max-diagnostics 10",
     "generate": "node ./node_modules/@11ty/eleventy/cmd.cjs",
     "dev-mode": "node ./node_modules/@11ty/eleventy/cmd.cjs --serve"
   },
@@ -8,6 +9,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.4",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "@biomejs/biome": "2.3.7",
     "html-minifier-next": "^4.1.1",
     "csso": "^5.0.5",
     "terser": "^5.44.1"

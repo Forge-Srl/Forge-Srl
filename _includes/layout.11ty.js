@@ -2,16 +2,16 @@ const header = require('./components/header')
 const footer = require('./components/footer')
 
 const lazyCssLink = (href, media) => {
-    return `<link rel="preload" as="style" type="text/css" media="${media}" href="${href}" onload="this.onload=null;this.rel='stylesheet'">
+  return `<link rel="preload" as="style" type="text/css" media="${media}" href="${href}" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" type="text/css" media="${media}" href="${href}"></noscript>`
 }
 
-module.exports = async function(data) {
-    const canonical = `${data.forge.domain}${data.page.url}`
-    const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
-    const tagManagerId = 'GTM-P8LVR4Q'
+module.exports = function (data) {
+  const canonical = `${data.forge.domain}${data.page.url}`
+  const facebookVerification = 'fxmsfl9hkx07qo7xidpwh92dtws3c3'
+  const tagManagerId = 'GTM-P8LVR4Q'
 
-    return `<!doctype html>
+  return `<!doctype html>
         <html lang="it-IT">
             <head>
                 <meta charset="utf-8">
@@ -54,9 +54,9 @@ module.exports = async function(data) {
                 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!-- End Google Tag Manager (noscript) -->
                 <div class="box" style="width: var(--terminal-width); box-sizing: content-box;">
-                    ${await header.call(this, data)}
+                    ${header.call(this, data)}
                     ${data.content}
-                    ${await footer.call(this, data)}
+                    ${footer.call(this, data)}
                 </div>
             </body>
         </html>`

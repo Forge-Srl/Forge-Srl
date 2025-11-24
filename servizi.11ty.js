@@ -1,21 +1,21 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('./_includes/components/page-title')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Servizi',
-            pageDescription: 'Scopri i servizi di Forge: Intelligenza Artificiale, Sviluppo Web, Mobile, Back-End',
-            eleventyNavigation: {
-                key: 'software development',
-                title: 'I nostri Servizi',
-                parent: 'home',
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Servizi',
+      pageDescription: 'Scopri i servizi di Forge: Intelligenza Artificiale, Sviluppo Web, Mobile, Back-End',
+      eleventyNavigation: {
+        key: 'software development',
+        title: 'I nostri Servizi',
+        parent: 'home',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <p>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente.</p>
             <section id="ai">
@@ -73,5 +73,5 @@ module.exports = class {
                 <a href="/contattaci/" class="cta">Parliamone Insieme</a>
             </section>
         </main>`
-    }
+  }
 }

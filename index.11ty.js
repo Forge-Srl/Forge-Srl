@@ -1,18 +1,19 @@
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Homepage',
-            pageDescription: 'Trasformiamo le idee di oggi nei prodotti di domani. Siamo appassionati di Artificial Intelligence, Process Automation, Machine Learning, Software Development e Digital Innovation',
-            eleventyNavigation: {
-                key: 'home',
-                title: 'Home',
-            },
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Homepage',
+      pageDescription:
+        'Trasformiamo le idee di oggi nei prodotti di domani. Siamo appassionati di Artificial Intelligence, Process Automation, Machine Learning, Software Development e Digital Innovation',
+      eleventyNavigation: {
+        key: 'home',
+        title: 'Home',
+      },
     }
+  }
 
-    async render(data) {
-        return `<main>
+  async render(data) {
+    return `<main>
             <section>
                 <h3 style="will-change: contents; transform: translateZ(0);">
                     <span class="pt-0">Appassionati di</span>
@@ -198,5 +199,5 @@ module.exports = class {
 				<a href="/contattaci/" class="cta">Parliamone Insieme</a>
             </section>
         </main>`
-    }
+  }
 }

@@ -1,22 +1,23 @@
-const pageTitle = require('./_includes/components/pageTitle')
-const formScript = require('./_includes/components/formScript')
+const pageTitle = require('./_includes/components/page-title')
+const formScript = require('./_includes/components/form-script')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: 'Contattaci',
-            pageDescription: 'Contattaci se sei interessato, vuoi informazioni o vuoi farci sapere la tua opinione. Un nostro incaricato ti risponderà al più presto!',
-            eleventyNavigation: {
-                key: 'contattaci',
-                title: 'Contattaci',
-                parent: 'home',
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: 'Contattaci',
+      pageDescription:
+        'Contattaci se sei interessato, vuoi informazioni o vuoi farci sapere la tua opinione. Un nostro incaricato ti risponderà al più presto!',
+      eleventyNavigation: {
+        key: 'contattaci',
+        title: 'Contattaci',
+        parent: 'home',
+      },
     }
+  }
 
-    render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section>
                 <h2>Come possiamo essere d'aiuto alla tua azienda?</h2>
@@ -73,5 +74,5 @@ module.exports = class {
                 ${formScript.call(this, 'contact-form', 'contact-form-done', data)}
             </section>
         </main>`
-    }
+  }
 }

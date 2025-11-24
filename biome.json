@@ -1,0 +1,175 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.7/schema.json",
+  "files": {
+    "includes": ["**", "!**/_site/**", "!**/node_modules/**"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "attributePosition": "auto"
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "complexity": {
+        "noBannedTypes": "error",
+        "noEmptyTypeParameters": "error",
+        "noExcessiveCognitiveComplexity": "warn",
+        "noStaticOnlyClass": "warn",
+        "noUselessCatch": "error",
+        "noUselessConstructor": "error",
+        "noUselessLoneBlockStatements": "error",
+        "noUselessRename": "error",
+        "noUselessSwitchCase": "error",
+        "noUselessTernary": "error",
+        "noUselessThisAlias": "error",
+        "noUselessTypeConstraint": "error",
+        "useArrowFunction": "warn",
+        "useFlatMap": "error",
+        "useRegexLiterals": "error",
+        "noUselessContinue": "error",
+        "noCommaOperator": "error",
+        "useWhile": "error"
+      },
+      "correctness": {
+        "noConstructorReturn": "error",
+        "noPrecisionLoss": "error",
+        "noUnusedImports": "error",
+        "noUnusedLabels": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error",
+        "noUnreachable": "error",
+        "useValidTypeof": "error"
+      },
+      "performance": {
+        "noAccumulatingSpread": "warn",
+        "noBarrelFile": "warn",
+        "noDelete": "info",
+        "noReExportAll": "warn"
+      },
+      "security": {
+        "noGlobalEval": "error"
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "noNamespace": "error",
+        "noUnusedTemplateLiteral": "error",
+        "noUselessElse": "error",
+        "useAsConstAssertion": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useEnumInitializers": "error",
+        "useForOf": "error",
+        "useFilenamingConvention": {
+          "level": "warn",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "filenameCases": ["kebab-case", "export"]
+          }
+        },
+        "useNamingConvention": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "requireAscii": true,
+            "strictCase": false,
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "enum"
+                },
+                "formats": ["PascalCase"]
+              }
+            ]
+          }
+        },
+        "useNodejsImportProtocol": "error",
+        "useNumberNamespace": "error",
+        "useTemplate": "error",
+        "useArrayLiterals": "off"
+      },
+      "suspicious": {
+        "noConfusingLabels": "error",
+        "noDoubleEquals": "error",
+        "noDebugger": "error",
+        "noExplicitAny": "warn",
+        "noExtraNonNullAssertion": "error",
+        "noMisleadingInstantiator": "error",
+        "noMisrefactoredShorthandAssign": "warn",
+        "noUnsafeDeclarationMerging": "error",
+        "noUnsafeNegation": "warn",
+        "useAwait": "error",
+        "useDefaultSwitchClauseLast": "error",
+        "useGetterReturn": "error",
+        "useIsArray": "error",
+        "noVar": "error"
+      }
+    },
+    "includes": ["**", "!**/node_modules/", "!**/_site/"]
+  },
+  "overrides": [
+    {
+      "includes": ["**/scripts/**/*.gushio.js"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off",
+            "useNamingConvention": "off"
+          }
+        }
+      }
+    }
+  ],
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always",
+      "bracketSpacing": false,
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "html": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}

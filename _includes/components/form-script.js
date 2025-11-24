@@ -1,5 +1,8 @@
-module.exports = function (formId, formReplacementId, data) {
-    return `<script src="https://www.google.com/recaptcha/api.js?render=${data.form.recaptchaClientKey}"></script>
+module.exports = (
+  formId,
+  formReplacementId,
+  data,
+) => `<script src="https://www.google.com/recaptcha/api.js?render=${data.form.recaptchaClientKey}"></script>
     <script>
     (() => {
         const form = document.getElementById('${formId}')
@@ -61,4 +64,3 @@ module.exports = function (formId, formReplacementId, data) {
         })
     })()
     </script>`
-}

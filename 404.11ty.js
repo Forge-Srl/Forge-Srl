@@ -1,22 +1,22 @@
-const pageTitle = require('./_includes/components/pageTitle')
+const pageTitle = require('./_includes/components/page-title')
 
 module.exports = class {
-    data() {
-        return {
-            layout: 'layout.11ty.js',
-            pageTitle: '404',
-            pageDescription: '',
-            // Force output page to be /404.html instead of /404/index.html!
-            permalink: '/404.html',
-            eleventyExcludeFromCollections: true,
-            eleventyNavigation: {
-                title: 'Pagina non trovata!'
-            }
-        }
+  data() {
+    return {
+      layout: 'layout.11ty.js',
+      pageTitle: '404',
+      pageDescription: '',
+      // Force output page to be /404.html instead of /404/index.html!
+      permalink: '/404.html',
+      eleventyExcludeFromCollections: true,
+      eleventyNavigation: {
+        title: 'Pagina non trovata!',
+      },
     }
+  }
 
-    render(data) {
-        return `<main>
+  render(data) {
+    return `<main>
             ${pageTitle.call(this, data)}
             <section class="error-page">
 	   	        <p>
@@ -35,5 +35,5 @@ module.exports = class {
                 </p>
 	       </section>
         </main>`
-    }
+  }
 }

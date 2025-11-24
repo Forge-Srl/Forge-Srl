@@ -1,5 +1,4 @@
-module.exports = async function (data) {
-    return `<footer>
+module.exports = (data) => `<footer>
         <script>
         function openIubendaPreferences(){
             _iub.cs.api.openPreferences();
@@ -41,4 +40,3 @@ module.exports = async function (data) {
 			<span>© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | Tutti i diritti sono riservati.</span><span class="blink">&nbsp;</span>
 		</div>
 	</footer>`
-}
