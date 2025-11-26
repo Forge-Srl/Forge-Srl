@@ -62,7 +62,7 @@ module.exports = class {
                     <li><strong>Volontà di metterti in gioco</strong>: è fondamentale che tu abbia passione per quello che fai e voglia di lavorare su progetti innovativi e sfidanti</li>
                     <li><strong>Attitudine al lavoro di squadra</strong>: per noi il concetto di team è fondamentale e cerchiamo persone che apprezzino il confronto con gli altri più che il lavoro in solitaria</li>
                     <li><strong>Voglia di imparare</strong>: non è fondamentale saper utilizzare tutti i linguaggi, l'importante è non spaventarsi di fronte a nuove sfide e non temere di rimboccarsi le maniche</li>
-                    <li><strong>Trasparenza</strong>: amiamo l’onestà e desideriamo che tu ti senta libero di dire ciò che pensi in maniera costruttiva, partecipando alle dinamiche che ti circondano</li>
+                    <li><strong>Trasparenza</strong>: amiamo l'onestà e desideriamo che tu ti senta libero di dire ciò che pensi in maniera costruttiva, partecipando alle dinamiche che ti circondano</li>
                     <li><strong>Desiderio di crescita</strong>: cerchi un contesto lavorativo che sappia coltivare il tuo talento con un percorso di crescita professionale condiviso.</li>
                 </ul>
             </section>

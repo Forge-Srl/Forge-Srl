@@ -199,7 +199,7 @@ body {
   );
   color: var(--color-text);
 
-  font-family: "Source Code Pro", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-size: clamp(14px, round(calc(100vw / 1400px * 16px), 1px), 24px);
   font-kerning: none;
@@ -207,6 +207,13 @@ body {
   cursor:
     var(--cursor-default) 6 15,
     auto;
+}
+
+picture {
+  display: flex;
+  height: round(100%, var(--char-height));
+  justify-content: center;
+  align-items: center;
 }
 
 input,
@@ -265,7 +272,7 @@ input,
 textarea,
 button {
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 ul {
@@ -292,7 +299,7 @@ em {
 }
 
 strong {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 nav {
@@ -345,32 +352,32 @@ h6::after {
 
 h6 {
   --size-multiplier: 1;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h5 {
   --size-multiplier: 1;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 h4 {
   --size-multiplier: 2;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h3 {
   --size-multiplier: 2;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 h2 {
   --size-multiplier: 3;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1 {
   --size-multiplier: 3;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 hr {
@@ -410,7 +417,7 @@ button[type="submit"] {
   width: 50%;
 }
 button:hover {
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
 }
 button:disabled,
@@ -429,12 +436,12 @@ blockquote > * {
 }
 blockquote::before {
   content: "/**";
-  font-weight: 900;
+  font-weight: 800;
   display: inline-block;
 }
 blockquote:after {
   content: "*/";
-  font-weight: 900;
+  font-weight: 800;
   display: inline-block;
 }
 
@@ -462,7 +469,7 @@ header a.logo:hover {
 }
 .highlight a {
   color: var(--color-text);
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
 }
 .highlight a:hover {
@@ -479,7 +486,7 @@ header a.logo:hover {
   font-style: normal;
 }
 .highlight a:hover.cta {
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
 }
 

@@ -58,7 +58,7 @@ module.exports = class {
             <section class="highlight">
                 <p><strong>Ti aiutiamo a raggiungere i tuoi obiettivi</strong></p>
                 <br>
-                <p>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un’idea di come lavoriamo?<br>Siamo a tua disposizione!</p>
+                <p>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un'idea di come lavoriamo?<br>Siamo a tua disposizione!</p>
                 <br>
                 <a href="/contattaci/" class="cta">Parliamone Insieme</a>
             </section>

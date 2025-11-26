@@ -34,7 +34,7 @@ module.exports = function (data) {
                 <!-- Google Font -->
                 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                ${lazyCssLink('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap', 'all')}
+                ${lazyCssLink('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap', 'all')}
 
                 <!-- Theme CSS -->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
