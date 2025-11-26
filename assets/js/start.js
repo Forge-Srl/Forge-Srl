@@ -11,38 +11,57 @@ const advertiser = (lines) => {
 }
 class Rabbit {
   static #followed = false
+  static #instanceCounter = 0
+  #id
 
-  constructor(color) {
+  constructor(color, icon) {
+    this.#id = Math.pow(2, Rabbit.#instanceCounter++)
     this.color = color
+    this.icon = icon
+  }
+
+  get [Symbol.toStringTag]() {
+    return "Rabbit";
+  }
+
+  [Symbol.toPrimitive](hint) {
+    if (hint === 'string') {
+      return `🐇${this.icon}`
+    }
+    if (hint === 'number') {
+      return this.#id
+    }
+    return false
   }
 
   follow() {
     if (this.color !== 'white') {
-      console.warn('Stop chasing rabbits!')
+      console.error('You cannot follow this rabbit')
       return
     }
 
-    if (this.constructor.#followed) {
+    if (Rabbit.#followed) {
+      console.warn('Stop chasing rabbits!')
       return
     }
-    this.constructor.#followed = true
+    Rabbit.#followed = true
 
     console.log(`Following the ${this.color} rabbit...`)
     const rabbitHoleScriptElement = document.createElement('script')
     rabbitHoleScriptElement.src = absoluteUrl('/assets/js/rabbit-hole.js')
     document.body.append(rabbitHoleScriptElement)
   }
-
-  // Using a symbol to make sure thie method does not appear in dev tools suggestions
-  [Symbol.for('onRabbitHoleLoaded')](rabbitHole) {
-    rabbitHole.start()
-    console.log('You found the rabbit hole!')
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('%c{FORGE}', 'font-size: 6em; font-family: monospace; color: #F08819')
   advertiser(['Vuoi lavorare con noi?', absoluteUrl('/lavora-con-noi')])
-  window.whiteRabbit = new Rabbit('white')
+  // Using a symbol to make sure this function does not appear in dev tools suggestions
+  window[Symbol.for('onRabbitHoleLoaded')] = (rabbitHole) => {
+    delete window[Symbol.for('onRabbitHoleLoaded')]
+    rabbitHole.start()
+    console.log('You found the rabbit hole!')
+  }
+  window.whiteRabbit = new Rabbit('white', '⚪')
   console.log('%cFollow the `whiteRabbit` out of the `window`...', 'font-family: monospace; font-style: italic;')
 })
