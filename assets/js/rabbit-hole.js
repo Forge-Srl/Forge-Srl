@@ -66,13 +66,13 @@
 
     #afterRedPill() {
       this.#warren.push(
-        window.redRabbit = new Rabbit('red', '🔴'),
-        window.greenRabbit = new Rabbit('green', '🟢'),
-        window.blueRabbit = new Rabbit('blue', '🔵'),
-        window.orangeRabbit = new Rabbit('orange', '🟠'),
-        window.yellowRabbit = new Rabbit('yellow', '🟡'),
-        window.purpleRabbit = new Rabbit('purple', '🟣'),
-        window.brownRabbit = new Rabbit('brown', '🟤'),
+        (window.redRabbit = new Rabbit('red', '🔴')),
+        (window.greenRabbit = new Rabbit('green', '🟢')),
+        (window.blueRabbit = new Rabbit('blue', '🔵')),
+        (window.orangeRabbit = new Rabbit('orange', '🟠')),
+        (window.yellowRabbit = new Rabbit('yellow', '🟡')),
+        (window.purpleRabbit = new Rabbit('purple', '🟣')),
+        (window.brownRabbit = new Rabbit('brown', '🟤')),
       )
       Rabbit.prototype.feed = function (carrot) {
         console.log(`${this.color} rabbit ate ${carrot}`)

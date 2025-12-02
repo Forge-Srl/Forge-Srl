@@ -313,7 +313,7 @@ nav ul {
 nav ul li {
   display: inline;
 }
-nav ul li::before {
+nav ul li + li::before {
   content: "/";
   margin: 0 1ch;
 }

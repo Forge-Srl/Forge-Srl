@@ -21,7 +21,7 @@ class Rabbit {
   }
 
   get [Symbol.toStringTag]() {
-    return "Rabbit";
+    return 'Rabbit'
   }
 
   [Symbol.toPrimitive](hint) {

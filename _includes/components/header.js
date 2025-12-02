@@ -7,7 +7,7 @@ module.exports = function (data) {
             includeSelf: true,
             allowMissing: true,
           }),
-        )
+        ).replace('>Home<', 'aria-label="Home">~<')
   return `<header style="text-align: center;">
 			<p style="text-align: center;">
 				<a href="/chi-siamo/">Chi Siamo</a> |
