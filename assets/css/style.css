@@ -260,7 +260,8 @@ h5,
 h6 {
   line-height: 1.5;
   word-break: break-all;
-  text-align: justify;
+  line-break: anywhere;
+  white-space: break-spaces;
 }
 
 p,
@@ -435,7 +436,7 @@ blockquote > * {
   margin-left: 2ch;
 }
 blockquote::before {
-  content: "/**";
+  content: "/***";
   font-weight: 800;
   display: inline-block;
 }
