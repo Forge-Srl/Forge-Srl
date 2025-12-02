@@ -201,7 +201,7 @@ body {
 
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
-  font-size: clamp(14px, round(calc(100vw / 1400px * 16px), 1px), 24px);
+  font-size: clamp(16px, round(calc(100vw / 1600px * 18px), 1px), 24px);
   font-kerning: none;
 
   cursor:
