@@ -272,7 +272,7 @@ input,
 textarea,
 button {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 ul {
@@ -352,32 +352,32 @@ h6::after {
 
 h6 {
   --size-multiplier: 1;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h5 {
   --size-multiplier: 1;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h4 {
   --size-multiplier: 2;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h3 {
   --size-multiplier: 2;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
   --size-multiplier: 3;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1 {
   --size-multiplier: 3;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 hr {
