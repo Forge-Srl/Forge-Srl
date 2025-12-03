@@ -390,6 +390,16 @@ form {
   margin: var(--char-height) 0;
 }
 
+form div.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0 1ch;
+  padding: 0 1ch;
+}
+
 input,
 textarea,
 button {

@@ -44,20 +44,24 @@ module.exports = class {
                 <p>Mettiti in contatto con noi per condividere le tue idee e per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto.</p>
                 <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
                     <div class="group-2">
-                        <div style="display: flex;">
+                        <div class="input-wrapper">
+                            <label for="con-name">Nome</label>
                             <input required id="con-name" name="name" type="text" class="form-control" placeholder="Nome">
                         </div>
-                        <div style="display: flex;">
+                        <div class="input-wrapper">
+                            <label for="con-email">E-mail</label>
                             <input required id="con-email" name="from" type="email" class="form-control" placeholder="E-mail">
                         </div>
                     </div>
                     <div class="group-1">
-                        <div style="display: flex;">
+                        <div class="input-wrapper">
+                            <label for="con-subject">Oggetto</label>
                             <input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Oggetto">
                         </div>
                     </div>
                     <div class="group-1">
-                        <div style="display: flex;">
+                        <div class="input-wrapper">
+                            <label for="con-message">Messaggio</label>
                             <textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Messaggio"></textarea>
                         </div>
                     </div>

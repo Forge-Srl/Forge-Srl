@@ -84,27 +84,32 @@ module.exports = class {
                 <h2>Candidati per questa posizione</h2>
                 <form id="application-form" class="needs-validation" name="applicationform" method="POST" action="${data.form.url.applyForJob()}">
                     <div class="group-2">
-                        <div style="display: flex;">
-                            <input required type="text" name="name" class="form-control" placeholder="Nome e Cognome">
+                        <div class="input-wrapper">
+                            <label for="app-name">Nome e Cognome</label>
+                            <input required id="app-name" type="text" name="name" class="form-control" placeholder="Nome e Cognome">
                         </div>
-                        <div style="display: flex;">
-                            <input required type="email" name="from" class="form-control" placeholder="E-mail">
+                        <div class="input-wrapper">
+                            <label for="app-email">E-mail</label>
+                            <input required id="app-email" type="email" name="from" class="form-control" placeholder="E-mail">
                         </div>
                     </div>
                     <div class="group-2">
-                        <div style="display: flex;">
-                            <input required type="text" name="phone" class="form-control" placeholder="Telefono">
+                        <div class="input-wrapper">
+                            <label for="app-phone">Telefono</label>
+                            <input required id="app-phone" type="text" name="phone" class="form-control" placeholder="Telefono">
                         </div>
-                        <div style="display: flex;">
+                        <div class="input-wrapper">
+                            <label for="app-curriculum">Curriculum</label>
                             <button class="form-control" style="flex-grow: 1;" type="button" onclick="document.querySelector('input[name=curriculum]').click();">
                                 <span>Carica il tuo CV</span>
                             </button>
-                            <input required type="file" name="curriculum" style="display: none;">
+                            <input required id="app-curriculum" type="file" name="curriculum" style="display: none;">
                         </div>
                     </div>
                     <div class="group-1">
-                        <div style="display: flex;">
-                            <textarea required cols="40" rows="6" name="about_you" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea>
+                        <div class="input-wrapper">
+                            <label for="app-about">Raccontaci qualcosa in più su di te</label>
+                            <textarea required id="app-about" cols="40" rows="6" name="about_you" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea>
                         </div>
                     </div>
                     <div style="text-align: center;">
