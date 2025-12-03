@@ -1,5 +1,5 @@
 const pageTitle = require('../_includes/components/page-title')
-const formScript = require('../_includes/components/form-script')
+const {form, inputField, submitButton} = require('../_includes/components/form')
 
 module.exports = class {
   data() {
@@ -82,47 +82,27 @@ module.exports = class {
             </section>
             <section>
                 <h2>Candidati per questa posizione</h2>
-                <form id="application-form" class="needs-validation" name="applicationform" method="POST" action="${data.form.url.applyForJob()}">
-                    <div class="group-2">
-                        <div class="input-wrapper">
-                            <label for="app-name">Nome e Cognome</label>
-                            <input required id="app-name" type="text" name="name" class="form-control" placeholder="Nome e Cognome">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="app-email">E-mail</label>
-                            <input required id="app-email" type="email" name="from" class="form-control" placeholder="E-mail">
-                        </div>
+                ${form(
+                  'application-form',
+                  'applicationform',
+                  data.form.url.applyForJob(),
+                  `<div class="group-2">
+                        ${inputField('app-name', 'name', 'text', 'Nome e Cognome')}
+                        ${inputField('app-email', 'from', 'email', 'E-mail')}
                     </div>
                     <div class="group-2">
-                        <div class="input-wrapper">
-                            <label for="app-phone">Telefono</label>
-                            <input required id="app-phone" type="text" name="phone" class="form-control" placeholder="Telefono">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="app-curriculum">Curriculum</label>
-                            <button class="form-control" style="flex-grow: 1;" type="button" onclick="document.querySelector('input[name=curriculum]').click();">
-                                <span>Carica il tuo CV</span>
-                            </button>
-                            <input required id="app-curriculum" type="file" name="curriculum" style="display: none;">
-                        </div>
+                        ${inputField('app-phone', 'phone', 'text', 'Telefono')}
+                        ${inputField('app-curriculum', 'curriculum', 'file', 'Curriculum', 'Carica il tuo CV')}
                     </div>
                     <div class="group-1">
-                        <div class="input-wrapper">
-                            <label for="app-about">Raccontaci qualcosa in più su di te</label>
-                            <textarea required id="app-about" cols="40" rows="6" name="about_you" class="form-control" placeholder="Raccontaci qualcosa in più su di te"></textarea>
-                        </div>
+                        ${inputField('app-about', 'about_you', 'textarea', 'Raccontaci qualcosa in più su di te')}
                     </div>
                     <div style="text-align: center;">
-                        <button type="submit">
-                            <span class="spinner" style="display: none" role="status" aria-hidden="true"></span>
-                            Candidati Ora
-                        </button>
-                    </div>
-                </form>
-                <div id="application-form-done" style="display: none;">
-                    <p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>
-                </div>
-                ${formScript.call(this, 'application-form', 'application-form-done', data)}
+                        ${submitButton('Candidati Ora')}
+                    </div>`,
+                  '<p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>',
+                  data,
+                )}
             </section>
         </main>`
   }

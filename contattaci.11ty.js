@@ -1,5 +1,5 @@
 const pageTitle = require('./_includes/components/page-title')
-const formScript = require('./_includes/components/form-script')
+const {form, inputField, submitButton} = require('./_includes/components/form')
 
 module.exports = class {
   data() {
@@ -42,40 +42,26 @@ module.exports = class {
             <section>
                 <h3>Hai un grande progetto in mente? Realizziamolo insieme!</h3>
                 <p>Mettiti in contatto con noi per condividere le tue idee e per capire, senza alcun impegno, come possiamo esserti d'aiuto nello sviluppo del tuo progetto.</p>
-                <form id="contact-form" class="needs-validation" name="contactform" method="POST" action="${data.form.url.contactUs()}">
-                    <div class="group-2">
-                        <div class="input-wrapper">
-                            <label for="con-name">Nome</label>
-                            <input required id="con-name" name="name" type="text" class="form-control" placeholder="Nome">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="con-email">E-mail</label>
-                            <input required id="con-email" name="from" type="email" class="form-control" placeholder="E-mail">
-                        </div>
+                ${form(
+                  'contact-form',
+                  'contactform',
+                  data.form.url.contactUs(),
+                  `<div class="group-2">
+                        ${inputField('con-name', 'name', 'text', 'Nome')}
+                        ${inputField('con-email', 'from', 'email', 'E-mail')}
                     </div>
                     <div class="group-1">
-                        <div class="input-wrapper">
-                            <label for="con-subject">Oggetto</label>
-                            <input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Oggetto">
-                        </div>
+                        ${inputField('con-subject', 'subject', 'text', 'Oggetto')}
                     </div>
                     <div class="group-1">
-                        <div class="input-wrapper">
-                            <label for="con-message">Messaggio</label>
-                            <textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Messaggio"></textarea>
-                        </div>
+                        ${inputField('con-message', 'message', 'textarea', 'Messaggio')}
                     </div>
                     <div style="text-align: center;">
-                        <button type="submit">
-                            <span class="spinner" style="display: none" role="status" aria-hidden="true"></span>
-                            Invia
-                        </button>
-                    </div>
-                </form>
-                <div id="contact-form-done" style="display: none;">
-                    <p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>
-                </div>
-                ${formScript.call(this, 'contact-form', 'contact-form-done', data)}
+                        ${submitButton('Invia')}
+                    </div>`,
+                  '<p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>',
+                  data,
+                )}
             </section>
         </main>`
   }
