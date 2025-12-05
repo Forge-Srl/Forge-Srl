@@ -47,14 +47,14 @@ module.exports = class {
                   'contactform',
                   data.form.url.contactUs(),
                   `<div class="group-2">
-                        ${inputField('con-name', 'name', 'text', 'Nome')}
-                        ${inputField('con-email', 'from', 'email', 'E-mail')}
+                        ${inputField('con-name', 'name', 'text', 'Nome', 'Erlich Bachman')}
+                        ${inputField('con-email', 'from', 'email', 'E-mail', 'eb@example.com')}
                     </div>
                     <div class="group-1">
-                        ${inputField('con-subject', 'subject', 'text', 'Oggetto')}
+                        ${inputField('con-subject', 'subject', 'text', 'Oggetto', '')}
                     </div>
                     <div class="group-1">
-                        ${inputField('con-message', 'message', 'textarea', 'Messaggio')}
+                        ${inputField('con-message', 'message', 'textarea', 'Messaggio', '')}
                     </div>
                     <div style="text-align: center;">
                         ${submitButton('Invia')}

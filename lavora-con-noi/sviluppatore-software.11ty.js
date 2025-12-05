@@ -87,15 +87,15 @@ module.exports = class {
                   'applicationform',
                   data.form.url.applyForJob(),
                   `<div class="group-2">
-                        ${inputField('app-name', 'name', 'text', 'Nome e Cognome')}
-                        ${inputField('app-email', 'from', 'email', 'E-mail')}
+                        ${inputField('app-name', 'name', 'text', 'Nome e Cognome', 'Elliot Alderson')}
+                        ${inputField('app-email', 'from', 'email', 'E-mail', 'mr.robot@example.com')}
                     </div>
                     <div class="group-2">
-                        ${inputField('app-phone', 'phone', 'text', 'Telefono')}
+                        ${inputField('app-phone', 'phone', 'text', 'Telefono', '3450000000')}
                         ${inputField('app-curriculum', 'curriculum', 'file', 'Curriculum', 'Carica il tuo CV')}
                     </div>
                     <div class="group-1">
-                        ${inputField('app-about', 'about_you', 'textarea', 'Raccontaci qualcosa in più su di te')}
+                        ${inputField('app-about', 'about_you', 'textarea', 'Raccontaci qualcosa in più su di te', '')}
                     </div>
                     <div style="text-align: center;">
                         ${submitButton('Candidati Ora')}
