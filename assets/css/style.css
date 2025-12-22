@@ -145,6 +145,7 @@ html {
   --char-height: calc((5ex + 1cap) / 2);
   --border-thickness: 0.5ch;
   --border-style: double;
+  --focus-outline-thickness: calc(1ch / 3);
   --size-multiplier: 1;
 
   --cursor-default: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="38" style="font-size: 1.5em; font-family: monospace;"><text y="19" style="fill:white;fill-opacity:0.8">█</text></svg>');
@@ -294,6 +295,13 @@ a:hover {
   color: var(--color-text);
   background-color: var(--color-brand-orange);
 }
+a:focus-visible {
+  outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
+  color: var(--color-brand-blue);
+}
+a:focus-visible > picture:only-child, a:focus-visible > img:only-child {
+  outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
+}
 
 em {
   font-style: italic;
@@ -437,6 +445,9 @@ button[disabled] {
   font-style: inherit !important;
   font-weight: inherit !important;
 }
+button:focus-visible {
+  outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
+}
 
 blockquote {
   padding: calc(var(--char-height)) 0;
@@ -499,6 +510,10 @@ header a.logo:hover {
 .highlight a:hover.cta {
   font-weight: 800;
   font-style: italic;
+}
+.highlight a:focus-visible.cta {
+  outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
+  filter: unset;
 }
 
 .box {
