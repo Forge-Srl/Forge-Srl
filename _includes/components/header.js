@@ -17,7 +17,7 @@ module.exports = function (data) {
         '@type': 'ListItem',
         position: index + 1,
         name: item.title,
-        item: item.url,
+        item: new URL(item.url, data.forge.domain),
       })),
     }
     breadcrumb += `<script type="application/ld+json">${JSON.stringify(microdata)}</script>`
