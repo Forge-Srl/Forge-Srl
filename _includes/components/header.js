@@ -1,13 +1,28 @@
 module.exports = function (data) {
-  const breadcrumb =
+  const bredcrumbData = this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {
+    includeSelf: true,
+    allowMissing: true,
+  })
+
+  let breadcrumb =
     data.eleventyNavigation.key === 'home'
       ? ''
-      : this.eleventyNavigationToHtml(
-          this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {
-            includeSelf: true,
-            allowMissing: true,
-          }),
-        ).replace('>Home<', 'aria-label="Home">~<')
+      : this.eleventyNavigationToHtml(bredcrumbData).replace('>Home<', 'aria-label="Home">~<')
+
+  if (breadcrumb) {
+    const microdata = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: bredcrumbData.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.title,
+        item: item.url,
+      })),
+    }
+    breadcrumb += `<script type="application/ld+json">${JSON.stringify(microdata)}</script>`
+  }
+
   return `<header style="text-align: center;">
 			<p style="text-align: center;">
 				<a href="/chi-siamo/">Chi Siamo</a> |
@@ -20,7 +35,7 @@ module.exports = function (data) {
 				<picture>
 				  <source srcset="/assets/images/forge-logo.png" media="(prefers-color-scheme: light)"/>
 				  <source srcset="/assets/images/forge-logo-white.png" media="(prefers-color-scheme: dark)"/>
-				  <img src="https://forge.srl/assets/images/forge-logo-white.png" alt="Forge logo"/>
+				  <img src="/assets/images/forge-logo-white.png" alt="Forge logo"/>
 				</picture>
 			</a>
 			<hr>
