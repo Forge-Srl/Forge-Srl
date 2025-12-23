@@ -13,7 +13,39 @@ module.exports = class {
   }
 
   async render(data) {
+    const microdata = {
+      '@context': 'https://schema.org',
+      '@type': ['Organization', 'LocalBusiness'],
+      name: 'Forge S.r.l.',
+      url: data.forge.domain,
+      logo: `${data.forge.domain}/assets/images/forge-logo.png`,
+      //description: 'Consulenza informatica, sviluppo di piattaforme e-commerce e app su misura per aziende.',
+      telephone: data.forge.contacts.phone,
+      email: data.forge.contacts.info,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: data.forge.contacts.address.street,
+        addressLocality: data.forge.contacts.address.locality,
+        postalCode: data.forge.contacts.address.postalCode,
+        addressCountry: data.forge.contacts.address.country,
+      },
+      vatID: data.forge.vatCode,
+      openingHours: 'Mo-Fr 09:00-18:00',
+      sameAs: [data.forge.linkedin, data.forge.facebook, data.forge.github],
+      knowsAbout: 'Web development, Cloud, Serverless, Artificial Intelligence, Angular, Nest.js, TypeScript, AWS',
+      skills: 'Web development, Cloud, Serverless, Artificial Intelligence, Angular, Nest.js, TypeScript, AWS',
+      /*
+      TODO:
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servizi di consulenza e sviluppo",
+        "itemListElement": [...]
+      }
+    */
+    }
+
     return `<main>
+            <script type="application/ld+json">${JSON.stringify(microdata)}</script>
             <section>
                 <h3 style="will-change: contents; transform: translateZ(0);">
                     <span class="pt-0">Appassionati di</span>

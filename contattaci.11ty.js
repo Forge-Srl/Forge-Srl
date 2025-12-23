@@ -36,7 +36,7 @@ module.exports = class {
                 </div>
                 <div>
                     <h5>Indirizzo</h5>
-                    <p>${data.forge.contacts.address}</p>
+                    <p>${data.forge.contacts.fullAddress}</p>
                 </div>
             </section>
             <section>

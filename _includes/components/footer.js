@@ -13,7 +13,7 @@ module.exports = (data) => `<footer>
             <div>
                 <h6>DOVE TROVARCI</h6>
                 <ul>
-                    <li><a href="${data.forge.contacts.maps}">${data.forge.contacts.address}</a></li>
+                    <li><a href="${data.forge.contacts.maps}">${data.forge.contacts.fullAddress}</a></li>
                     <li><a href="tel:${data.forge.contacts.phone}">${data.forge.contacts.phone}</a></li>
                     <li><a href="mailto:${data.forge.contacts.info}">${data.forge.contacts.info}</a></li>
                 </ul>
