@@ -258,7 +258,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label,
+textarea,
+input,
+button {
   line-height: 1.5;
   word-break: break-all;
   line-break: anywhere;
@@ -299,7 +303,8 @@ a:focus-visible {
   outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
   color: var(--color-brand-blue);
 }
-a:focus-visible > picture:only-child, a:focus-visible > img:only-child {
+a:focus-visible > picture:only-child,
+a:focus-visible > img:only-child {
   outline: var(--focus-outline-thickness) solid var(--color-brand-orange);
 }
 
