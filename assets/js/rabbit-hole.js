@@ -38,6 +38,7 @@
           case 'red':
           case '#ff0000':
           case '#FF0000':
+            // biome-ignore lint/performance/noDelete: this is exactly what is needed here
             delete window.takePill
             this.#afterRedPill()
             break
@@ -46,22 +47,19 @@
         }
       }
       this.#containerElement.innerHTML = `<blockquote>
-          <p>
-          Nessuno di noi è in grado, purtroppo, di descrivere Forge agli altri. Dovrai scoprire con i tuoi occhi che cos'è.<br>
-          È la tua ultima occasione, se rinunci non ne avrai altre.
-          </p>
-          <ul>
-          <li><strong>Pillola azzurra</strong>, fine della storia: domani ti sveglierai in camera tua, e crederai a quello che vorrai.</li>
-          <li><strong>Pillola rossa</strong>, resti nel paese delle meraviglie, e vedrai quant'è profonda la tana del Bianconiglio.</li>
-          </ul>
-          <br>
-          <p>Ti sto offrendo solo la verità, ricordalo. Niente di più.</p>
-      </blockquote>
-      <br>
-      <div class="group-2 gap-3">
-          <button type="button" class="pill red" onclick="takePill('red')">Pillola rossa</button>
-          <button type="button" class="pill blue" onclick="takePill('blue')">Pillola azzurra</button>
-      <div>`
+<p>Nessuno di noi è in grado, purtroppo, di descrivere Forge agli altri. Dovrai scoprire con i tuoi occhi che cos'è.<br>È la tua ultima occasione, se rinunci non ne avrai altre.</p>
+<ul>
+<li><strong>Pillola azzurra</strong>, fine della storia: domani ti sveglierai in camera tua, e crederai a quello che vorrai.</li>
+<li><strong>Pillola rossa</strong>, resti nel paese delle meraviglie, e vedrai quant'è profonda la tana del Bianconiglio.</li>
+</ul>
+<br>
+<p>Ti sto offrendo solo la verità, ricordalo. Niente di più.</p>
+</blockquote>
+<br>
+<div class="group-2 gap-3">
+<button type="button" class="pill red" onclick="takePill('red')">Pillola rossa</button>
+<button type="button" class="pill blue" onclick="takePill('blue')">Pillola azzurra</button>
+<div>`
     }
 
     #afterRedPill() {
@@ -74,11 +72,35 @@
         (window.purpleRabbit = new Rabbit('purple', '🟣')),
         (window.brownRabbit = new Rabbit('brown', '🟤')),
       )
-      Rabbit.prototype.feed = function (carrot) {
-        console.log(`${this.color} rabbit ate ${carrot}`)
+
+      const onBeingEatenSymbol = Symbol('onBeingEatenSymbol')
+      window.Carrot = class {
+        get hasAlreadyBeenEaten() {
+          return !!this.eaten
+        }
+
+        [onBeingEatenSymbol](rabbit) {
+          this.eaten = true
+          console.log(`${rabbit} is eating the carrot`)
+          //TODO
+          console.log('TODO')
+        }
       }
 
-      this.#containerElement.innerHTML = '<p>I conigli si sono moltiplicati!</p>'
+      Rabbit.prototype.feed = function (carrot) {
+        if (!(carrot instanceof window.Carrot)) {
+          console.error('Rabbits only eat carrots')
+          return
+        }
+        if (carrot.hasAlreadyBeenEaten) {
+          console.error('Carrots can be fed only once')
+          return
+        }
+        carrot[onBeingEatenSymbol](this)
+      }
+
+      this.#containerElement.innerHTML = '<p>I conigli si sono moltiplicati e hanno fame!</p>'
+      //TODO
       console.log('TODO')
     }
   }
