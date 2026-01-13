@@ -6,6 +6,7 @@ module.exports = (data) => `<footer>
         </script>
         <br>
         <hr>
+        <br>
         <div style="text-align: center;">
             <span>Siamo appassionati di Intelligenza Artificiale, ma sviluppiamo soluzioni software con un approccio umano.</span>
         </div>
@@ -35,6 +36,7 @@ module.exports = (data) => `<footer>
                 </ul>
             </div>
         </div>
+        <br>
         <hr>
         <div style="text-align: center;">
             <span>© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | Tutti i diritti sono riservati.</span><span class="blink">&nbsp;</span>
