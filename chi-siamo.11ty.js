@@ -18,16 +18,17 @@ module.exports = class {
     return `<main>
             ${pageTitle.call(this, data)}
             <section id="chi siamo">
-                <h2>La miglior estensione per la tua squadra</h2>
+                <h2>Un'estensione per la tua squadra</h2>
                 <p><strong><em>Il nostro obiettivo? Creare valore e arrivare al successo insieme alle aziende che seguiamo.</em><strong></p>
                 <p>Siamo una realtà giovane e dinamica che unisce competenze informatiche di diverso tipo come l'intelligenza artificiale, lo sviluppo agile del software e il cloud computing.</p>
                 <p>Nasciamo nel 2018 e da allora trasformiamo idee in prodotti, studiando a fondo la visione dei clienti e realizzando soluzioni digitali competitive.</p>
                 <p>Il nostro cuore pulsante è a Varese, siamo amanti delle metodologie agili e degli spazi condivisi.</p>
                 <br>
-                <a href="/#servizi">Scopri i nostri servizi</a>
+                <a href="/servizi">Scopri i nostri servizi</a>
             </section>
+            
             <section id="valori">
-                <h2>I nostri valori sono il nostro brand</h2>
+                <h2>I nostri valori</h2>
                 <div class="group-3 gap-2">
                     <div class="box">
                         <h3>Vision</h3>
@@ -46,11 +47,41 @@ module.exports = class {
                     </div>
                 </div>
             </section>
+            
+            <section id="metodologia">
+                <h2>Come lavoriamo</h2>
+                <p><strong><em>Il successo dei nostri clienti è il nostro successo</em></strong></p>
+                <p>Offriamo un approccio concreto, flessibile e soprattutto umano</p>
+                <br>
+                <div class="group-2 gap-3">
+                    <div class="box">
+                        <span class="box-title">01</span>
+                        <h5>Ascoltiamo e valutiamo</h5>
+                        <p>con onestà il progetto e decidiamo se possiamo fornire il nostro contributo nella realizzazione</p>
+                    </div>
+                    <div class="box">
+                        <span class="box-title">02</span>
+                        <h5>Troviamo una soluzione</h5>
+                        <p>che sia il più possibile efficace e che dimostri con dati misurabili un riscontro positivo</p>
+                    </div>
+                    <div class="box">
+                        <span class="box-title">03</span>
+                        <h5>Usiamo il modello <em>Agile</em></h5>
+                        <p>e la metodologia Scrum per pianificare e gestire il progetto con la massima flessibilità ed efficienza</p>
+                    </div>
+                    <div class="box">
+                        <span class="box-title">04</span>
+                        <h5>Chiediamo feedback</h5>
+                        <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia, rilasciando gradualmente il software.</p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="team">
                 <h2>Il team</h2>
                 <p><strong><em>Il lavoro di squadra è il nostro asset migliore</em></strong></p>
                 <p>La nostra squadra è composta da sviluppatori esperti in diverse tecnologie e project manager.</p>
-                <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie. </p>
+                <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie.</p>
                 <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende.</p>
                 <br>
                 <a href="/innovazione/">Scopri i nostri progetti</a>

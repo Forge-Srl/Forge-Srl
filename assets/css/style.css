@@ -399,6 +399,12 @@ hr {
   border-top: var(--border-thickness) var(--border-style) var(--color-text-soft);
 }
 
+img {
+  object-fit: fill;
+  width: 100%;
+  height: auto;
+}
+
 form {
   margin: var(--char-height) 0;
 }
@@ -568,16 +574,16 @@ header a.logo:hover {
   min-width: min(calc(var(--terminal-width) / 4), 100%);
 }
 .gap-1 {
-  gap: 1ch;
+  gap: var(--char-height) 1ch;
 }
 .gap-2 {
-  gap: 2ch;
+  gap: var(--char-height) 2ch;
 }
 .gap-3 {
-  gap: 3ch;
+  gap: calc(var(--char-height) * 2) 3ch;
 }
 .gap-4 {
-  gap: 4ch;
+  gap: calc(var(--char-height) * 2) 4ch;
 }
 
 @keyframes termspinner {
@@ -633,6 +639,22 @@ header a.logo:hover {
 }
 .blink {
   animation: cursorblink 1s cubic-bezier(1, 0, 0, 1) infinite;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--char-height) 4ch;
+  height: calc(var(--char-height) * 3);
+  overflow: hidden;
+  background: white;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 
 #iubenda-iframe {

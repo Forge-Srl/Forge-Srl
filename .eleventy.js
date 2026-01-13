@@ -28,18 +28,33 @@ module.exports = (eleventyConfig) => {
     }
     url = url.startsWith('http') ? url : `assets/images/${url}`
 
-    const metadata = await Image(url, {
-      formats: ['webp', null],
-      widths: widths,
-      urlPath: '/assets/images',
-      outputDir: './_site/assets/images',
-      filenameFormat: (id, src, width, format, options) => {
-        const extension = path.extname(src)
-        const name = path.basename(src, extension)
-        fs.mkdirSync(`${options.outputDir}/${name}`, {recursive: true})
-        return `${name}/${id}-${width}w.${format}`
-      },
-    })
+    let metadata
+    if (url.endsWith('.svg')) {
+      metadata = await Image(url, {
+        formats: ['svg', null],
+        urlPath: '/assets/images',
+        outputDir: './_site/assets/images',
+        filenameFormat: (id, src, width, format, options) => {
+          const extension = path.extname(src)
+          const name = path.basename(src, extension)
+          fs.mkdirSync(`${options.outputDir}/${name}`, {recursive: true})
+          return `${name}/${id}-${width}w.${format}`
+        },
+      })
+    } else {
+      metadata = await Image(url, {
+        formats: ['webp', null],
+        widths: widths,
+        urlPath: '/assets/images',
+        outputDir: './_site/assets/images',
+        filenameFormat: (id, src, width, format, options) => {
+          const extension = path.extname(src)
+          const name = path.basename(src, extension)
+          fs.mkdirSync(`${options.outputDir}/${name}`, {recursive: true})
+          return `${name}/${id}-${width}w.${format}`
+        },
+      })
+    }
 
     return Image.generateHTML(metadata, {
       alt: altText || '',

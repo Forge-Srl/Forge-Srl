@@ -14,27 +14,39 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  async render(data) {
     return `<main>
             ${pageTitle.call(this, data)}
-            <p>Studiamo a fondo le idee dei clienti e realizziamo soluzioni competitive in un mercato digitale sempre più esigente.</p>
+            <p><strong><em>Soluzioni tecnologiche per aziende che vogliono innovare</em></strong></p>
+            <p>Offriamo servizi di Intelligenza Artificiale e Sviluppo Software per aiutarti a automatizzare, ottimizzare e crescere.
+            Ogni soluzione è pensata per rispondere alle esigenze specifiche della tua azienda.</p>
             <section id="ai">
-                <h5>Artificial Intelligence</h5>
+                <h2>AI &amp; Data Science</h2>
                 <p>Utilizziamo modelli di Machine Learning e AI Generativa per automatizzare i processi aziendali ripetitivi che richiedono oggi l'intervento di personale dedicato. Il nostro obiettivo è la riduzione degli errori, dei tempi di esecuzione e dei costi.</p>
-                <h5>Customer Service</h5>
-                <p>Siamo in grado di automatizzare il supporto ai clienti di qualsiasi piattaforma, partendo dalle prime fasi di raccolta delle informazioni. In molti casi l'assistenza può svolgersi interamente grazie a un bot basato su AI Generativa, in altri casi specifici il bot stesso è in grado di decidere se richiedere l'intervento di personale di supporto.</p>
-                <h5>Predictive Maintenance</h5>
-                <p>Impiegando strumenti di Data Science e Machine Learning applicati ai dati raccolti dalla sensoristica, abbiamo sviluppato una innovativa tecnologia di manutenzione predittiva che può riconoscere in anticipo guasti e malfunzionamenti di qualsiasi impianto, evitando costosissimi fermi di produzione.</p>
+                <div class="group-2 gap-3">
+                  <div class="box">
+                      <h5>Customer Service</h5>
+                      <p>Siamo in grado di automatizzare il supporto ai clienti di qualsiasi piattaforma, partendo dalle prime fasi di raccolta delle informazioni. In molti casi l'assistenza può svolgersi interamente grazie a un bot basato su AI Generativa, in altri casi specifici il bot stesso è in grado di decidere se richiedere l'intervento di personale di supporto.</p>
+                  </div>
+                  <div class="box">
+                    <h5>Predictive Maintenance</h5>
+                    <p>Impiegando strumenti di Data Science e Machine Learning applicati ai dati raccolti dalla sensoristica, abbiamo sviluppato una innovativa tecnologia di manutenzione predittiva che può riconoscere in anticipo guasti e malfunzionamenti di qualsiasi impianto, evitando costosissimi fermi di produzione.</p>
+                  </div>
+                </div>
 	        </section>
 	        <section id="dev">
-                <h5>Piattaforme Web</h5>
-                <p>Creiamo piattaforme Web di qualsiasi tipo: single page applications, siti multi pagina, E-commerce, progressive web app (PWA). Supportiamo i maggiori provider cloud e CDN per garantire una infrastruttura con elevate performance.</p>
-                <h5>Mobile</h5>
-                <p>Progettiamo e sviluppiamo applicazioni mobile Android e iOS, focalizzandoci sull'efficienza e la versatilità. La nostra squadra di sviluppatori assicura soluzioni intuitive e funzionali. Basiamo sempre la progettazione sulla scalabilità, consentendo aggiornamenti rapidi e una manutenzione semplice ed immediata.</p>
-                <h5>Back-End</h5>
-                <p>Realizziamo servizi Back-end e API utilizzando le infrastrutture cloud native offerte da AWS, Google Cloud e altri provider. Siamo in grado di integrare le principali tecnologie serverless, a microservizi, database e strumenti di virtualizzazione.</p>
-                <h5>Open Source</h5>
-                <p>Utilizziamo ogni giorno decine di strumenti offerti dalla comunità open source. Il minimo che possiamo fare è cercare di contribuire noi stessi, creando nuovi progetti e aiutando a migliorare l'efficienza e l'affidabilità dei software che utilizziamo.</p>
+                <h2>Sviluppo Web &amp; Cloud</h2>
+                <p>Creiamo piattaforme Web di qualsiasi tipo: single page applications, siti multi pagina, progressive web app (PWA). Supportiamo i maggiori provider cloud e CDN per garantire una infrastruttura con elevate performance.</p>
+                <div class="group-2 gap-3">
+                  <div class="box">
+                    <h5>E-Commerce e Piattaforme Software</h5>
+                    <p>Realizziamo servizi e API utilizzando le infrastrutture cloud native offerte da AWS, Google Cloud e altri provider. Siamo in grado di integrare le principali tecnologie serverless, a microservizi, database e strumenti di virtualizzazione.</p>
+                  </div>
+                  <div class="box">
+                    <h5>Mobile</h5>
+                    <p>Progettiamo e sviluppiamo applicazioni mobile Android e iOS, focalizzandoci sull'efficienza e la versatilità. La nostra squadra di sviluppatori assicura soluzioni intuitive e funzionali. Basiamo sempre la progettazione sulla scalabilità, consentendo aggiornamenti rapidi e una manutenzione semplice ed immediata.</p>
+                  </div>
+	            </div>
 	        </section>
             <br>
             <section>
@@ -64,6 +76,52 @@ module.exports = class {
                     <li>Siamo instancabili studenti alla <strong>costante ricerca</strong> di modi innovativi per applicare le nostre conoscenze a nuove soluzioni.</li>
                     <li>Crediamo fortemente che la chiave del cambiamento sia il <strong>confronto nella diversità</strong> e amiamo costruire rapporti basati sulla <strong>fiducia</strong> reciproca.</li>
                 </ul>
+            </section>
+            <section>
+                <div>
+                    <h2>Le nostre tecnologie</h2>
+                    <p>Alcuni degli strumenti che utilizziamo quotidianamente per lavorare</p>
+                    <br>
+                </div>
+                <div class="group-3 gap-2">
+                    <!-- Most logos has been taken from https://brandfetch.com/ -->
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/TypeScript.svg', 'Logo TypeScript', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/Angular.svg', 'Logo Angular', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/NestJS.svg', 'Logo NestJS', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/NodeJS.svg', 'Logo Node.js', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/Docker.svg', 'Logo Docker', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/Algolia.svg', 'Logo Algolia', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/AmazonWebServices.svg', 'Logo Amazon Web Services', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/GoogleCloud.svg', 'Logo Google Cloud', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/Cloudflare.svg', 'Logo Cloudflare', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/Firebase.svg', 'Logo Firebase', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/WordPress.svg', 'Logo WordPress', '', [214], '214w')}
+                    </div>
+                    <div class="brand-logo">
+                        ${await this.image('technologies-logos/JetBrains.svg', 'Logo JetBrains', '', [214], '214w')}
+                    </div>
+                </div>
             </section>
             <section class="highlight">
                 <p><strong>Ti aiutiamo a raggiungere i tuoi obiettivi</strong</p>

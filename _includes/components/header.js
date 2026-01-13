@@ -26,8 +26,7 @@ module.exports = function (data) {
   return `<header style="text-align: center;">
 			<p style="text-align: center;">
 				<a href="/chi-siamo/">Chi Siamo</a> |
-				<a href="/#servizi">Servizi</a> |
-				<a href="/#metodologia">Metodologia</a> |
+				<a href="/servizi">Servizi</a> |
 				<a href="/innovazione/">Innovazione</a> |
 				<a href="/lavora-con-noi/">Lavora con Noi</a>
 			</p>
