@@ -138,8 +138,8 @@ html {
   --color-background: rgba(15, 25, 35, 1);
   --color-background-grad2: rgba(5, 5, 5, 1);
   --color-text-soft: rgba(210, 210, 210, 1);
-  --input-backgroud: rgba(255, 255, 255, 0.15);
-  --input-backgroud-highlight: rgba(255, 255, 255, 0.35);
+  --input-background: rgba(255, 255, 255, 0.15);
+  --input-background-highlight: rgba(255, 255, 255, 0.35);
 
   --terminal-width: 120ch;
   --char-height: calc((5ex + 1cap) / 2);
@@ -157,8 +157,8 @@ html {
     --color-background: rgba(230, 235, 245, 1);
     --color-background-grad2: rgba(250, 250, 250, 1);
     --color-text-soft: rgba(55, 65, 75, 1);
-    --input-backgroud: rgba(0, 0, 0, 0.15);
-    --input-backgroud-highlight: rgba(0, 0, 0, 0.35);
+    --input-background: rgba(0, 0, 0, 0.15);
+    --input-background-highlight: rgba(0, 0, 0, 0.35);
     --cursor-default: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="38" style="font-size: 1.5em; font-family: monospace;"><text y="19" style="fill:black;fill-opacity:0.8">█</text></svg>');
   }
 }
@@ -228,7 +228,7 @@ button {
 textarea,
 input,
 input[type] {
-  background-color: var(--input-backgroud);
+  background-color: var(--input-background);
   color: var(--color-text);
 }
 
@@ -237,7 +237,7 @@ input:focus,
 input[type]:focus {
   border: 0;
   outline: 0 none;
-  background: var(--input-backgroud-highlight);
+  background: var(--input-background-highlight);
 }
 
 input:disabled,
@@ -461,11 +461,13 @@ button:focus-visible {
 }
 
 blockquote {
-  padding: calc(var(--char-height)) 0;
+  margin: 0 1ch;
+  padding: calc(var(--char-height)) 1ch;
   color: var(--color-text-soft);
+  background: var(--input-background);
 }
 blockquote > * {
-  margin-left: 2ch;
+  margin-left: 3ch;
 }
 blockquote::before {
   content: "/***";
@@ -473,7 +475,7 @@ blockquote::before {
   display: inline-block;
 }
 blockquote:after {
-  content: "*/";
+  content: "\00a0*/";
   font-weight: 800;
   display: inline-block;
 }
