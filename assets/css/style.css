@@ -466,18 +466,28 @@ blockquote {
   color: var(--color-text-soft);
   background: var(--input-background);
 }
-blockquote > * {
-  margin-left: 3ch;
-}
-blockquote::before {
+blockquote:before {
   content: "/***";
   font-weight: 800;
-  display: inline-block;
+  display: block;
 }
 blockquote:after {
   content: "\00a0*/";
   font-weight: 800;
-  display: inline-block;
+  display: block;
+}
+blockquote > * {
+  padding-left: 3ch;
+  position: relative;
+  overflow: hidden;
+  word-break: break-word;
+  line-break: auto;
+}
+blockquote > *:before {
+  content: "*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*";
+  position: absolute;
+  margin: 0 -2ch;
+  font-weight: bold;
 }
 
 header .logo img {
