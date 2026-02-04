@@ -46,7 +46,7 @@
             console.error(`Cannot take ${color} pill`)
         }
       }
-      this.#containerElement.innerHTML = `<blockquote>
+      this.#containerElement.innerHTML = `<blockquote><div>
 <p>Nessuno di noi è in grado, purtroppo, di descrivere Forge agli altri. Dovrai scoprire con i tuoi occhi che cos'è.<br>È la tua ultima occasione, se rinunci non ne avrai altre.</p>
 <ul>
 <li><strong>Pillola azzurra</strong>, fine della storia: domani ti sveglierai in camera tua, e crederai a quello che vorrai.</li>
@@ -54,7 +54,7 @@
 </ul>
 <br>
 <p>Ti sto offrendo solo la verità, ricordalo. Niente di più.</p>
-</blockquote>
+</div></blockquote>
 <br>
 <div class="group-2 gap-3">
 <button type="button" class="pill red" onclick="takePill('red')">Pillola rossa</button>

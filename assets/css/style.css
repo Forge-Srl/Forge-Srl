@@ -249,6 +249,7 @@ textarea[disabled] {
 
 p,
 span,
+br,
 a,
 ul,
 ol,
@@ -466,15 +467,17 @@ blockquote {
   color: var(--color-text-soft);
   background: var(--input-background);
 }
-blockquote:before {
+blockquote::before {
   content: "/***";
   font-weight: 800;
   display: block;
+  line-height: 1.5;
 }
-blockquote:after {
+blockquote::after {
   content: "\00a0*/";
   font-weight: 800;
   display: block;
+  line-height: 1.5;
 }
 blockquote > * {
   padding-left: 3ch;
@@ -482,12 +485,15 @@ blockquote > * {
   overflow: hidden;
   word-break: break-word;
   line-break: auto;
+  line-height: 1.5;
 }
-blockquote > *:before {
+blockquote > *::before {
   content: "*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*\a*";
   position: absolute;
   margin: 0 -2ch;
+  line-height: 1.5;
   font-weight: bold;
+  width: 1px;
 }
 
 header .logo img {
