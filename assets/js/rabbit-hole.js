@@ -2,6 +2,7 @@
   class RabbitHole {
     #containerElement
     #warren
+    #fingerPrint
 
     constructor() {
       const cssLinkElement = document.createElement('link')
@@ -23,6 +24,20 @@
 
       this.#containerElement = containerElement
       this.#warren = [window.whiteRabbit]
+    }
+
+    async loadFingerPrint() {
+      if (this.#fingerPrint) {
+        return
+      }
+
+      const now = Date.now().toString(36)
+      const nonce = Math.floor(Math.random() * 36 ** 5).toString(36).padStart(5, '0')
+      const ua = window.navigator.userAgent
+
+      const data = JSON.stringify({d: now, n: nonce, u: btoa(ua)})
+      const hash = new Uint8Array(await window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(data))).toHex()
+      this.#fingerPrint = JSON.stringify({hash, data})
     }
 
     start() {
@@ -74,6 +89,8 @@
       )
 
       const onBeingEatenSymbol = Symbol('onBeingEatenSymbol')
+      const rabbitHole = this
+
       window.Carrot = class {
         get hasAlreadyBeenEaten() {
           return !!this.eaten
@@ -81,9 +98,39 @@
 
         [onBeingEatenSymbol](rabbit) {
           this.eaten = true
-          console.log(`${rabbit} is eating the carrot`)
-          //TODO
-          console.log('TODO')
+          console.log(`%c${rabbit} is eating the carrot`, 'font-style: italic;')
+
+          let message
+          switch (rabbit) {
+            case window.whiteRabbit:
+              message = '[000] SWYgeW91J3JlIHJlYWRpbmcgdGhpcyw='
+              break
+            case window.redRabbit:
+              message = '[001] eW91J3ZlIGZvdW5kIG91ciBsaXR0bGUgc2VjcmV0IQ=='
+              break
+            case window.greenRabbit:
+              message = '[010] SXQgbWVhbnMgeW91IGhhdmUgYSBrZWVuIGV5ZQ=='
+              break
+            case window.blueRabbit:
+              message = '[011] YW5kIHRoZSByaWdodCBjdXJpb3NpdHkgdG8gd29yayB3aXRoIHVzLg=='
+              break
+            case window.orangeRabbit:
+              message = '[100] VG8gZ2V0IGluIHRvdWNoLCBvcGVuIGFuIGlzc3VlIG9uIG91ciBHaXRIdWIgcmVwb3NpdG9yeSBodHRwczovL2dpdGh1Yi5jb20vRm9yZ2UtU3JsL0ZvcmdlLVNybA=='
+              break
+            case window.yellowRabbit:
+              message = '[101] d2l0aCB0aGUgdGl0bGUgIlRvbyBNYW55IFJhYmJpdHMgdG8gQ2hhc2Ui'
+              break
+            case window.purpleRabbit:
+              message = `[110] ${btoa(`and the message:\n${rabbitHole.#fingerPrint}`)}`
+              break
+            case window.brownRabbit:
+              message = '[111] V2UnbGwgZ2V0IGJhY2sgdG8geW91IGFzIHNvb24gYXMgcG9zc2libGUhCuKAlCBUaGUgRm9yZ2UgVGVhbQ=='
+              break
+          }
+
+          if (message) {
+            console.log(`${rabbit}: Thank you! Here is a hint for you\n${message}`)
+          }
         }
       }
 
@@ -100,11 +147,11 @@
       }
 
       this.#containerElement.innerHTML = '<p>I conigli si sono moltiplicati e hanno fame!</p>'
-      //TODO
-      console.log('TODO')
     }
   }
 
   const rabbitHole = new RabbitHole()
-  window[Symbol.for('onRabbitHoleLoaded')](rabbitHole)
+  rabbitHole.loadFingerPrint().then(() => {
+    window[Symbol.for('onRabbitHoleLoaded')](rabbitHole)
+  })
 })()
