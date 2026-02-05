@@ -37,6 +37,8 @@ module.exports = (data) => `<footer>
             </div>
         </div>
         <br>
+        <div id="flame-canvas" aria-hidden="true"></div>
+        <script defer src="/assets/js/flame.js"></script>
         <hr>
         <div style="text-align: center;">
             <span>© ${new Date().getFullYear()} Forge s.r.l. | P.IVA ${data.forge.vatCode} | Tutti i diritti sono riservati.</span><span class="blink">&nbsp;</span>

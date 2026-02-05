@@ -678,6 +678,14 @@ header a.logo:hover {
   max-height: 100%;
 }
 
+#flame-canvas {
+  white-space: pre;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(0deg, var(--color-brand-orange-grad2) 0%, var(--color-brand-orange) 15%);
+  background-clip: text;
+}
+
 #iubenda-iframe {
   cursor: auto;
 }
