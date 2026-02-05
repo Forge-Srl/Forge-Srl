@@ -89,9 +89,22 @@
       )
 
       const onBeingEatenSymbol = Symbol('onBeingEatenSymbol')
-      const rabbitHole = this
+      const messages = [
+        '000|SWYgeW91J3JlIHJlYWRpbmcgdGhpcyw=',
+        '001|eW91J3ZlIGZvdW5kIG91ciBsaXR0bGUgc2VjcmV0IQ==',
+        '010|SXQgbWVhbnMgeW91IGhhdmUgYSBrZWVuIGV5ZQ==',
+        '011|YW5kIHRoZSByaWdodCBjdXJpb3NpdHkgdG8gd29yayB3aXRoIHVzLg==',
+        '100|VG8gZ2V0IGluIHRvdWNoLCBvcGVuIGFuIGlzc3VlIG9uIG91ciBHaXRIdWIgcmVwb3NpdG9yeSBodHRwczovL2dpdGh1Yi5jb20vRm9yZ2UtU3JsL0ZvcmdlLVNybA==',
+        '101|d2l0aCB0aGUgdGl0bGUgIlRvbyBNYW55IFJhYmJpdHMgdG8gQ2hhc2Ui',
+        `110|${btoa(`and the message:\n${this.#fingerPrint}`)}`,
+        '111|V2UnbGwgZ2V0IGJhY2sgdG8geW91IGFzIHNvb24gYXMgcG9zc2libGUhCuKAlCBUaGUgRm9yZ2UgVGVhbQ==',
+      ]
+      messages.sort(() => Math.round(Math.random() * 2 - 1))
+      const warren = this.#warren
 
       window.Carrot = class {
+        #size = Math.floor(Math.random() * 4) + 1
+
         get hasAlreadyBeenEaten() {
           return !!this.eaten
         }
@@ -99,37 +112,15 @@
         [onBeingEatenSymbol](rabbit) {
           this.eaten = true
           console.log(`%c${rabbit} is eating the carrot`, 'font-style: italic;')
+          rabbit.carrotsEaten = (rabbit.carrotsEaten || 0) + this.#size
 
-          let message
-          switch (rabbit) {
-            case window.whiteRabbit:
-              message = '[000] SWYgeW91J3JlIHJlYWRpbmcgdGhpcyw='
-              break
-            case window.redRabbit:
-              message = '[001] eW91J3ZlIGZvdW5kIG91ciBsaXR0bGUgc2VjcmV0IQ=='
-              break
-            case window.greenRabbit:
-              message = '[010] SXQgbWVhbnMgeW91IGhhdmUgYSBrZWVuIGV5ZQ=='
-              break
-            case window.blueRabbit:
-              message = '[011] YW5kIHRoZSByaWdodCBjdXJpb3NpdHkgdG8gd29yayB3aXRoIHVzLg=='
-              break
-            case window.orangeRabbit:
-              message = '[100] VG8gZ2V0IGluIHRvdWNoLCBvcGVuIGFuIGlzc3VlIG9uIG91ciBHaXRIdWIgcmVwb3NpdG9yeSBodHRwczovL2dpdGh1Yi5jb20vRm9yZ2UtU3JsL0ZvcmdlLVNybA=='
-              break
-            case window.yellowRabbit:
-              message = '[101] d2l0aCB0aGUgdGl0bGUgIlRvbyBNYW55IFJhYmJpdHMgdG8gQ2hhc2Ui'
-              break
-            case window.purpleRabbit:
-              message = `[110] ${btoa(`and the message:\n${rabbitHole.#fingerPrint}`)}`
-              break
-            case window.brownRabbit:
-              message = '[111] V2UnbGwgZ2V0IGJhY2sgdG8geW91IGFzIHNvb24gYXMgcG9zc2libGUhCuKAlCBUaGUgRm9yZ2UgVGVhbQ=='
-              break
-          }
-
-          if (message) {
-            console.log(`${rabbit}: Thank you! Here is a hint for you\n${message}`)
+          const index = warren.findIndex(r => r === rabbit)
+          if (index >= 0 && index < messages.length) {
+            if (rabbit.carrotsEaten < rabbit) {
+              console.log(`${rabbit}: More carrots please`)
+            } else {
+              console.log(`${rabbit}: Thank you! Here is a hint for you\n${messages[index]}`)
+            }
           }
         }
       }
@@ -146,7 +137,7 @@
         carrot[onBeingEatenSymbol](this)
       }
 
-      this.#containerElement.innerHTML = '<p>I conigli si sono moltiplicati e hanno fame!</p>'
+      this.#containerElement.innerHTML = '<p>Dalla finestra vedi tanti conigli affamati.<br>Forse è il caso di dar loro delle carote...</p>'
     }
   }
 

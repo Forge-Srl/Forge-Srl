@@ -24,6 +24,7 @@ class Rabbit {
     return 'Rabbit'
   }
 
+  // This is needed inside the rabbit hole
   [Symbol.toPrimitive](hint) {
     if (hint === 'string') {
       return `🐇${this.icon}`
