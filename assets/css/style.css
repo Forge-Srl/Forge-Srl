@@ -143,8 +143,8 @@ html {
 
   --terminal-width: 120ch;
   --char-height: calc((5ex + 1cap) / 2);
-  --border-thickness: 0.5ch;
-  --border-style: double;
+  --border-thickness: 0.15ch;
+  --border-style: solid;
   --focus-outline-thickness: calc(1ch / 3);
   --size-multiplier: 1;
 

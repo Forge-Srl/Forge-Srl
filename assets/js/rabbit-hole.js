@@ -32,11 +32,13 @@
       }
 
       const now = Date.now().toString(36)
-      const nonce = Math.floor(Math.random() * 36 ** 5).toString(36).padStart(5, '0')
+      const nonce = Math.floor(Math.random() * 36 ** 5)
+        .toString(36)
+        .padStart(5, '0')
       const ua = window.navigator.userAgent
 
       const data = JSON.stringify({d: now, n: nonce, u: btoa(ua)})
-      const hash = new Uint8Array(await window.crypto.subtle.digest("SHA-256", new TextEncoder().encode(data))).toHex()
+      const hash = new Uint8Array(await window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(data))).toHex()
       this.#fingerPrint = JSON.stringify({hash, data})
     }
 
@@ -114,7 +116,7 @@
           console.log(`%c${rabbit} is eating the carrot`, 'font-style: italic;')
           rabbit.carrotsEaten = (rabbit.carrotsEaten || 0) + this.#size
 
-          const index = warren.findIndex(r => r === rabbit)
+          const index = warren.findIndex((r) => r === rabbit)
           if (index >= 0 && index < messages.length) {
             if (rabbit.carrotsEaten < rabbit) {
               console.log(`${rabbit}: More carrots please`)
@@ -137,7 +139,8 @@
         carrot[onBeingEatenSymbol](this)
       }
 
-      this.#containerElement.innerHTML = '<p>Dalla finestra vedi tanti conigli affamati.<br>Forse è il caso di dar loro delle carote...</p>'
+      this.#containerElement.innerHTML =
+        '<p>Dalla finestra vedi tanti conigli affamati.<br>Forse è il caso di dar loro delle carote...</p>'
     }
   }
 
