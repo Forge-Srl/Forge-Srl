@@ -9,11 +9,7 @@ const terser = require('terser')
 const Forge = require('./_data/forge')
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig
-    .addPassthroughCopy('assets')
-    .addPassthroughCopy('favicon.ico')
-    .addPassthroughCopy('robots.txt')
-    .addPassthroughCopy({'node_modules/ityped/dist': 'assets/vendor/ityped'})
+  eleventyConfig.addPassthroughCopy('assets').addPassthroughCopy('favicon.ico').addPassthroughCopy('robots.txt')
 
   eleventyConfig.addPlugin(navigationPlugin)
   eleventyConfig.addPlugin(sitemap, {

@@ -7,15 +7,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-navigation": "^1.0.5",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "@biomejs/biome": "2.3.7",
-    "html-minifier-next": "^4.1.1",
+    "@biomejs/biome": "2.3.14",
+    "html-minifier-next": "^5.0.3",
     "csso": "^5.0.5",
-    "terser": "^5.44.1",
+    "terser": "^5.46.0",
     "sharp": "^0.34.5"
   },
-  "dependencies": {
-    "ityped": "^1.0.3"
-  }
+  "dependencies": {}
 }
