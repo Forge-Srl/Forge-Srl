@@ -398,6 +398,9 @@ h1 {
 hr {
   border: 0;
   border-top: var(--border-thickness) var(--border-style) var(--color-text-soft);
+  margin-top: calc(var(--char-height) * 0.6 - var(--border-thickness));
+  margin-bottom: calc(var(--char-height) * 0.4);
+  padding: 0;
 }
 
 img {
