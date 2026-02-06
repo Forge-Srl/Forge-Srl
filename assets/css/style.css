@@ -681,6 +681,8 @@ header a.logo:hover {
 #flame-canvas {
   white-space: pre;
   text-align: center;
+  font-weight: 800;
+  font-style: italic;
   color: transparent;
   background: linear-gradient(0deg, var(--color-brand-orange-grad2) 0%, var(--color-brand-orange) 15%);
   background-clip: text;
