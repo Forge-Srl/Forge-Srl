@@ -4,7 +4,7 @@ module.exports = {
     info: 'info@forge.srl',
     career: 'career@forge.srl',
     phone: '(+39) 375 664 7867',
-    address: 'Via Sempione 14, 21100 Varese VA'
+    address: 'Via Ulisse Merini, 43, 21100 Varese VA'
   },
   vatCode: 'IT03778880132',
   facebook: 'https://www.facebook.com/forgesrl',
