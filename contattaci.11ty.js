@@ -29,7 +29,7 @@ module.exports = class {
                         </div>
                     </div>
                     <div class="row g-4">
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="contact-box d-flex flex-column h-100 bg-overlay-dark-7 px-3 py-4" 
                                  style="background:url('/assets/images/contattaci-forge.jpg') no-repeat; background-size: cover; background-position: center center;">
                                 <!-- Phone -->
@@ -50,12 +50,6 @@ module.exports = class {
                                     <h5 class="mb-2">Telefono</h5>
                                     <p class="mb-0">${data.forge.contacts.phone}</p>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- google map -->
-                        <div class="col-md-3">
-                            <div class="h-100">
-                                <iframe class="w-100 h-100 grayscale rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.4928366116674!2d8.821423081725039!3d45.821414609655335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47867e2f70fdb84f%3A0x67415f1109c8090e!2sVia%20Sempione%2C%2014%2C%2021100%20Varese%20VA!5e0!3m2!1sen!2sit!4v1645632353632!5m2!1sen!2sit" style="border:0;" aria-hidden="false" tabindex="0"></iframe>	
                             </div>
                         </div>
                         <!-- contact form -->
