@@ -64,7 +64,7 @@ module.exports = async function (data) {
 		<div class="footer-copyright py-3">
 			<div class="container">
 				<div class="d-md-flex py-3 justify-content-center">
-					<div class="copyright-text">© 2026 Forge s.r.l. | P.IVA ${data.forge.vatCode} | Tutti i diritti sono riservati.</div>
+					<div class="copyright-text">© 2026 Forge s.r.l. | P.IVA ${data.forge.vatCode}  | Tutti i diritti sono riservati.</div>
 				</div>
 			</div>
 		</div>
