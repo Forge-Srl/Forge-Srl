@@ -78,7 +78,7 @@ const getFooterFlameSize = (canvas) => {
   const charW = probe.getBoundingClientRect().width || 9.6
   canvas.removeChild(probe)
   const width = Math.max(20, Math.floor(document.body.clientWidth / charW))
-  const height = Math.max(10, Math.ceil(width / 6))
+  const height = Math.max(6, Math.ceil(width / 14))
   return {width, height}
 }
 
