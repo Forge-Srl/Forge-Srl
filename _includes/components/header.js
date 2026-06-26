@@ -1,45 +1,32 @@
-module.exports = function (data) {
-  const bredcrumbData = this.eleventyNavigationBreadcrumb(data.collections.all, data.eleventyNavigation.key, {
-    includeSelf: true,
-    allowMissing: true,
-  })
+module.exports = (data) => {
+  const currentKey = data.eleventyNavigation?.key ?? ''
 
-  let breadcrumb =
-    data.eleventyNavigation.key === 'home'
-      ? ''
-      : this.eleventyNavigationToHtml(bredcrumbData).replace('>Home<', 'aria-label="Home">~<')
+  const navItems = [
+    {key: 'home', label: 'home', href: '/'},
+    {key: 'chi-siamo', label: 'chi siamo', href: '/chi-siamo/'},
+    {key: 'servizi', label: 'prodotti & servizi', href: '/servizi/'},
+    {key: 'innovazione', label: 'progetti', href: '/innovazione/'},
+    {key: 'lavora-con-noi', label: 'lavora con noi', href: '/lavora-con-noi/'},
+  ]
 
-  if (breadcrumb) {
-    const microdata = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: bredcrumbData.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: item.title,
-        item: new URL(item.url, data.forge.domain),
-      })),
-    }
-    breadcrumb += `<script type="application/ld+json">${JSON.stringify(microdata)}</script>`
-  }
+  const navLinks = navItems
+    .map(({key, label, href}) => {
+      const active = key === currentKey
+      return `<a href="${href}" class="${active ? 'active' : ''}">${label}</a>`
+    })
+    .join('')
 
-  return `<header style="text-align: center;">
-			<p style="text-align: center;">
-				<a href="/chi-siamo/">Chi Siamo</a> |
-				<a href="/servizi">Servizi</a> |
-				<a href="/innovazione/">Innovazione</a> |
-				<a href="/lavora-con-noi/">Lavora con Noi</a>
-			</p>
-			<a class="logo" href="/">
-				<picture>
-				  <source srcset="/assets/images/forge-logo.png" media="(prefers-color-scheme: light)"/>
-				  <source srcset="/assets/images/forge-logo-white.png" media="(prefers-color-scheme: dark)"/>
-				  <img src="/assets/images/forge-logo-white.png" alt="Forge logo"/>
-				</picture>
-			</a>
-			<hr>
-			<nav>
-                ${breadcrumb}
-            </nav>
-		</header>`
+  return `<nav class="site-nav" aria-label="Navigazione principale">
+  <a class="nav-logo" href="/" aria-label="Forge — homepage">
+    <picture>
+      <source srcset="/assets/images/forge-logo.png" media="(prefers-color-scheme: light)">
+      <source srcset="/assets/images/forge-logo-white.png" media="(prefers-color-scheme: dark)">
+      <img src="/assets/images/forge-logo-white.png" alt="Forge" height="30">
+    </picture>
+  </a>
+  <div class="nav-links">
+    ${navLinks}
+    <a href="/contattaci/" class="nav-cta">Prenota una call →</a>
+  </div>
+</nav>`
 }
