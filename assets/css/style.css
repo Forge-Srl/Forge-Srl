@@ -368,6 +368,8 @@ section {
   align-items: center;
   line-height: 0;
   border-bottom: none;
+  opacity: 1;
+  transition: opacity 280ms ease;
 }
 .site-nav .nav-logo img {
   height: 30px;
@@ -376,6 +378,24 @@ section {
 }
 .site-nav .nav-logo:hover {
   border-bottom: none;
+}
+
+/* On homepage: nav logo hidden until hero logo scrolls away */
+body.has-hero-logo .site-nav .nav-logo {
+  opacity: 0;
+  pointer-events: none;
+}
+body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hero logo (homepage only) */
+.hero-logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-bottom: 28px;
 }
 
 .nav-links {
@@ -430,16 +450,37 @@ section {
   position: relative;
   overflow: hidden;
   background: var(--bg);
-  padding: 148px var(--px) 88px;
+  padding: 120px var(--px) 90px;
+}
+
+#hero-flame-canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  white-space: pre;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-style: italic;
+  pointer-events: none;
+  user-select: none;
+  color: transparent;
+  background: linear-gradient(0deg, var(--orange-grad2) 0%, var(--orange) 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0.50;
 }
 
 .hero-grid {
   max-width: var(--max-w);
-  margin: 0 auto;
+  margin: 0 auto 30px;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 56px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-label {
@@ -615,6 +656,8 @@ section {
 .hero-stats {
   max-width: var(--max-w);
   margin: 72px auto 0;
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;

@@ -55,6 +55,17 @@ class Rabbit {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const heroLogo = document.getElementById('hero-logo')
+  if (heroLogo) {
+    document.body.classList.add('has-hero-logo')
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        document.body.classList.toggle('hero-logo-scrolled', !entry.isIntersecting)
+      },
+      {threshold: 0},
+    )
+    obs.observe(heroLogo)
+  }
   console.log('%c{FORGE}', 'font-size: 6em; font-family: monospace; color: #F08819')
   advertiser(['Vuoi lavorare con noi?', absoluteUrl('/lavora-con-noi')])
   // Using a symbol to make sure this function does not appear in dev tools suggestions

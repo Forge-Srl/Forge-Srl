@@ -48,7 +48,6 @@ module.exports = (data) => {
 
   return `<footer class="site-footer">
   <div id="flame-canvas" aria-hidden="true"></div>
-  <script defer src="/assets/js/flame.js"></script>
   <div class="footer-grid">
     <div class="footer-brand">
       <picture>

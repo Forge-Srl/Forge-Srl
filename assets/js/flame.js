@@ -68,24 +68,57 @@ const lerp = (x, y, a) => x * (1 - a) + y * a
 const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a))
 const invlerp = (x, y, a) => clamp((a - x) / (y - x))
 const range = (x1, y1, x2, y2, a) => lerp(x2, y2, invlerp(x1, y1, a))
-// TODO: avoid using fixed magic numbers and compute dynamically
 const widthToChars = (width) => Math.floor(range(364, 1188, 34, 120, width))
-const getFlameSize = (containerWidth) => {
+
+const getFooterFlameSize = (containerWidth) => {
   const width = widthToChars(containerWidth)
   const height = Math.max(10, Math.ceil(width / 6))
   return {width, height}
 }
 
+const getHeroFlameSize = (section, canvas) => {
+  // Probe is appended to the canvas so it inherits the exact same font
+  const probe = document.createElement('span')
+  probe.style.cssText = 'position:absolute;visibility:hidden;white-space:pre'
+  probe.textContent = 'X'
+  canvas.appendChild(probe)
+  const charW = probe.getBoundingClientRect().width || 9.6
+  canvas.removeChild(probe)
+
+  const width = Math.max(20, Math.floor(section.offsetWidth / charW))
+  const height = Math.max(6, Math.ceil(width / 14))
+  return {width, height}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  const pageContainer = document.body.querySelector('div.box')
-  const flameSize = getFlameSize(pageContainer.clientWidth)
-
+  // ── Footer flame ──────────────────────────────────────────────
   const flameCanvas = document.getElementById('flame-canvas')
-  const flame = new AsciiFlame(flameCanvas, flameSize.width, flameSize.height, 80)
-  flame.start()
+  if (flameCanvas) {
+    const containerWidth = document.body.clientWidth
+    const flameSize = getFooterFlameSize(containerWidth)
+    const flame = new AsciiFlame(flameCanvas, flameSize.width, flameSize.height, 80)
+    flame.start()
 
-  window.addEventListener('resize', () => {
-    const flameSize = getFlameSize(pageContainer.clientWidth)
-    flame.resize(flameSize.width, flameSize.height)
-  })
+    window.addEventListener('resize', () => {
+      const size = getFooterFlameSize(document.body.clientWidth)
+      flame.resize(size.width, size.height)
+    })
+  }
+
+  // ── Hero background flame ─────────────────────────────────────
+  const heroCanvas = document.getElementById('hero-flame-canvas')
+  if (heroCanvas) {
+    const heroSection = heroCanvas.closest('section') ?? heroCanvas.parentElement
+    // Wait one rAF so the section has its final painted dimensions
+    requestAnimationFrame(() => {
+      const size = getHeroFlameSize(heroSection, heroCanvas)
+      const heroFlame = new AsciiFlame(heroCanvas, size.width, size.height, 100)
+      heroFlame.start()
+
+      window.addEventListener('resize', () => {
+        const s = getHeroFlameSize(heroSection, heroCanvas)
+        heroFlame.resize(s.width, s.height)
+      })
+    })
+  }
 })

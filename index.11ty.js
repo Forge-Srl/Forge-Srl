@@ -185,8 +185,10 @@ module.exports = class {
 
 <!-- ── HERO ──────────────────────────────────────────────── -->
 <section class="hero">
+  <pre id="hero-flame-canvas" aria-hidden="true"></pre>
   <div class="hero-grid">
     <div>
+      <img id="hero-logo" src="/assets/images/forge-logo-white.png" alt="Forge" class="hero-logo-img">
       <div class="hero-label"><span class="dim">// </span>software house · varese</div>
       <h1>Costruiamo software che va in <span class="accent">{</span>produzione<span class="accent">}</span>.</h1>
       <p class="hero-desc">Progettiamo piattaforme AI e sistemi e-commerce per team che misurano il successo in deploy — non in slide.</p>
@@ -214,7 +216,6 @@ module.exports = class {
     </div>
   </div>
 
-  <div class="hero-stats">${statsHtml}</div>
 </section>
 
 <!-- ── CHI SIAMO ──────────────────────────────────────────── -->
