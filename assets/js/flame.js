@@ -70,8 +70,14 @@ const invlerp = (x, y, a) => clamp((a - x) / (y - x))
 const range = (x1, y1, x2, y2, a) => lerp(x2, y2, invlerp(x1, y1, a))
 const widthToChars = (width) => Math.floor(range(364, 1188, 34, 120, width))
 
-const getFooterFlameSize = (containerWidth) => {
-  const width = widthToChars(containerWidth)
+const getFooterFlameSize = (canvas) => {
+  const probe = document.createElement('span')
+  probe.style.cssText = 'position:absolute;visibility:hidden;white-space:pre'
+  probe.textContent = 'X'
+  canvas.appendChild(probe)
+  const charW = probe.getBoundingClientRect().width || 9.6
+  canvas.removeChild(probe)
+  const width = Math.max(20, Math.floor(document.body.clientWidth / charW))
   const height = Math.max(10, Math.ceil(width / 6))
   return {width, height}
 }
@@ -94,13 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Footer flame ──────────────────────────────────────────────
   const flameCanvas = document.getElementById('flame-canvas')
   if (flameCanvas) {
-    const containerWidth = document.body.clientWidth
-    const flameSize = getFooterFlameSize(containerWidth)
+    const flameSize = getFooterFlameSize(flameCanvas)
     const flame = new AsciiFlame(flameCanvas, flameSize.width, flameSize.height, 80)
     flame.start()
 
     window.addEventListener('resize', () => {
-      const size = getFooterFlameSize(document.body.clientWidth)
+      const size = getFooterFlameSize(flameCanvas)
       flame.resize(size.width, size.height)
     })
   }

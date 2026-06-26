@@ -1135,6 +1135,8 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   color: var(--text);
   padding: 64px var(--px) 40px;
   border-top: 1px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
 }
 .footer-grid {
   max-width: var(--max-w);
@@ -1142,6 +1144,8 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
 .footer-brand img {
   height: 28px;
@@ -1190,6 +1194,8 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   flex-wrap: wrap;
   gap: 12px;
   font-family: "JetBrains Mono", monospace;
+  position: relative;
+  z-index: 1;
   font-size: 12px;
   color: var(--text-dim);
 }
@@ -1245,13 +1251,22 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
 
 /* ── Flame canvas (footer decoration) ───────────────────────── */
 #flame-canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   white-space: pre;
   text-align: center;
+  font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
   font-style: italic;
+  pointer-events: none;
+  user-select: none;
   color: transparent;
   background: linear-gradient(0deg, var(--orange-grad2) 0%, var(--orange) 15%);
   background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0.20;
 }
 
 /* ── Rabbit-hole overlay ─────────────────────────────────────── */
