@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "forge-site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["./node_modules/@11ty/eleventy/cmd.cjs", "--serve", "--port=8092"],
+      "port": 8092
+    }
+  ]
+}

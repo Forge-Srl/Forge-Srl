@@ -1,4 +1,4 @@
-const pageTitle = require('../_includes/components/page-title')
+const pageHero = require('../_includes/components/page-hero')
 const {form, inputField, submitButton} = require('../_includes/components/form')
 
 module.exports = class {
@@ -7,7 +7,7 @@ module.exports = class {
       layout: 'layout.11ty.js',
       pageTitle: 'Lavora con Noi: Sviluppatore Software',
       pageDescription:
-        'Come sviluppatore Software di Forge lavorerai a Varese su progetti innovativi utilizzando diverse tecnologie: JavaScript, Python, Kotlin...',
+        'Come sviluppatore software in Forge lavorerai a Varese su progetti innovativi con tecnologie diverse: TypeScript, Python, Angular, AWS e altro.',
       eleventyNavigation: {
         key: 'sviluppatore-software',
         parent: 'lavora-con-noi',
@@ -17,93 +17,127 @@ module.exports = class {
   }
 
   render(data) {
-    return `<main>
-            ${pageTitle.call(this, data)}
-            <section class="group-3 gap-2">
-                <div style="flex-grow: 2;">
-                    <h2>Job description</h2>
-                    <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese.
-                    L'esperienza nell'utilizzo di più linguaggi di programmazione e di strumenti di Intelligenza Artificiale e Machine Learning sono <strong>requisiti opzionali</strong>.</p>
-                    <p>Utilizziamo la <strong>metodologia Agile</strong> applicata al processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
-                    <p>Abbiamo un <strong>approccio di continuous delivery</strong> sui progetti e scriviamo test automatici per consolidare il lavoro che facciamo (e dormire sonni tranquilli!); inoltre incentiviamo l'utilizzo del pair programming per diffondere la conoscenza e stimolare soluzioni innovative.</p>
-                    <p>Utilizziamo diverse tecnologie a seconda del contesto: Python e PyTorch, TypeScript, Angular, NestJS, AWS cloud native, etc.</p>
-                    <p>Per noi <strong>è indispensabile</strong> essere appassionati di informatica e curiosi di fronte a nuove sfide e tecnologie.</p>
-                    <p>Crediamo molto nella <strong>formazione</strong>: riserviamo ad ogni membro del team del tempo da dedicare alla propria crescita professionale e all'avanzamento di progetti personali.</p>
-                    <p>Contribuiamo a diversi <strong>progetti open source</strong>: dallo sviluppo multipiattaforma alla gestione centralizzata dell'autenticazione di cloud tools.</p>
-                </div>
-                <div class="box">
-                    <h4>Dettagli</h4>
-                    <ul>
-                        <li><strong>Luogo:</strong> Varese</li>
-                        <li><strong>Settore:</strong> IT</li>
-                        <li><strong>Contratto:</strong> Tempo pieno</li>
-                    </ul>
-                    <br>
-                    <a href="#application-form">Candidati</a>
-                </div>
-            </section>
-            <section>
-                <h2>Cosa potresti fare con noi</h2>
-                <ul>
-                    <li>Scrivere codice semplice, sicuro, documentato e testato</li>
-                    <li>Progettare modelli di Machine Learning orientati all'ottimizzazione di funzioni o al riconoscimento di pattern</li>
-                    <li>Sviluppare architetture basate su AI Generativa per automatizzare processi </li>
-                    <li>Integrare software robusto e scalabile</li>
-                    <li>Condurre analisi e ottimizzazione delle performance</li>
-                    <li>Collaborare con il resto del team per lo sviluppo di prodotti digitali</li>
-                    <li>Rimanere aggiornato sugli ultimi sviluppi di tecnologie, coding trends, best practices, portando tutto questo nel tuo lavoro giornaliero</li>
-                    <li>Misurarti su progetti di tipologia diversa e appartenenti a diversi ambiti e settori.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Chi stiamo cercando</h2>
-                <p>Non poniamo vincoli sull'esperienza, l'importante è che tu abbia:</p>
-                <ul>
-                    <li><strong>Volontà di metterti in gioco</strong>: è fondamentale che tu abbia passione per quello che fai e voglia di lavorare su progetti innovativi e sfidanti</li>
-                    <li><strong>Attitudine al lavoro di squadra</strong>: per noi il concetto di team è fondamentale e cerchiamo persone che apprezzino il confronto con gli altri più che il lavoro in solitaria</li>
-                    <li><strong>Voglia di imparare</strong>: non è fondamentale saper utilizzare tutti i linguaggi, l'importante è non spaventarsi di fronte a nuove sfide e non temere di rimboccarsi le maniche</li>
-                    <li><strong>Trasparenza</strong>: amiamo l'onestà e desideriamo che tu ti senta libero di dire ciò che pensi in maniera costruttiva, partecipando alle dinamiche che ti circondano</li>
-                    <li><strong>Desiderio di crescita</strong>: cerchi un contesto lavorativo che sappia coltivare il tuo talento con un percorso di crescita professionale condiviso.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Cosa ti offriamo</h2>
-                <p>Cerchiamo di trattare le persone nel miglior modo possibile, con professionalità e rispetto. Ti offriamo:</p>
-                <ul>
-                    <li>Un ambiente di lavoro positivo, dinamico e sempre aperto al dialogo</li>
-                    <li>Ore di studio per investire continuamente sulla tua formazione e crescita personale</li>
-                    <li>Utilizzo di PerPranzo nei giorni in ufficio (il pranzo al ristorante pagato)</li>
-                    <li>Free coffee & snacks.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Nota</h2>
-                <p>Tutte le candidature sono valutate singolarmente e ci teniamo a rispondere a ogni candidato.</p>
-            </section>
-            <section>
-                <h2>Candidati per questa posizione</h2>
-                ${form(
-                  'application-form',
-                  'applicationform',
-                  data.form.url.applyForJob(),
-                  `<div class="group-2">
-                        ${inputField('app-name', 'name', 'text', 'Nome e Cognome', 'Elliot Alderson')}
-                        ${inputField('app-email', 'from', 'email', 'E-mail', 'mr.robot@example.com')}
-                    </div>
-                    <div class="group-2">
-                        ${inputField('app-phone', 'phone', 'text', 'Telefono', '3450000000')}
-                        ${inputField('app-curriculum', 'curriculum', 'file', 'Curriculum', 'Carica il tuo CV')}
-                    </div>
-                    <div class="group-1">
-                        ${inputField('app-about', 'about_you', 'textarea', 'Raccontaci qualcosa in più su di te', '')}
-                    </div>
-                    <div style="text-align: center;">
-                        ${submitButton('Candidati Ora')}
-                    </div>`,
-                  '<p><strong>Grazie per averci contattato!</strong> Un membro del nostro team si metterà in contatto con te il prima possibile.</p>',
-                  data,
-                )}
-            </section>
-        </main>`
+    return `
+${pageHero({
+  label: 'lavora con noi · posizione aperta',
+  title: 'Sviluppatore <span class="accent">Software</span>',
+  lead: 'Lavora a Varese su progetti innovativi con tecnologie diverse. Continuous delivery, pair programming e tanta voglia di imparare.',
+  actions: '<a class="btn-primary" href="#application-form">Candidati ora →</a>',
+})}
+
+<!-- ── Job description ─────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="job-layout">
+    <div class="prose">
+      <div class="label"><span class="dim">// </span>job description</div>
+      <h2 style="margin:0 0 20px;">Cosa farai</h2>
+      <p>Cerchiamo uno sviluppatore software da inserire nel team di Varese. Esperienza con più linguaggi e con strumenti di AI e Machine Learning sono <strong>requisiti opzionali</strong>.</p>
+      <p>Usiamo la <strong>metodologia Agile</strong> applicata allo sviluppo, con un approccio di <strong>continuous delivery</strong> e test automatici per consolidare il lavoro (e dormire sonni tranquilli). Incentiviamo il pair programming per diffondere conoscenza e stimolare soluzioni innovative.</p>
+      <p>Usiamo tecnologie diverse a seconda del contesto: Python e PyTorch, TypeScript, Angular, NestJS, AWS cloud-native, e altro. Per noi è <strong>indispensabile</strong> la passione per l'informatica e la curiosità verso nuove sfide.</p>
+      <p>Crediamo molto nella <strong>formazione</strong>: riserviamo a ogni persona del team tempo dedicato alla crescita professionale e a progetti personali. Contribuiamo a diversi <strong>progetti open source</strong>, dallo sviluppo multipiattaforma alla gestione dell'autenticazione di cloud tools.</p>
+    </div>
+    <aside class="job-aside">
+      <div class="feature-card">
+        <h4>Dettagli</h4>
+        <ul>
+          <li>Luogo · Varese</li>
+          <li>Settore · IT</li>
+          <li>Contratto · Tempo pieno</li>
+        </ul>
+        <a class="btn-primary" href="#application-form" style="display:block;text-align:center;">Candidati →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ── Responsabilità ──────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>cosa potresti fare</div>
+      <h2>Il lavoro,<br>nel concreto.</h2>
+    </div>
+    <div class="prose">
+      <ul>
+        <li>Scrivere codice semplice, sicuro, documentato e testato</li>
+        <li>Progettare modelli di Machine Learning per ottimizzazione e riconoscimento di pattern</li>
+        <li>Sviluppare architetture basate su AI Generativa per automatizzare processi</li>
+        <li>Integrare software robusto e scalabile</li>
+        <li>Condurre analisi e ottimizzazione delle performance</li>
+        <li>Collaborare con il team allo sviluppo di prodotti digitali</li>
+        <li>Restare aggiornato su tecnologie, trend e best practice — e portarli nel lavoro quotidiano</li>
+        <li>Misurarti su progetti di tipologia, ambito e settore diversi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Chi cerchiamo ───────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>chi stiamo cercando</div>
+      <h2>Non poniamo vincoli<br>sull'esperienza.</h2>
+    </div>
+    <div class="prose">
+      <p>L'importante è che tu abbia:</p>
+      <ul>
+        <li><strong>Voglia di metterti in gioco</strong> — passione per ciò che fai e per i progetti sfidanti</li>
+        <li><strong>Attitudine al lavoro di squadra</strong> — apprezzi il confronto più del lavoro in solitaria</li>
+        <li><strong>Voglia di imparare</strong> — non temi nuove sfide né di rimboccarti le maniche</li>
+        <li><strong>Trasparenza</strong> — dici ciò che pensi in modo costruttivo</li>
+        <li><strong>Desiderio di crescita</strong> — cerchi un percorso professionale condiviso</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Cosa offriamo ───────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>cosa ti offriamo</div>
+      <h2>Persone trattate<br>con rispetto.</h2>
+    </div>
+    <div class="prose">
+      <ul>
+        <li>Un ambiente positivo, dinamico e sempre aperto al dialogo</li>
+        <li>Ore di studio per investire sulla tua formazione e crescita</li>
+        <li>PerPranzo nei giorni in ufficio (pranzo al ristorante pagato)</li>
+        <li>Free coffee &amp; snacks</li>
+      </ul>
+      <p style="margin-top:20px;">Tutte le candidature sono valutate singolarmente: ci teniamo a rispondere a ogni candidato.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Form candidatura ────────────────────────────────────── -->
+<section class="sec-dark2" id="application-form">
+  <div class="section-intro" style="margin-bottom:8px;">
+    <div class="label"><span class="dim">// </span>candidati</div>
+    <h2>Candidati per questa posizione.</h2>
+  </div>
+  <div class="fg-form">
+    ${form(
+      'application-form',
+      'applicationform',
+      data.form.url.applyForJob(),
+      `<div class="group-2">
+            ${inputField('app-name', 'name', 'text', 'Nome e Cognome', 'Elliot Alderson')}
+            ${inputField('app-email', 'from', 'email', 'E-mail', 'mr.robot@example.com')}
+        </div>
+        <div class="group-2">
+            ${inputField('app-phone', 'phone', 'text', 'Telefono', '3450000000')}
+            ${inputField('app-curriculum', 'curriculum', 'file', 'Curriculum', 'Carica il tuo CV')}
+        </div>
+        <div class="group-1">
+            ${inputField('app-about', 'about_you', 'textarea', 'Raccontaci qualcosa in più su di te', '')}
+        </div>
+        ${submitButton('Candidati ora')}`,
+      '<p class="form-success"><span class="tick">✓</span> Grazie per averci contattato! Un membro del team si metterà in contatto con te il prima possibile.</p>',
+      data,
+    )}
+  </div>
+</section>`
   }
 }

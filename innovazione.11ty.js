@@ -1,120 +1,169 @@
-const pageTitle = require('./_includes/components/page-title')
+const pageHero = require('./_includes/components/page-hero')
 
 module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Innovazione',
+      pageTitle: 'Progetti & Innovazione',
       pageDescription:
-        'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.',
+        'Ricerca applicata, progetti open source e collaborazioni con le università. Dove sperimentiamo prima di portarlo ai clienti.',
       eleventyNavigation: {
         key: 'innovazione',
-        title: 'Innovazione',
+        title: 'Progetti',
         parent: 'home',
       },
     }
   }
 
   render(data) {
-    return `<main>
-            ${pageTitle.call(this, data)}
-            <section id="innovare">
-                <h2>La nostra parola preferita: Innovare</h2>
-                <p>In Forge amiamo accompagnare le aziende in un <strong>percorso di innovazione</strong> che nasce dal rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.</p>
-                <p>Utilizziamo un <strong>approccio collaborativo</strong> in ogni fase dello sviluppo di prodotti, servizi e processi, ponendo particolare attenzione alla <strong>trasformazione digitale</strong> e all'adozione di nuove tecnologie che rispondano ai problemi emergenti delle organizzazioni.</p>
-            </section>
-            <section>
-                <script>
-                    function countCoffees() {
-                        const coffeesUntilPageCreation = 15210
-                        const pageCreation = new Date(2022, 6, 1)
-                        const today = new Date();
-                        const differenceInMillis = today.getTime() - pageCreation.getTime()
-                        const differenceInDays = differenceInMillis / (1000 * 3600 * 24)
-                        return coffeesUntilPageCreation + (differenceInDays * 0.6 * 21)
-                    }
-                    document.addEventListener("DOMContentLoaded", function() {
-                        document.querySelectorAll(".counter").forEach((element) => {
-                            const finalNumber = element.id === 'coffeeCounter' ? countCoffees() : Number.parseInt(element.getAttribute('data-counter-end'))
-                            const maxTime = 1500
-                            const updates = 50
-                            let counter = 0
-                            const intervalId = setInterval(() => {
-                                counter++
-                                element.innerText = Math.ceil(finalNumber / updates * counter)
-                                if (counter === updates) {
-                                    clearInterval(intervalId)
-                                }
-                            }, maxTime / updates)
-                        })
-                    });
-                </script>
-                <div class="group-2 gap-3">
-                    <div>
-                        <h4 class="counter" id="coffeeCounter">0</h4>
-                        <p>Caffè convertiti in codice</p>
-                    </div>
-                    <div>
-                        <h4 class="counter" data-counter-end="21">0</h4>
-                        <p>Progetti di tesi</p>
-                    </div>
-                    <div>
-                        <h4 class="counter" data-counter-end="32">0</h4>
-                        <p>Progetti Software</p>
-                    </div>
-                    <div>
-                        <h4 class="counter" data-counter-end="3">0</h4>
-                        <p>Università partner</p>
-                    </div>
-                </div>
-            </section>
-            <section id="universita">
-                <h2>Università</h2>
-                <p><strong><em>Dialoghiamo con giovani menti entusiaste</em></strong></p>
-                <p>La forte spinta a collaborare con le università del territorio viene dai nostri stessi fondatori, che arrivano da un lungo percorso accademico e ben conoscono il <strong>potenziale innovativo di centri di ricerca e università</strong> in risposta alle esigenze di trasformazione delle aziende.</p>
-                <p>Nel tempo abbiamo stretto importanti <strong>sinergie con l'Università dell'Insubria di Varese</strong>, la nostra città natale, e abbiamo svolto diversi <strong>workshop all'Università Bicocca di Milano</strong>. Inoltre, curiamo la formazione dei giovani universitari per accelerare la loro crescita professionale e la loro capacità di essere protagonisti del cambiamento attraverso <strong>stage e progetti di ricerca</strong>.</p>
-                <br>
-                <a href="/lavora-con-noi/#posizioni-aperte">Posizioni aperte</a>
-            </section>
-            <section id="open-source">
-                <h2>Sviluppiamo progetti Open Source</h2>
-                <p>Ogni volta che risolviamo un problema scrivendo del software cerchiamo di astrarre il più possibile dall'ambito di applicazione per arrivare ad una <strong>soluzione aperta</strong> che possa essere riutilizzata in altri ambiti. Per questo motivo abbiamo deciso di rilasciare alcuni progetti Open Source, <strong>nati e forgiati internamente a Forge</strong> con lo scopo di risolvere esigenze di sviluppo.</p>
-                <div class="group-3 gap-2">
-                    <div class="box">
-                        <h5>Gushio</h5>
-                        <p>Permette di scrivere script multipiattaforma testabili unitariamente in linguaggio JavaScript.</p>
-                        <br>
-                        <a target="_blank" rel="noopener" href="https://github.com/Forge-Srl/gushio/">Vai al progetto</a>
-                    </div>
-                    <div class="box">
-                        <h5>BionicJS</h5>
-                        <p>Permette di eseguire codice JavaScript da altri linguaggi di programmazione per semplificare lo sviluppo di applicazioni multi-piattaforma.</p>
-                        <br>
-                        <a target="_blank" rel="noopener" href="https://github.com/Forge-Srl/bionic-js/">Vai al progetto</a>
-                    </div>
-                    <div class="box">
-                        <h5>JJBridge</h5>
-                        <p>Porta l'esecuzione di codice JavaScript in ambiente Java, nato inizialmente per utilizzare BionicJS in ambito Android.</p>
-                        <br>
-                        <a target="_blank" rel="noopener" href="https://github.com/Forge-Srl/jjbridge-engine-v8/">Vai al progetto</a>
-                    </div>
-                </div>
-            </section>
-            <section id="ricerca">
-                <h2>Ricerca e Sviluppo</h2>
-                <p><strong><em>Un ecosistema dedicato alla trasformazione digitale</em></strong></h2>
-                <p>Per noi la tecnologia è al servizio del cambiamento. Partendo dal potenziale delle nuove tecnologie digitali costruiamo soluzioni di <strong>intelligenza artificiale</strong>, integriamo e <strong>sviluppiamo software</strong> per accompagnare le aziende in un reale percorso di trasformazione digitale.</p>
-                <p>Ci identifichiamo con i <strong>bisogni di innovazione delle aziende</strong> e le aiutiamo a individuare le soluzioni migliori per realizzare i progetti che le rendano autonome nell'affrontare il futuro.</p>
-                <br>
-                <a href="/contattaci/" >Contattaci per una consulenza</a>
-            </section>
-            <section class="highlight">
-                <p><strong>Innovazione è la nostra parola preferita. È così anche per te?</strong></p>
-                <br>
-                <p>Mandaci una mail spiegandoci la tua idea o il tuo progetto.</p>
-                <br>
-                <a href="/contattaci/" class="cta">Parliamone insieme</a>
-            </section>
-        </main>`
+    const stats = [
+      {id: 'coffeeCounter', end: '', label: 'caffè convertiti in codice'},
+      {id: '', end: '21', label: 'progetti di tesi'},
+      {id: '', end: '32', label: 'progetti software'},
+      {id: '', end: '3', label: 'università partner'},
+    ]
+
+    const openSource = [
+      {
+        title: 'Gushio',
+        body: 'Scrivi script multipiattaforma testabili unitariamente, in JavaScript.',
+        href: 'https://github.com/Forge-Srl/gushio/',
+      },
+      {
+        title: 'BionicJS',
+        body: 'Esegui codice JavaScript da altri linguaggi, per semplificare lo sviluppo multipiattaforma.',
+        href: 'https://github.com/Forge-Srl/bionic-js/',
+      },
+      {
+        title: 'JJBridge',
+        body: "Porta l'esecuzione di codice JavaScript in ambiente Java — nato per usare BionicJS su Android.",
+        href: 'https://github.com/Forge-Srl/jjbridge-engine-v8/',
+      },
+    ]
+
+    const statsHtml = stats
+      .map(
+        ({id, end, label}) => `
+      <div class="stat">
+        <div class="stat-n counter"${id ? ` id="${id}"` : ''}${end ? ` data-counter-end="${end}"` : ''}>0</div>
+        <div class="stat-l">${label}</div>
+      </div>`,
+      )
+      .join('')
+
+    const openSourceHtml = openSource
+      .map(
+        ({title, body, href}) => `
+      <div class="feature-card is-interactive">
+        <h3>${title}</h3>
+        <p>${body}</p>
+        <a class="fg-link" target="_blank" rel="noopener" href="${href}">Vai al progetto →</a>
+      </div>`,
+      )
+      .join('')
+
+    return `
+${pageHero({
+  label: 'progetti & innovazione',
+  title: 'La nostra parola preferita: <span class="accent">innovare</span>.',
+  lead: 'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto con università, start-up, centri di ricerca e giovani talenti.',
+})}
+
+<!-- ── Innovare ────────────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>approccio</div>
+      <h2>Innovazione,<br>in modo collaborativo.</h2>
+    </div>
+    <div class="prose">
+      <p>In Forge amiamo accompagnare le aziende in un <strong>percorso di innovazione</strong> costruito sul rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.</p>
+      <p>Usiamo un <strong>approccio collaborativo</strong> in ogni fase dello sviluppo di prodotti, servizi e processi, con particolare attenzione alla <strong>trasformazione digitale</strong> e all'adozione di tecnologie che rispondano ai problemi reali delle organizzazioni.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Numeri ──────────────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="section-intro" style="margin-bottom:40px;">
+    <div class="label"><span class="dim">// </span>in numeri</div>
+    <h2>Quello che abbiamo costruito.</h2>
+  </div>
+  <div class="stat-grid">${statsHtml}</div>
+</section>
+<script>
+  function countCoffees() {
+    const coffeesUntilPageCreation = 15210
+    const pageCreation = new Date(2022, 6, 1)
+    const today = new Date();
+    const differenceInMillis = today.getTime() - pageCreation.getTime()
+    const differenceInDays = differenceInMillis / (1000 * 3600 * 24)
+    return coffeesUntilPageCreation + (differenceInDays * 0.6 * 21)
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".counter").forEach((element) => {
+      const finalNumber = element.id === 'coffeeCounter' ? countCoffees() : Number.parseInt(element.getAttribute('data-counter-end'))
+      const maxTime = 1500
+      const updates = 50
+      let counter = 0
+      const intervalId = setInterval(() => {
+        counter++
+        element.innerText = Math.ceil(finalNumber / updates * counter)
+        if (counter === updates) {
+          clearInterval(intervalId)
+        }
+      }, maxTime / updates)
+    })
+  });
+</script>
+
+<!-- ── Università ───────────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>università</div>
+      <h2>Dialoghiamo con<br>giovani menti.</h2>
+    </div>
+    <div class="prose">
+      <p>La spinta a collaborare con le università del territorio viene dai nostri stessi fondatori, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale innovativo di ricerca e università</strong>.</p>
+      <p>Nel tempo abbiamo stretto sinergie con l'<strong>Università dell'Insubria di Varese</strong>, la nostra città natale, e svolto workshop all'<strong>Università Bicocca di Milano</strong>. Curiamo la formazione dei giovani con stage e progetti di ricerca, per accelerarne la crescita professionale.</p>
+      <a class="fg-link" href="/lavora-con-noi/#posizioni-aperte">Vedi le posizioni aperte →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Open source ─────────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="section-intro">
+    <div class="label"><span class="dim">// </span>open source</div>
+    <h2>Quello che rilasciamo, in chiaro.</h2>
+    <p class="lead">Ogni volta che risolviamo un problema proviamo ad astrarre la soluzione il più possibile, per renderla riutilizzabile. Alcuni progetti sono nati e forgiati internamente, e li abbiamo aperti.</p>
+  </div>
+  <div class="feature-grid cols-3">${openSourceHtml}</div>
+</section>
+
+<!-- ── Ricerca & sviluppo ──────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>ricerca & sviluppo</div>
+      <h2>La tecnologia al servizio<br>del cambiamento.</h2>
+    </div>
+    <div class="prose">
+      <p>Partiamo dal potenziale delle tecnologie digitali per costruire soluzioni di <strong>intelligenza artificiale</strong>, integrare e <strong>sviluppare software</strong> che accompagni le aziende in un reale percorso di trasformazione.</p>
+      <p>Ci identifichiamo con i <strong>bisogni di innovazione</strong> delle aziende e le aiutiamo a individuare le soluzioni migliori per affrontare il futuro in autonomia.</p>
+      <a class="fg-link" href="/contattaci/">Contattaci per una consulenza →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="cta-band">
+    <h2>Innovare è la nostra parola preferita.<br>È così anche per te?</h2>
+    <p>Raccontaci la tua idea o il tuo progetto. La prima call è gratuita e senza impegno.</p>
+    <a class="btn-primary" href="/contattaci/">Parliamone insieme →</a>
+  </div>
+</section>`
   }
 }

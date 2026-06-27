@@ -1,11 +1,12 @@
-const pageTitle = require('./_includes/components/page-title')
+const pageHero = require('./_includes/components/page-hero')
 
 module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
       pageTitle: 'Chi siamo',
-      pageDescription: 'Usiamo le nostre competenze informatiche e di problem solving per creare valore.',
+      pageDescription:
+        "Siamo una forge, non un'agenzia. Un gruppo di ingegneri che progetta, costruisce e manda software in produzione — e resta dopo il go-live.",
       eleventyNavigation: {
         key: 'chi-siamo',
         title: 'Chi Siamo',
@@ -15,84 +16,125 @@ module.exports = class {
   }
 
   render(data) {
-    return `<main>
-            ${pageTitle.call(this, data)}
-            <section id="chi siamo">
-                <h2>Un'estensione per la tua squadra</h2>
-                <p><strong><em>Il nostro obiettivo? Creare valore e arrivare al successo insieme alle aziende che seguiamo.</em><strong></p>
-                <p>Siamo una realtà giovane e dinamica che unisce competenze informatiche di diverso tipo come l'intelligenza artificiale, lo sviluppo agile del software e il cloud computing.</p>
-                <p>Nasciamo nel 2018 e da allora trasformiamo idee in prodotti, studiando a fondo la visione dei clienti e realizzando soluzioni digitali competitive.</p>
-                <p>Il nostro cuore pulsante è a Varese, siamo amanti delle metodologie agili e degli spazi condivisi.</p>
-                <br>
-                <a href="/servizi">Scopri i nostri servizi</a>
-            </section>
-            
-            <section id="valori">
-                <h2>I nostri valori</h2>
-                <div class="group-3 gap-2">
-                    <div class="box">
-                        <h3>Vision</h3>
-                        <p><strong><em>Come ci immaginiamo il futuro?</em></strong></p>
-                        <p>Un mondo del lavoro più equo che premia i talenti e la formazione, in cui le competenze e la corretta metodologia di lavoro sono gli strumenti per il successo.</p>
-                    </div>
-                    <div class="box">
-                        <h3>Mission</h3>
-                        <p><strong><em>Che ruolo vogliamo avere nel futuro?</em></strong></p>
-                        <p>Vogliamo affiancare le aziende nel processo di crescita con un approccio propositivo basato su fiducia, onestà, etica e trasparenza.</p>
-                    </div>
-                    <div class="box">
-                        <h3>North Star</h3>
-                        <p><strong><em>Come misuriamo il valore che creiamo?</em></strong></p>
-                        <p>Tramite il livello di soddisfazione dei clienti partendo dal rispetto dei tempi di consegna, dalla solidità dei rapporti commerciali e dalla felicità delle persone coinvolte.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="metodologia">
-                <h2>Come lavoriamo</h2>
-                <p><strong><em>Il successo dei nostri clienti è il nostro successo</em></strong></p>
-                <p>Offriamo un approccio concreto, flessibile e soprattutto umano</p>
-                <br>
-                <div class="group-2 gap-3">
-                    <div class="box">
-                        <span class="box-title">01</span>
-                        <h5>Ascoltiamo e valutiamo</h5>
-                        <p>con onestà il progetto e decidiamo se possiamo fornire il nostro contributo nella realizzazione</p>
-                    </div>
-                    <div class="box">
-                        <span class="box-title">02</span>
-                        <h5>Troviamo una soluzione</h5>
-                        <p>che sia il più possibile efficace e che dimostri con dati misurabili un riscontro positivo</p>
-                    </div>
-                    <div class="box">
-                        <span class="box-title">03</span>
-                        <h5>Usiamo il modello <em>Agile</em></h5>
-                        <p>e la metodologia Scrum per pianificare e gestire il progetto con la massima flessibilità ed efficienza</p>
-                    </div>
-                    <div class="box">
-                        <span class="box-title">04</span>
-                        <h5>Chiediamo feedback</h5>
-                        <p>costantemente attraverso un rapporto umano e trasparente costruito sulla fiducia, rilasciando gradualmente il software.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="team">
-                <h2>Il team</h2>
-                <p><strong><em>Il lavoro di squadra è il nostro asset migliore</em></strong></p>
-                <p>La nostra squadra è composta da sviluppatori esperti in diverse tecnologie e project manager.</p>
-                <p>Ispirati dalla curiosità e dalla passione per le sfide, riteniamo estremamente importante il valore umano ma non perdiamo mai di vista i numeri, che guidano tutte le nostre decisioni e strategie.</p>
-                <p>Sogniamo un mondo permeato dalla cultura digitale, che cerchiamo di diffondere insegnando presso università e aziende.</p>
-                <br>
-                <a href="/innovazione/">Scopri i nostri progetti</a>
-            </section>
-            <section class="highlight">
-                <p><strong>Ti aiutiamo a raggiungere i tuoi obiettivi</strong></p>
-                <br>
-                <p>Hai bisogno di maggiori informazioni o vuoi semplicemente farti un'idea di come lavoriamo?<br>Siamo a tua disposizione!</p>
-                <br>
-                <a href="/contattaci/" class="cta">Parliamone Insieme</a>
-            </section>
-        </main>`
+    const valori = [
+      {
+        tag: 'val_01',
+        title: 'Vision',
+        body: 'Un mondo del lavoro che premia competenze e metodo. Dove il talento, non lo slide deck, decide il risultato.',
+      },
+      {
+        tag: 'val_02',
+        title: 'Mission',
+        body: 'Affiancare le aziende nella crescita con un approccio concreto, basato su fiducia, trasparenza e codice che va in produzione.',
+      },
+      {
+        tag: 'val_03',
+        title: 'North Star',
+        body: 'Misuriamo il valore in risultati: tempi di consegna rispettati, sistemi che reggono, persone soddisfatte.',
+      },
+    ]
+
+    const metodo = [
+      {num: '01', title: 'Ascoltiamo', body: 'Capiamo il problema e diciamo con onestà se possiamo davvero aiutarti.'},
+      {num: '02', title: 'Risolviamo', body: 'Troviamo la soluzione più efficace e la validiamo con dati misurabili.'},
+      {num: '03', title: 'Costruiamo', body: 'Agile e Scrum, sprint corti e deploy continui. Flessibilità reale.'},
+      {num: '04', title: 'Restiamo', body: 'Feedback costante, rilascio graduale, e supporto anche dopo il go-live.'},
+    ]
+
+    const valoriHtml = valori
+      .map(
+        ({tag, title, body}) => `
+      <div class="feature-card">
+        <div class="feature-num">${tag}</div>
+        <h3>${title}</h3>
+        <p>${body}</p>
+      </div>`,
+      )
+      .join('')
+
+    const metodoHtml = metodo
+      .map(
+        ({num, title, body}) => `
+      <div class="metodo-step">
+        <div class="metodo-num">${num}</div>
+        <div class="metodo-title">${title}</div>
+        <div class="metodo-body">${body}</div>
+      </div>`,
+      )
+      .join('')
+
+    return `
+${pageHero({
+  label: 'chi siamo',
+  title: 'Siamo una <span class="accent">{forge}</span>,<br>non un\'agenzia.',
+  lead: 'Un gruppo di ingegneri che progetta, costruisce e manda in produzione. Niente filtri commerciali tra te e chi scrive il codice.',
+})}
+
+<!-- ── Estensione del team ─────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>il nostro ruolo</div>
+      <h2>Un'estensione<br>della tua squadra.</h2>
+    </div>
+    <div class="prose">
+      <p class="lead">Il nostro obiettivo è creare valore e arrivare al risultato insieme alle aziende che seguiamo.</p>
+      <p>Siamo una realtà giovane che unisce competenze diverse — <strong>intelligenza artificiale</strong>, sviluppo software agile e cloud computing — sotto lo stesso tetto.</p>
+      <p>Siamo nati nel <strong>2018</strong> e da allora trasformiamo idee in prodotti: studiamo a fondo la visione del cliente e costruiamo soluzioni digitali competitive, fatte per durare.</p>
+      <p>Il nostro cuore pulsante è a <strong>Varese</strong>. Amiamo le metodologie agili, gli spazi condivisi e il codice che finisce in produzione.</p>
+      <a class="fg-link" href="/servizi/">Scopri cosa costruiamo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Quote ───────────────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="quote-block">
+    <p>Il successo dei nostri clienti è il nostro successo. Per questo restiamo anche dopo il go-live.</p>
+  </div>
+</section>
+
+<!-- ── Valori ──────────────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="section-intro">
+    <div class="label"><span class="dim">// </span>i nostri valori</div>
+    <h2>Come pensiamo il lavoro.</h2>
+  </div>
+  <div class="feature-grid cols-3">${valoriHtml}</div>
+</section>
+
+<!-- ── Come lavoriamo ──────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="inner">
+    <div class="label"><span class="dim">// </span>come lavoriamo</div>
+    <h2 style="margin:0 0 40px;">Concreti, flessibili, umani.</h2>
+    <div class="metodo-grid">${metodoHtml}</div>
+  </div>
+</section>
+
+<!-- ── Il team ─────────────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>il team</div>
+      <h2>Il lavoro di squadra<br>è il nostro asset.</h2>
+    </div>
+    <div class="prose">
+      <p>La nostra squadra mette insieme sviluppatori esperti in tecnologie diverse e project manager. Ci guidano la curiosità e la passione per le sfide.</p>
+      <p>Teniamo al <strong>valore umano</strong>, ma non perdiamo mai di vista i numeri: sono loro a guidare decisioni e strategie.</p>
+      <p>Sogniamo un mondo permeato dalla cultura digitale, e proviamo a diffonderla insegnando in università e aziende.</p>
+      <a class="fg-link" href="/innovazione/">Scopri i nostri progetti →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="cta-band">
+    <h2>Ti aiutiamo a raggiungere i tuoi obiettivi.</h2>
+    <p>Hai bisogno di più informazioni o vuoi solo farti un'idea di come lavoriamo? Siamo a tua disposizione.</p>
+    <a class="btn-primary" href="/contattaci/">Parliamone insieme →</a>
+  </div>
+</section>`
   }
 }

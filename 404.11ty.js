@@ -1,5 +1,3 @@
-const pageTitle = require('./_includes/components/page-title')
-
 module.exports = class {
   data() {
     return {
@@ -16,24 +14,30 @@ module.exports = class {
   }
 
   render(data) {
-    return `<main>
-            ${pageTitle.call(this, data)}
-            <section class="error-page">
-                <p>
-                <span style="color: white; background: firebrick;">HTTPError: 404 (Not Found)</span><br>
-                <em>Uncaught ReferenceError: this page is not defined</em><br>
-                <em>&nbsp;&nbsp;at resolveRoute (webpack:///./src/router/index.js:42:69)</em><br>
-                <em>&nbsp;&nbsp;at async whereIsThisGoing (webpack:///./node_modules/forge-router/dist/forge-router.production.min.js:20:18)</em><br>
-                <em>&nbsp;&nbsp;at async pleaseLoad (webpack:///./src/loaders/pageLoader.js:33:9)</em><br>
-                <em>&nbsp;&nbsp;at async render (webpack:///./src/app.js:89:5)</em><br>
-                <em>&nbsp;&nbsp;at seeTheActualSourceCodeAt (<a target="_blank" href="https://github.com/Forge-Srl/Forge-Srl">https://github.com/Forge-Srl/Forge-Srl</a>)</em><br>
-                </p>
-                <p>
-                    <br>
-                    Ooops! La pagina che stai cercando non esiste.<br>
-                    <a href="/">Riparti dalla home!</a>
-                </p>
-           </section>
-        </main>`
+    return `
+<section class="sec-dark">
+  <div class="error-wrap">
+    <div class="error-code">404</div>
+    <div class="terminal error-terminal" aria-hidden="true">
+      <div class="terminal-bar">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yel"></span>
+        <span class="terminal-dot grn"></span>
+        <span class="terminal-title">forge — runtime.log</span>
+      </div>
+      <div class="terminal-body">
+        <div class="err">HTTPError: 404 (Not Found)</div>
+        <div class="err">Uncaught ReferenceError: this page is not defined</div>
+        <div class="trace">&nbsp;&nbsp;at <span class="fn">resolveRoute</span> (./src/router/index.js:42:69)</div>
+        <div class="trace">&nbsp;&nbsp;at async <span class="fn">whereIsThisGoing</span> (forge-router.min.js:20:18)</div>
+        <div class="trace">&nbsp;&nbsp;at async <span class="fn">pleaseLoad</span> (./src/loaders/pageLoader.js:33:9)</div>
+        <div class="trace">&nbsp;&nbsp;at async <span class="fn">render</span> (./src/app.js:89:5)</div>
+        <div class="trace">&nbsp;&nbsp;at <span class="fn">seeTheActualSourceCodeAt</span> (<a href="https://github.com/Forge-Srl/Forge-Srl" target="_blank" rel="noopener">github.com/Forge-Srl</a>)</div>
+      </div>
+    </div>
+    <p>Ooops! La pagina che stai cercando non esiste.</p>
+    <a class="btn-primary" href="/">Riparti dalla home →</a>
+  </div>
+</section>`
   }
 }

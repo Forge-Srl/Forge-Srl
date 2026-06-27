@@ -1,4 +1,4 @@
-const pageTitle = require('../_includes/components/page-title')
+const pageHero = require('../_includes/components/page-hero')
 
 module.exports = class {
   data() {
@@ -6,7 +6,7 @@ module.exports = class {
       layout: 'layout.11ty.js',
       pageTitle: 'Lavora con Noi',
       pageDescription:
-        'Forge è sempre alla ricerca di persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra a far parte del team.',
+        'Stiamo assumendo. Forge cerca persone che amino innovare e mettersi in gioco. Scopri le posizioni aperte ed entra nel team.',
       eleventyNavigation: {
         key: 'lavora-con-noi',
         title: 'Lavora con Noi',
@@ -16,83 +16,144 @@ module.exports = class {
   }
 
   render(data) {
-    return `<main>
-            ${pageTitle.call(this, data)}
-            <section >
-                <h2>Perché Forge</h2>
-                <p><strong><em>Vogliamo il massimo per chi lavora con noi!</em></strong></p>
-                <p>Come dice il nome stesso, Forge ha come elemento distintivo la "forgiatura", ovvero la formazione di persone. Ci piace lavorare a stretto contatto con il territorio e in collaborazione con le migliori università.</p>
-                <p>Crediamo che la condivisione dello spazio fisico, come anche di quello creato con strumenti virtuali, possa creare forti sinergie e ritorni positivi. Pensiamo che la chiave del cambiamento sia il confronto nella diversità.</p>
-            </section>
-            <section>
-                <blockquote>
-                    <p>Il lavoro che facciamo occupa la maggior parte della nostra vita, è importante quindi che rispecchi appieno quello in cui crediamo. Per questo abbiamo deciso di creare Forge, un'azienda che mira ad essere ai massimi livelli tecnologici ed al tempo stesso con solide basi umane, puntando ad essere un ambiente di lavoro stimolante e sereno.</p>
-                </blockquote>
-            </section>
-            <section>
-                <h2>Il lavoro in Forge</h2>
-                <p><strong><em>Fai ciò che ti piace in un team di cui essere orgoglioso</em></strong></p>
-                <p>Da noi si lavora duro, ma ci si diverte nei giusti tempi e modi. Non esiste un organigramma preciso: ci sono ruoli e responsabilità.</p>
-                <p>Ci piace lavorare in spazi di co-working con un orario di lavoro che vada incontro alle esigenze di ognuno, nel rispetto delle differenze degli altri.</p>
-                <ul>
-                    <li><strong>Metodologia Agile</strong>: adottiamo la metodologia Agile per organizzare le attività in brevi sprint di task ben definiti così da dare il massimo.</li>
-                    <li><strong>Approccio data-driven</strong>: pianifichiamo le attività sulla base di previsioni accurate, facciamo test e ci affidiamo ai dati per prendere decisioni.</li>
-                    <li><strong>Alta competenza tecnologica</strong>: siamo al passo con le ultime tecnologie e siamo sempre aggiornati.</li>
-                    <li><strong>Ore di studio</strong>: dedichiamo del tempo alla nostra formazione professionale e a progetti personali, che riteniamo tanto importanti quanto il lavoro stesso.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>La nostra filosofia</h2>
-                <p>Pensiamo che per lavorare bene insieme sia importante condividere i nostri valori:</p>
-                <div class="group-3 gap-2">
-                    <div class="box">
-                        <h5>Entusiasmo</h5>
-                        <p>Abbracciamo il cambiamento e le nuove sfide, non ci fermiamo davanti alle prime difficoltà. </p>
-                    </div>
-                    <div class="box">
-                        <h5>Collaborazione</h5>
-                        <p>Ascoltiamo il parere di tutti e collaboriamo con la massima trasparenza incentivando gli scambi di idee. </p>
-                    </div>
-                    <div class="box">
-                        <h5>Confronto</h5>
-                        <p>Mettiamo in discussione ciò che facciamo ogni giorno e non diamo mai nulla per scontato. </p>
-                    </div>
-                </div>
-            </section>
-            <section id="posizioni-aperte">
-                <h2>Posizioni Aperte</h2>
-                <div class="box">
-                    <h3>Sviluppatore Software</h3>
-                    <div>
-                        <p>Stiamo cercando uno sviluppatore software da inserire nel nostro team di Varese.<br>
-                        L'esperienza nell'utilizzo di più linguaggi di programmazione e di strumenti di Intelligenza Artificiale e Machine Learning sono requisiti opzionali.
-                        Utilizziamo la metodologia Agile applicata al processo di sviluppo e basata sulla continua voglia di migliorare le proprie conoscenze e i prodotti su cui lavoriamo.</p>
-                        <br>
-                        <p><strong>Luogo</strong>: Varese</p>
-                        <br>
-                        <a href="/lavora-con-noi/sviluppatore-software/">Candidati</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <h3>Candidatura Spontanea</h3>
-                    <div>
-                        <p>Non ci sono posizioni aperte adatte a te?<br>
-                        Scrivici comunque: siamo sempre alla ricerca di talenti in grado di portare valore all'interno del team e valutiamo singolarmente tutte le candidature che riceviamo. Spiegaci perché dovremmo lavorare insieme.<p>
-                        <br>
-                        <a href="mailto:${data.forge.contacts.career}">Candidati</a>
-                    </div>
-                </div>
-                <h4>Hai qualche domanda?</h4>
-                <p><strong>Scrivici!</strong></p>
-                <p>Se hai bisogno di qualche informazione riguardo le opportunità di lavoro in Forge mandaci una email a <a href="mailto:${data.forge.contacts.career}">${data.forge.contacts.career}</a> e ti risponderemo il prima possibile.
-            </section>
-            <section class="highlight">
-                <p><strong>Vuoi conoscere meglio la nostra società?</strong></p>
-                <br>
-                <p>Dai un'occhiata alla nostra pagina chi siamo</p>
-                <br>
-                <a href="/chi-siamo/" class="cta">Scopri Chi Siamo</a>
-            </section>
-        </main>`
+    const lavoro = [
+      {
+        title: 'Metodologia Agile',
+        body: 'Organizziamo le attività in sprint brevi con task ben definiti, così da dare il massimo senza disperdere energie.',
+      },
+      {
+        title: 'Approccio data-driven',
+        body: 'Pianifichiamo su previsioni accurate, facciamo test e ci affidiamo ai dati per prendere decisioni.',
+      },
+      {
+        title: 'Alta competenza tecnica',
+        body: 'Siamo al passo con le ultime tecnologie e sempre aggiornati. La curiosità è parte del lavoro.',
+      },
+      {
+        title: 'Ore di studio',
+        body: 'Dedichiamo tempo alla formazione e a progetti personali, importanti quanto il lavoro stesso.',
+      },
+    ]
+
+    const filosofia = [
+      {
+        tag: 'val_01',
+        title: 'Entusiasmo',
+        body: 'Abbracciamo il cambiamento e le sfide. Non ci fermiamo alle prime difficoltà.',
+      },
+      {
+        tag: 'val_02',
+        title: 'Collaborazione',
+        body: 'Ascoltiamo tutti e lavoriamo in trasparenza, incentivando lo scambio di idee.',
+      },
+      {
+        tag: 'val_03',
+        title: 'Confronto',
+        body: 'Mettiamo in discussione ciò che facciamo ogni giorno. Non diamo nulla per scontato.',
+      },
+    ]
+
+    const lavoroHtml = lavoro
+      .map(
+        ({title, body}) => `
+      <div class="feature-card"><h3>${title}</h3><p>${body}</p></div>`,
+      )
+      .join('')
+
+    const filosofiaHtml = filosofia
+      .map(
+        ({tag, title, body}) => `
+      <div class="feature-card"><div class="feature-num">${tag}</div><h3>${title}</h3><p>${body}</p></div>`,
+      )
+      .join('')
+
+    return `
+${pageHero({
+  label: 'lavora con noi',
+  title: 'Stiamo <span class="accent">assumendo</span>.',
+  lead: 'Forge significa forgiatura: la formazione delle persone è il nostro elemento distintivo. Cerchiamo talenti che vogliano innovare e mettersi in gioco.',
+  actions: '<a class="btn-primary" href="#posizioni-aperte">Vedi le posizioni →</a>',
+})}
+
+<!-- ── Perché Forge ────────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="split-grid">
+    <div>
+      <div class="label"><span class="dim">// </span>perché forge</div>
+      <h2>Vogliamo il massimo<br>per chi lavora con noi.</h2>
+    </div>
+    <div class="prose">
+      <p>Ci piace lavorare a stretto contatto con il territorio e in collaborazione con le migliori università.</p>
+      <p>Crediamo che la condivisione dello spazio — fisico e virtuale — crei <strong>forti sinergie</strong>. Pensiamo che la chiave del cambiamento sia il <strong>confronto nella diversità</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Quote ───────────────────────────────────────────────── -->
+<section class="sec-dark">
+  <div class="quote-block">
+    <p>Il lavoro occupa gran parte della nostra vita: è importante che rispecchi ciò in cui crediamo. Per questo abbiamo creato un ambiente ai massimi livelli tecnologici, con solide basi umane.</p>
+  </div>
+</section>
+
+<!-- ── Il lavoro in Forge ──────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="section-intro">
+    <div class="label"><span class="dim">// </span>il lavoro in forge</div>
+    <h2>Fai ciò che ti piace,<br>in un team di cui andare fiero.</h2>
+    <p class="lead">Si lavora duro, ma ci si diverte nei modi giusti. Niente organigramma rigido: ci sono ruoli e responsabilità.</p>
+  </div>
+  <div class="feature-grid cols-2">${lavoroHtml}</div>
+</section>
+
+<!-- ── Filosofia ───────────────────────────────────────────── -->
+<section class="sec-paper">
+  <div class="section-intro">
+    <div class="label"><span class="dim">// </span>la nostra filosofia</div>
+    <h2>I valori che condividiamo.</h2>
+  </div>
+  <div class="feature-grid cols-3">${filosofiaHtml}</div>
+</section>
+
+<!-- ── Posizioni aperte ────────────────────────────────────── -->
+<section class="sec-dark" id="posizioni-aperte">
+  <div class="section-intro" style="margin-bottom:40px;">
+    <div class="label"><span class="dim">// </span>posizioni aperte</div>
+    <h2>Entra nel team.</h2>
+  </div>
+
+  <div class="position-card">
+    <div>
+      <h3>Sviluppatore Software</h3>
+      <p>Cerchiamo uno sviluppatore da inserire nel team di Varese. Esperienza con più linguaggi e con strumenti di AI/ML sono requisiti opzionali: l'importante è la voglia di migliorare.</p>
+      <div class="position-meta">Luogo: Varese · Settore: IT · Tempo pieno</div>
+    </div>
+    <div class="position-action">
+      <a class="btn-primary" href="/lavora-con-noi/sviluppatore-software/">Candidati →</a>
+    </div>
+  </div>
+
+  <div class="position-card">
+    <div>
+      <h3>Candidatura spontanea</h3>
+      <p>Nessuna posizione adatta a te? Scrivici comunque: valutiamo singolarmente ogni candidatura. Spiegaci perché dovremmo lavorare insieme.</p>
+      <div class="position-meta">Sempre aperta</div>
+    </div>
+    <div class="position-action">
+      <a class="btn-secondary" href="mailto:${data.forge.contacts.career}">Scrivici →</a>
+    </div>
+  </div>
+
+  <p style="max-width:60ch;margin:28px 0 0;color:var(--text-muted);">Hai domande sulle opportunità in Forge? Scrivici a <a href="mailto:${data.forge.contacts.career}">${data.forge.contacts.career}</a> e ti risponderemo il prima possibile.</p>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<section class="sec-paper2">
+  <div class="cta-band">
+    <h2>Vuoi conoscerci meglio?</h2>
+    <p>Dai un'occhiata a chi siamo, ai nostri valori e al modo in cui lavoriamo.</p>
+    <a class="btn-primary" href="/chi-siamo/">Scopri chi siamo →</a>
+  </div>
+</section>`
   }
 }
