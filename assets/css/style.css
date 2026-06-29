@@ -1266,7 +1266,7 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   background: linear-gradient(0deg, var(--orange-grad2) 0%, var(--orange) 15%);
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 /* ── Rabbit-hole overlay ─────────────────────────────────────── */
