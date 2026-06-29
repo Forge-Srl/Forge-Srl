@@ -2,9 +2,9 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Forge — Software House',
+      pageTitle: 'Forge — Software House a Varese | Software e AI',
       pageDescription:
-        'Costruiamo piattaforme AI e sistemi e-commerce che vanno in produzione. Progettiamo, costruiamo e manteniamo — sprint corti, deploy continui.',
+        "Software house di Varese: sviluppo software e soluzioni di intelligenza artificiale. Dall'idea al prodotto in produzione. Prima call gratuita.",
       eleventyNavigation: {
         key: 'home',
         title: 'Home',
@@ -41,50 +41,85 @@ module.exports = class {
     ]
 
     const valori = [
-      {tag: 'val_01', title: 'Andiamo in produzione', body: 'Il codice che non è live non conta. Misuriamo in deploy.'},
-      {tag: 'val_02', title: 'Restiamo dopo il go-live', body: 'Non spariamo la fattura e spariamo. Manteniamo.'},
-      {tag: 'val_03', title: 'Parli con chi costruisce', body: 'Niente filtri commerciali tra te e gli ingegneri.'},
-      {tag: 'val_04', title: 'Concreti, non vaghi', body: 'Numeri, non aggettivi. p99 &lt; 80ms, non "scalabile".'},
+      {
+        tag: 'val_01',
+        title: 'Fiducia',
+        body: 'La costruiamo dicendo le cose come stanno, fin dalla prima call. Ti diciamo anche quando non siamo la scelta giusta.',
+      },
+      {
+        tag: 'val_02',
+        title: 'Onestà',
+        body: 'Niente sorprese in fattura, niente promesse che non possiamo mantenere. Stime chiare, tempi realistici.',
+      },
+      {
+        tag: 'val_03',
+        title: 'Innovazione',
+        body: 'È la nostra parola preferita. Sperimentiamo e studiamo per portare ai clienti tecnologie mature, non mode passeggere.',
+      },
+      {
+        tag: 'val_04',
+        title: 'Trasparenza',
+        body: 'Lavori a contatto diretto con chi scrive il codice. Avanzamenti visibili, decisioni spiegate.',
+      },
     ]
 
     const servizi = [
       {
         num: '01',
-        title: 'Piattaforme AI',
-        body: 'LLM, RAG e agenti messi davvero in produzione.',
+        title: 'Intelligenza Artificiale',
+        body: "Automazione processi, assistenti conversazionali e manutenzione predittiva. L'AI che lavora davvero.",
         href: '/servizi/#ai',
       },
       {
         num: '02',
-        title: 'Commerce headless',
-        body: 'E-commerce ad alto traffico, costruito per la scala.',
-        href: '/servizi/#commerce',
+        title: 'Sviluppo Software',
+        body: 'Web, mobile, back-end e e-commerce. Piattaforme fatte per durare e scalare.',
+        href: '/servizi/#sviluppo',
       },
       {
         num: '03',
-        title: 'Piattaforme su misura',
-        body: 'Backend, API e gestionali fatti per durare.',
-        href: '/servizi/#dev',
+        title: 'Data Science',
+        body: 'Trasformiamo i dati che già hai in decisioni concrete e modelli predittivi in produzione.',
+        href: '/servizi/#ai',
       },
       {
         num: '04',
-        title: 'Dati & integrazioni',
-        body: 'Pipeline, ETL, sincronizzazioni e ML in produzione.',
-        href: '/servizi/#data',
+        title: 'Prodotti pronti',
+        body: 'Soluzioni già collaudate che adotti in tempi rapidi, senza partire da zero.',
+        href: '/prodotti/',
       },
     ]
 
     const casePreview = [
-      {client: 'mercato.it', status: 'in corso', title: 'Commerce headless', metric: '4M SKU · 12k RPS · 0 rollback'},
-      {client: 'Nordica', status: 'in corso', title: 'Assistente AI supporto', metric: '−68% tempo risposta · 24/7'},
-      {client: 'Atelier', status: 'completato', title: 'Performance fashion', metric: '+34% conversione · −50% TTFB'},
+      {
+        client: '[DA FORNIRE]',
+        status: 'in corso',
+        title: 'Supporto clienti AI',
+        metric: 'automazione 24/7 · escalation intelligente',
+      },
+      {
+        client: '[DA FORNIRE]',
+        status: 'completato',
+        title: 'E-commerce ad alto traffico',
+        metric: 'performance · 0 rollback',
+      },
+      {
+        client: '[DA FORNIRE]',
+        status: 'completato',
+        title: 'Manutenzione predittiva',
+        metric: 'fermi evitati · ML in produzione',
+      },
     ]
 
     const metodo = [
-      {num: '01', title: 'Discovery', body: 'Capiamo il problema, non solo i requisiti.'},
-      {num: '02', title: 'Architettura', body: 'Progettiamo per la scala che serve davvero.'},
-      {num: '03', title: 'Build', body: 'Sprint corti, deploy continui, codice rivisto.'},
-      {num: '04', title: 'Go-live', body: 'Andiamo in produzione. Poi restiamo.'},
+      {
+        num: '01',
+        title: 'Ascoltiamo',
+        body: 'Capiamo il problema reale e ti diciamo con onestà se possiamo davvero aiutarti.',
+      },
+      {num: '02', title: 'Risolviamo', body: 'Troviamo la soluzione più efficace e la validiamo con dati misurabili.'},
+      {num: '03', title: 'Costruiamo', body: 'Agile e Scrum: sprint corti, rilasci frequenti, flessibilità reale.'},
+      {num: '04', title: 'Restiamo', body: 'Feedback costante, rilascio graduale e supporto anche dopo il go-live.'},
     ]
 
     const tech = [
@@ -190,11 +225,12 @@ module.exports = class {
     <div>
       <img id="hero-logo" src="/assets/images/forge-logo-white.png" alt="Forge" class="hero-logo-img">
       <div class="hero-label"><span class="dim">// </span>software house · varese</div>
-      <h1>Costruiamo software che va in <span class="accent">{</span>produzione<span class="accent">}</span>.</h1>
-      <p class="hero-desc">Progettiamo piattaforme AI e sistemi e-commerce per team che misurano il successo in deploy — non in slide.</p>
+      <div class="hero-label"><span class="dim">// </span>software house · varese</div>
+      <h1><span class="dim">&gt; </span>idea.run() — Dall'idea al prodotto. <span class="accent">Eseguito.</span></h1>
+      <p class="hero-desc">Sviluppo software e intelligenza artificiale per aziende che misurano il successo in risultati concreti — non in slide. La prima call è gratuita e senza impegno.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="/servizi/">Cosa facciamo →</a>
-        <a class="btn-secondary" href="/chi-siamo/">Il nostro approccio</a>
+        <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
+        <a class="btn-secondary" href="/servizi/">Cosa facciamo</a>
       </div>
     </div>
 
@@ -224,8 +260,8 @@ module.exports = class {
     <div>
       <div class="label"><span class="dim">// </span>chi siamo</div>
       <h2>Siamo una <span class="accent">{forge}</span>,<br>non un'agenzia.</h2>
-      <p>Un gruppo di ingegneri che progetta, costruisce e manda in produzione. I nostri valori e la nostra filosofia di lavoro raccontano come arriviamo al risultato — e perché restiamo anche dopo il go-live.</p>
-      <a class="fg-link" href="/chi-siamo/">Conosci il team e i nostri valori →</a>
+      <p>Un gruppo di informatici che progetta, costruisce e manda in produzione software e soluzioni AI. Tra te e chi scrive il codice non c'è nessun filtro commerciale: parli direttamente con chi costruisce.</p>
+      <a class="fg-link" href="/chi-siamo/">Conosci chi siamo →</a>
     </div>
     <div class="values-grid">${valoriHtml}</div>
   </div>
@@ -237,10 +273,11 @@ module.exports = class {
     <div class="section-header">
       <div>
         <div class="label"><span class="dim">// </span>cosa facciamo</div>
-        <h2>Prodotti e servizi,<br>in un posto solo.</h2>
+        <h2>Sviluppo software e AI,<br>su misura per te.</h2>
       </div>
       <div class="section-actions">
-        <a class="btn-dark" href="/servizi/">I servizi →</a>
+        <a class="btn-dark" href="/servizi/">Tutti i servizi →</a>
+        <a class="btn-dark" href="/prodotti/" style="margin-left:8px;">I prodotti →</a>
       </div>
     </div>
     <div class="services-grid">${serviziHtml}</div>
@@ -257,6 +294,9 @@ module.exports = class {
       </div>
     </div>
     <div class="cases-grid">${casesHtml}</div>
+    <div style="text-align:center;margin-top:32px;">
+      <a class="btn-dark" href="/case-study/">Vedi tutti i case study →</a>
+    </div>
   </div>
 </section>
 

@@ -4,9 +4,9 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Progetti & Innovazione',
+      pageTitle: 'Progetti & Innovazione — R&D in Forge',
       pageDescription:
-        'Ricerca applicata, progetti open source e collaborazioni con le università. Dove sperimentiamo prima di portarlo ai clienti.',
+        'Ricerca, sperimentazione e progetti interni in Forge: dove proviamo AI e nuove tecnologie prima di portarle ai clienti. Open source e università partner.',
       eleventyNavigation: {
         key: 'innovazione',
         title: 'Progetti',
@@ -66,19 +66,20 @@ module.exports = class {
 ${pageHero({
   label: 'progetti & innovazione',
   title: 'La nostra parola preferita: <span class="accent">innovare</span>.',
-  lead: 'Accompagniamo le aziende in un percorso di innovazione che nasce dal rapporto con università, start-up, centri di ricerca e giovani talenti.',
+  lead: 'Innovare per noi non è una parola da brochure: è un metodo. Sperimentiamo su progetti interni, rilasciamo open source e collaboriamo con le università. Quello che funziona, lo portiamo ai clienti — il resto ci insegna qualcosa.',
+  actions: '<a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>',
 })}
 
-<!-- ── Innovare ────────────────────────────────────────────── -->
+<!-- ── Approccio R&D ───────────────────────────────────────── -->
 <section class="sec-paper">
   <div class="split-grid">
     <div>
       <div class="label"><span class="dim">// </span>approccio</div>
-      <h2>Innovazione,<br>in modo collaborativo.</h2>
+      <h2>Prima sperimentiamo.<br>Poi consegniamo.</h2>
     </div>
     <div class="prose">
-      <p>In Forge amiamo accompagnare le aziende in un <strong>percorso di innovazione</strong> costruito sul rapporto sinergico con università, start-up, centri di ricerca e giovani talenti.</p>
-      <p>Usiamo un <strong>approccio collaborativo</strong> in ogni fase dello sviluppo di prodotti, servizi e processi, con particolare attenzione alla <strong>trasformazione digitale</strong> e all'adozione di tecnologie che rispondano ai problemi reali delle organizzazioni.</p>
+      <p>Dedichiamo tempo a esplorare tecnologie nuove <strong>prima</strong> che diventino richieste dai clienti. Significa che quando arrivi da noi non facciamo da cavie con il tuo progetto: portiamo soluzioni già messe alla prova internamente.</p>
+      <p>Lavoriamo in modo <strong>collaborativo</strong> con università, start-up, centri di ricerca e giovani talenti. È così che restiamo aggiornati davvero — non leggendo titoli, ma costruendo.</p>
     </div>
   </div>
 </section>
@@ -125,9 +126,9 @@ ${pageHero({
       <h2>Dialoghiamo con<br>giovani menti.</h2>
     </div>
     <div class="prose">
-      <p>La spinta a collaborare con le università del territorio viene dai nostri stessi fondatori, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale innovativo di ricerca e università</strong>.</p>
-      <p>Nel tempo abbiamo stretto sinergie con l'<strong>Università dell'Insubria di Varese</strong>, la nostra città natale, e svolto workshop all'<strong>Università Bicocca di Milano</strong>. Curiamo la formazione dei giovani con stage e progetti di ricerca, per accelerarne la crescita professionale.</p>
-      <a class="fg-link" href="/lavora-con-noi/#posizioni-aperte">Vedi le posizioni aperte →</a>
+      <p>La spinta a collaborare con le università viene dai fondatori stessi, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale di ricerca e università</strong>.</p>
+      <p>Nel tempo abbiamo stretto sinergie con l'<strong>Università dell'Insubria di Varese</strong>, la nostra città natale, e svolto workshop all'<strong>Università Bicocca di Milano</strong>. Curiamo la formazione dei giovani con stage e progetti di tesi, per accelerarne la crescita professionale.</p>
+      <a class="fg-link" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>
     </div>
   </div>
 </section>
@@ -142,27 +143,15 @@ ${pageHero({
   <div class="feature-grid cols-3">${openSourceHtml}</div>
 </section>
 
-<!-- ── Ricerca & sviluppo ──────────────────────────────────── -->
-<section class="sec-paper">
-  <div class="split-grid">
-    <div>
-      <div class="label"><span class="dim">// </span>ricerca & sviluppo</div>
-      <h2>La tecnologia al servizio<br>del cambiamento.</h2>
-    </div>
-    <div class="prose">
-      <p>Partiamo dal potenziale delle tecnologie digitali per costruire soluzioni di <strong>intelligenza artificiale</strong>, integrare e <strong>sviluppare software</strong> che accompagni le aziende in un reale percorso di trasformazione.</p>
-      <p>Ci identifichiamo con i <strong>bisogni di innovazione</strong> delle aziende e le aiutiamo a individuare le soluzioni migliori per affrontare il futuro in autonomia.</p>
-      <a class="fg-link" href="/contattaci/">Contattaci per una consulenza →</a>
-    </div>
-  </div>
-</section>
-
 <!-- ── CTA ─────────────────────────────────────────────────── -->
-<section class="sec-paper2">
+<section class="sec-paper">
   <div class="cta-band">
     <h2>Innovare è la nostra parola preferita.<br>È così anche per te?</h2>
     <p>Raccontaci la tua idea o il tuo progetto. La prima call è gratuita e senza impegno.</p>
-    <a class="btn-primary" href="/contattaci/">Parliamone insieme →</a>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
+      <a class="btn-secondary" href="/case-study/" aria-label="Vedi i case study">vedi_case_study →</a>
+    </div>
   </div>
 </section>`
   }

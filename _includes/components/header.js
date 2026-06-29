@@ -4,7 +4,10 @@ module.exports = (data) => {
   const navItems = [
     {key: 'home', label: 'home', href: '/'},
     {key: 'chi-siamo', label: 'chi siamo', href: '/chi-siamo/'},
-    {key: 'servizi', label: 'prodotti & servizi', href: '/servizi/'},
+    {key: 'team', label: 'team', href: '/team/'},
+    {key: 'servizi', label: 'servizi', href: '/servizi/'},
+    {key: 'prodotti', label: 'prodotti', href: '/prodotti/'},
+    {key: 'case-study', label: 'case study', href: '/case-study/'},
     {key: 'innovazione', label: 'progetti', href: '/innovazione/'},
     {key: 'lavora-con-noi', label: 'lavora con noi', href: '/lavora-con-noi/'},
   ]
@@ -26,7 +29,7 @@ module.exports = (data) => {
   </a>
   <div class="nav-links">
     ${navLinks}
-    <a href="/contattaci/" class="nav-cta">Prenota una call →</a>
+    <a href="/contatti/" class="nav-cta" aria-label="Prenota una call gratuita">prenota_call →</a>
   </div>
 </nav>`
 }
