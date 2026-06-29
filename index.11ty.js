@@ -365,8 +365,9 @@ module.exports = class {
         <span class="contact-box-sub">15 min · gratis</span>
       </div>
       <div class="contact-box-body">
-        <a class="btn-orange-full" href="/contattaci/" style="text-align:center;text-decoration:none;display:block;">Vai al form di contatto →</a>
+        <a class="btn-orange-full" href="/prenota-una-call/" style="text-align:center;text-decoration:none;display:block;">Prenota la tua call →</a>
         <div class="contact-confirm"><span class="tick">✓</span> risposta entro 24h · senza impegno</div>
+        <div style="margin-top:16px;text-align:center;font-size:13px;color:var(--text-dim);">Preferisci scrivere? <a href="/contattaci/" style="color:var(--text-muted)">Usa il form di contatto →</a></div>
       </div>
     </div>
   </div>

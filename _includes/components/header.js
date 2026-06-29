@@ -29,7 +29,7 @@ module.exports = (data) => {
   </a>
   <div class="nav-links">
     ${navLinks}
-    <a href="/contatti/" class="nav-cta" aria-label="Prenota una call gratuita">prenota_call →</a>
+    <a href="/prenota-una-call/" class="nav-cta" aria-label="Prenota una call gratuita">prenota_call →</a>
   </div>
 </nav>`
 }
