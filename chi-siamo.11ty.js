@@ -1,3 +1,4 @@
+const location = require('./_includes/components/location')
 const pageHero = require('./_includes/components/page-hero')
 
 module.exports = class {
@@ -136,6 +137,9 @@ ${pageHero({
     </div>
   </div>
 </section>
+
+<!-- ── Dove trovarci ───────────────────────────────────────── -->
+${location({forge: data.forge})}
 
 <!-- ── CTA ─────────────────────────────────────────────────── -->
 <section class="sec-paper2">

@@ -1,3 +1,5 @@
+const location = require('./_includes/components/location')
+
 module.exports = class {
   data() {
     return {
@@ -370,6 +372,9 @@ module.exports = class {
       </div>
     </div>
   </div>
-</section>`
+</section>
+
+<!-- ── DOVE TROVARCI ──────────────────────────────────────── -->
+${location({forge: data.forge})}`
   }
 }

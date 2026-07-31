@@ -1589,6 +1589,45 @@ body > div.rabbit-hole-overlay {
   color: var(--text);
 }
 
+/* ── Dove trovarci (sede + mappa) ────────────────────────────── */
+.location-list {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-muted);
+  margin: 16px 0 24px;
+}
+.location-arrow {
+  color: var(--orange);
+}
+.location-list a {
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--paper-border);
+}
+.location-list a:hover {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 1px solid var(--paper-border);
+  border-radius: 2px;
+}
+.location-credit {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--ink-dim);
+  margin-top: 8px;
+}
+.location-credit a {
+  color: var(--ink-dim);
+}
+.location-credit a:hover {
+  color: var(--orange);
+}
+
 /* Two-column intro + content split */
 .split-grid {
   max-width: var(--max-w);
@@ -1597,6 +1636,10 @@ body > div.rabbit-hole-overlay {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 56px;
   align-items: start;
+}
+/* La mappa e i recapiti stanno meglio centrati fra loro (cfr. .location-map) */
+.split-grid.location-grid {
+  align-items: center;
 }
 
 /* ── Feature cards (generic 2/3-up grid) ─────────────────────── */
@@ -2092,6 +2135,9 @@ button.form-control:hover {
   .split-grid {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+  .location-map iframe {
+    height: 240px;
   }
   .feature-grid.cols-3 {
     grid-template-columns: repeat(2, 1fr);
