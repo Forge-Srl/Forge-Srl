@@ -894,6 +894,181 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   color: var(--text-muted);
 }
 
+/* ── Case study (elenco completo) ────────────────────────────── */
+.sector-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.sector-chip {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid #3f3f47;
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition:
+    border-color 160ms,
+    color 160ms;
+}
+.sector-chip:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.sector-chip.is-active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.cs-card {
+  background: #fff;
+  border: 1px solid var(--paper-border);
+  border-radius: 2px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.cs-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  background: var(--paper-2);
+  border-right: 1px solid var(--paper-border);
+}
+.cs-media span {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+}
+.cs-content {
+  padding: 36px;
+}
+.cs-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.cs-client {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--orange);
+}
+.cs-sector {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--ink-dim);
+}
+.cs-status {
+  margin-left: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--green);
+  background: #eaf7f0;
+  border: 1px solid #bfe3cf;
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+.cs-card h3 {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.cs-body {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0 0 20px;
+}
+
+.cs-log {
+  background: var(--bg-2);
+  border: 1px solid var(--border-dark);
+  border-radius: 3px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+.cs-log-line {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.cs-tick {
+  color: var(--orange);
+}
+
+.cs-metrics {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.cs-metric-n {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.cs-metric-n.is-pending {
+  color: var(--ink-dim);
+}
+.cs-metric-l {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: #898992;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+.cs-note {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  margin: 12px 0 20px;
+}
+
+.cs-quote {
+  border-left: 3px solid var(--orange);
+  padding-left: 16px;
+  margin: 0;
+}
+.cs-quote p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.cs-author {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+}
+
+.cs-empty {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: var(--ink-dim);
+}
+
 /* ── Come lavoriamo ──────────────────────────────────────────── */
 .metodo-grid {
   max-width: var(--max-w);
@@ -1886,6 +2061,17 @@ button.form-control:hover {
   }
   .cases-grid {
     grid-template-columns: 1fr;
+  }
+  .cs-card {
+    grid-template-columns: 1fr;
+  }
+  .cs-media {
+    min-height: 200px;
+    border-right: 0;
+    border-bottom: 1px solid var(--paper-border);
+  }
+  .cs-content {
+    padding: 28px 24px;
   }
   .metodo-grid {
     grid-template-columns: repeat(2, 1fr);

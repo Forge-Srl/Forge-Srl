@@ -143,13 +143,6 @@ ${pageHero({
   </div>
 </section>
 
-<!-- ── Easter egg ──────────────────────────────────────────── -->
-<section class="sec-dark2" style="padding:32px 0;">
-  <div class="inner">
-    <p style="font-family:var(--mono);color:var(--text-dim);font-size:13px;"># psst: c'è un white rabbit nascosto nella console del sito. Trovalo. 🐇</p>
-  </div>
-</section>
-
 <!-- ── CTA ─────────────────────────────────────────────────── -->
 <section class="sec-paper2">
   <div class="cta-band">

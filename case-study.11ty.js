@@ -15,50 +15,159 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  render() {
+    const sectors = [
+      {id: 'tutti', label: 'tutti'},
+      {id: 'ai', label: 'ai'},
+      {id: 'commerce', label: 'e-commerce'},
+      {id: 'dati', label: 'dati & ml'},
+    ]
+
+    // Nomi cliente, citazioni e numeri restano [DA FORNIRE] finché non abbiamo
+    // dati verificati e liberatoria firmata. I valori "—" sono in validazione.
+    const caseStudies = [
+      {
+        sec: 'ai',
+        sector: 'ai & automazione',
+        client: '[DA FORNIRE]',
+        status: 'in corso',
+        title: 'Assistente AI per il supporto clienti',
+        body: "Pipeline RAG sopra la knowledge base interna: risposte verificate e con citazioni, integrate nel gestionale che il team usa già. L'escalation a un operatore resta sempre a un click.",
+        log: [
+          'discovery e analisi dei ticket storici',
+          'pilot su un singolo team di supporto',
+          'rollout progressivo su tutto il supporto',
+        ],
+        metrics: [
+          {n: '24/7', l: 'copertura'},
+          {n: 'RAG', l: 'risposte con fonti'},
+          {n: '—', l: 'tempo di risposta'},
+        ],
+        quote: '[DA FORNIRE]',
+        author: '[DA FORNIRE]',
+      },
+      {
+        sec: 'commerce',
+        sector: 'e-commerce',
+        client: '[DA FORNIRE]',
+        status: 'completato',
+        title: 'E-commerce ad alto traffico',
+        body: 'Catalogo ampio e picchi di campagna da gestire senza fermare le vendite. Abbiamo riscritto storefront e checkout e portato il rollout in produzione in modo graduale, senza un solo rollback.',
+        log: [
+          'audit di performance e struttura del catalogo',
+          'nuovo storefront e checkout in produzione',
+          'rollout completato sull’intero catalogo',
+        ],
+        metrics: [
+          {n: '0', l: 'rollback'},
+          {n: '—', l: 'rps di picco'},
+          {n: '—', l: 'conversione'},
+        ],
+        quote: '[DA FORNIRE]',
+        author: '[DA FORNIRE]',
+      },
+      {
+        sec: 'dati',
+        sector: 'data science & ml',
+        client: '[DA FORNIRE]',
+        status: 'completato',
+        title: 'Manutenzione predittiva',
+        body: 'Dai dati di campo già raccolti a un modello che segnala i guasti prima che fermino la linea. Le previsioni arrivano dentro i sistemi di manutenzione esistenti, non in un altro cruscotto da guardare.',
+        log: [
+          'raccolta e pulizia dei dati di campo',
+          'modello predittivo validato sullo storico',
+          'previsioni integrate nel flusso di manutenzione',
+        ],
+        metrics: [
+          {n: 'ML', l: 'in produzione'},
+          {n: '—', l: 'fermi evitati'},
+          {n: '—', l: 'accuratezza'},
+        ],
+        quote: '[DA FORNIRE]',
+        author: '[DA FORNIRE]',
+      },
+    ]
+
     const microdata = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Case study Forge',
       description: 'Progetti AI e sviluppo software di Forge, software house a Varese',
-      itemListElement: [],
+      itemListElement: caseStudies.map(({title, body}, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'CreativeWork',
+          name: title,
+          description: body,
+        },
+      })),
     }
+
+    const sectorsHtml = sectors
+      .map(
+        ({id, label}, i) =>
+          `<button type="button" class="sector-chip${i === 0 ? ' is-active' : ''}" data-sector="${id}" aria-pressed="${i === 0}">${label}</button>`,
+      )
+      .join('')
+
+    const casesHtml = caseStudies
+      .map(({sec, sector, client, status, title, body, log, metrics, quote, author}) => {
+        const logHtml = log
+          .map((line) => `<div class="cs-log-line"><span class="cs-tick">◆</span> ${line}</div>`)
+          .join('')
+
+        const metricsHtml = metrics
+          .map(
+            ({n, l}) => `
+          <div>
+            <div class="cs-metric-n${n === '—' ? ' is-pending' : ''}">${n}</div>
+            <div class="cs-metric-l">${l}</div>
+          </div>`,
+          )
+          .join('')
+
+        return `
+      <article class="cs-card" data-sector="${sec}">
+        <div class="cs-media" aria-hidden="true"><span>[ screenshot · in arrivo ]</span></div>
+        <div class="cs-content">
+          <div class="cs-head">
+            <span class="cs-client">${client}</span>
+            <span class="cs-sector">· ${sector}</span>
+            <span class="cs-status">${status}</span>
+          </div>
+          <h3>${title}</h3>
+          <p class="cs-body">${body}</p>
+
+          <div class="cs-log">${logHtml}</div>
+
+          <div class="cs-metrics">${metricsHtml}</div>
+          <div class="cs-note"># metriche complete in validazione con il cliente</div>
+
+          <blockquote class="cs-quote">
+            <p>“${quote}”</p>
+            <footer class="cs-author">— ${author}</footer>
+          </blockquote>
+        </div>
+      </article>`
+      })
+      .join('')
 
     return `
 <script type="application/ld+json">${JSON.stringify(microdata)}</script>
 
 ${pageHero({
   label: 'case study',
-  title: 'I risultati che<br>abbiamo <span class="accent">costruito</span>.',
-  lead: 'Niente promesse di marketing. Progetti reali, problemi concreti, numeri prima e dopo. Ogni case study è una sessione che ha prodotto un output misurabile.',
+  title: 'Progetti in corso,<br>raccontati dai <span class="accent">numeri</span>.',
+  lead: "L'evoluzione dei progetti, i risultati ottenuti e la parola ai clienti che li hanno vissuti. Niente promesse di marketing: pubblichiamo un case study solo quando i numeri sono verificati.",
+  extra: `<div class="sector-filter" data-sector-filter hidden>${sectorsHtml}</div>`,
 })}
 
-<!-- ── Stato vuoto ────────────────────────────────────────── -->
+<!-- ── Elenco case study ──────────────────────────────────── -->
 <section class="sec-paper">
   <div class="inner">
-    <div class="label"><span class="dim">// </span>catalogo case study</div>
-    <h2>I case study stanno arrivando.</h2>
-    <p style="max-width:58ch;margin:16px 0 40px;color:var(--text-muted);">Stiamo documentando i progetti con i nostri clienti — numeri reali e liberatorie incluse. Ogni progetto viene pubblicato solo quando possiamo mostrare risultati misurabili e verificati.</p>
-
-    <div class="terminal" aria-hidden="true" style="max-width:560px;margin-bottom:40px;">
-      <div class="terminal-bar">
-        <span class="terminal-dot red"></span>
-        <span class="terminal-dot yel"></span>
-        <span class="terminal-dot grn"></span>
-        <span class="terminal-title">forge — case-study.log</span>
-      </div>
-      <div class="terminal-body">
-        <div class="cmd"><span class="prompt">$</span> ls /case-study</div>
-        <div class="ok"><span class="tick">✓</span> supporto-clienti-ai/ <span style="color:var(--text-dim)">· in documentazione</span></div>
-        <div class="ok"><span class="tick">✓</span> ecommerce-alto-traffico/ <span style="color:var(--text-dim)">· in documentazione</span></div>
-        <div class="ok"><span class="tick">✓</span> manutenzione-predittiva/ <span style="color:var(--text-dim)">· in documentazione</span></div>
-        <div class="result"><span class="arrow">→</span> <span style="color:var(--text-dim)"># i primi case study stanno arrivando.</span></div>
-        <div class="cursor-line"><span class="prompt">$</span> <span class="terminal-cursor">&nbsp;</span></div>
-      </div>
-    </div>
-
-    <p style="max-width:52ch;">Vuoi essere il prossimo case study? La prima call è gratuita e senza impegno.</p>
-    <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita" style="margin-top:16px;display:inline-block;">prenota_call →</a>
+    <div class="cs-list" data-case-list>${casesHtml}</div>
+    <p class="cs-empty" data-case-empty hidden>Nessun case study in questo ambito — <a class="fg-link" href="/servizi/">guarda i servizi</a>.</p>
   </div>
 </section>
 
@@ -106,8 +215,8 @@ ${pageHero({
 <!-- ── CTA finale ──────────────────────────────────────────── -->
 <section class="sec-paper2">
   <div class="cta-band">
-    <h2>Hai un progetto in mente?</h2>
-    <p>Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno. <strong>Il prossimo case study potrebbe essere il tuo.</strong></p>
+    <h2>Il prossimo case study<br>potrebbe essere il tuo.</h2>
+    <p>Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
       <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
       <a class="btn-secondary" href="/servizi/" aria-label="Vedi i servizi Forge">vedi_servizi →</a>

@@ -75,5 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('You found the rabbit hole!')
   }
   window.whiteRabbit = new Rabbit('white', '⚪')
-  console.log('%cFollow the `whiteRabbit` out of the `window`...', 'font-family: monospace; font-style: italic;')
 })
