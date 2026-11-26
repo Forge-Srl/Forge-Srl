@@ -69,6 +69,37 @@ const verifyRecaptcha = (userToken, callback) => {
     .catch((error) => callback(error))
 }
 
+// Returns the error message when reCAPTCHA flags the sender as a bot, otherwise null.
+const getRecaptchaBotError = (verification, fields) => {
+  const isBot = !verification.success || verification.score < 0.5
+  if (!isBot) {
+    return null
+  }
+
+  const errorMessage = `Recaptcha detected "${fields.name}" <${fields.from}> is a bot (success: ${verification.success}, score: ${verification.score})`
+  const verificationElement = verification['error-codes']
+    ? `\nError codes: ${verification['error-codes'].join(', ')}`
+    : ''
+  return errorMessage + verificationElement
+}
+
+// Builds the mail (which throws on missing fields) and sends it, reporting any failure through `fail`.
+const sendBuiltMail = (getMailData, response, fail) => {
+  try {
+    const mailData = getMailData()
+
+    transporter.sendMail(mailData, (error, result) => {
+      if (error) {
+        return fail(error)
+      }
+
+      return response.send(result.messageId)
+    })
+  } catch (e) {
+    return fail(e)
+  }
+}
+
 const mailHandler = (buildMail) =>
   functions.https.onRequest((request, response) => {
     cors(corsSettings)(request, response, () => {
@@ -109,27 +140,12 @@ const mailHandler = (buildMail) =>
             return fail(error)
           }
 
-          if (!verification.success || verification.score < 0.5) {
-            const errorMessage = `Recaptcha detected "${fields.name}" <${fields.from}> is a bot (success: ${verification.success}, score: ${verification.score})`
-            const verificationElement = verification['error-codes']
-              ? `\nError codes: ${verification['error-codes'].join(', ')}`
-              : ''
-            return fail(errorMessage + verificationElement)
+          const botError = getRecaptchaBotError(verification, fields)
+          if (botError) {
+            return fail(botError)
           }
 
-          try {
-            const mailData = buildMail(fields, files)
-
-            transporter.sendMail(mailData, (error, result) => {
-              if (error) {
-                return fail(error)
-              }
-
-              return response.send(result.messageId)
-            })
-          } catch (e) {
-            return fail(e)
-          }
+          return sendBuiltMail(() => buildMail(fields, files), response, fail)
         })
       })
       busboy.end(request.rawBody)

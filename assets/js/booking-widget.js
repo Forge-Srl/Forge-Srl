@@ -16,7 +16,9 @@
     const d = new Date()
     d.setHours(0, 0, 0, 0)
     // Se è già pomeriggio (>14:00) parti dal giorno dopo
-    if (new Date().getHours() >= 14) d.setDate(d.getDate() + 1)
+    if (new Date().getHours() >= 14) {
+      d.setDate(d.getDate() + 1)
+    }
     while (days.length < count) {
       const dow = d.getDay()
       if (dow !== 0 && dow !== 6) {
@@ -41,7 +43,9 @@
   }
 
   function init(container) {
-    if (!container) return
+    if (!container) {
+      return
+    }
 
     const formAction = container.dataset.action || ''
     const recaptchaKey = container.dataset.recaptcha || ''
@@ -52,9 +56,13 @@
     let step = 'calendar' // 'calendar' | 'form' | 'done'
 
     function render() {
-      if (step === 'calendar') renderCalendar()
-      else if (step === 'form') renderForm()
-      else renderDone()
+      if (step === 'calendar') {
+        renderCalendar()
+      } else if (step === 'form') {
+        renderForm()
+      } else {
+        renderDone()
+      }
     }
 
     function renderCalendar() {
@@ -130,7 +138,9 @@
 
     function updateConfirmLabel() {
       const lbl = container.querySelector('#bw-confirm-label')
-      if (lbl) lbl.textContent = formatFull(days[selDay], Slots[selSlot])
+      if (lbl) {
+        lbl.textContent = formatFull(days[selDay], Slots[selSlot])
+      }
     }
 
     function renderForm() {
@@ -193,7 +203,9 @@
 
         const doSubmit = (token) => {
           const fd = new FormData(form)
-          if (token) fd.set('recaptcha', token)
+          if (token) {
+            fd.set('recaptcha', token)
+          }
 
           const xhr = new XMLHttpRequest()
           xhr.open('POST', form.action, true)
