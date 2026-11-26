@@ -4,18 +4,34 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Sviluppo software e consulenza AI a Varese | Forge',
+      pageTitle: 'Prodotti e servizi: sviluppo software e AI a Varese | Forge',
       pageDescription:
-        'Sviluppo software, app mobile e consulenza AI per automatizzare i processi aziendali. Soluzioni su misura che vanno in produzione. Prima call gratuita.',
+        'Sviluppo software, app mobile e consulenza AI su misura, più prodotti già collaudati da adottare subito. Soluzioni che vanno in produzione. Prima call gratuita.',
       eleventyNavigation: {
         key: 'servizi',
-        title: 'Servizi',
+        title: 'Prodotti e servizi',
         parent: 'home',
       },
     }
   }
 
   async render(data) {
+    const {features} = data
+
+    // Card del catalogo: restano spente (features.productCatalog) finché non arrivano le descrizioni.
+    const prodotti = [
+      {
+        tag: 'forge_core',
+        title: 'Forge Core',
+        body: '[DA FORNIRE: a chi serve e cosa risolve]',
+      },
+      {
+        tag: 'forge_commerce',
+        title: 'Forge Commerce',
+        body: '[DA FORNIRE: a chi serve e cosa risolve]',
+      },
+    ]
+
     const servizi = [
       {
         id: 'ai',
@@ -96,6 +112,24 @@ module.exports = class {
       )
       .join('')
 
+    const catalogoHtml = features.productCatalog
+      ? `<div class="feature-grid cols-2">
+      ${prodotti
+        .map(
+          ({tag, title, body}) => `
+      <div class="feature-card">
+        <div class="feature-num">${tag}</div>
+        <h3>${title}</h3>
+        <p>${body}</p>
+        <a class="fg-link" href="/contattaci/" aria-label="Richiedi una demo di ${title}">richiedi_demo →</a>
+      </div>`,
+        )
+        .join('')}
+    </div>`
+      : `<p style="margin-top:32px;">
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call — raccontaci cosa ti serve →</a>
+    </p>`
+
     const logoFiles = [
       ['TypeScript.svg', 'Logo TypeScript'],
       ['Angular.svg', 'Logo Angular'],
@@ -122,14 +156,49 @@ module.exports = class {
 
     return `
 ${pageHero({
-  label: 'servizi',
+  label: 'prodotti e servizi',
   title: 'Sviluppo software e AI,<br>su misura per <span class="accent">te</span>.',
-  lead: "Dall'intelligenza artificiale allo sviluppo di app e piattaforme: progettiamo soluzioni intorno alle esigenze reali del tuo business. Prima il risultato che vuoi ottenere, poi la tecnologia per arrivarci.",
+  lead: "Dall'intelligenza artificiale allo sviluppo di app e piattaforme: progettiamo soluzioni intorno alle esigenze reali del tuo business. E quando un nostro prodotto risolve già il problema, partiamo da lì. Prima il risultato che vuoi ottenere, poi la tecnologia per arrivarci.",
   actions:
-    '<a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a><a class="btn-secondary" href="/prodotti/">vedi_i_prodotti →</a>',
+    '<a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a><a class="btn-secondary" href="#prodotti">vedi_i_prodotti →</a>',
 })}
 
 ${serviziHtml}
+
+<!-- ── Prodotti ────────────────────────────────────────────── -->
+<section class="sec-dark" id="prodotti">
+  <div class="inner">
+    <div class="section-header">
+      <div>
+        <div class="label"><span class="dim">// </span>prodotti</div>
+        <h2>Soluzioni pronte all'uso.<br><span class="accent">Parti subito.</span></h2>
+      </div>
+      <div class="section-actions">
+        <span class="feature-num" style="font-size:30px;font-weight:700;color:var(--orange)">03</span>
+      </div>
+    </div>
+    <div class="prose" style="max-width:64ch;margin-bottom:0;">
+      <p>Oltre ai progetti su misura, abbiamo costruito soluzioni software già collaudate che puoi adottare in tempi rapidi — senza partire da zero. Meno tempo, meno rischio, valore subito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Catalogo prodotti ──────────────────────────────────── -->
+<section class="sec-paper2" id="catalogo">
+  <div class="inner">
+    <div class="split-grid">
+      <div>
+        <div class="label"><span class="dim">// </span>catalogo prodotti</div>
+        <h2>Prodotti costruiti<br>sul campo.</h2>
+      </div>
+      <div class="prose">
+        <p class="lead">Ogni prodotto nasce da un'esigenza reale incontrata lavorando con i nostri clienti.</p>
+        <p>Li manteniamo e li facciamo evolvere nel tempo, esattamente come faremmo con il tuo software su misura. Quando un prodotto risolve già il tuo problema, è la strada più veloce per arrivare al risultato.</p>
+      </div>
+    </div>
+    ${catalogoHtml}
+  </div>
+</section>
 
 <!-- ── Come lavoriamo ─────────────────────────────────────── -->
 <section class="sec-paper" id="come-lavoriamo">
@@ -163,7 +232,7 @@ ${serviziHtml}
 </section>
 
 <!-- ── Tecnologie ──────────────────────────────────────────── -->
-<section class="sec-paper2">
+<section class="sec-paper2" id="tecnologie">
   <div class="section-intro">
     <div class="label"><span class="dim">// </span>le nostre tecnologie</div>
     <h2>Gli strumenti che padroneggiamo.</h2>
@@ -178,8 +247,8 @@ ${serviziHtml}
     <h2>Hai un progetto in mente?</h2>
     <p>Raccontacelo in 15 minuti. La prima call è <strong>gratuita e senza impegno</strong> — esci con un primo parere concreto.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
-      <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
-      <a class="btn-secondary" href="/prodotti/" aria-label="Vedi i prodotti Forge">vedi_i_prodotti →</a>
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>
+      <a class="btn-secondary" href="#prodotti" aria-label="Vedi i prodotti Forge">vedi_i_prodotti →</a>
     </div>
   </div>
 </section>`

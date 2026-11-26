@@ -1,18 +1,20 @@
 module.exports = (data) => {
   const currentKey = data.eleventyNavigation?.key ?? ''
 
+  const features = data.features ?? {}
+
   const navItems = [
     {key: 'home', label: 'home', href: '/'},
     {key: 'chi-siamo', label: 'chi siamo', href: '/chi-siamo/'},
     {key: 'team', label: 'team', href: '/team/'},
-    {key: 'servizi', label: 'servizi', href: '/servizi/'},
-    {key: 'prodotti', label: 'prodotti', href: '/prodotti/'},
-    {key: 'case-study', label: 'case study', href: '/case-study/'},
+    {key: 'servizi', label: 'prodotti e servizi', href: '/servizi/'},
+    {key: 'case-study', label: 'case study', href: '/case-study/', enabled: features.caseStudies},
     {key: 'innovazione', label: 'progetti', href: '/innovazione/'},
     {key: 'lavora-con-noi', label: 'lavora con noi', href: '/lavora-con-noi/'},
   ]
 
   const navLinks = navItems
+    .filter(({enabled = true}) => enabled)
     .map(({key, label, href}) => {
       const active = key === currentKey
       return `<a href="${href}" class="${active ? 'active' : ''}">${label}</a>`

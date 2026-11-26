@@ -1,4 +1,7 @@
+const fs = require('node:fs')
 const pageHero = require('./_includes/components/page-hero')
+
+const teamPhotoFile = 'team.jpg'
 
 module.exports = class {
   data() {
@@ -15,7 +18,62 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  async render(data) {
+    const {features, team} = data
+
+    // Foto del team nell'hero: spenta finché non c'è la foto (features.teamHeroPhoto).
+    const teamPhoto =
+      features.teamHeroPhoto && fs.existsSync(`assets/images/${teamPhotoFile}`)
+        ? await this.image(
+            teamPhotoFile,
+            'Il team di Forge',
+            'page-hero-img',
+            [560, 1120],
+            '(max-width: 900px) 100vw, 560px',
+          )
+        : ''
+
+    // Griglia "choose your character": spenta finché non ci sono avatar, ruoli e interviste (features.teamMembers).
+    const membersHtml = features.teamMembers
+      ? (
+          await Promise.all(
+            team.members.map(async ({name, role, avatar, skills, interview}, i) => {
+              const avatarHtml = avatar
+                ? await this.image(avatar, `Avatar pixel art di ${name}`, 'player-avatar-img', [192], '192px')
+                : '<span class="player-avatar-empty" aria-hidden="true">?</span>'
+              const skillsHtml = skills
+                .map(
+                  ({l, v}) => `
+            <div class="player-skill">
+              <span class="player-skill-l">${l}</span>
+              <span class="player-skill-bar" role="img" aria-label="${v} su 5">${'■'.repeat(v)}<span class="dim">${'□'.repeat(5 - v)}</span></span>
+            </div>`,
+                )
+                .join('')
+              const interviewHtml = Object.entries(interview)
+                .map(
+                  ([key, answer]) => `
+              <div class="player-qa"><dt>${team.questions[key]}</dt><dd>${answer}</dd></div>`,
+                )
+                .join('')
+
+              return `
+        <article class="player-card">
+          <div class="player-num">p${String(i + 1).padStart(2, '0')}</div>
+          <div class="player-avatar">${avatarHtml}</div>
+          <h3 class="player-name">${name}</h3>
+          <div class="player-role">${role}</div>
+          <div class="player-skills">${skillsHtml}</div>
+          <details class="player-interview">
+            <summary>intervista →</summary>
+            <dl>${interviewHtml}</dl>
+          </details>
+        </article>`
+            }),
+          )
+        ).join('')
+      : ''
+
     const filosofia = [
       {
         tag: 'fil_01',
@@ -95,6 +153,7 @@ ${pageHero({
   title: 'Chi siamo, dietro le <span class="accent">tastiere</span>.',
   lead: 'Forge è prima di tutto un gruppo di persone. Informatici con specializzazioni diverse che condividono curiosità, metodo e una buona dose di caffè.',
   actions: '<a class="btn-primary" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>',
+  aside: teamPhoto,
 })}
 
 <!-- ── Intro squadra ───────────────────────────────────────── -->
@@ -117,8 +176,14 @@ ${pageHero({
   <div class="inner">
     <div class="label"><span class="dim">// </span>chi trovi qui</div>
     <h2>Le persone di Forge.</h2>
-    <p style="max-width:54ch;margin:16px 0 40px;color:var(--text-muted);">
-      Le foto e le bio del team arriveranno presto. Nel frattempo, puoi conoscerci di persona — la prima call è gratuita.
+    ${
+      features.teamMembers
+        ? `<p style="max-width:54ch;margin:16px 0 40px;color:var(--text-muted);">
+      Scegli il tuo personaggio: ognuno ha la sua classe, le sue statistiche e qualche risposta da darti.
+    </p>
+    <div class="player-grid">${membersHtml}</div>`
+        : `<p style="max-width:54ch;margin:16px 0 40px;color:var(--text-muted);">
+      Puoi conoscerci di persona — la prima call è gratuita.
     </p>
     <div class="terminal" aria-hidden="true" style="max-width:480px;">
       <div class="terminal-bar">
@@ -134,12 +199,12 @@ ${pageHero({
         <div class="ok"><span class="tick">✓</span> ai_engineers/</div>
         <div class="ok"><span class="tick">✓</span> data_scientists/</div>
         <div class="ok"><span class="tick">✓</span> project_managers/</div>
-        <div class="result"><span class="arrow">→</span> <span class="url">[DA FORNIRE: foto e bio reali]</span></div>
         <div class="cursor-line"><span class="prompt">$</span> <span class="terminal-cursor">&nbsp;</span></div>
       </div>
-    </div>
+    </div>`
+    }
     <p style="margin-top:32px;">
-      <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call — conosciamoci →</a>
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call — conosciamoci →</a>
     </p>
   </div>
 </section>
@@ -176,7 +241,7 @@ ${pageHero({
     <p>Cerchiamo persone curiose a cui piace imparare. Dai un'occhiata alle posizioni aperte — e se non c'è quella giusta, scrivici lo stesso.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
       <a class="btn-primary" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>
-      <a class="btn-secondary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
+      <a class="btn-secondary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>
     </div>
   </div>
 </section>`

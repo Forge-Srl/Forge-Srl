@@ -40,7 +40,7 @@ module.exports = class {
     <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:24px;">
       <a class="btn-primary" href="/" aria-label="Torna alla home">torna_alla_home →</a>
       <a class="btn-secondary" href="/servizi/" aria-label="Vai ai servizi">vedi_servizi →</a>
-      <a class="btn-secondary" href="/case-study/" aria-label="Vai ai case study">vedi_case_study →</a>
+      ${data.features.caseStudies ? '<a class="btn-secondary" href="/case-study/" aria-label="Vai ai case study">vedi_case_study →</a>' : ''}
       <a class="btn-secondary" href="/contattaci/" aria-label="Vai ai contatti">contatti →</a>
     </div>
     <p style="font-size:14px;color:var(--text-dim);">&gt; exit 404 — oppure <a href="/contattaci/" style="color:var(--orange)">scrivici cosa cercavi</a>.</p>

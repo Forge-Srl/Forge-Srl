@@ -14,7 +14,9 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  async render(data) {
+    const {features, cases} = data
+
     const microdata = {
       '@context': 'https://schema.org',
       '@type': ['Organization', 'LocalBusiness'],
@@ -34,13 +36,6 @@ module.exports = class {
       openingHours: 'Mo-Fr 09:00-18:00',
       sameAs: [data.forge.linkedin, data.forge.facebook, data.forge.github],
     }
-
-    const stats = [
-      {n: '11', l: 'piattaforme in prod'},
-      {n: '4M', l: 'SKU gestiti'},
-      {n: 'p99&lt;80ms', l: 'commerce API'},
-      {n: '0', l: 'agency-speak'},
-    ]
 
     const valori = [
       {
@@ -88,28 +83,7 @@ module.exports = class {
         num: '04',
         title: 'Prodotti pronti',
         body: 'Soluzioni già collaudate che adotti in tempi rapidi, senza partire da zero.',
-        href: '/prodotti/',
-      },
-    ]
-
-    const casePreview = [
-      {
-        client: '[DA FORNIRE]',
-        status: 'in corso',
-        title: 'Supporto clienti AI',
-        metric: 'automazione 24/7 · escalation intelligente',
-      },
-      {
-        client: '[DA FORNIRE]',
-        status: 'completato',
-        title: 'E-commerce ad alto traffico',
-        metric: 'performance · 0 rollback',
-      },
-      {
-        client: '[DA FORNIRE]',
-        status: 'completato',
-        title: 'Manutenzione predittiva',
-        metric: 'fermi evitati · ML in produzione',
+        href: '/servizi/#prodotti',
       },
     ]
 
@@ -121,7 +95,7 @@ module.exports = class {
       },
       {num: '02', title: 'Risolviamo', body: 'Troviamo la soluzione più efficace e la validiamo con dati misurabili.'},
       {num: '03', title: 'Costruiamo', body: 'Agile e Scrum: sprint corti, rilasci frequenti, flessibilità reale.'},
-      {num: '04', title: 'Restiamo', body: 'Feedback costante, rilascio graduale e supporto anche dopo il go-live.'},
+      {num: '04', title: 'Supportiamo', body: 'Feedback costante, rilascio graduale e supporto anche dopo il go-live.'},
     ]
 
     const tech = [
@@ -145,16 +119,6 @@ module.exports = class {
       {stato: 'in corso', title: 'edge-deploy', body: 'Deploy multi-region a bassa latenza, by default.'},
     ]
 
-    const statsHtml = stats
-      .map(
-        ({n, l}) => `
-      <div>
-        <div class="stat-n">${n}</div>
-        <div class="stat-l">${l}</div>
-      </div>`,
-      )
-      .join('')
-
     const valoriHtml = valori
       .map(
         ({tag, title, body}) => `
@@ -177,21 +141,42 @@ module.exports = class {
       )
       .join('')
 
-    const casesHtml = casePreview
-      .map(
-        ({client, status, title, metric}) => `
-      <div class="case-card">
+    const areaTitles = Object.fromEntries(cases.areas.map(({id, title}) => [id, title]))
+
+    // "Il successo dei nostri clienti": spenta finché non ci sono loghi, liberatorie e numeri verificati.
+    const clientCards = features.homeClientSuccess
+      ? await Promise.all(
+          cases.items.map(async ({id, area, client, title, summary, metrics}) => {
+            const logo = client.logo
+              ? await this.image(client.logo, `Logo ${client.name}`, 'client-logo-img', [240], '240w')
+              : `<span class="client-logo-fallback">${client.name}</span>`
+            const metricsHtml = metrics
+              .filter(({n}) => n !== '—')
+              .slice(0, 2)
+              .map(
+                ({n, l}) => `<div><div class="client-metric-n">${n}</div><div class="client-metric-l">${l}</div></div>`,
+              )
+              .join('')
+            const tag = features.caseStudies ? 'a' : 'div'
+            const href = features.caseStudies ? ` href="/case-study/#cs-${id}"` : ''
+
+            return `
+      <${tag} class="case-card client-card"${href}>
+        <div class="client-logo">${logo}</div>
         <div class="case-card-body">
           <div class="case-card-top">
-            <span class="case-client">${client}</span>
-            <span class="case-status">${status}</span>
+            <span class="case-client">${client.name}</span>
+            <span class="case-status">${areaTitles[area]}</span>
           </div>
           <div class="case-title">${title}</div>
-          <div class="case-metric">${metric}</div>
+          <div class="case-metric">${summary}</div>
+          <div class="client-metrics">${metricsHtml}</div>
         </div>
-      </div>`,
-      )
-      .join('')
+      </${tag}>`
+          }),
+        )
+      : []
+    const casesHtml = clientCards.join('')
 
     const metodoHtml = metodo
       .map(
@@ -228,9 +213,10 @@ module.exports = class {
       <img id="hero-logo" src="/assets/images/forge-logo-white.png" alt="Forge" class="hero-logo-img">
       <div class="hero-label"><span class="dim">// </span>software house · varese</div>
       <h1><span class="dim">&gt; </span>idea.run() — Dall'idea al prodotto. <span class="accent">Eseguito.</span></h1>
-      <p class="hero-desc">Sviluppo software e intelligenza artificiale per aziende che misurano il successo in risultati concreti — non in slide. La prima call è gratuita e senza impegno.</p>
+      <p class="hero-desc">Sviluppo software e intelligenza artificiale per aziende che misurano il successo in risultati concreti.</p>
+      <p class="hero-desc hero-desc-strong">La prima call è gratuita e senza impegno.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
+        <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>
         <a class="btn-secondary" href="/servizi/">Cosa facciamo</a>
       </div>
     </div>
@@ -277,8 +263,7 @@ module.exports = class {
         <h2>Sviluppo software e AI,<br>su misura per te.</h2>
       </div>
       <div class="section-actions">
-        <a class="btn-dark" href="/servizi/">Tutti i servizi →</a>
-        <a class="btn-dark" href="/prodotti/" style="margin-left:8px;">I prodotti →</a>
+        <a class="btn-dark" href="/servizi/">Prodotti e servizi →</a>
       </div>
     </div>
     <div class="services-grid">${serviziHtml}</div>
@@ -286,7 +271,9 @@ module.exports = class {
 </section>
 
 <!-- ── SUCCESSO CLIENTI ───────────────────────────────────── -->
-<section class="sec-dark" id="clienti">
+${
+  features.homeClientSuccess
+    ? `<section class="sec-dark" id="clienti">
   <div class="inner">
     <div class="section-header">
       <div>
@@ -295,11 +282,17 @@ module.exports = class {
       </div>
     </div>
     <div class="cases-grid">${casesHtml}</div>
-    <div style="text-align:center;margin-top:32px;">
+    ${
+      features.caseStudies
+        ? `<div style="text-align:center;margin-top:32px;">
       <a class="btn-dark" href="/case-study/">Vedi tutti i case study →</a>
-    </div>
+    </div>`
+        : ''
+    }
   </div>
-</section>
+</section>`
+    : ''
+}
 
 <!-- ── COME LAVORIAMO ─────────────────────────────────────── -->
 <section class="sec-paper">
@@ -307,6 +300,9 @@ module.exports = class {
     <div class="label"><span class="dim">// </span>come lavoriamo</div>
     <h2 style="margin:0 0 40px;">Sprint corti, deploy continui.</h2>
     <div class="metodo-grid">${metodoHtml}</div>
+    <div style="margin-top:32px;">
+      <a class="btn-dark" href="/servizi/#come-lavoriamo">Il nostro metodo →</a>
+    </div>
   </div>
 </section>
 
@@ -316,23 +312,30 @@ module.exports = class {
     <div>
       <div class="label"><span class="dim">// </span>le nostre tecnologie</div>
       <h2>Lo stack che teniamo in produzione.</h2>
+      <a class="btn-dark" href="/servizi/#tecnologie" style="margin-top:24px;">I nostri strumenti →</a>
     </div>
     <div class="tech-pills">${techHtml}</div>
   </div>
 </section>
 
 <!-- ── PROGETTI & INNOVAZIONE ────────────────────────────── -->
-<section class="sec-dark" id="progetti">
+${
+  features.homeProjects
+    ? `<section class="sec-dark" id="progetti">
   <div class="inner">
     <div class="label"><span class="dim">// </span>progetti &amp; innovazione</div>
     <h2 style="margin:0 0 16px;">Quello che stiamo costruendo, in chiaro.</h2>
     <p style="max-width:54ch;margin:0 0 36px;">Ricerca applicata e progetti interni: dove sperimentiamo prima di portarlo ai clienti. Aggiornati, con nome e cognome.</p>
     <div class="progetti-grid">${progettiHtml}</div>
   </div>
-</section>
+</section>`
+    : ''
+}
 
 <!-- ── LAVORA CON NOI ─────────────────────────────────────── -->
-<section class="sec-paper" id="lavora-con-noi">
+${
+  features.homeCareers
+    ? `<section class="sec-paper" id="lavora-con-noi">
   <div class="lavora-strip">
     <div style="max-width:52ch;">
       <div class="label"><span class="dim">// </span>lavora con noi</div>
@@ -341,7 +344,9 @@ module.exports = class {
     </div>
     <a class="fg-link" href="/lavora-con-noi/">Vedi le posizioni aperte →</a>
   </div>
-</section>
+</section>`
+    : ''
+}
 
 <!-- ── CONTATTI ───────────────────────────────────────────── -->
 <section class="sec-dark" id="contatti">

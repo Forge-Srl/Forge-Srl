@@ -6,6 +6,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["./node_modules/@11ty/eleventy/cmd.cjs", "--serve", "--port=8092"],
       "port": 8092
+    },
+    {
+      "name": "forge-site-all-features",
+      "runtimeExecutable": "env",
+      "runtimeArgs": ["FORGE_FEATURES=all", "node", "./node_modules/@11ty/eleventy/cmd.cjs", "--serve", "--port=8093"],
+      "port": 8093
     }
   ]
 }

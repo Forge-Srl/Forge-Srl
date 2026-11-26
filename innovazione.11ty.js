@@ -1,4 +1,7 @@
+const fs = require('node:fs')
 const pageHero = require('./_includes/components/page-hero')
+
+const universityImageFile = 'universita-insubria.png'
 
 module.exports = class {
   data() {
@@ -15,7 +18,21 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  async render(data) {
+    const {features} = data
+
+    // Immagine dell'Insubria nella sezione università: spenta finché non c'è la versione in alta risoluzione.
+    const universityImage =
+      features.universityImage && fs.existsSync(`assets/images/${universityImageFile}`)
+        ? await this.image(
+            universityImageFile,
+            "Università dell'Insubria di Varese",
+            'university-img',
+            [480, 960],
+            '(max-width: 900px) 100vw, 480px',
+          )
+        : ''
+
     const stats = [
       {id: 'coffeeCounter', end: '', label: 'caffè convertiti in codice'},
       {id: '', end: '21', label: 'progetti di tesi'},
@@ -67,7 +84,7 @@ ${pageHero({
   label: 'progetti & innovazione',
   title: 'La nostra parola preferita: <span class="accent">innovare</span>.',
   lead: 'Innovare per noi non è una parola da brochure: è un metodo. Sperimentiamo su progetti interni, rilasciamo open source e collaboriamo con le università. Quello che funziona, lo portiamo ai clienti — il resto ci insegna qualcosa.',
-  actions: '<a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>',
+  actions: '<a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>',
 })}
 
 <!-- ── Approccio R&D ───────────────────────────────────────── -->
@@ -124,6 +141,7 @@ ${pageHero({
     <div>
       <div class="label"><span class="dim">// </span>università</div>
       <h2>Dialoghiamo con<br>giovani menti.</h2>
+      ${universityImage ? `<div class="university-media">${universityImage}</div>` : ''}
     </div>
     <div class="prose">
       <p>La spinta a collaborare con le università viene dai fondatori stessi, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale di ricerca e università</strong>.</p>
@@ -149,8 +167,8 @@ ${pageHero({
     <h2>Innovare è la nostra parola preferita.<br>È così anche per te?</h2>
     <p>Raccontaci la tua idea o il tuo progetto. La prima call è gratuita e senza impegno.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
-      <a class="btn-primary" href="/contattaci/" aria-label="Prenota una call gratuita">prenota_call →</a>
-      <a class="btn-secondary" href="/case-study/" aria-label="Vedi i case study">vedi_case_study →</a>
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>
+      ${features.caseStudies ? '<a class="btn-secondary" href="/case-study/" aria-label="Vedi i case study">vedi_case_study →</a>' : ''}
     </div>
   </div>
 </section>`

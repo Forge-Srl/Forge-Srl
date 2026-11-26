@@ -1,5 +1,6 @@
 module.exports = (data) => {
   const year = new Date().getFullYear()
+  const features = data.features ?? {}
 
   const cols = [
     {
@@ -7,6 +8,7 @@ module.exports = (data) => {
       links: [
         {label: 'Home', href: '/'},
         {label: 'Prodotti & servizi', href: '/servizi/'},
+        {label: 'Case study', href: '/case-study/', enabled: features.caseStudies},
         {label: 'Progetti', href: '/innovazione/'},
         {label: 'Lavora con noi', href: '/lavora-con-noi/'},
       ],
@@ -15,6 +17,7 @@ module.exports = (data) => {
       head: 'azienda',
       links: [
         {label: 'Chi siamo', href: '/chi-siamo/'},
+        {label: 'Team', href: '/team/'},
         {label: 'Contattaci', href: '/contattaci/'},
         {label: 'Privacy Policy', href: data.forge.privacy},
         {
@@ -28,7 +31,7 @@ module.exports = (data) => {
     {
       head: 'parliamone',
       links: [
-        {label: 'Prenota una call', href: '/contattaci/'},
+        {label: 'Prenota una call', href: '/prenota-una-call/'},
         {label: data.forge.contacts.info, href: `mailto:${data.forge.contacts.info}`},
         {label: 'LinkedIn', href: data.forge.linkedin, attrs: 'target="_blank" rel="noopener"'},
         {label: 'GitHub', href: data.forge.github, attrs: 'target="_blank" rel="noopener"'},
@@ -38,7 +41,10 @@ module.exports = (data) => {
 
   const colsHtml = cols
     .map(({head, links}) => {
-      const linksHtml = links.map(({label, href, attrs = ''}) => `<a href="${href}" ${attrs}>${label}</a>`).join('')
+      const linksHtml = links
+        .filter(({enabled = true}) => enabled)
+        .map(({label, href, attrs = ''}) => `<a href="${href}" ${attrs}>${label}</a>`)
+        .join('')
       return `<div>
       <div class="footer-col-head">${head}</div>
       <div class="footer-col-links">${linksHtml}</div>

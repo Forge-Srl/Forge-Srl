@@ -410,6 +410,7 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   font-weight: 500;
   color: var(--text-muted);
   padding: 8px 11px;
+  white-space: nowrap;
   letter-spacing: 0.01em;
   border-bottom: none;
   transition: color 120ms;
@@ -420,6 +421,16 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
 }
 .nav-links a.active {
   color: var(--orange);
+}
+/* Fra il desktop pieno e il menu mobile le voci si stringono invece di andare a capo */
+@media (max-width: 1180px) {
+  .nav-links a:not(.nav-cta) {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+  .nav-links .nav-cta {
+    margin-left: 6px;
+  }
 }
 .nav-links a.active::before {
   content: "· ";
@@ -511,6 +522,13 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   color: var(--text-muted);
   max-width: 46ch;
   margin: 0 0 36px;
+}
+/* Descrizione su due righe: la seconda (prima call gratuita) è evidenziata in bianco */
+.hero-desc:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.hero-desc-strong {
+  color: var(--text);
 }
 
 .hero-actions {
@@ -894,6 +912,54 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   color: var(--text-muted);
 }
 
+/* Card cliente in home: logo + ambito + numeri */
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  padding: 20px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border-dark);
+}
+.client-logo img,
+.client-logo-img {
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.client-logo-fallback {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.client-metrics {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+.client-metrics:empty {
+  display: none;
+}
+.client-metric-n {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--orange);
+}
+.client-metric-l {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
 /* ── Case study (elenco completo) ────────────────────────────── */
 .sector-filter {
   display: flex;
@@ -938,13 +1004,62 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.cs-card {
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
 .cs-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 340px;
+  padding: 36px;
+  background: var(--paper-2);
+  border-right: 1px solid var(--paper-border);
+}
+.cs-media-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 340px;
-  background: var(--paper-2);
-  border-right: 1px solid var(--paper-border);
+  min-height: 140px;
+}
+.cs-media-logo img {
+  max-width: 280px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.cs-media-logo .client-logo-fallback {
+  font-size: 32px;
+  color: var(--ink);
+}
+.cs-info {
+  width: 100%;
+  max-width: 340px;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  border-top: 1px solid var(--paper-border);
+}
+.cs-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--paper-border);
+}
+.cs-info dt {
+  color: var(--ink-dim);
+}
+.cs-info dd {
+  margin: 0;
+  color: var(--ink);
+  text-align: right;
+}
+.cs-info a {
+  color: var(--orange);
 }
 .cs-media span {
   font-family: "JetBrains Mono", monospace;
@@ -1061,6 +1176,66 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   font-family: "JetBrains Mono", monospace;
   font-size: 12.5px;
   color: var(--ink-dim);
+}
+
+/* Intervista al cliente (domande dal questionario) */
+.cs-interview {
+  border-left: 3px solid var(--orange);
+  padding-left: 16px;
+  margin-top: 8px;
+}
+.cs-interview-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--ink-dim);
+  margin-bottom: 12px;
+}
+.cs-qa {
+  margin-bottom: 14px;
+}
+.cs-q {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+.cs-a {
+  font-size: 15px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* Griglia ambiti: le card con un case study portano alla scheda */
+.area-card {
+  display: block;
+  text-decoration: none;
+}
+.area-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.area-client img {
+  max-width: 96px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.area-client .client-logo-fallback {
+  font-size: 13px;
+  color: var(--orange);
+}
+/* Scroll fluido solo per i salti interni alla pagina (click su un'ancora, che prende il focus):
+   applicato a tutto html interromperebbe il salto all'ancora quando si arriva da un'altra pagina. */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
 }
 
 .cs-empty {
@@ -2528,4 +2703,153 @@ button.form-control:hover {
   .bw-day:nth-child(n + 5) {
     display: none;
   }
+}
+
+/* ── Università (progetti & innovazione) ─────────────────────── */
+.university-media {
+  margin-top: 32px;
+}
+.university-img,
+.university-media img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* ── Page hero con aside (es. foto del team) ─────────────────── */
+.page-hero-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+.page-hero-aside img,
+.page-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-dark);
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .page-hero-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── Team: "choose your character" ───────────────────────────── */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.player-card {
+  position: relative;
+  background: var(--bg-3);
+  border: 1px solid var(--border-dark);
+  border-radius: 2px;
+  padding: 20px;
+  font-family: "JetBrains Mono", monospace;
+  transition:
+    border-color 160ms,
+    transform 160ms;
+}
+.player-card:hover,
+.player-card:focus-within {
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+.player-num {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.player-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  margin: 12px auto 16px;
+  max-width: 160px;
+  background: var(--bg-2);
+  border: 1px solid var(--border-dark);
+}
+.player-avatar img,
+.player-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+.player-avatar-empty {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.player-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+}
+.player-role {
+  font-size: 12px;
+  color: var(--orange);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 4px 0 16px;
+}
+.player-skill {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.player-skill-l {
+  color: var(--text-muted);
+}
+.player-skill-bar {
+  color: var(--orange);
+  letter-spacing: 0.1em;
+}
+.player-interview {
+  margin-top: 16px;
+  border-top: 1px solid var(--border-dark);
+  padding-top: 12px;
+}
+.player-interview summary {
+  cursor: pointer;
+  font-size: 12.5px;
+  color: var(--orange);
+}
+.player-interview dl {
+  margin: 12px 0 0;
+}
+.player-qa {
+  margin-bottom: 12px;
+}
+.player-qa dt {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+}
+.player-qa dd {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+/* Accento arancione anche nei titoli di sezione (es. "Parti subito." in prodotti e servizi) */
+section h2 .accent {
+  color: var(--orange);
 }
