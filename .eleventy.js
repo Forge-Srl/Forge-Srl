@@ -18,7 +18,8 @@ module.exports = (eleventyConfig) => {
     },
   })
 
-  eleventyConfig.addFilter('image', async (url, altText, cssClasses, widths = [null], sizes = '') => {
+  // `priority`: per le immagini above the fold (niente lazy loading, caricamento prioritario)
+  eleventyConfig.addFilter('image', async (url, altText, cssClasses, widths = [null], sizes = '', priority = false) => {
     if (!url) {
       return ''
     }
@@ -54,7 +55,8 @@ module.exports = (eleventyConfig) => {
 
     return Image.generateHTML(metadata, {
       alt: altText || '',
-      loading: 'lazy',
+      loading: priority ? 'eager' : 'lazy',
+      ...(priority ? {fetchpriority: 'high'} : {}),
       decoding: 'async',
       sizes: sizes,
       class: cssClasses,

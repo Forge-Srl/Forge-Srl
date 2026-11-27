@@ -3032,6 +3032,11 @@ button.form-control:hover {
   border: 1px solid var(--border-dark);
   border-radius: 2px;
 }
+/* Foto dentro la finestra terminale: il bordo e gli angoli li dà già la finestra */
+.terminal-photo .page-hero-img {
+  border: 0;
+  border-radius: 0;
+}
 
 /* ── Team: "choose your character" ───────────────────────────── */
 .player-grid {

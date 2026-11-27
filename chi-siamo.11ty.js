@@ -16,7 +16,27 @@ module.exports = class {
     }
   }
 
-  render(data) {
+  async render(data) {
+    const teamImage = await this.image(
+      'forge-team.jpg',
+      'Il team di Forge al completo davanti allo schermo con il logo Forge',
+      'page-hero-img',
+      [560, 1120],
+      '(max-width: 900px) 100vw, 560px',
+      true,
+    )
+
+    // La foto sta in una finestra "terminale" come quella della home, così si stacca meno dallo sfondo
+    const teamPhoto = `<div class="terminal terminal-photo">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yel"></span>
+          <span class="terminal-dot grn"></span>
+          <span class="terminal-title">forge — team.jpg</span>
+        </div>
+        ${teamImage}
+      </div>`
+
     const missione = [
       {
         tag: 'mission',
@@ -47,6 +67,7 @@ ${pageHero({
   title: 'Siamo una <span class="accent">{forge}</span>,<br>non un\'agenzia.',
   lead: "Un gruppo di informatici che progetta, costruisce e manda in produzione software e soluzioni AI. Tra te e chi scrive il codice non c'è nessun filtro: parli direttamente con chi costruisce.",
   actions: '<a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>',
+  aside: teamPhoto,
 })}
 
 <!-- ── Estensione del team ─────────────────────────────────── -->
