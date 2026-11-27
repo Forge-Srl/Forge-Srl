@@ -398,6 +398,7 @@ section {
 }
 
 .site-nav .nav-logo {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   min-height: 44px;
@@ -433,7 +434,7 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
   margin-bottom: 20px;
 }
 
-/* Hamburger: compare solo se c'è JS (classe .js su <html>) e sotto i 900px */
+/* Hamburger: compare solo se c'è JS (classe .js su <html>) e sotto i 1100px */
 .nav-toggle {
   display: none;
   align-items: center;
@@ -579,6 +580,9 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
     height: 100px;
     margin-bottom: 28px;
   }
+}
+/* La barra orizzontale parte da 1100px: sotto, le voci non ci stanno accanto al logo e resta l'hamburger */
+@media (min-width: 1100px) {
   .js .nav-toggle {
     display: none;
   }
@@ -597,7 +601,7 @@ body.has-hero-logo.hero-logo-scrolled .site-nav .nav-logo {
     transform: none;
     transition: none;
   }
-  /* Fra 900 e 1180px le voci si stringono invece di andare a capo */
+  /* Fra 1100 e 1180px le voci si stringono invece di andare a capo */
   .nav-links a {
     font-size: 12px;
     padding: 8px 6px;
@@ -2999,16 +3003,30 @@ button.form-control:hover {
 }
 
 /* ── Università (progetti & innovazione) ─────────────────────── */
+/* Testo a sinistra sotto il titolo, foto a destra (sotto il testo su mobile) */
+.university-grid {
+  align-items: center;
+}
+.university-grid h2 + .prose {
+  margin-top: 24px;
+}
 .university-media {
-  margin-top: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+@media (min-width: 900px) {
+  .split-grid.university-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  .university-media {
+    justify-self: end;
+  }
 }
 .university-img,
 .university-media img {
   display: block;
   width: 100%;
-  max-width: 480px;
   height: auto;
-  border-radius: 2px;
 }
 
 /* ── Page hero con aside (es. foto del team) ─────────────────── */

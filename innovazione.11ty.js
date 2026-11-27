@@ -1,7 +1,4 @@
-const fs = require('node:fs')
 const pageHero = require('./_includes/components/page-hero')
-
-const universityImageFile = 'universita-insubria.png'
 
 module.exports = class {
   data() {
@@ -12,7 +9,7 @@ module.exports = class {
         'Ricerca, sperimentazione e progetti interni in Forge: dove proviamo AI e nuove tecnologie prima di portarle ai clienti. Open source e università partner.',
       eleventyNavigation: {
         key: 'innovazione',
-        title: 'Progetti',
+        title: 'Progetti e innovazione',
         parent: 'home',
       },
     }
@@ -21,17 +18,24 @@ module.exports = class {
   async render(data) {
     const {features} = data
 
-    // Immagine dell'Insubria nella sezione università: spenta finché non c'è la versione in alta risoluzione.
-    const universityImage =
-      features.universityImage && fs.existsSync(`assets/images/${universityImageFile}`)
-        ? await this.image(
-            universityImageFile,
-            "Università dell'Insubria di Varese",
-            'university-img',
-            [480, 960],
-            '(max-width: 900px) 100vw, 480px',
-          )
-        : ''
+    // Foto dell'Insubria nella sezione università, ritagliata dal collage del vecchio sito.
+    // Sta in una finestra "terminale" come la foto del team.
+    const universityImage = await this.image(
+      'innovazione/universita-insubria.jpg',
+      "Il chiostro dell'Università dell'Insubria",
+      'university-img',
+      [480, 890],
+      '(max-width: 900px) 100vw, 480px',
+    )
+    const universityPhoto = `<div class="terminal terminal-photo">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yel"></span>
+          <span class="terminal-dot grn"></span>
+          <span class="terminal-title">forge/insubria.jpg</span>
+        </div>
+        ${universityImage}
+      </div>`
 
     const stats = [
       {id: 'coffeeCounter', end: '', label: 'caffè convertiti in codice'},
@@ -137,17 +141,17 @@ ${pageHero({
 
 <!-- ── Università ───────────────────────────────────────────── -->
 <section class="sec-paper2">
-  <div class="split-grid">
+  <div class="split-grid university-grid">
     <div>
       <div class="label"><span class="dim">// </span>università</div>
       <h2>Dialoghiamo con<br>giovani menti.</h2>
-      ${universityImage ? `<div class="university-media">${universityImage}</div>` : ''}
+      <div class="prose">
+        <p>La spinta a collaborare con le università viene dai fondatori stessi, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale di ricerca e università</strong>.</p>
+        <p>Nel tempo abbiamo stretto sinergie con l'<strong>Università dell'Insubria di Varese</strong>, la nostra città natale, e svolto workshop all'<strong>Università Bicocca di Milano</strong>. Curiamo la formazione dei giovani con stage e progetti di tesi, per accelerarne la crescita professionale.</p>
+        <a class="fg-link" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>
+      </div>
     </div>
-    <div class="prose">
-      <p>La spinta a collaborare con le università viene dai fondatori stessi, che arrivano da un lungo percorso accademico e conoscono il <strong>potenziale di ricerca e università</strong>.</p>
-      <p>Nel tempo abbiamo stretto sinergie con l'<strong>Università dell'Insubria di Varese</strong>, la nostra città natale, e svolto workshop all'<strong>Università Bicocca di Milano</strong>. Curiamo la formazione dei giovani con stage e progetti di tesi, per accelerarne la crescita professionale.</p>
-      <a class="fg-link" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>
-    </div>
+    <div class="university-media">${universityPhoto}</div>
   </div>
 </section>
 

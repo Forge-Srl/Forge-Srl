@@ -22,8 +22,6 @@ const features = {
   productCatalog: false,
   // Griglia "choose your character" del team: servono avatar pixel art, ruoli e interviste.
   teamMembers: false,
-  // Immagine dell'Università dell'Insubria in "progetti & innovazione": serve la versione in alta risoluzione.
-  universityImage: false,
 }
 
 if (process.env.FORGE_FEATURES === 'all') {

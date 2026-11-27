@@ -1,4 +1,4 @@
-// Menu mobile: apre/chiude il pannello di navigazione sotto i 900px.
+// Menu mobile: apre/chiude il pannello di navigazione sotto i 1100px (stesso breakpoint del CSS).
 // Senza JS il pulsante resta nascosto (vedi `.js .nav-toggle` nel CSS) e i link restano nel footer.
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.site-nav')
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return
   }
 
-  const desktop = window.matchMedia('(min-width: 900px)')
+  const desktop = window.matchMedia('(min-width: 1100px)')
   const isOpen = () => nav.classList.contains('is-open')
 
   const setOpen = (open) => {

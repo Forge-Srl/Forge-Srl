@@ -9,7 +9,7 @@ module.exports = (data) => {
         {label: 'Home', href: '/'},
         {label: 'Prodotti & servizi', href: '/servizi/'},
         {label: 'Case study', href: '/case-study/', enabled: features.caseStudies},
-        {label: 'Progetti', href: '/innovazione/'},
+        {label: 'Progetti & innovazione', href: '/innovazione/'},
         {label: 'Lavora con noi', href: '/lavora-con-noi/'},
       ],
     },
