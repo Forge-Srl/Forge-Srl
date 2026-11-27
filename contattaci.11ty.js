@@ -7,7 +7,7 @@ module.exports = class {
       layout: 'layout.11ty.js',
       pageTitle: 'Contattaci',
       pageDescription:
-        'Hai un progetto in mente? Raccontacelo. La prima call è gratuita e senza impegno — parli con chi costruisce, non con un commerciale.',
+        'Hai un progetto in mente? Raccontacelo. La prima call è gratuita e senza impegno: parli con chi costruisce, non con un commerciale.',
       eleventyNavigation: {
         key: 'contattaci',
         title: 'Contattaci',
@@ -21,7 +21,7 @@ module.exports = class {
 ${pageHero({
   label: 'parliamone',
   title: 'Hai un progetto<br>in <span class="accent">mente</span>?',
-  lead: 'Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno — nessuno ti venderà niente.',
+  lead: 'Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno: nessuno ti venderà niente.',
 })}
 
 <!-- ── Contatti diretti ────────────────────────────────────── -->

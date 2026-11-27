@@ -22,7 +22,7 @@ module.exports = (data) => {
     .join('')
 
   return `<nav class="site-nav" aria-label="Navigazione principale">
-  <a class="nav-logo" href="/" aria-label="Forge — homepage">
+  <a class="nav-logo" href="/" aria-label="Forge, homepage">
     <picture>
       <source srcset="/assets/images/forge-logo.png" media="(prefers-color-scheme: light)">
       <source srcset="/assets/images/forge-logo-white.png" media="(prefers-color-scheme: dark)">

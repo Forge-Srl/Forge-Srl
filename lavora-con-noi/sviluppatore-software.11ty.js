@@ -65,7 +65,7 @@ ${pageHero({
         <li>Integrare software robusto e scalabile</li>
         <li>Condurre analisi e ottimizzazione delle performance</li>
         <li>Collaborare con il team allo sviluppo di prodotti digitali</li>
-        <li>Restare aggiornato su tecnologie, trend e best practice — e portarli nel lavoro quotidiano</li>
+        <li>Restare aggiornato su tecnologie, trend e best practice, e portarli nel lavoro quotidiano</li>
         <li>Misurarti su progetti di tipologia, ambito e settore diversi</li>
       </ul>
     </div>
@@ -82,11 +82,11 @@ ${pageHero({
     <div class="prose">
       <p>L'importante è che tu abbia:</p>
       <ul>
-        <li><strong>Voglia di metterti in gioco</strong> — passione per ciò che fai e per i progetti sfidanti</li>
-        <li><strong>Attitudine al lavoro di squadra</strong> — apprezzi il confronto più del lavoro in solitaria</li>
-        <li><strong>Voglia di imparare</strong> — non temi nuove sfide né di rimboccarti le maniche</li>
-        <li><strong>Trasparenza</strong> — dici ciò che pensi in modo costruttivo</li>
-        <li><strong>Desiderio di crescita</strong> — cerchi un percorso professionale condiviso</li>
+        <li><strong>Voglia di metterti in gioco</strong>: passione per ciò che fai e per i progetti sfidanti</li>
+        <li><strong>Attitudine al lavoro di squadra</strong>: apprezzi il confronto più del lavoro in solitaria</li>
+        <li><strong>Voglia di imparare</strong>: non temi nuove sfide né di rimboccarti le maniche</li>
+        <li><strong>Trasparenza</strong>: dici ciò che pensi in modo costruttivo</li>
+        <li><strong>Desiderio di crescita</strong>: cerchi un percorso professionale condiviso</li>
       </ul>
     </div>
   </div>

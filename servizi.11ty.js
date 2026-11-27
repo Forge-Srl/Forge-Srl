@@ -39,11 +39,11 @@ module.exports = class {
         label: 'intelligenza artificiale',
         title: "Mettiamo l'AI al lavoro per te.",
         intro:
-          'Usiamo l\'intelligenza artificiale per togliere lavoro ripetitivo dalle spalle delle persone: meno errori, meno tempi morti, più capacità di concentrarsi su ciò che conta. Tutto con un approccio "AI + umano" — la tecnologia accelera, le persone decidono.',
+          'Usiamo l\'intelligenza artificiale per togliere lavoro ripetitivo dalle spalle delle persone: meno errori, meno tempi morti, più capacità di concentrarsi su ciò che conta. Tutto con un approccio "AI + umano": la tecnologia accelera, le persone decidono.',
         cards: [
           {
             title: 'Automazione dei processi con AI generativa',
-            body: 'Automatizziamo le attività ripetitive che oggi rallentano il tuo team — dalla gestione documenti alla produzione di contenuti. Soluzioni basate su modelli di AI generativa (LLM) integrate nei tuoi sistemi esistenti.',
+            body: 'Automatizziamo le attività ripetitive che oggi rallentano il tuo team, dalla gestione documenti alla produzione di contenuti. Soluzioni basate su modelli di AI generativa (LLM) integrate nei tuoi sistemi esistenti.',
           },
           {
             title: 'Supporto clienti automatizzato',
@@ -127,7 +127,7 @@ module.exports = class {
         .join('')}
     </div>`
       : `<p style="margin-top:32px;">
-      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call — raccontaci cosa ti serve →</a>
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call: raccontaci cosa ti serve →</a>
     </p>`
 
     const logoFiles = [
@@ -178,7 +178,7 @@ ${serviziHtml}
       </div>
     </div>
     <div class="prose" style="max-width:64ch;margin-bottom:0;">
-      <p>Oltre ai progetti su misura, abbiamo costruito soluzioni software già collaudate che puoi adottare in tempi rapidi — senza partire da zero. Meno tempo, meno rischio, valore subito.</p>
+      <p>Oltre ai progetti su misura, abbiamo costruito soluzioni software già collaudate che puoi adottare in tempi rapidi, senza partire da zero. Meno tempo, meno rischio, valore subito.</p>
     </div>
   </div>
 </section>
@@ -210,7 +210,7 @@ ${serviziHtml}
       <div class="metodo-step">
         <div class="metodo-num">01</div>
         <div class="metodo-title">Ascoltiamo e valutiamo</div>
-        <div class="metodo-body">Partiamo dal tuo problema reale. Capiamo il contesto, gli obiettivi e i vincoli — e ti diciamo con onestà se possiamo aiutarti.</div>
+        <div class="metodo-body">Partiamo dal tuo problema reale. Capiamo il contesto, gli obiettivi e i vincoli, e ti diciamo con onestà se possiamo aiutarti.</div>
       </div>
       <div class="metodo-step">
         <div class="metodo-num">02</div>
@@ -236,7 +236,7 @@ ${serviziHtml}
   <div class="section-intro">
     <div class="label"><span class="dim">// </span>le nostre tecnologie</div>
     <h2>Gli strumenti che padroneggiamo.</h2>
-    <p class="lead">Scegliamo la tecnologia giusta per ogni progetto — mai il contrario.</p>
+    <p class="lead">Scegliamo la tecnologia giusta per ogni progetto, mai il contrario.</p>
   </div>
   <div class="logo-grid">${logosHtml}</div>
 </section>
@@ -245,7 +245,7 @@ ${serviziHtml}
 <section class="sec-dark">
   <div class="cta-band">
     <h2>Hai un progetto in mente?</h2>
-    <p>Raccontacelo in 15 minuti. La prima call è <strong>gratuita e senza impegno</strong> — esci con un primo parere concreto.</p>
+    <p>Raccontacelo in 15 minuti. La prima call è <strong>gratuita e senza impegno</strong>: esci con un primo parere concreto.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
       <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>
       <a class="btn-secondary" href="#prodotti" aria-label="Vedi i prodotti Forge">vedi_i_prodotti →</a>

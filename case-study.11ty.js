@@ -9,7 +9,7 @@ module.exports = class {
       layout: 'layout.11ty.js',
       permalink: features.caseStudies ? '/case-study/' : false,
       eleventyExcludeFromCollections: !features.caseStudies,
-      pageTitle: 'Case study — progetti AI e software | Forge',
+      pageTitle: 'Case study: progetti AI e software | Forge',
       pageDescription:
         'I progetti che abbiamo costruito: sfide reali, soluzioni AI + umano e risultati misurabili. Scopri i case study di Forge, software house a Varese.',
       eleventyNavigation: {
@@ -81,7 +81,7 @@ module.exports = class {
         </div>
         <h3>${title}</h3>
         <p>${body}</p>
-        <span class="fg-link">${cs.client.name} — leggi il caso ↓</span>
+        <span class="fg-link">${cs.client.name}: leggi il caso ↓</span>
       </a>`
         }),
       )
@@ -98,12 +98,12 @@ module.exports = class {
             .map(
               ({n, l}) => `
           <div>
-            <div class="cs-metric-n${n === '—' ? ' is-pending' : ''}">${n}</div>
+            <div class="cs-metric-n${n === 'n/d' ? ' is-pending' : ''}">${n}</div>
             <div class="cs-metric-l">${l}</div>
           </div>`,
             )
             .join('')
-          const hasPendingMetrics = metrics.some(({n}) => n === '—')
+          const hasPendingMetrics = metrics.some(({n}) => n === 'n/d')
 
           const companyInfo = [
             ['settore', client.sector],
@@ -157,7 +157,7 @@ module.exports = class {
           <div class="cs-interview">
             <div class="cs-interview-label"><span class="dim">// </span>intervista</div>
             ${interviewHtml}
-            <div class="cs-author">— ${interviewee.name}, ${interviewee.role} @ ${client.name}</div>
+            <div class="cs-author">${interviewee.name}, ${interviewee.role} @ ${client.name}</div>
           </div>
         </div>
       </article>`
@@ -192,7 +192,7 @@ ${pageHero({
 <section class="sec-paper">
   <div class="inner">
     <div class="cs-list" data-case-list>${casesHtml}</div>
-    <p class="cs-empty" data-case-empty hidden>Nessun case study in questo ambito — <a class="fg-link" href="/servizi/">guarda i servizi</a>.</p>
+    <p class="cs-empty" data-case-empty hidden>Nessun case study in questo ambito. <a class="fg-link" href="/servizi/">Guarda i servizi</a>.</p>
   </div>
 </section>
 

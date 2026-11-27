@@ -4,7 +4,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Lavora con noi — posizioni aperte | Forge, Varese',
+      pageTitle: 'Lavora con noi: posizioni aperte | Forge, Varese',
       pageDescription:
         'Unisciti a una squadra di informatici veri a Varese. Posizioni aperte, cultura trasparente, AI + umano. Scopri come candidarti in Forge.',
       eleventyNavigation: {
@@ -77,10 +77,10 @@ ${pageHero({
       <h2>Non cerchiamo risorse.<br>Cerchiamo persone.</h2>
     </div>
     <div class="prose">
-      <p class="lead">Ecco cosa trovi qui — senza aggettivi da career page.</p>
+      <p class="lead">Ecco cosa trovi qui, senza aggettivi da career page.</p>
       <p>Lavoriamo con <strong>metodologie agili</strong> (Scrum): sprint corti, priorità che si adattano, rilasci frequenti. Parli con chi costruisce, non con un commerciale. GitHub aperto, decisioni spiegate, codice in produzione.</p>
       <p>Usiamo l'<strong>intelligenza artificiale</strong> internamente e la portiamo ai clienti. Se ti piace stare sul pezzo e imparare sul campo, sei nel posto giusto.</p>
-      <a class="fg-link" href="/team/" aria-label="Conosci il team">vai_al_team — vedi chi troveresti →</a>
+      <a class="fg-link" href="/team/" aria-label="Conosci il team">vai_al_team: vedi chi troveresti →</a>
     </div>
   </div>
 </section>
@@ -103,7 +103,7 @@ ${pageHero({
         <span class="terminal-dot red"></span>
         <span class="terminal-dot yel"></span>
         <span class="terminal-dot grn"></span>
-        <span class="terminal-title">forge — posizioni.log</span>
+        <span class="terminal-title">forge/posizioni.log</span>
       </div>
       <div class="terminal-body">
         <div class="cmd"><span class="prompt">$</span> ls /posizioni</div>
@@ -147,7 +147,7 @@ ${pageHero({
 <section class="sec-paper2">
   <div class="cta-band">
     <h2>Pensi di essere la persona giusta?</h2>
-    <p>Non aspettare il ruolo perfetto. Candidati — ci pensiamo noi.</p>
+    <p>Non aspettare il ruolo perfetto. Candidati, ci pensiamo noi.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
       <a class="btn-primary" href="mailto:${data.forge.contacts.career}" aria-label="Invia la candidatura spontanea">candidati →</a>
       <a class="btn-secondary" href="/team/" aria-label="Conosci il team">vai_al_team →</a>

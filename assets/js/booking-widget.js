@@ -159,7 +159,7 @@
             <input type="hidden" name="subject" value="${subject}">
             <div class="bw-field">
               <label for="bw-name">Nome e azienda</label>
-              <input id="bw-name" name="name" type="text" required placeholder="Mario Rossi — Azienda Srl" autocomplete="name">
+              <input id="bw-name" name="name" type="text" required placeholder="Mario Rossi, Azienda Srl" autocomplete="name">
             </div>
             <div class="bw-field">
               <label for="bw-email">Email di lavoro</label>
@@ -252,7 +252,7 @@
         <div class="bw-body bw-done-body">
           <div class="bw-done-icon">✓</div>
           <div class="bw-done-title">prenotazione inviata.</div>
-          <div class="bw-done-sub">Ti confermiamo la call per <strong>${formatFull(days[selDay], Slots[selSlot])}</strong>. Controlla la email — ti arriverà il link alla videocall.</div>
+          <div class="bw-done-sub">Ti confermiamo la call per <strong>${formatFull(days[selDay], Slots[selSlot])}</strong>. Controlla la email, ti arriverà il link alla videocall.</div>
           <div class="bw-footer" style="margin-top:16px;">risposta entro 24h · disdici quando vuoi</div>
         </div>`
     }

@@ -5,7 +5,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Chi siamo — Forge, software house di Varese',
+      pageTitle: 'Chi siamo: Forge, software house di Varese',
       pageDescription:
         'Siamo un gruppo di informatici a Varese che progetta, costruisce e manda in produzione software e soluzioni AI. La nostra missione e la nostra visione.',
       eleventyNavigation: {
@@ -32,7 +32,7 @@ module.exports = class {
           <span class="terminal-dot red"></span>
           <span class="terminal-dot yel"></span>
           <span class="terminal-dot grn"></span>
-          <span class="terminal-title">forge — team.jpg</span>
+          <span class="terminal-title">forge/team.jpg</span>
         </div>
         ${teamImage}
       </div>`
@@ -79,7 +79,7 @@ ${pageHero({
     </div>
     <div class="prose">
       <p class="lead">Il nostro obiettivo è semplice: arrivare al risultato <em>insieme</em> a chi seguiamo. Non vendiamo ore, costruiamo soluzioni che restano.</p>
-      <p>Siamo una realtà giovane con sede a <strong>Varese</strong> che unisce competenze diverse — <strong>intelligenza artificiale</strong>, sviluppo software e cloud — sotto lo stesso tetto. Ci sono sviluppatori back-end, front-end e mobile, persone che lavorano sui dati e con l'AI, e chi tiene insieme i progetti.</p>
+      <p>Siamo una realtà giovane con sede a <strong>Varese</strong> che unisce competenze diverse (<strong>intelligenza artificiale</strong>, sviluppo software e cloud) sotto lo stesso tetto. Ci sono sviluppatori back-end, front-end e mobile, persone che lavorano sui dati e con l'AI, e chi tiene insieme i progetti.</p>
       <p>Siamo nati nel <strong>2018</strong> e da allora trasformiamo idee in prodotti reali: studiamo a fondo la tua visione e costruiamo soluzioni digitali competitive, fatte per durare. Amiamo le metodologie agili, il lavoro condiviso e il codice che finisce in produzione.</p>
       <a class="fg-link" href="/servizi/">Scopri cosa costruiamo →</a>
     </div>
@@ -111,7 +111,7 @@ ${pageHero({
     </div>
     <div class="prose">
       <p>Il lavoro di squadra è il nostro vero asset. Mettiamo insieme sviluppatori esperti in tecnologie diverse, persone che lavorano con i dati e con l'AI, e chi tiene la rotta dei progetti.</p>
-      <p>Ci guidano curiosità e voglia di imparare. E sì — ci divertiamo a farlo.</p>
+      <p>Ci guidano curiosità e voglia di imparare. E sì, ci divertiamo a farlo.</p>
       <a class="fg-link" href="/team/">conosci_il_team →</a>
     </div>
   </div>

@@ -7,7 +7,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Il team Forge — chi siamo dietro le tastiere',
+      pageTitle: 'Il team Forge: chi siamo dietro le tastiere',
       pageDescription:
         'Conosci le persone di Forge: sviluppatori, esperti AI e project manager a Varese. La nostra filosofia, come collaboriamo e come lavorare con noi.',
       eleventyNavigation: {
@@ -78,7 +78,7 @@ module.exports = class {
       {
         tag: 'fil_01',
         title: 'Umiltà',
-        body: 'Nessuno qui le sa tutte. Si fanno domande, si chiede aiuto, si impara dagli errori — anche dai propri.',
+        body: 'Nessuno qui le sa tutte. Si fanno domande, si chiede aiuto, si impara dagli errori, anche dai propri.',
       },
       {
         tag: 'fil_02',
@@ -165,7 +165,7 @@ ${pageHero({
     </div>
     <div class="prose">
       <p class="lead">Mettiamo insieme sviluppatori back-end, front-end e mobile, persone che lavorano con i dati e con l'AI, e chi tiene la rotta dei progetti.</p>
-      <p>Competenze diverse che si parlano davvero — perché i problemi reali raramente stanno dentro una sola casella.</p>
+      <p>Competenze diverse che si parlano davvero, perché i problemi reali raramente stanno dentro una sola casella.</p>
       <p>Non abbiamo un reparto commerciale che fa da filtro: quando lavori con noi, <strong>parli con chi costruisce</strong>.</p>
     </div>
   </div>
@@ -183,14 +183,14 @@ ${pageHero({
     </p>
     <div class="player-grid">${membersHtml}</div>`
         : `<p style="max-width:54ch;margin:16px 0 40px;color:var(--text-muted);">
-      Puoi conoscerci di persona — la prima call è gratuita.
+      Puoi conoscerci di persona: la prima call è gratuita.
     </p>
     <div class="terminal" aria-hidden="true" style="max-width:480px;">
       <div class="terminal-bar">
         <span class="terminal-dot red"></span>
         <span class="terminal-dot yel"></span>
         <span class="terminal-dot grn"></span>
-        <span class="terminal-title">forge — team.log</span>
+        <span class="terminal-title">forge/team.log</span>
       </div>
       <div class="terminal-body">
         <div class="cmd"><span class="prompt">$</span> ls ./team</div>
@@ -204,7 +204,7 @@ ${pageHero({
     </div>`
     }
     <p style="margin-top:32px;">
-      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call — conosciamoci →</a>
+      <a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call: conosciamoci →</a>
     </p>
   </div>
 </section>
@@ -214,7 +214,7 @@ ${pageHero({
   <div class="section-intro">
     <div class="label"><span class="dim">// </span>la nostra filosofia</div>
     <h2>Come stiamo insieme.</h2>
-    <p class="lead">La tecnologia cambia, il modo in cui lavoriamo insieme no. Questi sono i principi che teniamo sul serio — non perché stanno bene su una parete, ma perché ci fanno lavorare meglio.</p>
+    <p class="lead">La tecnologia cambia, il modo in cui lavoriamo insieme no. Questi sono i principi che teniamo sul serio, non perché stanno bene su una parete, ma perché ci fanno lavorare meglio.</p>
   </div>
   <div class="feature-grid cols-3">${filosofiaHtml}</div>
 </section>
@@ -238,7 +238,7 @@ ${pageHero({
 <section class="sec-dark">
   <div class="cta-band">
     <h2>Vuoi lavorare con noi?</h2>
-    <p>Cerchiamo persone curiose a cui piace imparare. Dai un'occhiata alle posizioni aperte — e se non c'è quella giusta, scrivici lo stesso.</p>
+    <p>Cerchiamo persone curiose a cui piace imparare. Dai un'occhiata alle posizioni aperte, e se non c'è quella giusta, scrivici lo stesso.</p>
     <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
       <a class="btn-primary" href="/lavora-con-noi/" aria-label="Vai alle posizioni aperte">lavora_con_noi →</a>
       <a class="btn-secondary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>

@@ -7,7 +7,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Progetti & Innovazione — R&D in Forge',
+      pageTitle: 'Progetti & Innovazione: R&D in Forge',
       pageDescription:
         'Ricerca, sperimentazione e progetti interni in Forge: dove proviamo AI e nuove tecnologie prima di portarle ai clienti. Open source e università partner.',
       eleventyNavigation: {
@@ -53,7 +53,7 @@ module.exports = class {
       },
       {
         title: 'JJBridge',
-        body: "Porta l'esecuzione di codice JavaScript in ambiente Java — nato per usare BionicJS su Android.",
+        body: "Porta l'esecuzione di codice JavaScript in ambiente Java, nato per usare BionicJS su Android.",
         href: 'https://github.com/Forge-Srl/jjbridge-engine-v8/',
       },
     ]
@@ -83,7 +83,7 @@ module.exports = class {
 ${pageHero({
   label: 'progetti & innovazione',
   title: 'La nostra parola preferita: <span class="accent">innovare</span>.',
-  lead: 'Innovare per noi non è una parola da brochure: è un metodo. Sperimentiamo su progetti interni, rilasciamo open source e collaboriamo con le università. Quello che funziona, lo portiamo ai clienti — il resto ci insegna qualcosa.',
+  lead: 'Innovare per noi non è una parola da brochure: è un metodo. Sperimentiamo su progetti interni, rilasciamo open source e collaboriamo con le università. Quello che funziona, lo portiamo ai clienti, il resto ci insegna qualcosa.',
   actions: '<a class="btn-primary" href="/prenota-una-call/" aria-label="Prenota una call gratuita">prenota_call →</a>',
 })}
 
@@ -96,7 +96,7 @@ ${pageHero({
     </div>
     <div class="prose">
       <p>Dedichiamo tempo a esplorare tecnologie nuove <strong>prima</strong> che diventino richieste dai clienti. Significa che quando arrivi da noi non facciamo da cavie con il tuo progetto: portiamo soluzioni già messe alla prova internamente.</p>
-      <p>Lavoriamo in modo <strong>collaborativo</strong> con università, start-up, centri di ricerca e giovani talenti. È così che restiamo aggiornati davvero — non leggendo titoli, ma costruendo.</p>
+      <p>Lavoriamo in modo <strong>collaborativo</strong> con università, start-up, centri di ricerca e giovani talenti. È così che restiamo aggiornati davvero, non leggendo titoli, ma costruendo.</p>
     </div>
   </div>
 </section>

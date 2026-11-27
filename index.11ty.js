@@ -4,7 +4,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: 'Forge — Software House a Varese | Software e AI',
+      pageTitle: 'Forge: Software House a Varese | Software e AI',
       pageDescription:
         "Software house di Varese: sviluppo software e soluzioni di intelligenza artificiale. Dall'idea al prodotto in produzione. Prima call gratuita.",
       eleventyNavigation: {
@@ -151,7 +151,7 @@ module.exports = class {
               ? await this.image(client.logo, `Logo ${client.name}`, 'client-logo-img', [240], '240w')
               : `<span class="client-logo-fallback">${client.name}</span>`
             const metricsHtml = metrics
-              .filter(({n}) => n !== '—')
+              .filter(({n}) => n !== 'n/d')
               .slice(0, 2)
               .map(
                 ({n, l}) => `<div><div class="client-metric-n">${n}</div><div class="client-metric-l">${l}</div></div>`,
@@ -226,7 +226,7 @@ module.exports = class {
         <span class="terminal-dot red"></span>
         <span class="terminal-dot yel"></span>
         <span class="terminal-dot grn"></span>
-        <span class="terminal-title">forge — deploy.log</span>
+        <span class="terminal-title">forge/deploy.log</span>
       </div>
       <div class="terminal-body">
         <div class="cmd"><span class="prompt">$</span> forge deploy --prod</div>
@@ -354,7 +354,7 @@ ${
     <div>
       <div class="label"><span class="dim">// </span>parliamone</div>
       <h2>Hai un progetto<br>in mente?</h2>
-      <p style="max-width:42ch;margin:0 0 28px;">Raccontacelo in 15 minuti. La prima call è <strong style="color:var(--text)">gratuita e senza impegno</strong> — nessuno ti venderà niente.</p>
+      <p style="max-width:42ch;margin:0 0 28px;">Raccontacelo in 15 minuti. La prima call è <strong style="color:var(--text)">gratuita e senza impegno</strong>: nessuno ti venderà niente.</p>
       <div class="contatti-checks">
         <div><span class="tick">✓</span> 15 minuti, in video o di persona</div>
         <div><span class="tick">✓</span> parli con chi costruisce, non con un commerciale</div>

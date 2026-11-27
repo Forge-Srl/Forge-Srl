@@ -43,7 +43,7 @@ module.exports = class {
 ${pageHero({
   label: '$ ./contattaci.sh',
   title: 'Hai un progetto<br>in <span class="accent">mente</span>?',
-  lead: 'Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno — nessuno ti venderà niente.',
+  lead: 'Raccontacelo in 15 minuti. La prima call è gratuita e senza impegno: nessuno ti venderà niente.',
   actions: '<a class="btn-primary" href="#prenota" aria-label="Prenota una call gratuita">prenota_call →</a>',
 })}
 
@@ -154,7 +154,7 @@ ${pageHero({
 <section class="sec-dark">
   <div class="cta-band">
     <h2>Niente preventivi a freddo.</h2>
-    <p>Solo 15 minuti per capire se possiamo aiutarti. La prima call è gratuita e senza impegno — uscirai con un parere concreto.</p>
+    <p>Solo 15 minuti per capire se possiamo aiutarti. La prima call è gratuita e senza impegno, uscirai con un parere concreto.</p>
     <a class="btn-primary" href="#prenota" aria-label="Torna al widget di prenotazione">prenota_call →</a>
   </div>
 </section>`

@@ -6,7 +6,7 @@
  * le sezioni che li mostrano restano spente: vedi `_data/features.js`.
  *
  * - `logo`: percorso relativo ad `assets/images/` (passa dal filtro `image`), `null` se manca.
- * - metriche con `n: '—'`: valore ancora in validazione con il cliente.
+ * - metriche con `n: 'n/d'`: valore ancora in validazione con il cliente.
  * - `interview`: domande della sezione 3 del questionario clienti, con risposta e autore.
  */
 const areas = [
@@ -38,7 +38,7 @@ const areas = [
     id: 'integrazioni',
     num: '05',
     title: 'Integrazioni &amp; ETL',
-    body: 'Sistemi che non si parlano, collegati. Flussi dati affidabili e osservabili — senza sorprese notturne.',
+    body: 'Sistemi che non si parlano, collegati. Flussi dati affidabili e osservabili, senza sorprese notturne.',
   },
   {
     id: 'web',
@@ -75,7 +75,7 @@ const items = [
     metrics: [
       {n: '24/7', l: 'copertura'},
       {n: 'RAG', l: 'risposte con fonti'},
-      {n: '—', l: 'tempo di risposta'},
+      {n: 'n/d', l: 'tempo di risposta'},
     ],
     interview: [{q: '[DA FORNIRE: domanda dal questionario, sezione 3]', a: '[DA FORNIRE]'}],
     interviewee: {name: '[DA FORNIRE]', role: '[DA FORNIRE]'},
@@ -103,8 +103,8 @@ const items = [
     ],
     metrics: [
       {n: '0', l: 'rollback'},
-      {n: '—', l: 'rps di picco'},
-      {n: '—', l: 'conversione'},
+      {n: 'n/d', l: 'rps di picco'},
+      {n: 'n/d', l: 'conversione'},
     ],
     interview: [{q: '[DA FORNIRE: domanda dal questionario, sezione 3]', a: '[DA FORNIRE]'}],
     interviewee: {name: '[DA FORNIRE]', role: '[DA FORNIRE]'},
@@ -132,8 +132,8 @@ const items = [
     ],
     metrics: [
       {n: 'ML', l: 'in produzione'},
-      {n: '—', l: 'fermi evitati'},
-      {n: '—', l: 'accuratezza'},
+      {n: 'n/d', l: 'fermi evitati'},
+      {n: 'n/d', l: 'accuratezza'},
     ],
     interview: [{q: '[DA FORNIRE: domanda dal questionario, sezione 3]', a: '[DA FORNIRE]'}],
     interviewee: {name: '[DA FORNIRE]', role: '[DA FORNIRE]'},

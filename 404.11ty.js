@@ -2,7 +2,7 @@ module.exports = class {
   data() {
     return {
       layout: 'layout.11ty.js',
-      pageTitle: '404 — pagina non trovata | Forge',
+      pageTitle: '404: pagina non trovata | Forge',
       pageDescription: 'Questa pagina non esiste (o non più). Torna alla home di Forge o prenota una call gratuita.',
       // Force output page to be /404.html instead of /404/index.html!
       permalink: '/404.html',
@@ -23,7 +23,7 @@ module.exports = class {
         <span class="terminal-dot red"></span>
         <span class="terminal-dot yel"></span>
         <span class="terminal-dot grn"></span>
-        <span class="terminal-title">forge — runtime.log</span>
+        <span class="terminal-title">forge/runtime.log</span>
       </div>
       <div class="terminal-body">
         <div class="cmd"><span class="prompt">forge@varese:~$</span> cd /pagina-che-cercavi</div>
@@ -43,7 +43,7 @@ module.exports = class {
       ${data.features.caseStudies ? '<a class="btn-secondary" href="/case-study/" aria-label="Vai ai case study">vedi_case_study →</a>' : ''}
       <a class="btn-secondary" href="/contattaci/" aria-label="Vai ai contatti">contatti →</a>
     </div>
-    <p style="font-size:14px;color:var(--text-dim);">&gt; exit 404 — oppure <a href="/contattaci/" style="color:var(--orange)">scrivici cosa cercavi</a>.</p>
+    <p style="font-size:14px;color:var(--text-dim);">&gt; exit 404, oppure <a href="/contattaci/" style="color:var(--orange)">scrivici cosa cercavi</a>.</p>
   </div>
 </section>`
   }
