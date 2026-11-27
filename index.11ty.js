@@ -81,7 +81,7 @@ module.exports = class {
       },
       {
         num: '04',
-        title: 'Prodotti pronti',
+        title: 'I Nostri Prodotti',
         body: 'Soluzioni già collaudate che adotti in tempi rapidi, senza partire da zero.',
         href: '/servizi/#prodotti',
       },
@@ -212,7 +212,7 @@ module.exports = class {
     <div>
       <img id="hero-logo" src="/assets/images/forge-logo-white.png" alt="Forge" class="hero-logo-img">
       <div class="hero-label"><span class="dim">// </span>software house · varese</div>
-      <h1><span class="dim">&gt; </span>idea.run() — Dall'idea al prodotto. <span class="accent">Eseguito.</span></h1>
+      <h1>Dall'idea al prodotto.<br/><span class="accent">Senza sorprese.</span></h1>
       <p class="hero-desc">Sviluppo software e intelligenza artificiale per aziende che misurano il successo in risultati concreti.</p>
       <p class="hero-desc hero-desc-strong">La prima call è gratuita e senza impegno.</p>
       <div class="hero-actions">
