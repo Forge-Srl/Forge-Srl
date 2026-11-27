@@ -4,3 +4,4 @@ _site
 /.idea/misc.xml
 /.idea/Forge-Srl.iml
 /.idea/modules.xml
+.DS_Store
