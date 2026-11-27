@@ -1,7 +1,4 @@
-const fs = require('node:fs')
 const pageHero = require('./_includes/components/page-hero')
-
-const teamPhotoFile = 'team.jpg'
 
 module.exports = class {
   data() {
@@ -21,17 +18,26 @@ module.exports = class {
   async render(data) {
     const {features, team} = data
 
-    // Foto del team nell'hero: spenta finché non c'è la foto (features.teamHeroPhoto).
-    const teamPhoto =
-      features.teamHeroPhoto && fs.existsSync(`assets/images/${teamPhotoFile}`)
-        ? await this.image(
-            teamPhotoFile,
-            'Il team di Forge',
-            'page-hero-img',
-            [560, 1120],
-            '(max-width: 900px) 100vw, 560px',
-          )
-        : ''
+    // Foto del team nell'hero, above the fold: caricata subito e in priorità.
+    const teamImage = await this.image(
+      'forge-team.jpg',
+      'Il team di Forge al completo davanti allo schermo con il logo Forge',
+      'page-hero-img',
+      [560, 1120],
+      '(max-width: 900px) 100vw, 560px',
+      true,
+    )
+
+    // La foto sta in una finestra "terminale" come quella della home, così si stacca meno dallo sfondo
+    const teamPhoto = `<div class="terminal terminal-photo">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yel"></span>
+          <span class="terminal-dot grn"></span>
+          <span class="terminal-title">forge/team.jpg</span>
+        </div>
+        ${teamImage}
+      </div>`
 
     // Griglia "choose your character": spenta finché non ci sono avatar, ruoli e interviste (features.teamMembers).
     const membersHtml = features.teamMembers
