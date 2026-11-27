@@ -29,7 +29,10 @@ module.exports = (data) => {
       <img src="/assets/images/forge-logo-white.png" alt="Forge" height="30">
     </picture>
   </a>
-  <div class="nav-links">
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Apri il menu">
+    <span class="nav-toggle-bar" aria-hidden="true"></span>
+  </button>
+  <div class="nav-links" id="nav-links">
     ${navLinks}
     <a href="/prenota-una-call/" class="nav-cta" aria-label="Prenota una call gratuita">prenota_call →</a>
   </div>

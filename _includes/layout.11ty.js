@@ -11,6 +11,7 @@ module.exports = function (data) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
   <meta property="og:locale" content="it_IT">
   <meta property="og:type" content="website">
   <meta property="og:title" content="${data.pageTitle}">
@@ -31,7 +32,9 @@ module.exports = function (data) {
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"></noscript>
 
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/nav.js" defer></script>
   <script src="/assets/js/start.js" defer></script>
   <script src="/assets/js/flame.js" defer></script>
   <script src="/assets/js/booking-widget.js" defer></script>

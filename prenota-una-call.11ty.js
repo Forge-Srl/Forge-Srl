@@ -133,7 +133,7 @@ ${pageHero({
   <div class="inner">
     <div class="label"><span class="dim">// </span>seguici</div>
     <h2 style="margin:0 0 24px;">Dove trovarci online.</h2>
-    <div class="info-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="info-grid cols-3">
       <div class="info-card">
         <div class="info-label">GitHub</div>
         <p class="info-value"><a href="${data.forge.github}" target="_blank" rel="noopener" aria-label="Forge su GitHub">Forge-Srl →</a></p>

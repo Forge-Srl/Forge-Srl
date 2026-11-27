@@ -44,6 +44,9 @@ class AsciiFlame {
   }
 
   start() {
+    if (this.interval) {
+      return
+    }
     this.interval = setInterval(() => {
       this.updateState()
       this.render()
@@ -62,6 +65,40 @@ class AsciiFlame {
     this.height = height
     this.initialize()
   }
+
+  // Un fotogramma "a regime" per chi preferisce meno animazioni
+  renderStatic() {
+    for (let i = 0; i < this.height * 2; i++) {
+      this.updateState()
+    }
+    this.render()
+  }
+}
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+// Anima la fiamma solo quando è a schermo: su mobile risparmia batteria e CPU.
+// Con prefers-reduced-motion mostra un fotogramma fisso.
+const animateWhenVisible = (flame, element) => {
+  if (prefersReducedMotion.matches) {
+    flame.renderStatic()
+    return
+  }
+  new IntersectionObserver(([entry]) => (entry.isIntersecting ? flame.start() : flame.stop())).observe(element)
+}
+
+// Su mobile `resize` scatta anche quando la barra del browser appare o sparisce (cambia solo l'altezza):
+// ricreare la fiamma ogni volta la farebbe ripartire da zero durante lo scroll.
+const resizeOnWidthChange = (flame, getSize) => {
+  let lastWidth = window.innerWidth
+  window.addEventListener('resize', () => {
+    if (window.innerWidth === lastWidth) {
+      return
+    }
+    lastWidth = window.innerWidth
+    const size = getSize()
+    flame.resize(size.width, size.height)
+  })
 }
 
 const getFooterFlameSize = (canvas) => {
@@ -96,12 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (flameCanvas) {
     const flameSize = getFooterFlameSize(flameCanvas)
     const flame = new AsciiFlame(flameCanvas, flameSize.width, flameSize.height, 80)
-    flame.start()
-
-    window.addEventListener('resize', () => {
-      const size = getFooterFlameSize(flameCanvas)
-      flame.resize(size.width, size.height)
-    })
+    animateWhenVisible(flame, flameCanvas.parentElement)
+    resizeOnWidthChange(flame, () => getFooterFlameSize(flameCanvas))
   }
 
   // ── Hero background flame ─────────────────────────────────────
@@ -112,12 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(() => {
       const size = getHeroFlameSize(heroSection, heroCanvas)
       const heroFlame = new AsciiFlame(heroCanvas, size.width, size.height, 100)
-      heroFlame.start()
-
-      window.addEventListener('resize', () => {
-        const s = getHeroFlameSize(heroSection, heroCanvas)
-        heroFlame.resize(s.width, s.height)
-      })
+      animateWhenVisible(heroFlame, heroSection)
+      resizeOnWidthChange(heroFlame, () => getHeroFlameSize(heroSection, heroCanvas))
     })
   }
 })
